@@ -3,7 +3,7 @@
 
 <!-- Head tag -->
 <head>
-    <meta charset="utf-8">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
@@ -31,7 +31,7 @@
     <link rel="stylesheet" href="/css/blog-style.css">
 
     <!-- Pygments Github CSS -->
-    <link rel="stylesheet" href="/css/syntax.css">
+    <link rel="stylesheet" href="/css/syntax.css"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 <style>
@@ -42,7 +42,7 @@
 </style>
 <!-- hack iOS CSS :active style -->
 <body ontouchstart="" class="animated fadeIn">
-<!-- Navigation -->
+<!-- hexo-inject:begin --><!-- hexo-inject:end --><!-- Navigation -->
 <nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost = "false" data-istags="false
 " data-ishome = "true" >
     <div class="container-fluid">
@@ -350,9 +350,9 @@
 
 <div class="post-preview "
      style="background-image: url('https://github.com/Buevara/blog_img/raw/master/siyue.jpg')">
-    <a href="/2018/01/31/排序算法/">
+    <a href="/2018/01/31/算法基础1：排序算法/">
         <h2 class="post-title">
-            各种排序算法的性质
+            算法基础1:各种排序算法的性质
         </h2>
         <p class="post-meta">
             <i class="fa fa-calendar" aria-hidden="true"></i> 2018-01-31
@@ -421,15 +421,16 @@ O(1)
         
         <div class="post-content-preview">
             <p>
-                ##机器学习
-###什么是机器学习？
+                机器学习
+什么是机器学习？
 
 对于某给定的任务T，在合理的性能度量方案P的前提下，某计算机程序可以自主学习任务T的经验E；随着提供合适、优质、大量的静安E，改程序对于任务T的性能逐步提交。
 
-###这个任务最重要的是机器学习的对象：
+这个任务最重要的是机器学习的对象：
 
 任务Task，T，一个或者多个
-经验Experie..
+经验Experience，E
+性能..
             </p>
         </div>
     </a>
@@ -500,6 +501,12 @@ O(1)
                     
                     <a href="/tags/#面经" title="面经"
                        rel="2">面经</a>
+                    
+                    
+                    
+                    
+                    
+                    
                     
                     
                     
@@ -614,6 +621,22 @@ O(1)
 
 <!--wechat title img-->
 <img class="wechat-title-img" src="https://github.com/Buevara/blog_img/raw/master/guevara.jpeg">
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
 </body>
 
 </html>
