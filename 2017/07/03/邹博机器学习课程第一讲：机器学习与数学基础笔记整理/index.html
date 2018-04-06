@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
+    <meta name="description" content="马浩珍在 Github 上的个人博客">
     <meta name="keyword" content="">
     <meta name="theme-color" content="#600090">
     <meta name="msapplication-navbutton-color" content="#600090">
@@ -18,11 +18,11 @@
     <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
     <title>
         
-        小米--机器学习岗位面经｜undefined
+        邹博机器学习课程第一讲：机器学习与数学基础笔记整理｜Haojen&#39;s blog
         
     </title>
 
-    <link rel="canonical" href="http://yoursite.com/小米机器学习岗位面经/">
+    <link rel="canonical" href="http://haojen.github.io/2017/07/03/邹博机器学习课程第一讲：机器学习与数学基础笔记整理/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -37,7 +37,7 @@
 <style>
 
     header.intro-header {
-        background-image: url('')
+        background-image: url('https://github.com/Buevara/blog_img/raw/master/siyue.jpg')
     }
 </style>
 <!-- hack iOS CSS :active style -->
@@ -145,24 +145,15 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
                 <div class="post-heading">
-                    <h1>小米--机器学习岗位面经</h1>
+                    <h1>邹博机器学习课程第一讲：机器学习与数学基础笔记整理</h1>
                     
                     <span class="meta">
                          作者 Buevara
                         <span>
-                          日期 2018-03-31
+                          日期 2017-07-03
                          </span>
                     </span>
                     <div class="tags text-center">
-                        
-                        <a class="tag" href="/tags/#面经"
-                           title="面经">面经</a>
-                        
-                        <a class="tag" href="/tags/#小米"
-                           title="小米">小米</a>
-                        
-                        <a class="tag" href="/tags/#机器学习"
-                           title="机器学习">机器学习</a>
                         
                     </div>
                 </div>
@@ -171,7 +162,7 @@
     </div>
     <div class="post-title-haojen">
         <span>
-            小米--机器学习岗位面经
+            邹博机器学习课程第一讲：机器学习与数学基础笔记整理
         </span>
     </div>
 </header>
@@ -182,60 +173,138 @@
         <div class="row">
             <!-- Post Container -->
             <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
-                <hr>
-<p>感谢两位校友@Marcovaldo和@KillersDeath提供的面经。
-面试约的下午三点，第一次面试，心里有点紧张。</p>
-<hr>
-<h3>一面</h3>
+                <p>##机器学习
+###什么是机器学习？</p>
+<blockquote>
+<p>对于某给定的任务T，在合理的性能度量方案P的前提下，某计算机程序可以自主学习任务T的经验E；随着提供合适、优质、大量的静安E，改程序对于任务T的性能逐步提交。</p>
+</blockquote>
+<p>###这个任务最重要的是机器学习的对象：</p>
+<blockquote>
+<p>任务Task，T，一个或者多个
+经验Experience，E
+性能Performance，P</p>
+</blockquote>
+<p>总结来说：就是随着任务的不断执行，经验的累计会带来计算性能的提升。</p>
+<p>###机器学习的一般流程</p>
+<blockquote>
+<ol>
+<li><em>数据收集</em></li>
+<li><em>数据清洗</em></li>
+<li><em>特征工程</em></li>
+<li><em>数据建模</em></li>
+</ol>
+</blockquote>
+<p>注意：</p>
+<ol>
+<li>数据直接影响学习的结果。</li>
+<li>对特征的选取不同，所得到的结果也会不同。</li>
+<li>对于模型的选择，也有不同的方案，同样的数据用不同的模型所得到的结果不同。</li>
+</ol>
+<p>##机器学习的数学基础
+###高等数学</p>
 <ul>
-<li>
-<p>1.自我介绍.</p>
-</li>
-<li>
-<p>2.介绍一下机器学习模型都有哪些。</p>
-</li>
-<li>
-<p>3.深度学习网络的网络特性和不同，主要说了Alexnet和ResNet的主要特征。说的时候问到是不是用layers直接写，我说最早也用conv和pooling，relu写过浅层的网络。</p>
-</li>
-<li>
-<p>4.梯度爆炸和梯度消失，梯度爆炸当时没理解清，没回答的很明白。这个解释很好：<a href="https://www.zhihu.com/question/66027838/" target="_blank" rel="noopener">梯度爆炸</a></p>
-</li>
-<li>
-<p>5.项目上对如何找特征，用了什么模型和技巧，损失函数用的什么。我说用的gbdt，xgboost和SVM，他问我gbdt和SVM哪个对特征不需要处理（gbdt）， xgboost和gbdt的区别，回答速度快。问为什么xgboost速度快，回答用了二阶导数，问xgboost可以自定义损失函数，那你比赛利用的损失函数是什么，你对你的损失函数求一下二阶导，这坑挖的，算了半天没算出来。</p>
-</li>
-<li>
-<p>6.L1、L2正则化的区别，为什么会产生稀疏性，为什么会降低特征权重。</p>
-</li>
-<li>
-<p>7.给1张5*5*3的图片，3*3*64的卷积，用到了多少参数。（应该是想问我卷积层参数共享）</p>
-</li>
-<li>
-<p>8.最后一道算法题：排序数组中给定某个重复出现数字第一次出现的下标。 剑指offer原题，算了半天用了两次二分查找，才写出来，面试官估计不咋满意。</p>
-</li>
+<li>导数</li>
 </ul>
-<p>一面结束，四十分钟左右。</p>
-<hr>
-<h3>二面</h3>
-<p>面试官应该是C++大神，想问我指针和数据流方面的题，但我都不会。于是问了三道算法题和一些小问题：</p>
+<blockquote>
+<p>简单来说，导数是曲线的斜率，是曲线变化快慢的反应
+<strong>二阶导数</strong>是斜率变化快慢的反应，表征曲线<strong>凹凸性</strong>
+根据$\lim_{x\rightarrow \infty }(1+\frac{1}{x})^{x}=e$，可以得到函数$f(x)=lnx$的导数，进一步根据换底公式/反函数求导等，得到其他初等函数的导数。
+常用函数的导数
+${C}'=0$       ${({x}<sup>n)}'=nx</sup>{n-1}$
+${sinx}'=cosx$    ${cosx}'=-sinx$
+${(a<sup>{x})}'=a</sup>{x}lna$    ${(e<sup>x)}'=e</sup>x$
+${(log_{a}x)}'=\frac{1}{x}{log_{a}e}$ ${(lnx)}'=\frac{1}{x}$
+${(u+v)}'=u'+v'$ ${(uv)}'=u'v+uv'$</p>
+</blockquote>
+<p>例子：已知$f(x)=x^x,x&gt;0$，求解其最小值</p>
+<blockquote>
+<p>$t=x^x$
+$lnt=xlnx$
+两边对x求导:$\frac{1}{t}t'=lnx+1$
+令$t'=0$:$lnx+1=0$
+$x=(e)^{-1}$
+$t=e^{-\frac{1}{e}}$</p>
+</blockquote>
+<p>例子：推导$N\rightarrow \infty \Rightarrow lnN!\rightarrow N(lnN-1)$</p>
+<blockquote>
+<p>$lnN!=\sum_{i=1}^{N}lni\approx \int_{1}^{N}lnxdx$
+$=xlnx|<em>{1}<sup>{N}-\int_{1}</sup>{N}xdxlnx$
+$=NlnN-\int</em>{1}^{N}x\cdot \frac{1}{x}dx$
+$=NlnN-x|_{1}^{N}$
+$=NlnN-N+1$
+$\rightarrow NlnN-N$</p>
+</blockquote>
 <ul>
-<li>
-<p>1.一个n*m的矩阵，所有数无顺序，求第k大的数。想用快排，面试官说可以，但是不是最好的。最后没想出来，结束后和同学讨论应该是堆排序加上mapreduce。</p>
-</li>
-<li>
-<p>2.反转链表。剑指offer原题。</p>
-</li>
-<li>
-<p>3.中间问了一下函数的传参问题。</p>
-</li>
-<li>
-<p>4.问了堆排序。</p>
-</li>
-<li>
-<p>5.旋转数组找k。leetcode33题。</p>
-</li>
+<li>Tayor公式</li>
 </ul>
-<p>二面结束，三十分钟左右，写算法特别慢，估计挂了。</p>
-<hr>
+<blockquote>
+<p>$f(x)=f(x_{0})+f'(x_{0})(x-x_{0})+\frac{f''(x_{0})}{2!}(x-x_{0})+...+\frac{f<sup>{(n)}(x_{0})}{n!}(x-x_{0})</sup>{n}+R_{n}(x)$
+令x=0，得到：
+$f(x)=f(0)+f'(0)x+\frac{f''(0)}{2!}x<sup>{2}+...+\frac{f</sup>{n}(0)}{n!}x<sup>{n}+o(x</sup>{n})$</p>
+</blockquote>
+<p>Taylor公式的应用：
+数值计算：初等函数值计算（在原点上展开）</p>
+<blockquote>
+<p>$sinx=x-\frac{x<sup>{3}}{3!}+\frac{x</sup>{5}}{5!}-\frac{x<sup>{7}}{7!}+\frac{x</sup>{9}}{9!}+...+(-1)<sup>{m-1}\frac{x</sup>{2m-1}}{(2m-1)!}+R_{2m}$
+$e<sup>{x}=1+x+\frac{x</sup>{2}}{2!}+\frac{x<sup>{3}}{3!}+\frac{x</sup>{4}}{4!}+...+\frac{x^{n}}{n!}+R_{n}$</p>
+</blockquote>
+<p>在实践中，往往需要做一定程度上的变换。</p>
+<p>例子：计算$e^{x}$</p>
+<blockquote>
+<p>$x=k\cdot ln2+r$,$\left | r \right |\leqslant 0.5\cdot ln2$
+$e<sup>{x}=e</sup>{k\cdot ln2+r}$
+  $=e^{k\cdot ln2}\cdot e^{r}$
+  $=2^{k}\cdot e^{r}$</p>
+</blockquote>
+<ul>
+<li>方向导数</li>
+</ul>
+<blockquote>
+<p>如果函数$z=f(x,y)$在点$P(x,y)$是可微分的，那么，函数在该点沿任意方向$L$的方向导数都存在，且有：
+$\frac{\partial f}{\partial l}=\frac{\partial f}{\partial x}cos\varphi +\frac{\partial f}{\partial y}sin\varphi $
+其中，$\varphi$为x轴到方向L的转角。</p>
+</blockquote>
+<ul>
+<li>梯度</li>
+</ul>
+<blockquote>
+<p>设函数$z=f(x,y)$在平面区域D内具有一阶连续偏导数，则对于每一个点$P(x,y)\in D$,向量
+$$(\frac{\partial f}{\partial x},\frac{\partial f}{\partial y})$$
+为函数$z=f(x,y)$在点$P(x,y)$的梯度，记作$gradf(x)$
+梯度的方向是函数在该点变化最快的方向</p>
+</blockquote>
+<p>###概率论</p>
+<blockquote>
+<ul>
+<li>概率表达式：$P(x)\in [0,1]$
+若x为离散，则$P(x=x_{0})$表示$x_{0}$发生的<em>概率</em>
+若x为连续变量，则$P(x=x_{0})$表示$x_{0}$发生的<em>概率密度</em></li>
+<li>累计分布函数：$\Phi (x)=P(x\leq x_{0})$
+$\Phi (x)$一定为<em>单调递增函数</em>。
+$min(\Phi (x))=0$,$max(\Phi (x))=1$</li>
+</ul>
+</blockquote>
+<p>思考：将值域为[0,1]的单增函数$y=F(x)$看成<strong>X事件的累积概率函数</strong>，若$y=F(x)$可导，则$f(x)=F'(x)$为概率密度函数</p>
+<blockquote>
+<ul>
+<li>概率公式
+条件概率：$P(A|B)=\frac{P(AB)}{P(B)}$
+全概率公式：$P(A)=\sum_{i}P(A|B_{i})P(B_{i})$
+贝叶斯(Bayes)公式：$P(B_{i}|A)=\frac{P(A|B_{i})P(B_{i})}{\sum_{j}P(A|B_{i})P(B_{j})}$</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>贝叶斯公式：
+<img src="http://osibywvsl.bkt.clouddn.com/bayes%E5%85%AC%E5%BC%8F.png" alt=""></li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>分布
+<img src="http://osibywvsl.bkt.clouddn.com/%E5%90%84%E7%A7%8D%E5%88%86%E5%B8%83.png" alt=""></li>
+</ul>
+</blockquote>
 
                 <hr>
                 
@@ -243,15 +312,10 @@
                 <ul class="pager">
                     
                     <li class="previous">
-                        <a href="/瓜子二手车--数据挖掘算法岗位面经/" data-toggle="tooltip" data-placement="top"
-                           title="瓜子二手车--数据分析岗位面经">&larr; Previous Post</a>
+                        <a href="/2018/01/31/排序算法/" data-toggle="tooltip" data-placement="top"
+                           title="各种排序算法的性质">&larr; Previous Post</a>
                     </li>
                     
-                    
-                    <li class="next">
-                        <a href="/排序算法/" data-toggle="tooltip" data-placement="top"
-                           title="各种排序算法的性质">Next Post &rarr;</a>
-                    </li>
                     
                 </ul>
 
@@ -263,7 +327,7 @@
                 <!--加入新的评论系统-->
                 
                 <!-- 来必力City版安装代码 -->
-                <div id="lv-container" data-id="city" data-uid="MTAyMC8zNTQ5OC8xMjAzNA==">
+                <div id="lv-container" data-id="city" data-uid="">
                     <script type="text/javascript">
                         (function(d, s) {
                             var j, e = d.getElementsByTagName(s)[0];
@@ -285,7 +349,7 @@
 
             <div class="hidden-xs col-sm-3 toc-col">
                 <div class="toc-wrap">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">一面</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">二面</span></a></li></ol>
+                    
                 </div>
             </div>
         </div>
@@ -299,6 +363,16 @@
                 sidebar-container">
 
                 <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5 class="text-center">
+                        <a href="/tags/">FEATURED TAGS</a>
+                    </h5>
+                    <div class="tags">
+                        
+                    </div>
+                </section>
                 
 
                 <!-- Friends Blog -->
@@ -375,7 +449,7 @@
 <script>
     // only load tagcloud.js in tag.html
     if($('#tag_cloud').length !== 0){
-        async("http://yoursite.com/js/jquery.tagcloud.js",function(){
+        async("http://haojen.github.io/js/jquery.tagcloud.js",function(){
             $.fn.tagcloud.defaults = {
                 //size: {start: 1, end: 1, unit: 'em'},
                 color: {start: '#bbbbee', end: '#0085a1'},
@@ -413,7 +487,7 @@
 <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 <!--wechat title img-->
-<img class="wechat-title-img" src="">
+<img class="wechat-title-img" src="https://github.com/Buevara/blog_img/raw/master/guevara.jpeg">
 </body>
 
 </html>
