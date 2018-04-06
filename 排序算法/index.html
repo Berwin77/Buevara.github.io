@@ -32,10 +32,6 @@
 
     <!-- Pygments Github CSS -->
     <link rel="stylesheet" href="/css/syntax.css">
-    
-    
-   <script src="https://leancloud.cn/scripts/lib/av-0.4.6.min.js"></script>
-  <script>AV.initialize(BoQlCldPWJ1hEtFkzsc5wy63-gzGzoHsz, JACfXJoBEkFFlzSfRjpwHE7o);</script>
 </head>
 
 <style>
@@ -270,9 +266,6 @@
 <p>假设排序表为L[1...n]，第i趟排序即从L[1...n]中选择关键字最小的元素与L[i]进行交换，每一趟排序都可以确定一个元素的最终位置，经过n-1趟排序就可以使整个排序表有序。
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">SelectSort</span><span class="params">(ElemType A[], <span class="keyword">int</span> n)</span></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;n<span class="number">-1</span>;i++)&#123;</span><br><span class="line">        min = i;</span><br><span class="line">        <span class="keyword">for</span>(j=i+<span class="number">1</span>;j&lt;n;j++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(A[j] &lt; A[min])</span><br><span class="line">                min = j;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(min!=i)</span><br><span class="line">            Swap(A[i], A[min]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
-                
-                
-                
                 <hr>
                 
 
@@ -299,7 +292,7 @@
                 <!--加入新的评论系统-->
                 
                 <!-- 来必力City版安装代码 -->
-                <div id="lv-container" data-id="city" data-uid="MTAyMC8zNTQ5OC8xMjAzNA==">
+                <div id="lv-container" data-id="city" data-uid="">
                     <script type="text/javascript">
                         (function(d, s) {
                             var j, e = d.getElementsByTagName(s)[0];
@@ -348,7 +341,8 @@
 
 
 
-
+<!-- 动态背景 -->
+<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
 
 
 <!-- Footer -->
@@ -375,9 +369,9 @@
                 <p class="copyright text-muted">
                     Copyright &copy; Buevara 2016
                     <br>
-                    <span id="busuanzi_container_site_pv" style="font-size: 12px;">本站访问总次数：<span id="busuanzi_value_site_pv"></span> Times</span>
+                    <span id="busuanzi_container_site_pv" style="font-size: 12px;">全站总访问量: <span id="busuanzi_value_site_pv"></span> Times</span>
                     <br>
-                    <!--Theme by <a href="https://haojen.github.io/">Haojen Ma</a>//new Date().getFullYear()-->
+                    <!-- Theme by <a href="https://haojen.github.io/">Haojen Ma</a>-->
                 </p>
 
             </div>
