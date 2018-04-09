@@ -18,11 +18,11 @@
     <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
     <title>
         
-        瓜子二手车--数据分析岗位面经｜Buevara&#39;s blog
+        机器学习--L1正则化项和L2正则化项理解｜Buevara&#39;s blog
         
     </title>
 
-    <link rel="canonical" href="http://Buevara.github.io/2018/04/05/瓜子二手车--数据挖掘算法岗位面经/">
+    <link rel="canonical" href="http://Buevara.github.io/2018/04/01/L1正则化项和L2正则化项的理解/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -145,12 +145,12 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
                 <div class="post-heading">
-                    <h1>瓜子二手车--数据分析岗位面经</h1>
+                    <h1>机器学习--L1正则化项和L2正则化项理解</h1>
                     
                     <span class="meta">
                          作者 Buevara
                         <span>
-                          日期 2018-04-05
+                          日期 2018-04-01
                          </span>
                          <span>
                          本文阅读量 <span id="busuanzi_value_page_pv">
@@ -159,14 +159,11 @@
                     
                     <div class="tags text-center">
                         
-                        <a class="tag" href="/tags/#面经"
-                           title="面经">面经</a>
+                        <a class="tag" href="/tags/#机器学习"
+                           title="机器学习">机器学习</a>
                         
-                        <a class="tag" href="/tags/#瓜子"
-                           title="瓜子">瓜子</a>
-                        
-                        <a class="tag" href="/tags/#数据分析"
-                           title="数据分析">数据分析</a>
+                        <a class="tag" href="/tags/#正则化"
+                           title="正则化">正则化</a>
                         
                     </div>
                 </div>
@@ -175,7 +172,7 @@
     </div>
     <div class="post-title-haojen">
         <span>
-            瓜子二手车--数据分析岗位面经
+            机器学习--L1正则化项和L2正则化项理解
         </span>
     </div>
 </header>
@@ -186,73 +183,65 @@
         <div class="row">
             <!-- Post Container -->
             <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
-                <hr>
-<p>面试约的上午九点半，去了直接面试，估计去的太早了。</p>
+                <h2>L1正则化项和L2正则化项的理解</h2>
 <hr>
-<h3>一面</h3>
-<ul>
-<li>
-<p>1.自我介绍.</p>
-</li>
-<li>
-<p>2.介绍一下机器学习模型都有哪些，判别模型和生成模型区别，具体有哪些。</p>
-</li>
-<li>
-<p>3.推导logistic的损失函数。</p>
-</li>
-<li>
-<p>4.什么是过拟合，过拟合如何解决。</p>
-</li>
-<li>
-<p>5.什么是gbdt，gbdt如何确定第一棵树，没答出来，她换了个问法，说给你两个特征x，x1是连续的，x2是非连续的，和对应的label，具体的构建gbdt的方法。</p>
-</li>
-<li>
-<p>6.描述kmeans算法，难度加深，给定一个每个点和其他点的距离而不是坐标，该如何聚类。</p>
-</li>
-<li>
-<p>7.最后一道算法题：不用内置函数求sqrt，给定x和 $\Sigma$, 其中$ \Sigma $是误差项。应该用二分查找，但是最后没写出来。</p>
-</li>
-</ul>
-<p>一面结束，三十分钟左右。</p>
+<p>概念：</p>
+<blockquote>
+<p>L1正则化是指权值向量w中各个元素的绝对值之和，通常表示为$ ||W||_{1} $</p>
+</blockquote>
+<blockquote>
+<p>L2正则化是指权值向量w中各个元素的平方和然后再求平方根（可以看到Ridge回归的L2正则化项有平方符号），通常表示为$ ||W||_{2} $</p>
+</blockquote>
+<p>先抛出个结论：</p>
+<blockquote>
+<p>L1正则化可以产生稀疏权值矩阵，即产生一个稀疏模型，可以用于特征选择,L1范数.
+L2范数是指向量各元素的平方和然后求平方根。我们让L2范数的正则项$ ||W||_{2} $最小，可以使得W的每个元素都很小，都接近于0，但与L1范数不同，它不会让它等于0，而是接近于0，大比起1范数，更常用L2范数。
+L2正则化可以防止模型过拟合（overfitting）；一定程度上，L1也可以防止过拟合</p>
+</blockquote>
 <hr>
-<h3>二面</h3>
-<ul>
-<li>
-<p>1.自我介绍。</p>
-</li>
-<li>
-<p>2.什么是极大似然估计，如何推导。</p>
-</li>
-<li>
-<p>3.什么是最大后验概率，如何推导。</p>
-</li>
-<li>
-<p>4.描述一下朴素贝叶斯。</p>
-</li>
-<li>
-<p>5.算法题：旋转数组中找到x。leetcode33题</p>
-</li>
-<li>
-<p>6.1求概率：得分问题，赢一局得一分，输一局，不扣分，赢和输概率为p和q，n局得到m分的概率是。</p>
-</li>
-<li>
-<p>6.2前面的问题难度加大，输一局扣一分，求n局得到m分的概率是。</p>
-</li>
-<li>
-<p>6.3难度再提升，扣为0分不降分，n局得到m分的概率是。当时没做出来（应该用动态规划）</p>
-</li>
-<li>
-<p>7.1用一枚硬币（1/2的概率）求出一个1/3的概率。</p>
-</li>
-<li>
-<p>7.2用一枚硬币（1/2的概率）求出一个1/3的概率。</p>
-</li>
-<li>
-<p>7.3用不均匀一枚硬币（概率不为1/2）求出一个1/3的概率。</p>
-</li>
-</ul>
-<p>二面面试官问我有什么要问的，我问了一下他所在的部门是做什么的，都有什么方向，他说在做分类推荐。二面结束，共四十分钟左右，面试官很和善，但是他出的问题都不是我自己独立解答的，80%都需要他的一些指引，认识到了自己的不足，继续努力。</p>
+<h3>L1正则化</h3>
+<p>为什么L1正则化可以产生稀疏模型（L1是怎么让系数等于零的），以及为什么L2正则化可以防止过拟合？
+假设有如下带L1正则化的损失函数：
+<img src="https://github.com/Buevara/blog_img/raw/master/4.9/MLE4.9-18.png" alt="4.9-18"></p>
+<p>其中$ J0 $是原始的损失函数，加号后面的一项是$ L1 $正则化项，$ α $是正则化系数。注意到$ L1 $正则化是权值的绝对值之和，$J$是带有绝对值符号的函数，因此$J$是不完全可微的。机器学习的任务就是要通过一些方法（比如梯度下降）求出损失函数的最小值。当我们在原始损失函数$J0$后添加$L1$正则化项时，相当于对$J0$做了一个约束。令$L=α∑w|w|$，则$J=J0+L$，此时我们的任务变成在$L$约束下求出$J0$取最小值的解。考虑二维的情况，即只有两个权值$w1$和$w2$，此时$L=|w1|+|w2|$对于梯度下降法，求解$J0$的过程可以画出等值线，同时$L1$正则化的函数$L$也可以在$w1w2$的二维平面上画出来。如下图
+<img src="https://github.com/Buevara/blog_img/raw/master/4.9/MLE4.9-19.png" alt="4.9-19"></p>
+<p>图中等值线是$J0$的等值线，黑色方形是$L$函数的图形。在图中，当$J0$等值线与$L$图形首次相交的地方就是最优解。上图中$J0$与$L$在$L$的一个顶点处相交，这个顶点就是最优解。注意到这个顶点的值是$(w1,w2)=(0,w)$。可以直观想象，因为$L$函数有很多『突出的角』（二维情况下四个，多维情况下更多），$J0$与这些角接触的机率会远大于与$L$其它部位接触的机率，而在这些角上，会有很多权值等于$0$，这就是为什么$L1$正则化可以产生稀疏模型，进而可以用于特征选择。</p>
+<p>而正则化前面的系数$α$，可以控制L图形的大小。$α$越小，$L$的图形越大（上图中的黑色方框）；$α$越大，$L$的图形就越小，可以小到黑色方框只超出原点范围一点点，这是最优点的值$(w1,w2)=(0,w)$中的$w$可以取到很小的值。</p>
 <hr>
+<h3>L2正则化</h3>
+<p>假设有如下带L2正则化的损失函数：
+<img src="https://github.com/Buevara/blog_img/raw/master/4.9/MLE4.9-20.png" alt="4.9-20">
+同样可以画出他们在二维平面上的图形，如下：
+<img src="https://github.com/Buevara/blog_img/raw/master/4.9/MLE4.9-21.png" alt="4.9-21">
+二维平面下L2正则化的函数图形是个圆，与方形相比，被磨去了棱角。因此J0与L相交时使得w1或w2等于零的机率小了许多，这就是为什么L2正则化不具有稀疏性的原因。</p>
+<hr>
+<h3>L2正则化和过拟合</h3>
+<p>拟合过程中通常都倾向于让权值尽可能小，最后构造一个所有参数都比较小的模型。因为一般认为参数值小的模型比较简单，能适应不同的数据集，也在一定程度上避免了过拟合现象。可以设想一下对于一个线性回归方程，若参数很大，那么只要数据偏移一点点，就会对结果造成很大的影响；但如果参数足够小，数据偏移得多一点也不会对结果造成什么影响，专业一点的说法是『抗扰动能力强』。</p>
+<blockquote>
+<p>那为什么L2正则化可以获得值很小的参数？</p>
+</blockquote>
+<p>以线性回归中的梯度下降法为例。假设要求的参数为$θ$，$hθ(x)$是我们的假设函数，那么线性回归的代价函数如下：
+以线性回归中的梯度下降法为例。假设要求的参数为$θ，hθ(x)$是我们的假设函数，那么线性回归的代价函数如下：
+<img src="https://github.com/Buevara/blog_img/raw/master/4.9/MLE4.9-22.png" alt="4.9-22">
+那么在梯度下降法中，最终用于迭代计算参数θ的迭代式为：
+<img src="https://github.com/Buevara/blog_img/raw/master/4.9/MLE4.9-23.png" alt="4.9-23">
+<img src="https://github.com/Buevara/blog_img/raw/master/4.9/MLE4.9-24.png" alt="4.9-24">
+其中$α$是learning rate. 上式是没有添加L2正则化项的迭代公式，如果在原始代价函数之后添加L2正则化，则迭代公式会变成下面的样子：
+<img src="https://github.com/Buevara/blog_img/raw/master/4.9/MLE4.9-25.png" alt="4.9-25">
+其中$λ$就是正则化参数。从上式可以看到，与未添加$L2$正则化的迭代公式相比，每一次迭代，$θj$都要先乘以一个小于1的因子，从而使得$θj$不断减小，因此总得来看，$θ$是不断减小的。
+最开始也提到$L1$正则化一定程度上也可以防止过拟合。之前做了解释，当$L1$的正则化系数很小时，得到的最优解会很小，可以达到和$L2$正则化类似的效果。</p>
+<hr>
+<h3>正则化参数的选择</h3>
+<blockquote>
+<p>通常越大的$λ$可以让代价函数在参数为$0$时取到最小值。</p>
+</blockquote>
+<p><img src="https://github.com/Buevara/blog_img/raw/master/4.9/MLE4.9-26.png" alt="4.9-26"></p>
+<p>分别取$λ=0.5$和$λ=2$，可以看到越大的$λ$越容易使$F(x)$在$x=0$时取到最小值。</p>
+<blockquote>
+<p>$λ$越大，$θj$衰减得越快。另一个理解可以参考上图，$λ$越大，$L2$圆的半径越小，最后求得代价函数最值时各参数也会变得很小。</p>
+</blockquote>
+<hr>
+<p>文章转自 <a href="https://blog.csdn.net/jinping_shi/article/details/52433975" target="_blank" rel="noopener">阿拉丁吃米粉的博客</a></p>
 
                 <hr>
                 
@@ -260,14 +249,14 @@
                 <ul class="pager">
                     
                     <li class="previous">
-                        <a href="/2018/04/09/最大似然估计（MLE）和最大后验概率（MAP）/" data-toggle="tooltip" data-placement="top"
-                           title="机器学习--最大似然估计（MLE）和最大后验概率（MAP）">&larr; Previous Post</a>
+                        <a href="/2018/04/05/瓜子二手车--数据挖掘算法岗位面经/" data-toggle="tooltip" data-placement="top"
+                           title="瓜子二手车--数据分析岗位面经">&larr; Previous Post</a>
                     </li>
                     
                     
                     <li class="next">
-                        <a href="/2018/04/01/L1正则化项和L2正则化项的理解/" data-toggle="tooltip" data-placement="top"
-                           title="机器学习--L1正则化项和L2正则化项理解">Next Post &rarr;</a>
+                        <a href="/2018/03/31/小米机器学习岗位面经/" data-toggle="tooltip" data-placement="top"
+                           title="小米--机器学习岗位面经">Next Post &rarr;</a>
                     </li>
                     
                 </ul>
@@ -302,7 +291,7 @@
 
             <div class="hidden-xs col-sm-3 toc-col">
                 <div class="toc-wrap">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">一面</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">二面</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-text">L1正则化项和L2正则化项的理解</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">L1正则化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">L2正则化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">L2正则化和过拟合</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">正则化参数的选择</span></a></li></ol></li></ol>
                 </div>
             </div>
         </div>
@@ -324,14 +313,11 @@
                     </h5>
                     <div class="tags">
                         
-                        <a class="tag" href="/tags/#面经"
-                           title="面经">面经</a>
+                        <a class="tag" href="/tags/#机器学习"
+                           title="机器学习">机器学习</a>
                         
-                        <a class="tag" href="/tags/#瓜子"
-                           title="瓜子">瓜子</a>
-                        
-                        <a class="tag" href="/tags/#数据分析"
-                           title="数据分析">数据分析</a>
+                        <a class="tag" href="/tags/#正则化"
+                           title="正则化">正则化</a>
                         
                     </div>
                 </section>
