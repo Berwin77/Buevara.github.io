@@ -196,7 +196,7 @@
 <blockquote>
 <p>L1正则化可以产生稀疏权值矩阵，即产生一个稀疏模型，可以用于特征选择,L1范数.
 L2范数是指向量各元素的平方和然后求平方根。我们让L2范数的正则项$ ||W||_{2} $最小，可以使得W的每个元素都很小，都接近于0，但与L1范数不同，它不会让它等于0，而是接近于0，大比起1范数，更常用L2范数。
-L2正则化可以防止模型过拟合（overfitting）；一定程度上，L1也可以防止过拟合</p>
+通过L2范数，我们可以实现了对模型空间的限制，从而在一定程度上避免了过拟合；一定程度上，L1也可以防止过拟合</p>
 </blockquote>
 <hr>
 <h3>L1正则化</h3>
@@ -240,7 +240,7 @@ L2正则化可以防止模型过拟合（overfitting）；一定程度上，L1�
 <blockquote>
 <p>$λ$越大，$θj$衰减得越快。另一个理解可以参考上图，$λ$越大，$L2$圆的半径越小，最后求得代价函数最值时各参数也会变得很小。</p>
 </blockquote>
-<hr>
+<h2>除了：L1和L2 regularization外，正则化常用的方法还有：数据集扩增、dropout</h2>
 <p>文章转自 <a href="https://blog.csdn.net/jinping_shi/article/details/52433975" target="_blank" rel="noopener">阿拉丁吃米粉的博客</a></p>
 
                 <hr>
@@ -291,7 +291,7 @@ L2正则化可以防止模型过拟合（overfitting）；一定程度上，L1�
 
             <div class="hidden-xs col-sm-3 toc-col">
                 <div class="toc-wrap">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-text">L1正则化项和L2正则化项的理解</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">L1正则化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">L2正则化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">L2正则化和过拟合</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">正则化参数的选择</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-text">L1正则化项和L2正则化项的理解</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">L1正则化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">L2正则化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">L2正则化和过拟合</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">正则化参数的选择</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-text">除了：L1和L2 regularization外，正则化常用的方法还有：数据集扩增、dropout</span></a></li></ol>
                 </div>
             </div>
         </div>
