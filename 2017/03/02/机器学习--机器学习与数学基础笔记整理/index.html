@@ -18,11 +18,11 @@
     <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
     <title>
         
-        深度学习--keras中image.ImageDataGenerator.flow_from_directory()方法｜Buevara&#39;s blog
+        机器学习--机器学习与数学基础笔记整理｜Buevara&#39;s blog
         
     </title>
 
-    <link rel="canonical" href="http://Buevara.github.io/2017/07/31/深度学习--keras中image.ImageDataGenerator.flow_from_directory()方法/">
+    <link rel="canonical" href="http://Buevara.github.io/2017/03/02/机器学习--机器学习与数学基础笔记整理/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -145,12 +145,12 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
                 <div class="post-heading">
-                    <h1>深度学习--keras中image.ImageDataGenerator.flow_from_directory()方法</h1>
+                    <h1>机器学习--机器学习与数学基础笔记整理</h1>
                     
                     <span class="meta">
                          作者 Buevara
                         <span>
-                          日期 2017-07-31
+                          日期 2017-03-02
                          </span>
                          <span>
                          本文阅读量 <span id="busuanzi_value_page_pv">
@@ -159,11 +159,8 @@
                     
                     <div class="tags text-center">
                         
-                        <a class="tag" href="/tags/#深度学习"
-                           title="深度学习">深度学习</a>
-                        
-                        <a class="tag" href="/tags/#keras"
-                           title="keras">keras</a>
+                        <a class="tag" href="/tags/#机器学习"
+                           title="机器学习">机器学习</a>
                         
                     </div>
                 </div>
@@ -172,7 +169,7 @@
     </div>
     <div class="post-title-haojen">
         <span>
-            深度学习--keras中image.ImageDataGenerator.flow_from_directory()方法
+            机器学习--机器学习与数学基础笔记整理
         </span>
     </div>
 </header>
@@ -183,34 +180,138 @@
         <div class="row">
             <!-- Post Container -->
             <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
-                <blockquote>
-<p>作用：keras中image.ImageDataGenerator.flow_from_directory()方法可以实现从文件夹中提取图片和进行简单归一化处理。</p>
+                <h2>机器学习</h2>
+<h3>什么是机器学习？</h3>
+<blockquote>
+<p>对于某给定的任务T，在合理的性能度量方案P的前提下，某计算机程序可以自主学习任务T的经验E；随着提供合适、优质、大量的静安E，改程序对于任务T的性能逐步提交。</p>
+</blockquote>
+<h3>这个任务最重要的是机器学习的对象：</h3>
+<blockquote>
+<p>任务Task，T，一个或者多个
+经验Experience，E
+性能Performance，P</p>
+</blockquote>
+<p>总结来说：就是随着任务的不断执行，经验的累计会带来计算性能的提升。</p>
+<h3>机器学习的一般流程</h3>
+<blockquote>
+<ol>
+<li><em>数据收集</em></li>
+<li><em>数据清洗</em></li>
+<li><em>特征工程</em></li>
+<li><em>数据建模</em></li>
+</ol>
+</blockquote>
+<p>注意：</p>
+<ol>
+<li>数据直接影响学习的结果。</li>
+<li>对特征的选取不同，所得到的结果也会不同。</li>
+<li>对于模型的选择，也有不同的方案，同样的数据用不同的模型所得到的结果不同。</li>
+</ol>
+<h2>机器学习的数学基础</h2>
+<h3>高等数学</h3>
+<ul>
+<li>导数</li>
+</ul>
+<blockquote>
+<p>简单来说，导数是曲线的斜率，是曲线变化快慢的反应
+<strong>二阶导数</strong>是斜率变化快慢的反应，表征曲线<strong>凹凸性</strong>
+根据$\lim_{x\rightarrow \infty }(1+\frac{1}{x})^{x}=e$，可以得到函数$ f(x)=lnx $的导数，进一步根据换底公式/反函数求导等，得到其他初等函数的导数。
+常用函数的导数
+$ {C}'=0$       ${({x}<sup>n)}'=nx</sup>{n-1} $
+$ {sinx}'=cosx$    ${cosx}'=-sinx $
+$ {(a<sup>{x})}'=a</sup>{x}lna$    ${(e<sup>x)}'=e</sup>x $
+$ {(log_{a}x)}'=\frac{1}{x}{log_{a}e}$ ${(lnx)}'=\frac{1}{x} $
+$ {(u+v)}'=u'+v'$ ${(uv)}'=u'v+uv' $</p>
+</blockquote>
+<p>例子：已知$ f(x)=x^x,x&gt;0 $，求解其最小值</p>
+<blockquote>
+<p>$ t=x^x $
+$ lnt=xlnx $
+两边对x求导:$ \frac{1}{t}t'=lnx+1 $
+令$ t'=0$:$lnx+1=0 $
+$ x=(e)^{-1} $
+$ t=e^{-\frac{1}{e}} $</p>
+</blockquote>
+<p>例子：推导$ N\rightarrow \infty \Rightarrow lnN!\rightarrow N(lnN-1) $</p>
+<blockquote>
+<p>$ lnN!=\sum_{i=1}^{N}lni\approx \int_{1}^{N}lnxdx $
+$ =xlnx|<em>{1}<sup>{N}-\int_{1}</sup>{N}xdxlnx $
+$ =NlnN-\int</em>{1}^{N}x\cdot \frac{1}{x}dx $
+$ =NlnN-x|_{1}^{N} $
+$ =NlnN-N+1 $
+$ \rightarrow NlnN-N $</p>
+</blockquote>
+<ul>
+<li>Tayor公式</li>
+</ul>
+<blockquote>
+<p>$ f(x)=f(x_{0})+f'(x_{0})(x-x_{0})+\frac{f''(x_{0})}{2!}(x-x_{0})+...+\frac{f<sup>{(n)}(x_{0})}{n!}(x-x_{0})</sup>{n}+R_{n}(x) $
+令x=0，得到：
+$ f(x)=f(0)+f'(0)x+\frac{f''(0)}{2!}x<sup>{2}+...+\frac{f</sup>{n}(0)}{n!}x<sup>{n}+o(x</sup>{n}) $</p>
+</blockquote>
+<p>Taylor公式的应用：
+数值计算：初等函数值计算（在原点上展开）</p>
+<blockquote>
+<p>$$ sinx=x-\frac{x<sup>{3}}{3!}+\frac{x</sup>{5}}{5!}-\frac{x<sup>{7}}{7!}+\frac{x</sup>{9}}{9!}+...+(-1)<sup>{m-1}\frac{x</sup>{2m-1}}{(2m-1)!}+R_{2m} $$
+$$ e<sup>{x}=1+x+\frac{x</sup>{2}}{2!}+\frac{x<sup>{3}}{3!}+\frac{x</sup>{4}}{4!}+...+\frac{x^{n}}{n!}+R_{n} $$</p>
+</blockquote>
+<p>在实践中，往往需要做一定程度上的变换。</p>
+<p>例子：计算$ e^{x} $</p>
+<blockquote>
+<p>$ x=k\cdot ln2+r $ , $ \left | r \right |\leqslant 0.5\cdot ln2 $
+$$
+e<sup>{x}=e</sup>{k\cdot ln2+r}=e^{k\cdot ln2}\cdot e^{r} =2^{k}\cdot e^{r}
+$$</p>
+</blockquote>
+<ul>
+<li>方向导数</li>
+</ul>
+<blockquote>
+<p>如果函数$ z=f(x,y) $在点$ P(x,y) $是可微分的，那么，函数在该点沿任意方向$ L $的方向导数都存在，且有：
+$ \frac{\partial f}{\partial l}=\frac{\partial f}{\partial x}cos\varphi +\frac{\partial f}{\partial y}sin\varphi $
+其中，$ \varphi $为x轴到方向L的转角。</p>
+</blockquote>
+<ul>
+<li>梯度</li>
+</ul>
+<blockquote>
+<p>设函数$ z=f(x,y) $在平面区域D内具有一阶连续偏导数，则对于每一个点$P(x,y)\in D$,向量
+$$ (\frac{\partial f}{\partial x},\frac{\partial f}{\partial y}) $$
+为函数$ z=f(x,y) $在点$P(x,y)$的梯度，记作$ gradf(x) $
+梯度的方向是函数在该点变化最快的方向</p>
+</blockquote>
+<p>###概率论</p>
+<blockquote>
+<ul>
+<li>概率表达式：$ P(x)\in [0,1] $
+若x为离散，则$ P(x=x_{0}) $表示$ x_{0} $发生的<em>概率</em>
+若x为连续变量，则$ P(x=x_{0}) $表示$x_{0}$发生的<em>概率密度</em></li>
+<li>累计分布函数：$ \Phi (x)=P(x\leq x_{0}) $
+$ \Phi (x) $一定为<em>单调递增函数</em>。
+$ min(\Phi (x))=0 $,$ max(\Phi (x))=1 $</li>
+</ul>
+</blockquote>
+<p>思考：将值域为[0,1]的单增函数$ y=F(x) $看成<strong>X事件的累积概率函数</strong>，若$y=F(x)$可导，则$f(x)=F'(x)$为概率密度函数</p>
+<blockquote>
+<ul>
+<li>概率公式
+条件概率：$ P(A|B)=\frac{P(AB)}{P(B)} $
+全概率公式：$ P(A)=\sum_{i}P(A|B_{i})P(B_{i}) $
+贝叶斯(Bayes)公式：$ P(B_{i}|A)=\frac{P(A|B_{i})P(B_{i})}{\sum_{j}P(A|B_{i})P(B_{j})} $</li>
+</ul>
 </blockquote>
 <blockquote>
-<p>keras中有很多封装好的API可以帮助我们实现对图片数据的读取和处理。
-比如 ： keras.preprocessing.image.ImageDataGenerator.flow_from_directory( ) 这个函数
-这个函数的参数包括：
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">flow_from_directory(self, directory,  </span><br><span class="line">                            target_size=(<span class="number">256</span>, <span class="number">256</span>), color_mode=<span class="string">'rgb'</span>,  </span><br><span class="line">                            classes=<span class="keyword">None</span>, class_mode=<span class="string">'categorical'</span>,  </span><br><span class="line">                            batch_size=<span class="number">32</span>, shuffle=<span class="keyword">True</span>, seed=<span class="keyword">None</span>,  </span><br><span class="line">                            save_to_dir=<span class="keyword">None</span>,  </span><br><span class="line">                            save_prefix=<span class="string">''</span>,  </span><br><span class="line">                            save_format=<span class="string">'jpeg'</span>,  </span><br><span class="line">                            follow_links=<span class="keyword">False</span>)</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>贝叶斯公式：
+<img src="http://osibywvsl.bkt.clouddn.com/bayes%E5%85%AC%E5%BC%8F.png" alt=""></li>
+</ul>
 </blockquote>
-<p>flow_from_directory(directory): 以文件夹路径为参数,生成经过数据提升/归一化后的数据,在一个无限循环中无限产生batch数据</p>
-<p>directory: 目标文件夹路径,对于每一个类,该文件夹都要包含一个子文件夹.子文件夹中任何JPG、PNG、BNP、PPM的图片都会被生成器使用.详情请查看此脚本
-target_size: 整数tuple,默认为(256, 256). 图像将被resize成该尺寸</p>
-<p>color_mode: 颜色模式,为”grayscale”,”rgb”之一,默认为”rgb”.代表这些图片是否会被转换为单通道或三通道的图片.</p>
-<p>classes: 可选参数,为子文件夹的列表,如[‘dogs’,’cats’]默认为None. 若未提供,则该类别列表将从directory下的子文件夹名称/结构自动推断。每一个子文件夹都会被认为是一个新的类。(类别的顺序将按照字母表顺序映射到标签值)。通过属性class_indices可获得文件夹名与类的序号的对应字典。</p>
-<p>class_mode: “categorical”, “binary”, “sparse”或None之一. 默认为”categorical. 该参数决定了返回的标签数组的形式, “categorical”会返回2D的one-hot编码标签,”binary”返回1D的二值标签.”sparse”返回1D的整数标签,如果为None则不返回任何标签, 生成器将仅仅生成batch数据, 这种情况在使用model.predict_generator()和model.evaluate_generator()等函数时会用到.</p>
-<p>batch_size: batch数据的大小,默认32</p>
-<p>shuffle: 是否打乱数据,默认为True</p>
-<p>seed: 可选参数,打乱数据和进行变换时的随机数种子</p>
-<p>save_to_dir: None或字符串，该参数能让你将提升后的图片保存起来，用以可视化
-save_prefix：字符串，保存提升后图片时使用的前缀, 仅当设置了save_to_dir时生效
-save_format：”png”或”jpeg”之一，指定保存图片的数据格式,默认”jpeg”
-flollow_links: 是否访问子文件夹中的软链接</p>
-<p>使用flow_from_directory最值得注意的是directory这个参数：</p>
-<p>directory: path to the target directory. It should contain one subdirectory per class. Any PNG, JPG, BMP, PPM or TIF images inside each of the subdirectories directory tree will be included in the generator.</p>
-<p>这是官方文档的定义，它的目录格式一定要注意是包含一个子目录下的所有图片这种格式，driectoty路径只要写到标签路径上面的那个路径即可。</p>
-<p>target_size：可是实现对图片的尺寸转换，是预处理中比较常用的方法</p>
-<p>save_to_dir: 可以设置保存处理后图片的路径。</p>
-<p>save_prefix: 可以对处理后图片设置前缀。</p>
+<blockquote>
+<ul>
+<li>分布
+<img src="http://osibywvsl.bkt.clouddn.com/%E5%90%84%E7%A7%8D%E5%88%86%E5%B8%83.png" alt=""></li>
+</ul>
+</blockquote>
 
                 <hr>
                 
@@ -218,15 +319,10 @@ flollow_links: 是否访问子文件夹中的软链接</p>
                 <ul class="pager">
                     
                     <li class="previous">
-                        <a href="/2018/01/31/算法基础--各种排序算法的性质/" data-toggle="tooltip" data-placement="top"
-                           title="算法基础--各种排序算法的性质">&larr; Previous Post</a>
-                    </li>
-                    
-                    
-                    <li class="next">
                         <a href="/2017/07/03/网络安全--日志分析：报警关联/" data-toggle="tooltip" data-placement="top"
-                           title="网络安全--日志分析：报警关联">Next Post &rarr;</a>
+                           title="网络安全--日志分析：报警关联">&larr; Previous Post</a>
                     </li>
+                    
                     
                 </ul>
 
@@ -260,7 +356,7 @@ flollow_links: 是否访问子文件夹中的软链接</p>
 
             <div class="hidden-xs col-sm-3 toc-col">
                 <div class="toc-wrap">
-                    
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-text">机器学习</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">什么是机器学习？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">这个任务最重要的是机器学习的对象：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">机器学习的一般流程</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-text">机器学习的数学基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">高等数学</span></a></li></ol></li></ol>
                 </div>
             </div>
         </div>
@@ -282,11 +378,8 @@ flollow_links: 是否访问子文件夹中的软链接</p>
                     </h5>
                     <div class="tags">
                         
-                        <a class="tag" href="/tags/#深度学习"
-                           title="深度学习">深度学习</a>
-                        
-                        <a class="tag" href="/tags/#keras"
-                           title="keras">keras</a>
+                        <a class="tag" href="/tags/#机器学习"
+                           title="机器学习">机器学习</a>
                         
                     </div>
                 </section>
