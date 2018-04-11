@@ -18,11 +18,11 @@
     <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
     <title>
         
-        网络安全--日志分析：报警关联｜Buevara&#39;s blog
+        算法基础--各种排序算法的性质｜Buevara&#39;s blog
         
     </title>
 
-    <link rel="canonical" href="http://Buevara.github.io/2017/07/03/网络安全--日志分析：报警关联/">
+    <link rel="canonical" href="http://Buevara.github.io/2018/01/31/算法基础--各种排序算法的性质/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -145,12 +145,12 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
                 <div class="post-heading">
-                    <h1>网络安全--日志分析：报警关联</h1>
+                    <h1>算法基础--各种排序算法的性质</h1>
                     
                     <span class="meta">
                          作者 Buevara
                         <span>
-                          日期 2017-07-03
+                          日期 2018-01-31
                          </span>
                          <span>
                          本文阅读量 <span id="busuanzi_value_page_pv">
@@ -159,11 +159,11 @@
                     
                     <div class="tags text-center">
                         
-                        <a class="tag" href="/tags/#网络安全"
-                           title="网络安全">网络安全</a>
+                        <a class="tag" href="/tags/#算法"
+                           title="算法">算法</a>
                         
-                        <a class="tag" href="/tags/#日志分析"
-                           title="日志分析">日志分析</a>
+                        <a class="tag" href="/tags/#排序"
+                           title="排序">排序</a>
                         
                     </div>
                 </div>
@@ -172,7 +172,7 @@
     </div>
     <div class="post-title-haojen">
         <span>
-            网络安全--日志分析：报警关联
+            算法基础--各种排序算法的性质
         </span>
     </div>
 </header>
@@ -183,59 +183,98 @@
         <div class="row">
             <!-- Post Container -->
             <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
-                <h2>网络安全--日志分析：报警关联</h2>
-<hr>
-<p>警关联分析技术对以入侵报警信息为主的安全报警进行组合、解释和分析。目标是对报警信息的求精，以对攻击规划进行识别和场景重构。
-报警关联是一个过程，分析了由一个或多个入侵检测系统产生的警报，提供了更加简洁和高层次的入侵或企图侵入的判断。尽管关联过程往往是由一个步骤提出，分析实际通过若干组成部分协作完成，各自有具体的目标。通过对来自于不同类型IDS和其他安全设备所产生的报警进行聚合与关联，可以有效地解决入侵检测分类技术由于硬件速度、算法假设和复杂网络环境的影响所很难克服的误报和漏报偏高等问题，为自动、深入的报警处理打下基础，可以实现如下目标：</p>
-<blockquote>
-<ul>
-<li>1.消除或减少重复报警。网络上不同的IDS 针对同一个安全事件都可能报警，即使是同一个 IDS也可能对某个安全事件发出多个报警。这些重复报警少则几个，多则上万。通过对报警的聚合，可以大大减少重复报警率。</li>
-</ul>
-</blockquote>
-<hr>
-<blockquote>
-<ul>
-<li>2.降低误报率。通过将一个攻击过程相关报警信息关联在一起，可以消除某些孤立和随机事件产生的误报警。另外，报警信息同被保护网络系统本身的信息相互比对就可以很好地滤除无关报警，降低误报率。</li>
-</ul>
-</blockquote>
-<hr>
-<blockquote>
-<ul>
-<li>降低漏报率。目前，没有一种单一的 IDS 能够检测到所有网络攻击。不同 IDS 之间的报警通过关联，可以相互补充，防止漏报的发生。</li>
-</ul>
-</blockquote>
-<hr>
-<blockquote>
-<ul>
-<li>3.发现高层攻击策略。将入侵过程的一系列攻击活动关联在一起，重建攻击过程，这样就可以对入侵的整体情况进行描述，有利于对入侵的理解，发现攻击策略，克服了以往IDS那种检测结果过于细化和底层缺点，为人侵的意图识别、入侵行动预测和入侵响应打下了基础。</li>
-</ul>
-</blockquote>
-<hr>
-<blockquote>
-<ul>
-<li>4.扩大了IDS的检测范围。在较大型的交换式网络统中，单个的IDS(不论是基于网络的还是基于主机的)其检测范围和处理能力是有限的，要想掌握整个网络的安全情况，就要将多个 IDS和安全设备布置在网络上的不同位置，然后将来自于这些安全设备的报警进行融合处理，从而实现全网范围内的安全防御。</li>
-</ul>
-</blockquote>
-<hr>
-<p>目前已经提出的入侵报警关联分析方法，主要可以分为报警聚类方法、基于攻击规划库的报警关联方法和基于攻击行为建模的报警关联方法三大类。</p>
-<h5>报警聚类方法</h5>
-<blockquote>
-<p>1.报警聚类方法属于最初步的关联分析，通过报警属性值之间的相似性对报警进行聚类，使得同个聚类的报警集合具有某些相同的特性，然后选择一个抽象的“元报警”事件作为该聚类的代表元。此类方法不能够完全揭示出相关报警之间的因果联系，无法对报警反映的攻击场景给出清晰的解释，也无法预测攻击者的目标和进一步的攻击规划。</p>
-</blockquote>
-<h5>基于攻击规划库的报警关联方法</h5>
-<blockquote>
-<p>2.基于攻击规划库的报警关联方法在拥有一个完整的已知攻击规划库的基础上，通过一系列关联分析技术来识别报警流中包含的与攻击规划库中的攻击规划相一致的攻击场景实例。基于攻击规划库的报警关联方法是基于封闭世界假说，需要一个完整的攻击规划库作为支撑基础，但在实际环境中，由于攻击动作的多样性和攻击过程的随意性以及新的攻击工具和技术的不断出现，使得构建一个完善的攻击规划库极为困难。此外，由于存在并行的攻击场景，上述的各种方法对每个攻击场景维护中间的状态，从而导致其存储代价和计算代价都非常庞大。上述两个缺陷使得基于攻击场景库的报警关联方法难以在实际中得到广泛的有效应用。</p>
-</blockquote>
-<h5>基于攻击行为建模的报警关联方法</h5>
-<blockquote>
-<p>3.基于攻击行为建模的报警关联方法通过对攻击动作的前提条件和造成的后果进行描述，构建攻击模型，如果一个攻击动作的后果使得另一攻击动作的前提条件得到满足，则认为这两个攻击动作之间存在因果关系。基于攻击行为建模的报警关联算法就利用这些因果关系将观察到的报警进行连接，构造出整个攻击场景。基于攻击行为建模的报警关联方法不需要对所有可能的攻击规划进行描述和存储，只需要对单个攻击行为动作进行建模，准确刻画其所需的前提条件和造成的后果，因此攻击知识模型的构建和维护较为可行，另外构建的攻击知识模型存在较强的灵活性，能够对一些未知的攻击场景进行识别。</p>
-</blockquote>
-<p>现有的入侵报警关联分析技术还存在着如下一些问题：</p>
-<ul>
-<li>[ ]  首先，能够完成攻击规划识别的关联分析技术都需要有一个领域知识库的支撑，虽然目前在攻击关联知识模型方面有一些研究工作，但目前尚未有完整的、实际可行的网络攻防知识库的构建方案。攻防知识库构建的困难阻碍了关联分析技术的实际应用；</li>
-<li>[ ]  其次，现有的入侵报警关联分析技术大多仅仅根据固定的模式对报警进行关联，而未对受监控系统以及攻击者的状态进行有效跟踪；</li>
-<li>[ ]  第三，缺乏对攻击者意图的识别，无法为正确及时的响应提供支持；最后，由于在实际网络环境中很难获得攻击场景测试数据并准确地从背景网络流量中对其进行正确标识，因此对入侵报警关联分析技术的测试和验证普遍缺乏足够的攻击场景数据，这也使得目前大多数的入侵报警关联分析技术研究仅仅针对几个人工构造的攻击场景数据集，并不能够体现实用性。</li>
-</ul>
+                <table>
+<thead>
+<tr>
+<th>算法种类</th>
+<th>最好情况</th>
+<th>平均情况</th>
+<th>最坏情况</th>
+<th>空间复杂度</th>
+<th>是否稳定</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>直接插入排序</td>
+<td>O(n)</td>
+<td>O(n^2)</td>
+<td>O(n^2)</td>
+<td>O(1)</td>
+<td>是</td>
+</tr>
+<tr>
+<td>冒泡排序</td>
+<td>O(n)</td>
+<td>O(n^2)</td>
+<td>O(n^2)</td>
+<td>O(1)</td>
+<td>是</td>
+</tr>
+<tr>
+<td>简单选择排序</td>
+<td>O(n^2)</td>
+<td>O(n^2)</td>
+<td>O(n^2)</td>
+<td>O(1)</td>
+<td>否</td>
+</tr>
+<tr>
+<td>希尔排序</td>
+<td></td>
+<td></td>
+<td></td>
+<td>O(1)</td>
+<td>否</td>
+</tr>
+<tr>
+<td>快速排序</td>
+<td>O(nlogn)</td>
+<td>O(nlogn)</td>
+<td>O(n^2)</td>
+<td>O(logn)</td>
+<td>否</td>
+</tr>
+<tr>
+<td>堆排序</td>
+<td>O(nlogn)</td>
+<td>O(nlogn)</td>
+<td>O(nlogn)</td>
+<td>O(1)</td>
+<td>否</td>
+</tr>
+<tr>
+<td>2-路归并</td>
+<td>O(nlogn)</td>
+<td>O(nlogn)</td>
+<td>O(nlogn)</td>
+<td>O(n)</td>
+<td>是</td>
+</tr>
+<tr>
+<td>基数排序</td>
+<td>O(d(n+r))</td>
+<td>O(d(n+r))</td>
+<td>O(d(n+r))</td>
+<td>O(r)</td>
+<td>是</td>
+</tr>
+</tbody>
+</table>
+<h2>快速排序</h2>
+<p>快速排序是每趟都确定一个元素的位置，并且在它的位置左边的都比它小，在它右边的都比它大。</p>
+<p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">void QuickSort(ElemType A[], int low, int high)&#123;</span><br><span class="line">    <span class="keyword">if</span>(low &lt; high)&#123;</span><br><span class="line">        int pivotpos = Partition(A, low, high);</span><br><span class="line">        QuickSort(A, low, pivotpos<span class="number">-1</span>);</span><br><span class="line">        QuickSort(A, pivotpos+<span class="number">1</span>, high);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int Partition(ElemType A[], int low, int high)&#123;</span><br><span class="line">    ElemType pivot = A[low];</span><br><span class="line">    <span class="keyword">while</span>(low &lt; high)&#123;</span><br><span class="line">        <span class="keyword">while</span>(low&lt;high &amp;&amp; A[high] &gt; pivot) high--;</span><br><span class="line">        A[low] = A[high];</span><br><span class="line">        <span class="keyword">while</span>(low&lt;high &amp;&amp; A[low] &lt; pivot) low++;</span><br><span class="line">    &#125;</span><br><span class="line">    A[low] = pivot;</span><br><span class="line">    <span class="keyword">return</span> low;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2>堆排序</h2>
+<p>堆排序是先要构建成大顶堆，而后依次将root跟二叉树最后一个元素互换，每次互换后都要将二叉树再调整回大顶堆。</p>
+<p>下面是建立大顶堆的过程：
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">BuildMaxHeap</span><span class="params">(ElemType A[], <span class="keyword">int</span> len)</span></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(i=len/<span class="number">2</span>;i&gt;<span class="number">0</span>;i--)</span><br><span class="line">        AdjustDown(A, i, len);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">AdjustDown</span><span class="params">(ElemType A[], <span class="keyword">int</span> k, <span class="keyword">int</span> len)</span></span>&#123;</span><br><span class="line">    A[<span class="number">0</span>] = A[k];</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">2</span>*k;i&lt;=len;i*=<span class="number">2</span>)&#123;</span><br><span class="line">        <span class="keyword">if</span>(i&lt;len&amp;&amp;A[i]&lt;A[i+<span class="number">1</span>])</span><br><span class="line">            i++;</span><br><span class="line">        <span class="keyword">if</span>(A[i] &gt; A[<span class="number">0</span>])</span><br><span class="line">            A[k] = A[i];</span><br><span class="line">            k = i;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>下面是堆排序算法：
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">HeapSort</span><span class="params">(ElemType A[], <span class="keyword">int</span> len)</span></span>&#123;</span><br><span class="line">    BuildMaxHeap(A, len);</span><br><span class="line">    <span class="keyword">for</span>(i=len;i&gt;<span class="number">1</span>;i--)&#123;</span><br><span class="line">        Swap(A[i], A[<span class="number">1</span>]);</span><br><span class="line">        AdjustDown(A, i<span class="number">-1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>堆支持删除和插入操作。删除堆顶元素时先将堆顶元素与最后一个元素互换，之后进行向下调整。插入元素时，直接将元素插入到最后的位置，之后进行向上调整。下面是执行向上调整的函数：
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">AdjustUp</span><span class="params">(ElemType A[], <span class="keyword">int</span> k)</span></span>&#123;</span><br><span class="line"><span class="comment">//参数k为向上调整的结点，也就是堆中的元素个数</span></span><br><span class="line">    A[<span class="number">0</span>] = A[k];</span><br><span class="line">    <span class="keyword">int</span> i = k / <span class="number">2</span>;</span><br><span class="line">    <span class="keyword">while</span>(i&gt;<span class="number">0</span>&amp;&amp;A[i]&lt;A[<span class="number">0</span>])&#123;</span><br><span class="line">        A[k] = A[i];</span><br><span class="line">        k = i;</span><br><span class="line">        i = k/<span class="number">2</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    A[k] = A[<span class="number">0</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2>简单选择排序</h2>
+<p>假设排序表为L[1...n]，第i趟排序即从L[1...n]中选择关键字最小的元素与L[i]进行交换，每一趟排序都可以确定一个元素的最终位置，经过n-1趟排序就可以使整个排序表有序。
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">SelectSort</span><span class="params">(ElemType A[], <span class="keyword">int</span> n)</span></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;n<span class="number">-1</span>;i++)&#123;</span><br><span class="line">        min = i;</span><br><span class="line">        <span class="keyword">for</span>(j=i+<span class="number">1</span>;j&lt;n;j++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(A[j] &lt; A[min])</span><br><span class="line">                min = j;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(min!=i)</span><br><span class="line">            Swap(A[i], A[min]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
                 <hr>
                 
@@ -243,10 +282,15 @@
                 <ul class="pager">
                     
                     <li class="previous">
-                        <a href="/2017/07/03/机器学习--机器学习与数学基础笔记整理/" data-toggle="tooltip" data-placement="top"
-                           title="机器学习--机器学习与数学基础笔记整理">&larr; Previous Post</a>
+                        <a href="/2018/03/25/算法基础--回文串问题/" data-toggle="tooltip" data-placement="top"
+                           title="算法基础--回文串问题">&larr; Previous Post</a>
                     </li>
                     
+                    
+                    <li class="next">
+                        <a href="/2017/07/31/深度学习--keras中image.ImageDataGenerator.flow_from_directory()方法/" data-toggle="tooltip" data-placement="top"
+                           title="深度学习--keras中image.ImageDataGenerator.flow_from_directory()方法">Next Post &rarr;</a>
+                    </li>
                     
                 </ul>
 
@@ -280,7 +324,7 @@
 
             <div class="hidden-xs col-sm-3 toc-col">
                 <div class="toc-wrap">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-text">网络安全--日志分析：报警关联</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#undefined"><span class="toc-text">报警聚类方法</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#undefined"><span class="toc-text">基于攻击规划库的报警关联方法</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#undefined"><span class="toc-text">基于攻击行为建模的报警关联方法</span></a></li></ol></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-text">快速排序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-text">堆排序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-text">简单选择排序</span></a></li></ol>
                 </div>
             </div>
         </div>
@@ -302,11 +346,11 @@
                     </h5>
                     <div class="tags">
                         
-                        <a class="tag" href="/tags/#网络安全"
-                           title="网络安全">网络安全</a>
+                        <a class="tag" href="/tags/#算法"
+                           title="算法">算法</a>
                         
-                        <a class="tag" href="/tags/#日志分析"
-                           title="日志分析">日志分析</a>
+                        <a class="tag" href="/tags/#排序"
+                           title="排序">排序</a>
                         
                     </div>
                 </section>

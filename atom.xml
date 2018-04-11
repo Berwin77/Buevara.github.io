@@ -18,8 +18,8 @@
   
   <entry>
     <title>机器学习--最大似然估计（MLE）和最大后验概率（MAP）</title>
-    <link href="http://Buevara.github.io/2018/04/09/%E6%9C%80%E5%A4%A7%E4%BC%BC%E7%84%B6%E4%BC%B0%E8%AE%A1%EF%BC%88MLE%EF%BC%89%E5%92%8C%E6%9C%80%E5%A4%A7%E5%90%8E%E9%AA%8C%E6%A6%82%E7%8E%87%EF%BC%88MAP%EF%BC%89/"/>
-    <id>http://Buevara.github.io/2018/04/09/最大似然估计（MLE）和最大后验概率（MAP）/</id>
+    <link href="http://Buevara.github.io/2018/04/09/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0--%E6%9C%80%E5%A4%A7%E4%BC%BC%E7%84%B6%E4%BC%B0%E8%AE%A1%EF%BC%88MLE%EF%BC%89%E5%92%8C%E6%9C%80%E5%A4%A7%E5%90%8E%E9%AA%8C%E6%A6%82%E7%8E%87%EF%BC%88MAP%EF%BC%89/"/>
+    <id>http://Buevara.github.io/2018/04/09/机器学习--最大似然估计（MLE）和最大后验概率（MAP）/</id>
     <published>2018-04-09T08:12:13.000Z</published>
     <updated>2018-04-09T10:15:00.264Z</updated>
     
@@ -46,8 +46,8 @@
   
   <entry>
     <title>瓜子二手车--数据分析岗位面经</title>
-    <link href="http://Buevara.github.io/2018/04/05/%E7%93%9C%E5%AD%90%E4%BA%8C%E6%89%8B%E8%BD%A6--%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E7%AE%97%E6%B3%95%E5%B2%97%E4%BD%8D%E9%9D%A2%E7%BB%8F/"/>
-    <id>http://Buevara.github.io/2018/04/05/瓜子二手车--数据挖掘算法岗位面经/</id>
+    <link href="http://Buevara.github.io/2018/04/05/%E9%9D%A2%E7%BB%8F--%E7%93%9C%E5%AD%90%E4%BA%8C%E6%89%8B%E8%BD%A6%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%B2%97%E4%BD%8D/"/>
+    <id>http://Buevara.github.io/2018/04/05/面经--瓜子二手车数据分析岗位/</id>
     <published>2018-04-05T07:42:40.610Z</published>
     <updated>2018-04-06T08:15:05.444Z</updated>
     
@@ -84,8 +84,8 @@
   
   <entry>
     <title>机器学习--L1正则化项和L2正则化项理解</title>
-    <link href="http://Buevara.github.io/2018/04/01/L1%E6%AD%A3%E5%88%99%E5%8C%96%E9%A1%B9%E5%92%8CL2%E6%AD%A3%E5%88%99%E5%8C%96%E9%A1%B9%E7%9A%84%E7%90%86%E8%A7%A3/"/>
-    <id>http://Buevara.github.io/2018/04/01/L1正则化项和L2正则化项的理解/</id>
+    <link href="http://Buevara.github.io/2018/04/01/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0--L1%E6%AD%A3%E5%88%99%E5%8C%96%E9%A1%B9%E5%92%8CL2%E6%AD%A3%E5%88%99%E5%8C%96%E9%A1%B9%E7%90%86%E8%A7%A3/"/>
+    <id>http://Buevara.github.io/2018/04/01/机器学习--L1正则化项和L2正则化项理解/</id>
     <published>2018-04-01T04:17:56.000Z</published>
     <updated>2018-04-09T10:13:06.585Z</updated>
     
@@ -115,11 +115,11 @@
   </entry>
   
   <entry>
-    <title>小米--机器学习岗位面经</title>
-    <link href="http://Buevara.github.io/2018/03/31/%E5%B0%8F%E7%B1%B3%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%B2%97%E4%BD%8D%E9%9D%A2%E7%BB%8F/"/>
-    <id>http://Buevara.github.io/2018/03/31/小米机器学习岗位面经/</id>
+    <title>面经--小米机器学习岗位</title>
+    <link href="http://Buevara.github.io/2018/03/31/%E9%9D%A2%E7%BB%8F--%E5%B0%8F%E7%B1%B3%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%B2%97%E4%BD%8D/"/>
+    <id>http://Buevara.github.io/2018/03/31/面经--小米机器学习岗位/</id>
     <published>2018-03-31T11:40:13.000Z</published>
-    <updated>2018-04-05T15:39:35.640Z</updated>
+    <updated>2018-04-11T12:23:05.840Z</updated>
     
     <content type="html"><![CDATA[<hr><p>感谢两位校友@Marcovaldo和@KillersDeath提供的面经。面试约的下午三点，第一次面试，心里有点紧张。</p><hr><h3>一面</h3><ul><li><p>1.自我介绍.</p></li><li><p>2.介绍一下机器学习模型都有哪些。</p></li><li><p>3.深度学习网络的网络特性和不同，主要说了Alexnet和ResNet的主要特征。说的时候问到是不是用layers直接写，我说最早也用conv和pooling，relu写过浅层的网络。</p></li><li><p>4.梯度爆炸和梯度消失，梯度爆炸当时没理解清，没回答的很明白。这个解释很好：<a href="https://www.zhihu.com/question/66027838/" target="_blank" rel="noopener">梯度爆炸</a></p></li><li><p>5.项目上对如何找特征，用了什么模型和技巧，损失函数用的什么。我说用的gbdt，xgboost和SVM，他问我gbdt和SVM哪个对特征不需要处理（gbdt）， xgboost和gbdt的区别，回答速度快。问为什么xgboost速度快，回答用了二阶导数，问xgboost可以自定义损失函数，那你比赛利用的损失函数是什么，你对你的损失函数求一下二阶导，这坑挖的，算了半天没算出来。</p></li><li><p>6.L1、L2正则化的区别，为什么会产生稀疏性，为什么会降低特征权重。</p></li><li><p>7.给1张5*5*3的图片，3*3*64的卷积，用到了多少参数。（应该是想问我卷积层参数共享）</p></li><li><p>8.最后一道算法题：排序数组中给定某个重复出现数字第一次出现的下标。 剑指offer原题，算了半天用了两次二分查找，才写出来，面试官估计不咋满意。</p></li></ul><p>一面结束，四十分钟左右。</p><hr><h3>二面</h3><p>面试官应该是C++大神，想问我指针和数据流方面的题，但我都不会。于是问了三道算法题和一些小问题：</p><ul><li><p>1.一个n*m的矩阵，所有数无顺序，求第k大的数。想用快排，面试官说可以，但是不是最好的。最后没想出来，结束后和同学讨论应该是堆排序加上mapreduce。</p></li><li><p>2.反转链表。剑指offer原题。</p></li><li><p>3.中间问了一下函数的传参问题。</p></li><li><p>4.问了堆排序。</p></li><li><p>5.旋转数组找k。leetcode33题。</p></li></ul><p>二面结束，三十分钟左右，写算法特别慢，估计挂了。</p><hr>]]></content>
     
@@ -148,6 +148,40 @@
       <category term="小米" scheme="http://Buevara.github.io/tags/%E5%B0%8F%E7%B1%B3/"/>
     
       <category term="面经" scheme="http://Buevara.github.io/tags/%E9%9D%A2%E7%BB%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>机器学习--模型融合方法</title>
+    <link href="http://Buevara.github.io/2018/03/25/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0--%E6%A8%A1%E5%9E%8B%E8%9E%8D%E5%90%88%E6%96%B9%E6%B3%95/"/>
+    <id>http://Buevara.github.io/2018/03/25/机器学习--模型融合方法/</id>
+    <published>2018-03-25T00:40:35.000Z</published>
+    <updated>2018-04-11T12:17:47.696Z</updated>
+    
+    <content type="html"><![CDATA[<h3>Ensemble Learning--模型融合</h3><p>含义：通过对多个单模型融合以提升整体性能。</p><blockquote><p>1.voting2.Averaging3.Ranking4.Bagging5.Boosting6.Bagging和Boosting的区别6.Stacking7.Blending8.Stacking和Blending的区别</p></blockquote><h4>模型的融合条件</h4><ul><li>[x]  Base Model 之间的相关性要尽可能的小。这就是为什么非 Tree-based Model 往往表现不是最好但还是要将它们包括在 Ensemble 里面的原因。Ensemble 的 Diversity 越大，最终 Model 的 Bias 就越低。</li><li>[x]  Base Model 之间的性能表现不能差距太大。这其实是一个 Trade-off，在实际中很有可能表现相近的 Model 只有寥寥几个而且它们之间相关性还不低。但是实践告诉我们即使在这种情况下 Ensemble 还是能大幅提高成绩。</li></ul><hr><h4>1.voting</h4><blockquote><p>投票即为，投票多者为最终的结果。用于分类问题：多个模型投票（当然可以设置权重）。最终投票数最多的类为最终被预测的类。</p></blockquote><hr><h4>2.Averaging</h4><blockquote><p>Averaging即所有预测器的结果平均。</p></blockquote><ul><li>[ ] 回归问题，直接取平均值作为最终的预测值。（也可以使用加权平均）</li><li>[ ] 分类问题，直接将模型的预测概率做平均。（or 加权）</li></ul><p>加权平均，其公式如下：<img src="https://github.com/Buevara/blog_img/raw/master/4.11/4.11-2.png" alt="4.11-2"></p><p>其中n表示模型的个数， $Weighti$表示该模型权重，$Pi$表示模型i的预测概率值。</p><hr><h4>3.Ranking</h4><blockquote><p>Rank的思想其实和Averaging一致，但Rank是把排名做平均，对于例如一些评价指标有效，如：AUC指标。</p></blockquote><p>具体公式如下：</p><p>加权平均，其公式如下：</p><p><img src="https://github.com/Buevara/blog_img/raw/master/4.11/4.11-3.png" alt="4.11-3"></p><p>其中n表示模型的个数， $Weighti$表示该模型权重，所有权重相同表示平均融合。$Ranki$表示样本在第i个模型中的升序排名。它可以较快的利用排名融合多个模型之间的差异，而不需要加权融合概率。</p><hr><h4>4.Bagging</h4><blockquote><p>1.同一个学习算法在来自同一分布的多个不同的训练数据集上训练得到的模型偏差可能较大，即模型的方差（variance）较大，为了解决这个问题，可以综合多个模型的输出结果，对于回归问题可以取平均值，对于分类问题可以采取多数投票的方法。这就是Bagging的核心思想。2.Bagging(Bootstrap Aggregation)是常用的统计学习方法，其综合的基本学习器可以是各种弱学习器。3.使用训练数据的不同随机子集来训练每个 Base Model，最后每个 Base Model 权重相同，分类问题进行投票，回归问题平均。经典算法：随机森林</p></blockquote><p>注意： <strong>有放回抽样</strong> （可能抽到重复的样本）</p><p>Bagging是将弱分类器组装成强分类器的方法。具体步骤：A）从原始样本集中抽取训练集。每轮从原始样本集中使用Bootstraping的方法抽取n个训练样本（在训练集中，有些样本可能被多次抽取到，而有些样本可能一次都没有被抽中）。共进行k轮抽取，得到k个训练集。（k个训练集之间是相互独立的）</p><p>B）每次使用一个训练集得到一个模型，k个训练集共得到k个模型。（注：这里并没有具体的分类算法或回归方法，我们可以根据具体问题采用不同的分类或回归方法，如决策树、感知器等）</p><p>C）对分类问题：将上步得到的k个模型采用投票的方式得到分类结果；对回归问题，计算上述模型的均值作为最后的结果。（所有模型的重要性相同）</p><p>如图所示：</p><p><img src="https://github.com/Buevara/blog_img/raw/master/4.11/4.11-4.png" alt="4.11-4"></p><p>要想综合N个弱分类器（决策树）的结果，我们需要采样N个训练数据集，在实际应用中获取N个训练数据集往往不现实，BootStrap 采样提供了一种有效的解决方法。采用这样的方式解决了获取N个服从同一分布的原始数据集不现实的问题，而且在可接受程度上，可以认为Bootstrap 采样方式不影响到模型的准确性（以方差来衡量），即可以等价于使用N个不同的原始数据集。</p><blockquote><p>Bagging较单棵决策树来说，降低了<em>方差</em>，但由于将多棵决策树的结果进行了平均，这损失了模型的可解释性。</p></blockquote><hr><h4>5.boosting</h4><p>Boosting是一种迭代的方法，每一次训练会更关心上一次被分错的样本。</p><blockquote><p>核心问题：1）在每一轮如何改变训练数据的权值或概率分布？</p></blockquote><blockquote><p>通过提高那些在前一轮被弱分类器分错样例的权值，减小前一轮分对样例的权值，来使得分类器对误分的数据有较好的效果。</p></blockquote><blockquote><p>2）通过什么方式来组合弱分类器？</p></blockquote><blockquote><p>通过加法模型将弱分类器进行线性组合</p></blockquote><p>经典算法：</p><p>AdaBoost通过加权多数表决的方式，即增大错误率小的分类器的权值，同时减小错误率较大的分类器的权值。</p><p>提升树通过拟合残差的方式逐步减小残差，将每一步生成的模型叠加得到最终模型。</p><hr><h4>6.Bagging和Boosting的区别</h4><p>Bagging和Boosting的区别：</p><p>1）样本选择上：</p><p>Bagging：训练集是在原始集中有放回选取的，从原始集中选出的各轮训练集之间是独立的。</p><p>Boosting：每一轮的训练集不变，只是训练集中每个样例在分类器中的权重发生变化。而权值是根据上一轮的分类结果进行调整。</p><p>2）样例权重：</p><p>Bagging：使用均匀取样，每个样例的权重相等</p><p>Boosting：根据错误率不断调整样例的权值，错误率越大则权重越大。</p><p>3）预测函数：</p><p>Bagging：所有预测函数的权重相等。</p><p>Boosting：每个弱分类器都有相应的权重，对于分类误差小的分类器会有更大的权重。</p><p>4）并行计算：</p><p>Bagging：各个预测函数可以并行生成</p><p>Boosting：各个预测函数只能顺序生成，因为后一个模型参数需要前一轮模型的结果。</p><blockquote><p>这两种方法都是把若干个分类器整合为一个分类器的方法，只是整合的方式不一样，最终得到不一样的效果，将不同的分类算法套入到此类算法框架中一定程度上会提高了原单一分类器的分类效果，但是也增大了计算量。</p></blockquote><blockquote><p>下面是将决策树与这些算法框架进行结合所得到的新的算法：</p></blockquote><blockquote><p>1）Bagging + 决策树 = 随机森林</p></blockquote><blockquote><p>2）AdaBoost + 决策树 = 提升树</p></blockquote><blockquote><p>3）Gradient Boosting + 决策树 = GBDT</p></blockquote><hr><h4>6.Stacking</h4><p><img src="https://github.com/Buevara/blog_img/raw/master/4.11/4.11-5.jpg" alt="4.11-5">图片来自于<a href="https://zhuanlan.zhihu.com/p/26890738" target="_blank" rel="noopener">Leon的知乎专栏</a>个人认为很想深度学习模型中的xception网络，这里不同的模型相当于xception中不同尺寸的卷积，进行不同特征的提取。</p><p>我们在这里只考虑两层的stacking，多层同理。</p><p>假设第一层的用到3个模型model1，model2，model3，第二层一个模型model4。步骤：</p><ol><li>首先先将训练集分成用K fold</li><li>用model对K-1折进行训练，剩下1折进行预测，一共可以的到K个（训练数据总数n/k）个结果，我们将其按照顺序排好，第1个n/k对应K折中的1折。reshape成为一个n*1的预测结果（我们可以把他考虑成为特征向量）</li><li>针对于预测集，K折交叉验证的每一次，都要对预测集进行一次预测，一共可以得到K*（预测集总数m），我们将其取平均，得到一个1*m的预测label（也可以看做是预测集的特征向量）</li><li>对于第一层的每个模型model1、model2、model3，我们都进行步骤1、2、3的操作，我们最终得到了训练集的特征向量是3*n（3是第一层的模型1数），得到预测集的特征向量是3*m。</li><li>对于第二层，我们用第一层得到的3*n作为特征用model4进行训练，模型训练结束后对3*m进行预测，得到最终的结果。</li></ol><p>最顶层的模型一般是LR或者线性模型。</p><hr><h4>7.Blending</h4><blockquote><p>Blending与Stacking大致相同，只是Blending的主要区别在于训练集不是通过K-Fold的CV策略来获得预测值从而生成第二阶段模型的特征，而是建立一个Holdout集，例如说10%的训练数据，第二阶段的stacker模型就基于第一阶段模型对这10%训练数据的预测值进行拟合。说白了，就是把Stacking流程中的K-Fold CV 改成 HoldOut CV。</p></blockquote><p>举例：1.将数据划分成train,test，然后将train划分成不相交的两部分train_1,train_2</p><p>2.使用不同的模型对train_1训练，对train_2和test预测，生成两个1维向量，有多少模型就生成多少维向量</p><p>3.第二层使用前面模型对train_2生成的向量和label作为新的训练集，使用LR或者其他模型训练一个新的模型来预测test生成的向量</p><hr><h4>8.Stacking和Blending的区别</h4><ol><li>stacking由于加入了K-fold，更加复杂；blending不用K-fold，所以更加简单</li><li>stacking因为使用K-fold，所以训练集的数据分布和原数据集的不一样了，会引入估计偏差；而blending不会。</li><li>blending用的数据会过少，多层之后，有可能会过拟合；而stacking不会出现。</li></ol><p>两种方法都可以用下图来表示：<img src="https://github.com/Buevara/blog_img/raw/master/4.11/4.11-6.png" alt="4.11-6"></p><hr><p>参考相关博客和资料：</p><blockquote></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3&gt;Ensemble Learning--模型融合&lt;/h3&gt;
+&lt;p&gt;含义：
+通过对多个单模型融合以提升整体性能。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;1.voting
+2.Averaging
+3.Ranking
+4.Bagging
+5.Boosting
+6.Bagging
+      
+    
+    </summary>
+    
+    
+      <category term="机器学习" scheme="http://Buevara.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="模型融合" scheme="http://Buevara.github.io/tags/%E6%A8%A1%E5%9E%8B%E8%9E%8D%E5%90%88/"/>
     
   </entry>
   
@@ -186,11 +220,11 @@
   </entry>
   
   <entry>
-    <title>算法基础1:各种排序算法的性质</title>
-    <link href="http://Buevara.github.io/2018/01/31/%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%801%EF%BC%9A%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/"/>
-    <id>http://Buevara.github.io/2018/01/31/算法基础1：排序算法/</id>
+    <title>算法基础--各种排序算法的性质</title>
+    <link href="http://Buevara.github.io/2018/01/31/%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80--%E5%90%84%E7%A7%8D%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E7%9A%84%E6%80%A7%E8%B4%A8/"/>
+    <id>http://Buevara.github.io/2018/01/31/算法基础--各种排序算法的性质/</id>
     <published>2018-01-31T02:12:56.000Z</published>
-    <updated>2018-04-06T08:20:25.239Z</updated>
+    <updated>2018-04-11T12:18:21.663Z</updated>
     
     <content type="html"><![CDATA[<table><thead><tr><th>算法种类</th><th>最好情况</th><th>平均情况</th><th>最坏情况</th><th>空间复杂度</th><th>是否稳定</th></tr></thead><tbody><tr><td>直接插入排序</td><td>O(n)</td><td>O(n^2)</td><td>O(n^2)</td><td>O(1)</td><td>是</td></tr><tr><td>冒泡排序</td><td>O(n)</td><td>O(n^2)</td><td>O(n^2)</td><td>O(1)</td><td>是</td></tr><tr><td>简单选择排序</td><td>O(n^2)</td><td>O(n^2)</td><td>O(n^2)</td><td>O(1)</td><td>否</td></tr><tr><td>希尔排序</td><td></td><td></td><td></td><td>O(1)</td><td>否</td></tr><tr><td>快速排序</td><td>O(nlogn)</td><td>O(nlogn)</td><td>O(n^2)</td><td>O(logn)</td><td>否</td></tr><tr><td>堆排序</td><td>O(nlogn)</td><td>O(nlogn)</td><td>O(nlogn)</td><td>O(1)</td><td>否</td></tr><tr><td>2-路归并</td><td>O(nlogn)</td><td>O(nlogn)</td><td>O(nlogn)</td><td>O(n)</td><td>是</td></tr><tr><td>基数排序</td><td>O(d(n+r))</td><td>O(d(n+r))</td><td>O(d(n+r))</td><td>O(r)</td><td>是</td></tr></tbody></table><h2>快速排序</h2><p>快速排序是每趟都确定一个元素的位置，并且在它的位置左边的都比它小，在它右边的都比它大。</p><p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">void QuickSort(ElemType A[], int low, int high)&#123;</span><br><span class="line">    <span class="keyword">if</span>(low &lt; high)&#123;</span><br><span class="line">        int pivotpos = Partition(A, low, high);</span><br><span class="line">        QuickSort(A, low, pivotpos<span class="number">-1</span>);</span><br><span class="line">        QuickSort(A, pivotpos+<span class="number">1</span>, high);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int Partition(ElemType A[], int low, int high)&#123;</span><br><span class="line">    ElemType pivot = A[low];</span><br><span class="line">    <span class="keyword">while</span>(low &lt; high)&#123;</span><br><span class="line">        <span class="keyword">while</span>(low&lt;high &amp;&amp; A[high] &gt; pivot) high--;</span><br><span class="line">        A[low] = A[high];</span><br><span class="line">        <span class="keyword">while</span>(low&lt;high &amp;&amp; A[low] &lt; pivot) low++;</span><br><span class="line">    &#125;</span><br><span class="line">    A[low] = pivot;</span><br><span class="line">    <span class="keyword">return</span> low;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><h2>堆排序</h2><p>堆排序是先要构建成大顶堆，而后依次将root跟二叉树最后一个元素互换，每次互换后都要将二叉树再调整回大顶堆。</p><p>下面是建立大顶堆的过程：<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">BuildMaxHeap</span><span class="params">(ElemType A[], <span class="keyword">int</span> len)</span></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(i=len/<span class="number">2</span>;i&gt;<span class="number">0</span>;i--)</span><br><span class="line">        AdjustDown(A, i, len);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">AdjustDown</span><span class="params">(ElemType A[], <span class="keyword">int</span> k, <span class="keyword">int</span> len)</span></span>&#123;</span><br><span class="line">    A[<span class="number">0</span>] = A[k];</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">2</span>*k;i&lt;=len;i*=<span class="number">2</span>)&#123;</span><br><span class="line">        <span class="keyword">if</span>(i&lt;len&amp;&amp;A[i]&lt;A[i+<span class="number">1</span>])</span><br><span class="line">            i++;</span><br><span class="line">        <span class="keyword">if</span>(A[i] &gt; A[<span class="number">0</span>])</span><br><span class="line">            A[k] = A[i];</span><br><span class="line">            k = i;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>下面是堆排序算法：<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">HeapSort</span><span class="params">(ElemType A[], <span class="keyword">int</span> len)</span></span>&#123;</span><br><span class="line">    BuildMaxHeap(A, len);</span><br><span class="line">    <span class="keyword">for</span>(i=len;i&gt;<span class="number">1</span>;i--)&#123;</span><br><span class="line">        Swap(A[i], A[<span class="number">1</span>]);</span><br><span class="line">        AdjustDown(A, i<span class="number">-1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>堆支持删除和插入操作。删除堆顶元素时先将堆顶元素与最后一个元素互换，之后进行向下调整。插入元素时，直接将元素插入到最后的位置，之后进行向上调整。下面是执行向上调整的函数：<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">AdjustUp</span><span class="params">(ElemType A[], <span class="keyword">int</span> k)</span></span>&#123;</span><br><span class="line"><span class="comment">//参数k为向上调整的结点，也就是堆中的元素个数</span></span><br><span class="line">    A[<span class="number">0</span>] = A[k];</span><br><span class="line">    <span class="keyword">int</span> i = k / <span class="number">2</span>;</span><br><span class="line">    <span class="keyword">while</span>(i&gt;<span class="number">0</span>&amp;&amp;A[i]&lt;A[<span class="number">0</span>])&#123;</span><br><span class="line">        A[k] = A[i];</span><br><span class="line">        k = i;</span><br><span class="line">        i = k/<span class="number">2</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    A[k] = A[<span class="number">0</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><h2>简单选择排序</h2><p>假设排序表为L[1...n]，第i趟排序即从L[1...n]中选择关键字最小的元素与L[i]进行交换，每一趟排序都可以确定一个元素的最终位置，经过n-1趟排序就可以使整个排序表有序。<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">SelectSort</span><span class="params">(ElemType A[], <span class="keyword">int</span> n)</span></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;n<span class="number">-1</span>;i++)&#123;</span><br><span class="line">        min = i;</span><br><span class="line">        <span class="keyword">for</span>(j=i+<span class="number">1</span>;j&lt;n;j++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(A[j] &lt; A[min])</span><br><span class="line">                min = j;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(min!=i)</span><br><span class="line">            Swap(A[i], A[min]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>]]></content>
     
@@ -224,11 +258,11 @@
   </entry>
   
   <entry>
-    <title>深度学习：keras中image.ImageDataGenerator.flow_from_directory()方法</title>
-    <link href="http://Buevara.github.io/2017/07/31/keras%E4%B8%ADimage.ImageDataGenerator.flow_from_directory()%E6%96%B9%E6%B3%95/"/>
-    <id>http://Buevara.github.io/2017/07/31/keras中image.ImageDataGenerator.flow_from_directory()方法/</id>
+    <title>深度学习--keras中image.ImageDataGenerator.flow_from_directory()方法</title>
+    <link href="http://Buevara.github.io/2017/07/31/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0--keras%E4%B8%ADimage.ImageDataGenerator.flow_from_directory()%E6%96%B9%E6%B3%95/"/>
+    <id>http://Buevara.github.io/2017/07/31/深度学习--keras中image.ImageDataGenerator.flow_from_directory()方法/</id>
     <published>2017-07-31T09:40:30.000Z</published>
-    <updated>2018-04-07T14:41:08.435Z</updated>
+    <updated>2018-04-11T12:20:40.365Z</updated>
     
     <content type="html"><![CDATA[<blockquote><p>作用：keras中image.ImageDataGenerator.flow_from_directory()方法可以实现从文件夹中提取图片和进行简单归一化处理。</p></blockquote><blockquote><p>keras中有很多封装好的API可以帮助我们实现对图片数据的读取和处理。比如 ： keras.preprocessing.image.ImageDataGenerator.flow_from_directory( ) 这个函数这个函数的参数包括：<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">flow_from_directory(self, directory,  </span><br><span class="line">                            target_size=(<span class="number">256</span>, <span class="number">256</span>), color_mode=<span class="string">'rgb'</span>,  </span><br><span class="line">                            classes=<span class="keyword">None</span>, class_mode=<span class="string">'categorical'</span>,  </span><br><span class="line">                            batch_size=<span class="number">32</span>, shuffle=<span class="keyword">True</span>, seed=<span class="keyword">None</span>,  </span><br><span class="line">                            save_to_dir=<span class="keyword">None</span>,  </span><br><span class="line">                            save_prefix=<span class="string">''</span>,  </span><br><span class="line">                            save_format=<span class="string">'jpeg'</span>,  </span><br><span class="line">                            follow_links=<span class="keyword">False</span>)</span><br></pre></td></tr></table></figure></p></blockquote><p>flow_from_directory(directory): 以文件夹路径为参数,生成经过数据提升/归一化后的数据,在一个无限循环中无限产生batch数据</p><p>directory: 目标文件夹路径,对于每一个类,该文件夹都要包含一个子文件夹.子文件夹中任何JPG、PNG、BNP、PPM的图片都会被生成器使用.详情请查看此脚本target_size: 整数tuple,默认为(256, 256). 图像将被resize成该尺寸</p><p>color_mode: 颜色模式,为”grayscale”,”rgb”之一,默认为”rgb”.代表这些图片是否会被转换为单通道或三通道的图片.</p><p>classes: 可选参数,为子文件夹的列表,如[‘dogs’,’cats’]默认为None. 若未提供,则该类别列表将从directory下的子文件夹名称/结构自动推断。每一个子文件夹都会被认为是一个新的类。(类别的顺序将按照字母表顺序映射到标签值)。通过属性class_indices可获得文件夹名与类的序号的对应字典。</p><p>class_mode: “categorical”, “binary”, “sparse”或None之一. 默认为”categorical. 该参数决定了返回的标签数组的形式, “categorical”会返回2D的one-hot编码标签,”binary”返回1D的二值标签.”sparse”返回1D的整数标签,如果为None则不返回任何标签, 生成器将仅仅生成batch数据, 这种情况在使用model.predict_generator()和model.evaluate_generator()等函数时会用到.</p><p>batch_size: batch数据的大小,默认32</p><p>shuffle: 是否打乱数据,默认为True</p><p>seed: 可选参数,打乱数据和进行变换时的随机数种子</p><p>save_to_dir: None或字符串，该参数能让你将提升后的图片保存起来，用以可视化save_prefix：字符串，保存提升后图片时使用的前缀, 仅当设置了save_to_dir时生效save_format：”png”或”jpeg”之一，指定保存图片的数据格式,默认”jpeg”flollow_links: 是否访问子文件夹中的软链接</p><p>使用flow_from_directory最值得注意的是directory这个参数：</p><p>directory: path to the target directory. It should contain one subdirectory per class. Any PNG, JPG, BMP, PPM or TIF images inside each of the subdirectories directory tree will be included in the generator.</p><p>这是官方文档的定义，它的目录格式一定要注意是包含一个子目录下的所有图片这种格式，driectoty路径只要写到标签路径上面的那个路径即可。</p><p>target_size：可是实现对图片的尺寸转换，是预处理中比较常用的方法</p><p>save_to_dir: 可以设置保存处理后图片的路径。</p><p>save_prefix: 可以对处理后图片设置前缀。</p>]]></content>
     
@@ -253,11 +287,11 @@
   </entry>
   
   <entry>
-    <title>邹博机器学习课程第一讲：机器学习与数学基础笔记整理</title>
-    <link href="http://Buevara.github.io/2017/07/03/%E9%82%B9%E5%8D%9A%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E8%AF%BE%E7%A8%8B%E7%AC%AC%E4%B8%80%E8%AE%B2%EF%BC%9A%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%B8%8E%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0%E6%95%B4%E7%90%86/"/>
-    <id>http://Buevara.github.io/2017/07/03/邹博机器学习课程第一讲：机器学习与数学基础笔记整理/</id>
+    <title>机器学习--机器学习与数学基础笔记整理</title>
+    <link href="http://Buevara.github.io/2017/07/03/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0--%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%B8%8E%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0%E6%95%B4%E7%90%86/"/>
+    <id>http://Buevara.github.io/2017/07/03/机器学习--机器学习与数学基础笔记整理/</id>
     <published>2017-07-03T06:25:13.000Z</published>
-    <updated>2018-04-06T08:15:41.403Z</updated>
+    <updated>2018-04-11T12:24:16.164Z</updated>
     
     <content type="html"><![CDATA[<h2>机器学习</h2><h3>什么是机器学习？</h3><blockquote><p>对于某给定的任务T，在合理的性能度量方案P的前提下，某计算机程序可以自主学习任务T的经验E；随着提供合适、优质、大量的静安E，改程序对于任务T的性能逐步提交。</p></blockquote><h3>这个任务最重要的是机器学习的对象：</h3><blockquote><p>任务Task，T，一个或者多个经验Experience，E性能Performance，P</p></blockquote><p>总结来说：就是随着任务的不断执行，经验的累计会带来计算性能的提升。</p><h3>机器学习的一般流程</h3><blockquote><ol><li><em>数据收集</em></li><li><em>数据清洗</em></li><li><em>特征工程</em></li><li><em>数据建模</em></li></ol></blockquote><p>注意：</p><ol><li>数据直接影响学习的结果。</li><li>对特征的选取不同，所得到的结果也会不同。</li><li>对于模型的选择，也有不同的方案，同样的数据用不同的模型所得到的结果不同。</li></ol><h2>机器学习的数学基础</h2><h3>高等数学</h3><ul><li>导数</li></ul><blockquote><p>简单来说，导数是曲线的斜率，是曲线变化快慢的反应<strong>二阶导数</strong>是斜率变化快慢的反应，表征曲线<strong>凹凸性</strong>根据$\lim_{x\rightarrow \infty }(1+\frac{1}{x})^{x}=e$，可以得到函数$ f(x)=lnx $的导数，进一步根据换底公式/反函数求导等，得到其他初等函数的导数。常用函数的导数$ {C}'=0$       ${({x}<sup>n)}'=nx</sup>{n-1} $$ {sinx}'=cosx$    ${cosx}'=-sinx $$ {(a<sup>{x})}'=a</sup>{x}lna$    ${(e<sup>x)}'=e</sup>x $$ {(log_{a}x)}'=\frac{1}{x}{log_{a}e}$ ${(lnx)}'=\frac{1}{x} $$ {(u+v)}'=u'+v'$ ${(uv)}'=u'v+uv' $</p></blockquote><p>例子：已知$ f(x)=x^x,x&gt;0 $，求解其最小值</p><blockquote><p>$ t=x^x $$ lnt=xlnx $两边对x求导:$ \frac{1}{t}t'=lnx+1 $令$ t'=0$:$lnx+1=0 $$ x=(e)^{-1} $$ t=e^{-\frac{1}{e}} $</p></blockquote><p>例子：推导$ N\rightarrow \infty \Rightarrow lnN!\rightarrow N(lnN-1) $</p><blockquote><p>$ lnN!=\sum_{i=1}^{N}lni\approx \int_{1}^{N}lnxdx $$ =xlnx|<em>{1}<sup>{N}-\int_{1}</sup>{N}xdxlnx $$ =NlnN-\int</em>{1}^{N}x\cdot \frac{1}{x}dx $$ =NlnN-x|_{1}^{N} $$ =NlnN-N+1 $$ \rightarrow NlnN-N $</p></blockquote><ul><li>Tayor公式</li></ul><blockquote><p>$ f(x)=f(x_{0})+f'(x_{0})(x-x_{0})+\frac{f''(x_{0})}{2!}(x-x_{0})+...+\frac{f<sup>{(n)}(x_{0})}{n!}(x-x_{0})</sup>{n}+R_{n}(x) $令x=0，得到：$ f(x)=f(0)+f'(0)x+\frac{f''(0)}{2!}x<sup>{2}+...+\frac{f</sup>{n}(0)}{n!}x<sup>{n}+o(x</sup>{n}) $</p></blockquote><p>Taylor公式的应用：数值计算：初等函数值计算（在原点上展开）</p><blockquote><p>$$ sinx=x-\frac{x<sup>{3}}{3!}+\frac{x</sup>{5}}{5!}-\frac{x<sup>{7}}{7!}+\frac{x</sup>{9}}{9!}+...+(-1)<sup>{m-1}\frac{x</sup>{2m-1}}{(2m-1)!}+R_{2m} $$$$ e<sup>{x}=1+x+\frac{x</sup>{2}}{2!}+\frac{x<sup>{3}}{3!}+\frac{x</sup>{4}}{4!}+...+\frac{x^{n}}{n!}+R_{n} $$</p></blockquote><p>在实践中，往往需要做一定程度上的变换。</p><p>例子：计算$ e^{x} $</p><blockquote><p>$ x=k\cdot ln2+r $ , $ \left | r \right |\leqslant 0.5\cdot ln2 $$$e<sup>{x}=e</sup>{k\cdot ln2+r}=e^{k\cdot ln2}\cdot e^{r} =2^{k}\cdot e^{r}$$</p></blockquote><ul><li>方向导数</li></ul><blockquote><p>如果函数$ z=f(x,y) $在点$ P(x,y) $是可微分的，那么，函数在该点沿任意方向$ L $的方向导数都存在，且有：$ \frac{\partial f}{\partial l}=\frac{\partial f}{\partial x}cos\varphi +\frac{\partial f}{\partial y}sin\varphi $其中，$ \varphi $为x轴到方向L的转角。</p></blockquote><ul><li>梯度</li></ul><blockquote><p>设函数$ z=f(x,y) $在平面区域D内具有一阶连续偏导数，则对于每一个点$P(x,y)\in D$,向量$$ (\frac{\partial f}{\partial x},\frac{\partial f}{\partial y}) $$为函数$ z=f(x,y) $在点$P(x,y)$的梯度，记作$ gradf(x) $梯度的方向是函数在该点变化最快的方向</p></blockquote><p>###概率论</p><blockquote><ul><li>概率表达式：$ P(x)\in [0,1] $若x为离散，则$ P(x=x_{0}) $表示$ x_{0} $发生的<em>概率</em>若x为连续变量，则$ P(x=x_{0}) $表示$x_{0}$发生的<em>概率密度</em></li><li>累计分布函数：$ \Phi (x)=P(x\leq x_{0}) $$ \Phi (x) $一定为<em>单调递增函数</em>。$ min(\Phi (x))=0 $,$ max(\Phi (x))=1 $</li></ul></blockquote><p>思考：将值域为[0,1]的单增函数$ y=F(x) $看成<strong>X事件的累积概率函数</strong>，若$y=F(x)$可导，则$f(x)=F'(x)$为概率密度函数</p><blockquote><ul><li>概率公式条件概率：$ P(A|B)=\frac{P(AB)}{P(B)} $全概率公式：$ P(A)=\sum_{i}P(A|B_{i})P(B_{i}) $贝叶斯(Bayes)公式：$ P(B_{i}|A)=\frac{P(A|B_{i})P(B_{i})}{\sum_{j}P(A|B_{i})P(B_{j})} $</li></ul></blockquote><blockquote><ul><li>贝叶斯公式：<img src="http://osibywvsl.bkt.clouddn.com/bayes%E5%85%AC%E5%BC%8F.png" alt=""></li></ul></blockquote><blockquote><ul><li>分布<img src="http://osibywvsl.bkt.clouddn.com/%E5%90%84%E7%A7%8D%E5%88%86%E5%B8%83.png" alt=""></li></ul></blockquote>]]></content>
     
@@ -275,27 +309,27 @@
     </summary>
     
     
-      <category term="机器学习基础" scheme="http://Buevara.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80/"/>
+      <category term="机器学习" scheme="http://Buevara.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
   <entry>
-    <title>网络安全：日志分析之报警关联</title>
-    <link href="http://Buevara.github.io/2017/02/03/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8--%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90%EF%BC%9A%E6%8A%A5%E8%AD%A6%E5%85%B3%E8%81%94/"/>
-    <id>http://Buevara.github.io/2017/02/03/网络安全--日志分析：报警关联/</id>
-    <published>2017-02-03T08:47:02.000Z</published>
-    <updated>2018-04-08T03:13:50.010Z</updated>
+    <title>网络安全--日志分析：报警关联</title>
+    <link href="http://Buevara.github.io/2017/07/03/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8--%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90%EF%BC%9A%E6%8A%A5%E8%AD%A6%E5%85%B3%E8%81%94/"/>
+    <id>http://Buevara.github.io/2017/07/03/网络安全--日志分析：报警关联/</id>
+    <published>2017-07-03T06:25:13.000Z</published>
+    <updated>2018-04-11T12:22:36.332Z</updated>
     
-    <content type="html"><![CDATA[<h2>网络安全：日志分析之报警关联</h2><hr><p>警关联分析技术对以入侵报警信息为主的安全报警进行组合、解释和分析。目标是对报警信息的求精，以对攻击规划进行识别和场景重构。报警关联是一个过程，分析了由一个或多个入侵检测系统产生的警报，提供了更加简洁和高层次的入侵或企图侵入的判断。尽管关联过程往往是由一个步骤提出，分析实际通过若干组成部分协作完成，各自有具体的目标。通过对来自于不同类型IDS和其他安全设备所产生的报警进行聚合与关联，可以有效地解决入侵检测分类技术由于硬件速度、算法假设和复杂网络环境的影响所很难克服的误报和漏报偏高等问题，为自动、深入的报警处理打下基础，可以实现如下目标：</p><blockquote><ul><li>1.消除或减少重复报警。网络上不同的IDS 针对同一个安全事件都可能报警，即使是同一个 IDS也可能对某个安全事件发出多个报警。这些重复报警少则几个，多则上万。通过对报警的聚合，可以大大减少重复报警率。</li></ul></blockquote><hr><blockquote><ul><li>2.降低误报率。通过将一个攻击过程相关报警信息关联在一起，可以消除某些孤立和随机事件产生的误报警。另外，报警信息同被保护网络系统本身的信息相互比对就可以很好地滤除无关报警，降低误报率。</li></ul></blockquote><hr><blockquote><ul><li>降低漏报率。目前，没有一种单一的 IDS 能够检测到所有网络攻击。不同 IDS 之间的报警通过关联，可以相互补充，防止漏报的发生。</li></ul></blockquote><hr><blockquote><ul><li>3.发现高层攻击策略。将入侵过程的一系列攻击活动关联在一起，重建攻击过程，这样就可以对入侵的整体情况进行描述，有利于对入侵的理解，发现攻击策略，克服了以往IDS那种检测结果过于细化和底层缺点，为人侵的意图识别、入侵行动预测和入侵响应打下了基础。</li></ul></blockquote><hr><blockquote><ul><li>4.扩大了IDS的检测范围。在较大型的交换式网络统中，单个的IDS(不论是基于网络的还是基于主机的)其检测范围和处理能力是有限的，要想掌握整个网络的安全情况，就要将多个 IDS和安全设备布置在网络上的不同位置，然后将来自于这些安全设备的报警进行融合处理，从而实现全网范围内的安全防御。</li></ul></blockquote><hr><p>目前已经提出的入侵报警关联分析方法，主要可以分为报警聚类方法、基于攻击规划库的报警关联方法和基于攻击行为建模的报警关联方法三大类。</p><h5>报警聚类方法</h5><blockquote><p>1.报警聚类方法属于最初步的关联分析，通过报警属性值之间的相似性对报警进行聚类，使得同个聚类的报警集合具有某些相同的特性，然后选择一个抽象的“元报警”事件作为该聚类的代表元。此类方法不能够完全揭示出相关报警之间的因果联系，无法对报警反映的攻击场景给出清晰的解释，也无法预测攻击者的目标和进一步的攻击规划。</p></blockquote><h5>基于攻击规划库的报警关联方法</h5><blockquote><p>2.基于攻击规划库的报警关联方法在拥有一个完整的已知攻击规划库的基础上，通过一系列关联分析技术来识别报警流中包含的与攻击规划库中的攻击规划相一致的攻击场景实例。基于攻击规划库的报警关联方法是基于封闭世界假说，需要一个完整的攻击规划库作为支撑基础，但在实际环境中，由于攻击动作的多样性和攻击过程的随意性以及新的攻击工具和技术的不断出现，使得构建一个完善的攻击规划库极为困难。此外，由于存在并行的攻击场景，上述的各种方法对每个攻击场景维护中间的状态，从而导致其存储代价和计算代价都非常庞大。上述两个缺陷使得基于攻击场景库的报警关联方法难以在实际中得到广泛的有效应用。</p></blockquote><h5>基于攻击行为建模的报警关联方法</h5><blockquote><p>3.基于攻击行为建模的报警关联方法通过对攻击动作的前提条件和造成的后果进行描述，构建攻击模型，如果一个攻击动作的后果使得另一攻击动作的前提条件得到满足，则认为这两个攻击动作之间存在因果关系。基于攻击行为建模的报警关联算法就利用这些因果关系将观察到的报警进行连接，构造出整个攻击场景。基于攻击行为建模的报警关联方法不需要对所有可能的攻击规划进行描述和存储，只需要对单个攻击行为动作进行建模，准确刻画其所需的前提条件和造成的后果，因此攻击知识模型的构建和维护较为可行，另外构建的攻击知识模型存在较强的灵活性，能够对一些未知的攻击场景进行识别。</p></blockquote>]]></content>
+    <content type="html"><![CDATA[<h2>网络安全--日志分析：报警关联</h2><hr><p>警关联分析技术对以入侵报警信息为主的安全报警进行组合、解释和分析。目标是对报警信息的求精，以对攻击规划进行识别和场景重构。报警关联是一个过程，分析了由一个或多个入侵检测系统产生的警报，提供了更加简洁和高层次的入侵或企图侵入的判断。尽管关联过程往往是由一个步骤提出，分析实际通过若干组成部分协作完成，各自有具体的目标。通过对来自于不同类型IDS和其他安全设备所产生的报警进行聚合与关联，可以有效地解决入侵检测分类技术由于硬件速度、算法假设和复杂网络环境的影响所很难克服的误报和漏报偏高等问题，为自动、深入的报警处理打下基础，可以实现如下目标：</p><blockquote><ul><li>1.消除或减少重复报警。网络上不同的IDS 针对同一个安全事件都可能报警，即使是同一个 IDS也可能对某个安全事件发出多个报警。这些重复报警少则几个，多则上万。通过对报警的聚合，可以大大减少重复报警率。</li></ul></blockquote><hr><blockquote><ul><li>2.降低误报率。通过将一个攻击过程相关报警信息关联在一起，可以消除某些孤立和随机事件产生的误报警。另外，报警信息同被保护网络系统本身的信息相互比对就可以很好地滤除无关报警，降低误报率。</li></ul></blockquote><hr><blockquote><ul><li>降低漏报率。目前，没有一种单一的 IDS 能够检测到所有网络攻击。不同 IDS 之间的报警通过关联，可以相互补充，防止漏报的发生。</li></ul></blockquote><hr><blockquote><ul><li>3.发现高层攻击策略。将入侵过程的一系列攻击活动关联在一起，重建攻击过程，这样就可以对入侵的整体情况进行描述，有利于对入侵的理解，发现攻击策略，克服了以往IDS那种检测结果过于细化和底层缺点，为人侵的意图识别、入侵行动预测和入侵响应打下了基础。</li></ul></blockquote><hr><blockquote><ul><li>4.扩大了IDS的检测范围。在较大型的交换式网络统中，单个的IDS(不论是基于网络的还是基于主机的)其检测范围和处理能力是有限的，要想掌握整个网络的安全情况，就要将多个 IDS和安全设备布置在网络上的不同位置，然后将来自于这些安全设备的报警进行融合处理，从而实现全网范围内的安全防御。</li></ul></blockquote><hr><p>目前已经提出的入侵报警关联分析方法，主要可以分为报警聚类方法、基于攻击规划库的报警关联方法和基于攻击行为建模的报警关联方法三大类。</p><h5>报警聚类方法</h5><blockquote><p>1.报警聚类方法属于最初步的关联分析，通过报警属性值之间的相似性对报警进行聚类，使得同个聚类的报警集合具有某些相同的特性，然后选择一个抽象的“元报警”事件作为该聚类的代表元。此类方法不能够完全揭示出相关报警之间的因果联系，无法对报警反映的攻击场景给出清晰的解释，也无法预测攻击者的目标和进一步的攻击规划。</p></blockquote><h5>基于攻击规划库的报警关联方法</h5><blockquote><p>2.基于攻击规划库的报警关联方法在拥有一个完整的已知攻击规划库的基础上，通过一系列关联分析技术来识别报警流中包含的与攻击规划库中的攻击规划相一致的攻击场景实例。基于攻击规划库的报警关联方法是基于封闭世界假说，需要一个完整的攻击规划库作为支撑基础，但在实际环境中，由于攻击动作的多样性和攻击过程的随意性以及新的攻击工具和技术的不断出现，使得构建一个完善的攻击规划库极为困难。此外，由于存在并行的攻击场景，上述的各种方法对每个攻击场景维护中间的状态，从而导致其存储代价和计算代价都非常庞大。上述两个缺陷使得基于攻击场景库的报警关联方法难以在实际中得到广泛的有效应用。</p></blockquote><h5>基于攻击行为建模的报警关联方法</h5><blockquote><p>3.基于攻击行为建模的报警关联方法通过对攻击动作的前提条件和造成的后果进行描述，构建攻击模型，如果一个攻击动作的后果使得另一攻击动作的前提条件得到满足，则认为这两个攻击动作之间存在因果关系。基于攻击行为建模的报警关联算法就利用这些因果关系将观察到的报警进行连接，构造出整个攻击场景。基于攻击行为建模的报警关联方法不需要对所有可能的攻击规划进行描述和存储，只需要对单个攻击行为动作进行建模，准确刻画其所需的前提条件和造成的后果，因此攻击知识模型的构建和维护较为可行，另外构建的攻击知识模型存在较强的灵活性，能够对一些未知的攻击场景进行识别。</p></blockquote><p>现有的入侵报警关联分析技术还存在着如下一些问题：</p><ul><li>[ ]  首先，能够完成攻击规划识别的关联分析技术都需要有一个领域知识库的支撑，虽然目前在攻击关联知识模型方面有一些研究工作，但目前尚未有完整的、实际可行的网络攻防知识库的构建方案。攻防知识库构建的困难阻碍了关联分析技术的实际应用；</li><li>[ ]  其次，现有的入侵报警关联分析技术大多仅仅根据固定的模式对报警进行关联，而未对受监控系统以及攻击者的状态进行有效跟踪；</li><li>[ ]  第三，缺乏对攻击者意图的识别，无法为正确及时的响应提供支持；最后，由于在实际网络环境中很难获得攻击场景测试数据并准确地从背景网络流量中对其进行正确标识，因此对入侵报警关联分析技术的测试和验证普遍缺乏足够的攻击场景数据，这也使得目前大多数的入侵报警关联分析技术研究仅仅针对几个人工构造的攻击场景数据集，并不能够体现实用性。</li></ul>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h2&gt;网络安全：日志分析之报警关联&lt;/h2&gt;
+        &lt;h2&gt;网络安全--日志分析：报警关联&lt;/h2&gt;
 &lt;hr&gt;
 &lt;p&gt;警关联分析技术对以入侵报警信息为主的安全报警进行组合、解释和分析。目标是对报警信息的求精，以对攻击规划进行识别和场景重构。
-报警关联是一个过程，分析了由一个或多个入侵检测系统产生的警报，提供了更加简洁和高层次的入侵或
+报警关联是一个过程，分析了由一个或多个入侵检测系统产生的警报，提供了更加简洁和高层次的入侵
       
     
     </summary>

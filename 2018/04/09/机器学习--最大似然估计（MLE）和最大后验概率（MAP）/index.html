@@ -18,11 +18,11 @@
     <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
     <title>
         
-        网络安全--日志分析：报警关联｜Buevara&#39;s blog
+        机器学习--最大似然估计（MLE）和最大后验概率（MAP）｜Buevara&#39;s blog
         
     </title>
 
-    <link rel="canonical" href="http://Buevara.github.io/2017/07/03/网络安全--日志分析：报警关联/">
+    <link rel="canonical" href="http://Buevara.github.io/2018/04/09/机器学习--最大似然估计（MLE）和最大后验概率（MAP）/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -145,12 +145,12 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
                 <div class="post-heading">
-                    <h1>网络安全--日志分析：报警关联</h1>
+                    <h1>机器学习--最大似然估计（MLE）和最大后验概率（MAP）</h1>
                     
                     <span class="meta">
                          作者 Buevara
                         <span>
-                          日期 2017-07-03
+                          日期 2018-04-09
                          </span>
                          <span>
                          本文阅读量 <span id="busuanzi_value_page_pv">
@@ -159,11 +159,11 @@
                     
                     <div class="tags text-center">
                         
-                        <a class="tag" href="/tags/#网络安全"
-                           title="网络安全">网络安全</a>
+                        <a class="tag" href="/tags/#机器学习"
+                           title="机器学习">机器学习</a>
                         
-                        <a class="tag" href="/tags/#日志分析"
-                           title="日志分析">日志分析</a>
+                        <a class="tag" href="/tags/#统计学习方法"
+                           title="统计学习方法">统计学习方法</a>
                         
                     </div>
                 </div>
@@ -172,7 +172,7 @@
     </div>
     <div class="post-title-haojen">
         <span>
-            网络安全--日志分析：报警关联
+            机器学习--最大似然估计（MLE）和最大后验概率（MAP）
         </span>
     </div>
 </header>
@@ -183,70 +183,66 @@
         <div class="row">
             <!-- Post Container -->
             <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
-                <h2>网络安全--日志分析：报警关联</h2>
+                <h2>最大似然估计（MLE）和最大后验概率（MAP）</h2>
 <hr>
-<p>警关联分析技术对以入侵报警信息为主的安全报警进行组合、解释和分析。目标是对报警信息的求精，以对攻击规划进行识别和场景重构。
-报警关联是一个过程，分析了由一个或多个入侵检测系统产生的警报，提供了更加简洁和高层次的入侵或企图侵入的判断。尽管关联过程往往是由一个步骤提出，分析实际通过若干组成部分协作完成，各自有具体的目标。通过对来自于不同类型IDS和其他安全设备所产生的报警进行聚合与关联，可以有效地解决入侵检测分类技术由于硬件速度、算法假设和复杂网络环境的影响所很难克服的误报和漏报偏高等问题，为自动、深入的报警处理打下基础，可以实现如下目标：</p>
-<blockquote>
-<ul>
-<li>1.消除或减少重复报警。网络上不同的IDS 针对同一个安全事件都可能报警，即使是同一个 IDS也可能对某个安全事件发出多个报警。这些重复报警少则几个，多则上万。通过对报警的聚合，可以大大减少重复报警率。</li>
-</ul>
-</blockquote>
+<h3>最大似然估计 MLE</h3>
+<p>给定一堆数据，加入我们知道他是从某一分部中随机取出来的。可是我们并不知道这个分布具体的参，即“模型已定，参数未知”。例如，我们知道这个分布是正态分布，但是不知道均值和方差；或者是二项分布，但是不知道均值。最大似然估计（MLE，Maximum Likelihood Estimation）就可以用来估计模型的参数。MLE的目标是找出一组参数，使得模型产生出观测数据的概率最大：
+$ \arg max _{ \mu}(p(X; \mu)) $</p>
+<p>其中$ p(X; \mu) $ 就是似然函数，表示在参数$ \mu $ 下出现观测数据的概率。我们假设每个观测数据是独立的，那么有
+<img src="https://github.com/Buevara/blog_img/raw/master/4.9/MLE4.9-1.png" alt="4.9-1"></p>
+<p>为了寻求方便，一般对目标取$ log $。所以最优化似然函数等于最优化对数似然函数：
+<img src="https://github.com/Buevara/blog_img/raw/master/4.9/MLE4.9-2.png" alt="4.9-2">
+举一个抛硬币的简单例子。 现在有一个正反面不是很匀称的硬币，如果正面朝上记为正，方面朝上记为反，抛10次的结果如下：</p>
+<p>正正正反反反正反正反</p>
+<p>很显然这个概率是0.5。现在我们用MLE的思想去求解它。我们知道每次抛硬币都是一次二项分布，设正面朝上的概率是$ \mu $，那么似然函数为：
+<img src="https://github.com/Buevara/blog_img/raw/master/4.9/MLE4.9-3.png" alt="4.9-3">
+x=1表示正面朝上，x=0表示方面朝上。那么有：
+<img src="https://github.com/Buevara/blog_img/raw/master/4.9/MLE4.9-4.png" alt="4.9-4">
+求导：
+<img src="https://github.com/Buevara/blog_img/raw/master/4.9/MLE4.9-5.png" alt="4.9-5">
+令导数为0，很容易得到：
+<img src="https://github.com/Buevara/blog_img/raw/master/4.9/MLE4.9-6.png" alt="4.9-6">
+也就是0.5。</p>
 <hr>
-<blockquote>
-<ul>
-<li>2.降低误报率。通过将一个攻击过程相关报警信息关联在一起，可以消除某些孤立和随机事件产生的误报警。另外，报警信息同被保护网络系统本身的信息相互比对就可以很好地滤除无关报警，降低误报率。</li>
-</ul>
-</blockquote>
+<h3>最大后验概率  MAP</h3>
+<p>以上求MLE   求得是找出一组能够使似然函数最大的参数，即$ \arg max <em>{ \mu}(p(X; \mu)) $ 。现在问题稍微复杂一点，假如这个参数$ \mu $ 有一个先验概率呢？比如说，在上面抛硬币的例子，假如我们的经验告诉我们，硬币一般都是均匀的，也就是$ \mu $=0.5的可能性最大，$ \mu $=0.2的可能性比较小，那么参数如何估计呢？这就是MAP要考虑的问题。MAP优化的是一个后验概率，即给定了观测值后是的$ \mu $最大的：
+<img src="https://github.com/Buevara/blog_img/raw/master/4.9/MLE4.9-7.png" alt="4.9-7">
+把上式根据贝叶斯公式展开：
+<img src="https://github.com/Buevara/blog_img/raw/master/4.9/MLE4.9-8.png" alt="4.9-8">
+我们可以看出第一项$ p(X; \mu) $ 就是似然函数，第二项$ p(\mu) $就是先验知识。取$ log $之后就是：
+<img src="https://github.com/Buevara/blog_img/raw/master/4.9/MLE4.9-9.png" alt="4.9-9">
+回到刚才的抛硬币的例子，假设参数$ \mu $有一个先验估计，他服从$ Beta $分布，即：
+<img src="https://github.com/Buevara/blog_img/raw/master/4.9/MLE4.9-10.png" alt="4.9-10">
+而每次抛硬币仍然服从二项分布：
+<img src="https://github.com/Buevara/blog_img/raw/master/4.9/MLE4.9-11.png" alt="4.9-11">
+那么目标函数的导数是：
+<img src="https://github.com/Buevara/blog_img/raw/master/4.9/MLE4.9-12.png" alt="4.9-12">
+求导的第一项已经在MLE中给出了，第二项为：
+<img src="https://github.com/Buevara/blog_img/raw/master/4.9/MLE4.9-13.png" alt="4.9-13">
+令导数为0，求解为：
+<img src="https://github.com/Buevara/blog_img/raw/master/4.9/MLE4.9-14.png" alt="4.9-14">
+其中，$ n</em>{H} $表示正面朝上的次数。这里看以看出，MLE与MAP的不同之处在于，MAP的结果多了一些先验分布的参数。</p>
 <hr>
-<blockquote>
-<ul>
-<li>降低漏报率。目前，没有一种单一的 IDS 能够检测到所有网络攻击。不同 IDS 之间的报警通过关联，可以相互补充，防止漏报的发生。</li>
-</ul>
-</blockquote>
+<h3>补充知识： Beta分布</h3>
+<p>Beat分布是一种常见的先验分布，它形状由两个参数控制，定义域为[0,1]
+<img src="https://github.com/Buevara/blog_img/raw/master/4.9/MLE4.9-15.png" alt="4.9-15"></p>
+<p>Beta分布的最大值是x等于$ \frac{\alpha -1}{\alpha +\beta -2} $的时候：
+<img src="https://github.com/Buevara/blog_img/raw/master/4.9/MLE4.9-16.png" alt="4.9-16">
+所以在抛硬币中，如果先验知识是说硬币是匀称的，那么就让$ \alpha = \beta  $。但是很显然即使它们相等，它两的值也对最终结果很有影响。它两的值越大，表示偏离匀称的可能性越小：
+<img src="https://github.com/Buevara/blog_img/raw/master/4.9/MLE4.9-17.png" alt="4.9-17"></p>
 <hr>
-<blockquote>
-<ul>
-<li>3.发现高层攻击策略。将入侵过程的一系列攻击活动关联在一起，重建攻击过程，这样就可以对入侵的整体情况进行描述，有利于对入侵的理解，发现攻击策略，克服了以往IDS那种检测结果过于细化和底层缺点，为人侵的意图识别、入侵行动预测和入侵响应打下了基础。</li>
-</ul>
-</blockquote>
-<hr>
-<blockquote>
-<ul>
-<li>4.扩大了IDS的检测范围。在较大型的交换式网络统中，单个的IDS(不论是基于网络的还是基于主机的)其检测范围和处理能力是有限的，要想掌握整个网络的安全情况，就要将多个 IDS和安全设备布置在网络上的不同位置，然后将来自于这些安全设备的报警进行融合处理，从而实现全网范围内的安全防御。</li>
-</ul>
-</blockquote>
-<hr>
-<p>目前已经提出的入侵报警关联分析方法，主要可以分为报警聚类方法、基于攻击规划库的报警关联方法和基于攻击行为建模的报警关联方法三大类。</p>
-<h5>报警聚类方法</h5>
-<blockquote>
-<p>1.报警聚类方法属于最初步的关联分析，通过报警属性值之间的相似性对报警进行聚类，使得同个聚类的报警集合具有某些相同的特性，然后选择一个抽象的“元报警”事件作为该聚类的代表元。此类方法不能够完全揭示出相关报警之间的因果联系，无法对报警反映的攻击场景给出清晰的解释，也无法预测攻击者的目标和进一步的攻击规划。</p>
-</blockquote>
-<h5>基于攻击规划库的报警关联方法</h5>
-<blockquote>
-<p>2.基于攻击规划库的报警关联方法在拥有一个完整的已知攻击规划库的基础上，通过一系列关联分析技术来识别报警流中包含的与攻击规划库中的攻击规划相一致的攻击场景实例。基于攻击规划库的报警关联方法是基于封闭世界假说，需要一个完整的攻击规划库作为支撑基础，但在实际环境中，由于攻击动作的多样性和攻击过程的随意性以及新的攻击工具和技术的不断出现，使得构建一个完善的攻击规划库极为困难。此外，由于存在并行的攻击场景，上述的各种方法对每个攻击场景维护中间的状态，从而导致其存储代价和计算代价都非常庞大。上述两个缺陷使得基于攻击场景库的报警关联方法难以在实际中得到广泛的有效应用。</p>
-</blockquote>
-<h5>基于攻击行为建模的报警关联方法</h5>
-<blockquote>
-<p>3.基于攻击行为建模的报警关联方法通过对攻击动作的前提条件和造成的后果进行描述，构建攻击模型，如果一个攻击动作的后果使得另一攻击动作的前提条件得到满足，则认为这两个攻击动作之间存在因果关系。基于攻击行为建模的报警关联算法就利用这些因果关系将观察到的报警进行连接，构造出整个攻击场景。基于攻击行为建模的报警关联方法不需要对所有可能的攻击规划进行描述和存储，只需要对单个攻击行为动作进行建模，准确刻画其所需的前提条件和造成的后果，因此攻击知识模型的构建和维护较为可行，另外构建的攻击知识模型存在较强的灵活性，能够对一些未知的攻击场景进行识别。</p>
-</blockquote>
-<p>现有的入侵报警关联分析技术还存在着如下一些问题：</p>
-<ul>
-<li>[ ]  首先，能够完成攻击规划识别的关联分析技术都需要有一个领域知识库的支撑，虽然目前在攻击关联知识模型方面有一些研究工作，但目前尚未有完整的、实际可行的网络攻防知识库的构建方案。攻防知识库构建的困难阻碍了关联分析技术的实际应用；</li>
-<li>[ ]  其次，现有的入侵报警关联分析技术大多仅仅根据固定的模式对报警进行关联，而未对受监控系统以及攻击者的状态进行有效跟踪；</li>
-<li>[ ]  第三，缺乏对攻击者意图的识别，无法为正确及时的响应提供支持；最后，由于在实际网络环境中很难获得攻击场景测试数据并准确地从背景网络流量中对其进行正确标识，因此对入侵报警关联分析技术的测试和验证普遍缺乏足够的攻击场景数据，这也使得目前大多数的入侵报警关联分析技术研究仅仅针对几个人工构造的攻击场景数据集，并不能够体现实用性。</li>
-</ul>
+<p>文章转自 <a href="http://www.cnblogs.com/sylvanas2012/p/5058065.html" target="_blank" rel="noopener">Leavingseason的博客</a></p>
 
                 <hr>
                 
 
                 <ul class="pager">
                     
-                    <li class="previous">
-                        <a href="/2017/07/03/机器学习--机器学习与数学基础笔记整理/" data-toggle="tooltip" data-placement="top"
-                           title="机器学习--机器学习与数学基础笔记整理">&larr; Previous Post</a>
-                    </li>
                     
+                    <li class="next">
+                        <a href="/2018/04/05/面经--瓜子二手车数据分析岗位/" data-toggle="tooltip" data-placement="top"
+                           title="瓜子二手车--数据分析岗位面经">Next Post &rarr;</a>
+                    </li>
                     
                 </ul>
 
@@ -280,7 +276,7 @@
 
             <div class="hidden-xs col-sm-3 toc-col">
                 <div class="toc-wrap">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-text">网络安全--日志分析：报警关联</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#undefined"><span class="toc-text">报警聚类方法</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#undefined"><span class="toc-text">基于攻击规划库的报警关联方法</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#undefined"><span class="toc-text">基于攻击行为建模的报警关联方法</span></a></li></ol></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-text">最大似然估计（MLE）和最大后验概率（MAP）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">最大似然估计 MLE</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">最大后验概率  MAP</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">补充知识： Beta分布</span></a></li></ol></li></ol>
                 </div>
             </div>
         </div>
@@ -302,11 +298,11 @@
                     </h5>
                     <div class="tags">
                         
-                        <a class="tag" href="/tags/#网络安全"
-                           title="网络安全">网络安全</a>
+                        <a class="tag" href="/tags/#机器学习"
+                           title="机器学习">机器学习</a>
                         
-                        <a class="tag" href="/tags/#日志分析"
-                           title="日志分析">日志分析</a>
+                        <a class="tag" href="/tags/#统计学习方法"
+                           title="统计学习方法">统计学习方法</a>
                         
                     </div>
                 </section>
