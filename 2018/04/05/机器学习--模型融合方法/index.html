@@ -187,15 +187,15 @@
 <p>含义：
 通过对多个单模型融合以提升整体性能。</p>
 <blockquote>
-<p>1.voting
-2.Averaging
-3.Ranking
-4.Bagging
-5.Boosting
-6.Bagging和Boosting的区别
-6.Stacking
-7.Blending
-8.Stacking和Blending的区别</p>
+<p>1.Voting</p>
+<p>2.Averaging</p>
+<p>3.Ranking</p>
+<p>4.Bagging</p>
+<p>5.Boosting</p>
+<p>6.Bagging和Boosting的区别</p>
+<p>7.Stacking</p>
+<p>8.Blending</p>
+<p>9.Stacking和Blending的区别</p>
 </blockquote>
 <h4>模型的融合条件</h4>
 <ul>
@@ -203,7 +203,7 @@
 <li>[x]  Base Model 之间的性能表现不能差距太大。这其实是一个 Trade-off，在实际中很有可能表现相近的 Model 只有寥寥几个而且它们之间相关性还不低。但是实践告诉我们即使在这种情况下 Ensemble 还是能大幅提高成绩。</li>
 </ul>
 <hr>
-<h4>1.voting</h4>
+<h4>1.Voting</h4>
 <blockquote>
 <p>投票即为，投票多者为最终的结果。
 用于分类问题：
@@ -300,7 +300,7 @@ A）从原始样本集中抽取训练集。每轮从原始样本集中使用Boot
 <p>3）Gradient Boosting + 决策树 = GBDT</p>
 </blockquote>
 <hr>
-<h4>6.Stacking</h4>
+<h4>7.Stacking</h4>
 <p><img src="https://github.com/Buevara/blog_img/raw/master/4.11/4.11-5.jpg" alt="4.11-5">
 图片来自于<a href="https://zhuanlan.zhihu.com/p/26890738" target="_blank" rel="noopener">Leon的知乎专栏</a>
 个人认为很想深度学习模型中的xception网络，这里不同的模型相当于xception中不同尺寸的卷积，进行不同特征的提取。</p>
@@ -317,7 +317,7 @@ A）从原始样本集中抽取训练集。每轮从原始样本集中使用Boot
 </ol>
 <p>最顶层的模型一般是LR或者线性模型。</p>
 <hr>
-<h4>7.Blending</h4>
+<h4>8.Blending</h4>
 <blockquote>
 <p>Blending与Stacking大致相同，只是Blending的主要区别在于训练集不是通过K-Fold的CV策略来获得预测值从而生成第二阶段模型的特征，而是建立一个Holdout集，例如说10%的训练数据，第二阶段的stacker模型就基于第一阶段模型对这10%训练数据的预测值进行拟合。说白了，就是把Stacking流程中的K-Fold CV 改成 HoldOut CV。</p>
 </blockquote>
@@ -326,7 +326,7 @@ A）从原始样本集中抽取训练集。每轮从原始样本集中使用Boot
 <p>2.使用不同的模型对train_1训练，对train_2和test预测，生成两个1维向量，有多少模型就生成多少维向量</p>
 <p>3.第二层使用前面模型对train_2生成的向量和label作为新的训练集，使用LR或者其他模型训练一个新的模型来预测test生成的向量</p>
 <hr>
-<h4>8.Stacking和Blending的区别</h4>
+<h4>9.Stacking和Blending的区别</h4>
 <ol>
 <li>stacking由于加入了K-fold，更加复杂；blending不用K-fold，所以更加简单</li>
 <li>stacking因为使用K-fold，所以训练集的数据分布和原数据集的不一样了，会引入估计偏差；而blending不会。</li>
@@ -350,7 +350,7 @@ A）从原始样本集中抽取训练集。每轮从原始样本集中使用Boot
                     
                     
                     <li class="next">
-                        <a href="/2018/04/02/面经--瓜子二手车数据分析岗位/" data-toggle="tooltip" data-placement="top"
+                        <a href="/2018/04/01/面经--瓜子二手车数据分析岗位/" data-toggle="tooltip" data-placement="top"
                            title="面经--瓜子二手车数据分析岗位">Next Post &rarr;</a>
                     </li>
                     
@@ -386,7 +386,7 @@ A）从原始样本集中抽取训练集。每轮从原始样本集中使用Boot
 
             <div class="hidden-xs col-sm-3 toc-col">
                 <div class="toc-wrap">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">Ensemble Learning--模型融合</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-text">模型的融合条件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-text">1.voting</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-text">2.Averaging</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-text">3.Ranking</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-text">4.Bagging</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-text">5.boosting</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-text">6.Bagging和Boosting的区别</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-text">6.Stacking</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-text">7.Blending</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-text">8.Stacking和Blending的区别</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">Ensemble Learning--模型融合</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-text">模型的融合条件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-text">1.Voting</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-text">2.Averaging</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-text">3.Ranking</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-text">4.Bagging</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-text">5.boosting</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-text">6.Bagging和Boosting的区别</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-text">7.Stacking</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-text">8.Blending</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-text">9.Stacking和Blending的区别</span></a></li></ol></li></ol>
                 </div>
             </div>
         </div>
