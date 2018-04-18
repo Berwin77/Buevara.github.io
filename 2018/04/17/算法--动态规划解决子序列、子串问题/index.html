@@ -217,31 +217,16 @@ c[0,j]表示字符串1的长度是0，字符串2的长度是j，这两个字符�
 <p>求一个最长子序列的问题是这个问题的简化版，所以不单独考虑了。</p>
 <p>我们用第一种方法得到了dp这个二维数组，记录了最长子串的长度，我们现在用dp来递归寻找所有最大公共子序列。
 <img src="https://github.com/Buevara/blog_img/raw/master/4.17/4.17-3.png" alt="4.17-3"></p>
-<blockquote></blockquote>
+<blockquote>
 <p>输出一个最长公共子序列并不难（网上很多相关代码），难点在于输出所有的最长公共子序列，因为 LCS 通常不唯一。总之，我们需要在动态规划表上进行回溯 —— 从dp[m][n]，即右下角的格子，开始进行判断：</p>
-<blockquote>
-<blockquote>
 <ol>
 <li>如果格子dp[i][j]对应的x[i-1] ==y[j-1]，
 则把这个字符放入LCS中，并跳入dp[i-1][j-1]中继续进行判断；</li>
-</ol>
-</blockquote>
-</blockquote>
-<blockquote>
-<blockquote>
-<ol start="2">
 <li>如果格子dp[i][j]对应的 x[i-1] ≠ y[j-1]，
 则比较dp[i-1][j]和dp[i][j-1]的值，跳入值较大的格子继续进行判断；</li>
-</ol>
-</blockquote>
-</blockquote>
-<blockquote>
-<blockquote>
-<ol start="3">
 <li>如果出现dp[i-1][j]等于dp[i][j-1]的情况，
 说明最长公共子序列有多个，故两边都要进行回溯,这里用到递归。</li>
 </ol>
-</blockquote>
 <blockquote>
 <ol start="4">
 <li>直到 i 或 j 小于等于零为止，倒序输出 LCS 。</li>
@@ -280,10 +265,8 @@ c[0,j]表示字符串1的长度是0，字符串2的长度是j，这两个字符�
 <p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">代码请参考第一道题</span><br></pre></td></tr></table></figure></p>
 <p>解法2：动态规划法（时间复杂度O(N^2))</p>
 <blockquote>
-<p>设长度为N的数组为{a0，a1,a2,...an-1)，建立dp二维矩阵</p>
-</blockquote>
-<blockquote>
-<p>如例子所示：假设数组a =[2,1,4,6],建立二维dp数组</p>
+<p>设长度为N的数组为{a0，a1,a2,...an-1)，建立dp二维矩阵
+如例子所示：假设数组a =[2,1,4,6],建立二维dp数组</p>
 </blockquote>
 <p><img src="https://github.com/Buevara/blog_img/raw/master/4.17/4.17-6.jpg" alt="4.17-6">
 结果是3，分别是：[1,4,6]和[2,4,6]</p>
