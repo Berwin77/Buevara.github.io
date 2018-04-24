@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://Buevara.github.io/"/>
-  <updated>2018-04-24T03:22:12.420Z</updated>
+  <updated>2018-04-24T13:29:43.855Z</updated>
   <id>http://Buevara.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://Buevara.github.io/2018/04/19/%E9%9D%A2%E7%BB%8F--%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95%EF%BC%88%E4%B8%80%E9%9D%A2%E6%8C%82%EF%BC%89/"/>
     <id>http://Buevara.github.io/2018/04/19/面经--阿里巴巴机器学习算法（一面挂）/</id>
     <published>2018-04-19T13:28:35.000Z</published>
-    <updated>2018-04-24T03:22:12.420Z</updated>
+    <updated>2018-04-24T13:29:43.855Z</updated>
     
     <content type="html"><![CDATA[<h2>面经--阿里巴巴机器学习算法（一面挂）</h2><hr><h3>一面</h3><ul><li><p>1.自我介绍.</p></li><li><p>2.问了发表过的安全相关的论文（完全没复习，什么也不会）。</p></li><li><p>3.项目上用到了迁移学习，问迁移学习的原理是什么。（一脸懵逼）迁移学习是把一个领域（即源领域）的知识，迁移到另外一个领域（即目标领域），使得目标领域能够取得更好的学习效果。通常，源领域数据量充足，而目标领域数据量较小，迁移学习需要将在数据量充足的情况下学习到的知识，迁移到数据量小的新环境中。</p></li><li><p>4.cnn的激活函数有什么？为什么sigmod函数会出现梯度消失和梯度爆炸？<a href="https://zhuanlan.zhihu.com/p/25631496" target="_blank" rel="noopener">&lt;-答案点击-&gt;</a><img src="https://github.com/Buevara/blog_img/raw/master/4.19/4.19-3.png" alt="4.19-3"><img src="https://github.com/Buevara/blog_img/raw/master/4.19/4.19-4.png" alt="4.19-4"></p></li></ul><blockquote><p>解决方案：<a href="https://blog.csdn.net/qq_25737169/article/details/78847691" target="_blank" rel="noopener">&lt;-答案点击-&gt;</a><img src="https://github.com/Buevara/blog_img/raw/master/4.19/4.19-5.png" alt="4.19-5"><img src="https://github.com/Buevara/blog_img/raw/master/4.19/4.19-6.png" alt="4.19-6"><img src="https://github.com/Buevara/blog_img/raw/master/4.19/4.19-7.png" alt="4.19-7"></p></blockquote><ul><li><p>5.为什么不用传统的三层网络，而使用CNN呢？为什么不能用DNN一直加深去做？<a href="https://www.zhihu.com/question/34681168" target="_blank" rel="noopener">&lt;-答案点击-&gt;</a><img src="https://github.com/Buevara/blog_img/raw/master/4.19/4.19-1.png" alt="4.19-1"><img src="https://github.com/Buevara/blog_img/raw/master/4.19/4.19-2.png" alt="4.19-2"></p></li><li><p>6.假如有一张人脸照片，用CNN的卷积提取流程？由浅层特征到深层特征，从纹理，到局部再到全图。每个卷积和只提取一种特征。</p></li><li><p>7.项目中的创新点？</p></li><li><p>8.cnn的权值共享是什么意思？<a href="https://www.zhihu.com/question/47158818" target="_blank" rel="noopener">&lt;-答案点击-&gt;</a></p></li><li><p>9.逻辑斯蒂回归为什么用sigmod函数而不用其他的函数？<img src="https://github.com/Buevara/blog_img/raw/master/4.19/4.19-8.png" alt="4.19-8"><img src="https://github.com/Buevara/blog_img/raw/master/4.19/4.19-9.png" alt="4.19-9"></p></li></ul><p>一面结束，二十分钟。很多问题没有答上来，真的感觉有些东西从来没想过，面试官认为我的项目工作量过小，基础方面需要加强。</p><hr>]]></content>
     
@@ -46,9 +46,7 @@
     </summary>
     
     
-      <category term="算法" scheme="http://Buevara.github.io/tags/%E7%AE%97%E6%B3%95/"/>
-    
-      <category term="leetcode" scheme="http://Buevara.github.io/tags/leetcode/"/>
+      <category term="面经" scheme="http://Buevara.github.io/tags/%E9%9D%A2%E7%BB%8F/"/>
     
   </entry>
   
