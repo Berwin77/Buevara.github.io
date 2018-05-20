@@ -116,19 +116,86 @@
   </entry>
   
   <entry>
-    <title>面经--阿里巴巴机器学习算法</title>
-    <link href="http://Buevara.github.io/2018/04/19/%E9%9D%A2%E7%BB%8F--%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95%EF%BC%88%E4%B8%80%E9%9D%A2%E6%8C%82%EF%BC%89/"/>
-    <id>http://Buevara.github.io/2018/04/19/面经--阿里巴巴机器学习算法（一面挂）/</id>
-    <published>2018-04-19T13:28:35.000Z</published>
-    <updated>2018-04-24T13:29:43.855Z</updated>
+    <title>面经--知乎算法岗位</title>
+    <link href="http://Buevara.github.io/2018/05/04/%E9%9D%A2%E7%BB%8F--%E7%9F%A5%E4%B9%8E%E7%AE%97%E6%B3%95%E5%B2%97%E4%BD%8D/"/>
+    <id>http://Buevara.github.io/2018/05/04/面经--知乎算法岗位/</id>
+    <published>2018-05-04T02:18:35.000Z</published>
+    <updated>2018-05-20T05:09:32.386Z</updated>
     
-    <content type="html"><![CDATA[<h2>面经--阿里巴巴机器学习算法（一面挂）</h2><hr><h3>一面</h3><ul><li><p>1.自我介绍.</p></li><li><p>2.问了发表过的安全相关的论文（完全没复习，什么也不会）。</p></li><li><p>3.项目上用到了迁移学习，问迁移学习的原理是什么。（一脸懵逼）迁移学习是把一个领域（即源领域）的知识，迁移到另外一个领域（即目标领域），使得目标领域能够取得更好的学习效果。通常，源领域数据量充足，而目标领域数据量较小，迁移学习需要将在数据量充足的情况下学习到的知识，迁移到数据量小的新环境中。</p></li><li><p>4.cnn的激活函数有什么？为什么sigmod函数会出现梯度消失和梯度爆炸？<a href="https://zhuanlan.zhihu.com/p/25631496" target="_blank" rel="noopener">&lt;-答案点击-&gt;</a><img src="https://github.com/Buevara/blog_img/raw/master/4.19/4.19-3.png" alt="4.19-3"><img src="https://github.com/Buevara/blog_img/raw/master/4.19/4.19-4.png" alt="4.19-4"></p></li></ul><blockquote><p>解决方案：<a href="https://blog.csdn.net/qq_25737169/article/details/78847691" target="_blank" rel="noopener">&lt;-答案点击-&gt;</a><img src="https://github.com/Buevara/blog_img/raw/master/4.19/4.19-5.png" alt="4.19-5"><img src="https://github.com/Buevara/blog_img/raw/master/4.19/4.19-6.png" alt="4.19-6"><img src="https://github.com/Buevara/blog_img/raw/master/4.19/4.19-7.png" alt="4.19-7"></p></blockquote><ul><li><p>5.为什么不用传统的三层网络，而使用CNN呢？为什么不能用DNN一直加深去做？<a href="https://www.zhihu.com/question/34681168" target="_blank" rel="noopener">&lt;-答案点击-&gt;</a><img src="https://github.com/Buevara/blog_img/raw/master/4.19/4.19-1.png" alt="4.19-1"><img src="https://github.com/Buevara/blog_img/raw/master/4.19/4.19-2.png" alt="4.19-2"></p></li><li><p>6.假如有一张人脸照片，用CNN的卷积提取流程？由浅层特征到深层特征，从纹理，到局部再到全图。每个卷积和只提取一种特征。</p></li><li><p>7.项目中的创新点？</p></li><li><p>8.cnn的权值共享是什么意思？<a href="https://www.zhihu.com/question/47158818" target="_blank" rel="noopener">&lt;-答案点击-&gt;</a></p></li><li><p>9.逻辑斯蒂回归为什么用sigmod函数而不用其他的函数？<img src="https://github.com/Buevara/blog_img/raw/master/4.19/4.19-8.png" alt="4.19-8"><img src="https://github.com/Buevara/blog_img/raw/master/4.19/4.19-9.png" alt="4.19-9"></p></li></ul><p>一面结束，二十分钟。很多问题没有答上来，真的感觉有些东西从来没想过，面试官认为我的项目工作量过小，基础方面需要加强。</p><hr>]]></content>
+    <content type="html"><![CDATA[<h2>面经--知乎算法岗位</h2><hr><h3>一面：</h3><ul><li><p>1.自我介绍.</p></li><li><p>2.聊项目，xgboost和gbdt的差别？</p></li><li><p>3.验证集的作用？</p></li><li><p>4.什么是过拟合？如何解决过拟合？</p></li><li><p>5.L1正则和L2正则？</p></li><li><p>6.Droputout的含义？</p></li><li><p>7.BN层的含义？</p></li><li><ol start="8"><li>AUC,ROC的含义？</li></ol></li><li><ol start="9"><li>Inception和Resnet的区别？</li></ol></li><li><p>10.算法：</p><ol><li>旋转数组中的最小值？(剑指offer)</li><li>单词dog转换为tik,有词库voc。 我用了队列，他说不是最优的</li></ol></li></ul><hr><h3>二面</h3><ul><li><p>1.自我介绍.</p></li><li><p>2.项目中，xgboost和gbdt区别？</p></li><li><p>3.随机森林中的随机指的是什么？</p></li><li><p>4.gbdt的参数有哪些，如何调整？</p></li><li><p>5.树模型的深度和树的数量有什么关系？</p></li><li><p>6.BN层的作用？</p></li><li><p>7.会不会hive，hadoop？ 不会</p></li><li><p>8.词向量word2vec？ 没学过</p></li><li><p>9.协同过滤？</p></li><li><p>10.算法:</p><ol><li>无序数组 知道排序前和排序后的相对位置差的绝对值k，如何比快速排序的时间复杂度还低？ 堆排序，直接取k个初始，构建最小堆，每次取堆顶元素。</li><li>翻转链表的前x个元素？</li></ol></li></ul><hr>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h2&gt;面经--阿里巴巴机器学习算法（一面挂）&lt;/h2&gt;
+        &lt;h2&gt;面经--知乎算法岗位&lt;/h2&gt;
+&lt;hr&gt;
+&lt;h3&gt;一面：&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;1.自我介绍.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;2.聊项目，xgboost和gbdt的差别？&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;3.验证集的作用？&lt;/p&gt;
+&lt;/li&gt;
+&lt;l
+      
+    
+    </summary>
+    
+    
+      <category term="面经" scheme="http://Buevara.github.io/tags/%E9%9D%A2%E7%BB%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>面经--360机器学习算法岗位</title>
+    <link href="http://Buevara.github.io/2018/04/24/%E9%9D%A2%E7%BB%8F--360%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95%E5%B2%97%E4%BD%8D%EF%BC%88%E4%BA%8C%E9%9D%A2%E6%8C%82%EF%BC%89/"/>
+    <id>http://Buevara.github.io/2018/04/24/面经--360机器学习算法岗位（二面挂）/</id>
+    <published>2018-04-24T12:28:35.000Z</published>
+    <updated>2018-05-20T05:16:28.083Z</updated>
+    
+    <content type="html"><![CDATA[<h2>面经--360机器学习算法岗位（二面挂）</h2><hr><h3>一面：</h3><ul><li>1.自我介绍.</li><li>2.问了所有的项目经历。</li><li>3.算法：大数据下找到两个人的共同好友？<a href="https://blog.csdn.net/u012808902/article/details/77513188" target="_blank" rel="noopener">澈彻策的博客</a><img src="https://github.com/Buevara/blog_img/raw/master/4.26/4.26-3.png" alt="4.26-3"></li></ul><hr><h3>二面</h3><ul><li><p>1.自我介绍.</p></li><li><p>2.SVM为什么特征需要归一化？</p></li></ul><p>首选，什么是归一化？什么是标准化？！<a href="https://github.com/Buevara/blog_img/raw/master/4.25/4.25-1.png" target="_blank" rel="noopener">4.25-1</a>！<a href="https://github.com/Buevara/blog_img/raw/master/4.25/4.25-2.png" target="_blank" rel="noopener">4.25-2</a>！<a href="https://github.com/Buevara/blog_img/raw/master/4.25/4.25-3.png" target="_blank" rel="noopener">4.25-3</a>！<a href="https://github.com/Buevara/blog_img/raw/master/4.25/4.25-4.png" target="_blank" rel="noopener">4.25-4</a>！<a href="https://github.com/Buevara/blog_img/raw/master/4.25/4.25-5.png" target="_blank" rel="noopener">4.25-5</a></p><p>SVM的调参值？C和g： cost和gammagamma（或Epsilon ε）---不敏感损失函数的参数，gamma越大，支持向量越少，gamma值越小，支持向量越多，RBF宽度越大</p><p>C 惩罚系数，C过大或过小，泛化能力变差！<a href="https://github.com/Buevara/blog_img/raw/master/4.25/4.25-6.png" target="_blank" rel="noopener">4.25-6</a><a href="https://blog.csdn.net/wusecaiyun/article/details/49681431" target="_blank" rel="noopener">参考链接</a>https://www.zhihu.com/question/20455227</p><hr>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2&gt;面经--360机器学习算法岗位（二面挂）&lt;/h2&gt;
+&lt;hr&gt;
+&lt;h3&gt;一面：&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;1.自我介绍.&lt;/li&gt;
+&lt;li&gt;2.问了所有的项目经历。&lt;/li&gt;
+&lt;li&gt;3.算法：
+大数据下找到两个人的共同好友？
+&lt;a href=&quot;https://blog.
+      
+    
+    </summary>
+    
+    
+      <category term="面经" scheme="http://Buevara.github.io/tags/%E9%9D%A2%E7%BB%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>面经--阿里巴巴机器学习岗位</title>
+    <link href="http://Buevara.github.io/2018/04/19/%E9%9D%A2%E7%BB%8F--%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95%E5%B2%97%E4%BD%8D%EF%BC%88%E4%B8%80%E9%9D%A2%E6%8C%82%EF%BC%89/"/>
+    <id>http://Buevara.github.io/2018/04/19/面经--阿里巴巴机器学习算法岗位（一面挂）/</id>
+    <published>2018-04-19T13:28:35.000Z</published>
+    <updated>2018-05-20T04:48:01.647Z</updated>
+    
+    <content type="html"><![CDATA[<h2>面经--阿里巴巴机器学习算法岗位（一面挂）</h2><hr><h3>一面</h3><ul><li><p>1.自我介绍.</p></li><li><p>2.问了发表过的安全相关的论文（完全没复习，什么也不会）。</p></li><li><p>3.项目上用到了迁移学习，问迁移学习的原理是什么。（一脸懵逼）迁移学习是把一个领域（即源领域）的知识，迁移到另外一个领域（即目标领域），使得目标领域能够取得更好的学习效果。通常，源领域数据量充足，而目标领域数据量较小，迁移学习需要将在数据量充足的情况下学习到的知识，迁移到数据量小的新环境中。</p></li><li><p>4.cnn的激活函数有什么？为什么sigmod函数会出现梯度消失和梯度爆炸？<a href="https://zhuanlan.zhihu.com/p/25631496" target="_blank" rel="noopener">&lt;-答案点击-&gt;</a><img src="https://github.com/Buevara/blog_img/raw/master/4.19/4.19-3.png" alt="4.19-3"><img src="https://github.com/Buevara/blog_img/raw/master/4.19/4.19-4.png" alt="4.19-4"></p></li></ul><blockquote><p>解决方案：<a href="https://blog.csdn.net/qq_25737169/article/details/78847691" target="_blank" rel="noopener">&lt;-答案点击-&gt;</a><img src="https://github.com/Buevara/blog_img/raw/master/4.19/4.19-5.png" alt="4.19-5"><img src="https://github.com/Buevara/blog_img/raw/master/4.19/4.19-6.png" alt="4.19-6"><img src="https://github.com/Buevara/blog_img/raw/master/4.19/4.19-7.png" alt="4.19-7"></p></blockquote><ul><li><p>5.为什么不用传统的三层网络，而使用CNN呢？为什么不能用DNN一直加深去做？<a href="https://www.zhihu.com/question/34681168" target="_blank" rel="noopener">&lt;-答案点击-&gt;</a><img src="https://github.com/Buevara/blog_img/raw/master/4.19/4.19-1.png" alt="4.19-1"><img src="https://github.com/Buevara/blog_img/raw/master/4.19/4.19-2.png" alt="4.19-2"></p></li><li><p>6.假如有一张人脸照片，用CNN的卷积提取流程？由浅层特征到深层特征，从纹理，到局部再到全图。每个卷积和只提取一种特征。</p></li><li><p>7.项目中的创新点？</p></li><li><p>8.cnn的权值共享是什么意思？<a href="https://www.zhihu.com/question/47158818" target="_blank" rel="noopener">&lt;-答案点击-&gt;</a></p></li><li><p>9.逻辑斯蒂回归为什么用sigmod函数而不用其他的函数？<img src="https://github.com/Buevara/blog_img/raw/master/4.19/4.19-8.png" alt="4.19-8"><img src="https://github.com/Buevara/blog_img/raw/master/4.19/4.19-9.png" alt="4.19-9"></p></li></ul><p>一面结束，二十分钟。很多问题没有答上来，真的感觉有些东西从来没想过，面试官认为我的项目工作量过小，基础方面需要加强。</p><hr>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2&gt;面经--阿里巴巴机器学习算法岗位（一面挂）&lt;/h2&gt;
 &lt;hr&gt;
 &lt;h3&gt;一面&lt;/h3&gt;
 &lt;ul&gt;
@@ -139,7 +206,7 @@
 &lt;p&gt;2.问了发表过的安全相关的论文（完全没复习，什么也不会）。&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;3.项目上用到
+&lt;p&gt;3.项目上
       
     
     </summary>
@@ -179,19 +246,19 @@
   </entry>
   
   <entry>
-    <title>面经--京东机器学习算法工程师</title>
-    <link href="http://Buevara.github.io/2018/04/16/%E9%9D%A2%E7%BB%8F--%E4%BA%AC%E4%B8%9C%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95%E5%B7%A5%E7%A8%8B%E5%B8%88/"/>
-    <id>http://Buevara.github.io/2018/04/16/面经--京东机器学习算法工程师/</id>
+    <title>面经--京东机器学习算法岗位</title>
+    <link href="http://Buevara.github.io/2018/04/16/%E9%9D%A2%E7%BB%8F--%E4%BA%AC%E4%B8%9C%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95%E5%B2%97%E4%BD%8D/"/>
+    <id>http://Buevara.github.io/2018/04/16/面经--京东机器学习算法岗位/</id>
     <published>2018-04-16T08:01:30.000Z</published>
-    <updated>2018-04-16T08:13:28.799Z</updated>
+    <updated>2018-05-20T05:18:09.904Z</updated>
     
-    <content type="html"><![CDATA[<h2>面经--京东机器学习算法工程师</h2><hr><p>共三面，两轮技术面，一轮hr面。</p><hr><h3>一面</h3><ul><li><p>1.自我介绍.</p></li><li><p>2.python装饰器，迭代器，生成器。</p></li><li><p>3.tensorflow高级操作的包，我回答contrib，他问我这个包的含义是什么,我不会，面试官告诉我是开源贡献者提供的方法。</p></li><li><p>4.机器学习的基础模型都有哪些？ 我答svm和logistic，讲了原理和损失函数的具体含义。</p></li><li><p>5.Inception和ResNet网络结构的特点和差别。</p></li><li><p>6.Hive和Hadoop了解吗？ 回答不了解，尴尬......</p></li><li><p>7.问我为什么没过六级，......  这个问题太难了，我也不知道怎么回答，后来面试官说没事，随口一问，吓死我了。</p></li><li><p>8.他问我有什么想问他的，我问了他所在的部门的具体工作，面试官说主要是做模型建立，给各个深度学习相关的部门提供底层模型支持。</p></li></ul><p>一面结束，二十分钟。（太短了，很不适应）</p><hr><h3>二面</h3><ul><li><p>1.问了我知不知道应聘的部门是做什么的，感不感兴趣。</p></li><li><p>2.迄今为止最印象深刻的项目。</p></li><li><p>3.详细介绍了问了我简历上的三个项目。</p></li><li><p>4.最后给我一些建议，应该完善技术栈，会用并且知道怎么用，需要linux的命令经验，hadoop和spark需要会一些。</p></li></ul><p>二面结束，还是二十分钟，面试官很nice，人很好。</p><hr><h3>hr面</h3><ul><li><p>1.自我介绍。</p></li><li><p>2.为什么从通信工程转到信息安全。</p></li><li><p>3.项目中遇到的最大的困难。</p></li><li><p>4.你能给你们部门带来什么。</p></li></ul><p>hr面结束，还是二十分钟，第一次电话面试比较紧张。</p><hr>]]></content>
+    <content type="html"><![CDATA[<h2>面经--京东机器学习算法岗位</h2><hr><p>共三面，两轮技术面，一轮hr面。</p><hr><h3>一面</h3><ul><li><p>1.自我介绍.</p></li><li><p>2.python装饰器，迭代器，生成器。</p></li><li><p>3.tensorflow高级操作的包，我回答contrib，他问我这个包的含义是什么,我不会，面试官告诉我是开源贡献者提供的方法。</p></li><li><p>4.机器学习的基础模型都有哪些？ 我答svm和logistic，讲了原理和损失函数的具体含义。</p></li><li><p>5.Inception和ResNet网络结构的特点和差别。</p></li><li><p>6.Hive和Hadoop了解吗？ 回答不了解，尴尬......</p></li><li><p>7.问我为什么没过六级，......  这个问题太难了，我也不知道怎么回答，后来面试官说没事，随口一问，吓死我了。</p></li><li><p>8.他问我有什么想问他的，我问了他所在的部门的具体工作，面试官说主要是做模型建立，给各个深度学习相关的部门提供底层模型支持。</p></li></ul><p>一面结束，二十分钟。（太短了，很不适应）</p><hr><h3>二面</h3><ul><li><p>1.问了我知不知道应聘的部门是做什么的，感不感兴趣。</p></li><li><p>2.迄今为止最印象深刻的项目。</p></li><li><p>3.详细介绍了问了我简历上的三个项目。</p></li><li><p>4.最后给我一些建议，应该完善技术栈，会用并且知道怎么用，需要linux的命令经验，hadoop和spark需要会一些。</p></li></ul><p>二面结束，还是二十分钟，面试官很nice，人很好。</p><hr><h3>hr面</h3><ul><li><p>1.自我介绍。</p></li><li><p>2.为什么从通信工程转到信息安全。</p></li><li><p>3.项目中遇到的最大的困难。</p></li><li><p>4.你能给你们部门带来什么。</p></li></ul><p>hr面结束，还是二十分钟，第一次电话面试比较紧张。</p><hr>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h2&gt;面经--京东机器学习算法工程师&lt;/h2&gt;
+        &lt;h2&gt;面经--京东机器学习算法岗位&lt;/h2&gt;
 &lt;hr&gt;
 &lt;p&gt;共三面，两轮技术面，一轮hr面。&lt;/p&gt;
 &lt;hr&gt;
@@ -203,6 +270,7 @@
 &lt;li&gt;
 &lt;p&gt;2.python装饰器，迭代器，生成器。&lt;/p&gt;
 &lt;/li&gt;
+
       
     
     </summary>
@@ -244,28 +312,29 @@
   </entry>
   
   <entry>
-    <title>面经--58同城算法工程师、优信二手车数据挖掘工程师</title>
-    <link href="http://Buevara.github.io/2018/04/12/%E9%9D%A2%E7%BB%8F--58%E5%90%8C%E5%9F%8E%E7%AE%97%E6%B3%95%E5%B7%A5%E7%A8%8B%E5%B8%88%E3%80%81%E4%BC%98%E4%BF%A1%E4%BA%8C%E6%89%8B%E8%BD%A6%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E5%B7%A5%E7%A8%8B%E5%B8%88/"/>
-    <id>http://Buevara.github.io/2018/04/12/面经--58同城算法工程师、优信二手车数据挖掘工程师/</id>
+    <title>面经--58同城算法岗位、优信二手车数据挖掘岗位</title>
+    <link href="http://Buevara.github.io/2018/04/12/%E9%9D%A2%E7%BB%8F--58%E5%90%8C%E5%9F%8E%E7%AE%97%E6%B3%95%E5%B2%97%E4%BD%8D%E3%80%81%E4%BC%98%E4%BF%A1%E4%BA%8C%E6%89%8B%E8%BD%A6%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98%E5%B2%97%E4%BD%8D/"/>
+    <id>http://Buevara.github.io/2018/04/12/面经--58同城算法岗位、优信二手车数据挖掘岗位/</id>
     <published>2018-04-12T09:06:30.000Z</published>
-    <updated>2018-04-24T03:17:16.641Z</updated>
+    <updated>2018-05-20T04:48:48.257Z</updated>
     
-    <content type="html"><![CDATA[<h2>面经--58同城算法工程师、优信二手车数据挖掘工程师</h2><p>58同城两面挂，优信二手车一面结束，所以放在一起整理。</p><hr><h3>58同城算法工程师</h3><h4>一面</h4><ul><li><p>1.自我介绍。</p></li><li><p>2.自己的海量数据处理项目。</p></li><li><p>3.kaggle项目中用到的神经网络的不同，和更优秀的模型的差别。</p></li><li><p>4.机器学习的基础模型中svm的原理，线性不可分时还可以用svm吗？可以，用高斯核函数，无限延伸到无穷维度。</p></li><li><p>5.bagging和boosting的区别？</p></li></ul><p><a href="https://buevara.github.io/2018/04/05/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0--%E6%A8%A1%E5%9E%8B%E8%9E%8D%E5%90%88%E6%96%B9%E6%B3%95/">答案点击这里</a></p><p>一面结束，四十分钟左右，其中聊项目比较多，没问算法。</p><hr><h4>二面（电话面试）</h4><ul><li><p>1.自我介绍。</p></li><li><p>2.介绍自己最深刻的项目。（京东店铺销量预测大赛）</p></li><li><p>3.XGBOOST和GBDT的不同，为什么XGBOOST复杂度高却比GBDT更快？<a href="https://blog.csdn.net/wolf963/article/details/78508858" target="_blank" rel="noopener">参考答案1</a><a href="https://www.zhihu.com/question/41354392" target="_blank" rel="noopener">参考答案2</a></p></li><li><p>4.python装饰器？</p></li></ul><p>装饰器：拓展原来函数功能的一种函数，这个函数的特殊之处在于它的返回值也是一个函数，使用python装饰器的好处就是在不用更改原函数的代码前提下给函数增加新的功能。<a href="https://blog.csdn.net/u010358168/article/details/77773199" target="_blank" rel="noopener">参考答案</a></p><p>拓展：迭代器：它是一个带状态的对象，他能在你调用next()方法的时候返回容器中的下一个值，任何实现了__iter__和__next__()（python2中实现next()）方法的对象都是迭代器，__iter__返回迭代器自身，__next__返回容器中的下一个值，如果容器中没有更多元素了，则抛出StopIteration异常，至于它们到底是如何实现的这并不重要。迭代器就是其他语言里的iterator，主要是实现了<code>__iter__</code>，以及和其他语言对应的<code>__next__</code>方法。</p><p>生成器：是Python语言中最吸引人的特性之一，生成器其实是一种特殊的迭代器，不过这种迭代器更加优雅。它不需要再像上面的类一样写__iter__()和__next__()方法了，只需要一个yiled关键字。生成器generator是python特有的，iterator的一个子类，（我理解）主要目的是方便你来实现一个iterator。</p><ul><li>5.为什么树模型不需要归一化特征？</li></ul><p><strong>概率模型不需要归一化，因为它们不关心变量的值，而是关心变量的分布和变量之间的条件概率。像svm、线性回归之类的最优化问题就需要归一化。决策树属于前者。</strong></p><ul><li>6.SVM用于回归模型如何解释？</li></ul><p><a href="http://blog.sina.com.cn/s/blog_62970c250102xfzj.html" target="_blank" rel="noopener">参考答案</a></p><ul><li>7.L1正则化和L2正则化特征，为什么？为什么L1和等值线的交点在坐标轴上的概率最大？<a href="https://www.cnblogs.com/heguanyou/p/7688344.html" target="_blank" rel="noopener">参考答案</a><a href="https://www.zhihu.com/question/23536142" target="_blank" rel="noopener">参考答案</a><a href="https://blog.csdn.net/zhuxiaodong030/article/details/54408786" target="_blank" rel="noopener">参考答案</a></li><li>8.MySql数据库引擎是什么？</li></ul><p>二面结束，三十分钟左右，其中聊项目比较多，基础知识问的都只能说出一些，再往深我没想过，面试官说希望对模型有更深的理解。</p><hr><h3>优信二手车数据挖掘工程师</h3><h4>一面</h4><ul><li><p>1.自我介绍。</p></li><li><p>2.自己JD店铺预测项目如何做的，用了什么模型？SVM,XGBOOST,GBDT...</p></li><li><p>3.SVM有哪些超参数？惩罚系数C和核函数选择和核函数的$ \sigma $。</p></li></ul><blockquote><p>使用SVM时，有两个点要注意：若使用核函数，一定要对Feature做Feature Scaling(Normalization)若训练集m太小，但Feature数量n很大，则训练数据不足以拟合复杂的非线性模型，这种情况下只能用linear-kernel（就是fi=xi）不能用高斯核</p></blockquote><p>来自于 Andrew NG. machine learning class at coursera</p><ul><li>4.logistic回归的超参数？只有一个：学习率</li><li>5.针对于回归问题的评价指标？当时没答上来，应该是mse，mae，决定系数等等。</li><li>5.AUC和ROC怎么求？概念不是很清晰，没推导出来</li><li>6.bagging和boosting的区别？</li><li>7.bagging和boosting分别对模型的偏差和方差有着怎样的影响？简单来说，就是bagging方差降低了，偏差高。boosting是对偏差进行拟合，降低了偏差，方差会随着训练增大。</li></ul><p><img src="https://github.com/Buevara/blog_img/raw/master/4.16/4.16-1.png" alt="4.16-1"></p><p><img src="https://github.com/Buevara/blog_img/raw/master/4.16/4.16-2.png" alt="4.16-2">图片和结论来自于<a href="https://blog.csdn.net/shenxiaoming77/article/details/53894973" target="_blank" rel="noopener">Michael_Shentu的博客</a></p><ul><li>时间复杂度和空间复杂度的含义？</li><li>算法题：</li><li>1.求一个字符串的所有子集？ 简单递归思想</li><li>2.二分查找</li></ul><p>一面结束，五十分钟，答的一般，有两个问题不会。一面结束让我等一下，进行二面，过了一会说二面不在，到时候再约面试，我说ok。晚上hr小姐姐给我打电话，本来以为要约二面，结果和我说不用了，等下个月通知，一脸懵逼。</p><hr>]]></content>
+    <content type="html"><![CDATA[<h2>面经--58同城算法岗位、优信二手车数据挖掘岗位</h2><p>58同城两面挂，优信二手车一面结束，所以放在一起整理。</p><hr><h3>58同城算法岗位</h3><h4>一面</h4><ul><li><p>1.自我介绍。</p></li><li><p>2.自己的海量数据处理项目。</p></li><li><p>3.kaggle项目中用到的神经网络的不同，和更优秀的模型的差别。</p></li><li><p>4.机器学习的基础模型中svm的原理，线性不可分时还可以用svm吗？可以，用高斯核函数，无限延伸到无穷维度。</p></li><li><p>5.bagging和boosting的区别？</p></li></ul><p><a href="https://buevara.github.io/2018/04/05/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0--%E6%A8%A1%E5%9E%8B%E8%9E%8D%E5%90%88%E6%96%B9%E6%B3%95/">答案点击这里</a></p><p>一面结束，四十分钟左右，其中聊项目比较多，没问算法。</p><hr><h4>二面（电话面试）</h4><ul><li><p>1.自我介绍。</p></li><li><p>2.介绍自己最深刻的项目。（京东店铺销量预测大赛）</p></li><li><p>3.XGBOOST和GBDT的不同，为什么XGBOOST复杂度高却比GBDT更快？<a href="https://blog.csdn.net/wolf963/article/details/78508858" target="_blank" rel="noopener">参考答案1</a><a href="https://www.zhihu.com/question/41354392" target="_blank" rel="noopener">参考答案2</a></p></li><li><p>4.python装饰器？</p></li></ul><p>装饰器：拓展原来函数功能的一种函数，这个函数的特殊之处在于它的返回值也是一个函数，使用python装饰器的好处就是在不用更改原函数的代码前提下给函数增加新的功能。<a href="https://blog.csdn.net/u010358168/article/details/77773199" target="_blank" rel="noopener">参考答案</a></p><p>拓展：迭代器：它是一个带状态的对象，他能在你调用next()方法的时候返回容器中的下一个值，任何实现了__iter__和__next__()（python2中实现next()）方法的对象都是迭代器，__iter__返回迭代器自身，__next__返回容器中的下一个值，如果容器中没有更多元素了，则抛出StopIteration异常，至于它们到底是如何实现的这并不重要。迭代器就是其他语言里的iterator，主要是实现了<code>__iter__</code>，以及和其他语言对应的<code>__next__</code>方法。</p><p>生成器：是Python语言中最吸引人的特性之一，生成器其实是一种特殊的迭代器，不过这种迭代器更加优雅。它不需要再像上面的类一样写__iter__()和__next__()方法了，只需要一个yiled关键字。生成器generator是python特有的，iterator的一个子类，（我理解）主要目的是方便你来实现一个iterator。</p><ul><li>5.为什么树模型不需要归一化特征？</li></ul><p><strong>概率模型不需要归一化，因为它们不关心变量的值，而是关心变量的分布和变量之间的条件概率。像svm、线性回归之类的最优化问题就需要归一化。决策树属于前者。</strong></p><ul><li>6.SVM用于回归模型如何解释？</li></ul><p><a href="http://blog.sina.com.cn/s/blog_62970c250102xfzj.html" target="_blank" rel="noopener">参考答案</a></p><ul><li>7.L1正则化和L2正则化特征，为什么？为什么L1和等值线的交点在坐标轴上的概率最大？<a href="https://www.cnblogs.com/heguanyou/p/7688344.html" target="_blank" rel="noopener">参考答案</a><a href="https://www.zhihu.com/question/23536142" target="_blank" rel="noopener">参考答案</a><a href="https://blog.csdn.net/zhuxiaodong030/article/details/54408786" target="_blank" rel="noopener">参考答案</a><img src="https://github.com/Buevara/blog_img/raw/master/4.16/4.16-3.png" alt="4.16-3"></li><li>8.MySql数据库引擎是什么？</li></ul><p>二面结束，三十分钟左右，其中聊项目比较多，基础知识问的都只能说出一些，再往深我没想过，面试官说希望对模型有更深的理解。</p><hr><h3>优信二手车数据挖掘岗位</h3><h4>一面</h4><ul><li><p>1.自我介绍。</p></li><li><p>2.自己JD店铺预测项目如何做的，用了什么模型？SVM,XGBOOST,GBDT...</p></li><li><p>3.SVM有哪些超参数？惩罚系数C和核函数选择和核函数的$ \sigma $。</p></li></ul><blockquote><p>使用SVM时，有两个点要注意：若使用核函数，一定要对Feature做Feature Scaling(Normalization)若训练集m太小，但Feature数量n很大，则训练数据不足以拟合复杂的非线性模型，这种情况下只能用linear-kernel（就是fi=xi）不能用高斯核</p></blockquote><p>来自于 Andrew NG. machine learning class at coursera</p><ul><li>4.logistic回归的超参数？只有一个：学习率</li><li>5.针对于回归问题的评价指标？当时没答上来，应该是mse，mae，决定系数等等。</li><li>5.AUC和ROC怎么求？概念不是很清晰，没推导出来</li><li>6.bagging和boosting的区别？</li><li>7.bagging和boosting分别对模型的偏差和方差有着怎样的影响？简单来说，就是bagging方差降低了，偏差高。boosting是对偏差进行拟合，降低了偏差，方差会随着训练增大。</li></ul><p><img src="https://github.com/Buevara/blog_img/raw/master/4.16/4.16-1.png" alt="4.16-1"></p><p><img src="https://github.com/Buevara/blog_img/raw/master/4.16/4.16-2.png" alt="4.16-2">图片和结论来自于<a href="https://blog.csdn.net/shenxiaoming77/article/details/53894973" target="_blank" rel="noopener">Michael_Shentu的博客</a></p><ul><li>时间复杂度和空间复杂度的含义？</li><li>算法题：</li><li>1.求一个字符串的所有子集？ 简单递归思想</li><li>2.二分查找</li></ul><p>一面结束，五十分钟，答的一般，有两个问题不会。一面结束让我等一下，进行二面，过了一会说二面不在，到时候再约面试，我说ok。晚上hr小姐姐给我打电话，本来以为要约二面，结果和我说不用了，等下个月通知，一脸懵逼。</p><hr>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h2&gt;面经--58同城算法工程师、优信二手车数据挖掘工程师&lt;/h2&gt;
+        &lt;h2&gt;面经--58同城算法岗位、优信二手车数据挖掘岗位&lt;/h2&gt;
 &lt;p&gt;58同城两面挂，优信二手车一面结束，所以放在一起整理。&lt;/p&gt;
 &lt;hr&gt;
-&lt;h3&gt;58同城算法工程师&lt;/h3&gt;
+&lt;h3&gt;58同城算法岗位&lt;/h3&gt;
 &lt;h4&gt;一面&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;1.自我介绍。&lt;/p&gt;
 &lt;/li&gt;
-&lt;l
+&lt;li&gt;
+
       
     
     </summary>
@@ -340,15 +409,15 @@
     <link href="http://Buevara.github.io/2018/04/01/%E9%9D%A2%E7%BB%8F--%E7%93%9C%E5%AD%90%E4%BA%8C%E6%89%8B%E8%BD%A6%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%B2%97%E4%BD%8D/"/>
     <id>http://Buevara.github.io/2018/04/01/面经--瓜子二手车数据分析岗位/</id>
     <published>2018-04-01T10:30:41.000Z</published>
-    <updated>2018-04-16T01:29:57.509Z</updated>
+    <updated>2018-05-20T05:18:48.303Z</updated>
     
-    <content type="html"><![CDATA[<h2>面经--瓜子二手车数据分析算法工程师</h2><hr><p>面试约的上午九点半，去了直接面试，估计去的太早了。</p><hr><h3>一面</h3><ul><li><p>1.自我介绍.</p></li><li><p>2.介绍一下机器学习模型都有哪些，判别模型和生成模型区别，具体有哪些。</p></li><li><p>3.推导logistic的损失函数。</p></li><li><p>4.什么是过拟合，过拟合如何解决。</p></li><li><p>5.什么是gbdt，gbdt如何确定第一棵树，没答出来，她换了个问法，说给你两个特征x，x1是连续的，x2是非连续的，和对应的label，具体的构建gbdt的方法。</p></li><li><p>6.描述kmeans算法，难度加深，给定一个每个点和其他点的距离而不是坐标，该如何聚类。</p></li><li><p>7.最后一道算法题：不用内置函数求sqrt，给定x和 $\Sigma$, 其中$ \Sigma $是误差项。应该用二分查找，但是最后没写出来。</p></li></ul><p>一面结束，三十分钟左右。</p><hr><h3>二面</h3><ul><li><p>1.自我介绍。</p></li><li><p>2.什么是极大似然估计，如何推导。</p></li><li><p>3.什么是最大后验概率，如何推导。</p></li><li><p>4.描述一下朴素贝叶斯。</p></li><li><p>5.算法题：旋转数组中找到x。leetcode33题</p></li><li><p>6.1求概率：得分问题，赢一局得一分，输一局，不扣分，赢和输概率为p和q，n局得到m分的概率是。</p></li><li><p>6.2前面的问题难度加大，输一局扣一分，求n局得到m分的概率是。</p></li><li><p>6.3难度再提升，扣为0分不降分，n局得到m分的概率是。当时没做出来（应该用动态规划）</p></li><li><p>7.1用一枚硬币（1/2的概率）求出一个1/3的概率。</p></li><li><p>7.2用一枚硬币（1/2的概率）求出一个1/3的概率。</p></li><li><p>7.3用不均匀一枚硬币（概率不为1/2）求出一个1/3的概率。</p></li></ul><p>二面面试官问我有什么要问的，我问了一下他所在的部门是做什么的，都有什么方向，他说在做分类推荐。二面结束，共四十分钟左右，面试官很和善，但是他出的问题都不是我自己独立解答的，80%都需要他的一些指引，认识到了自己的不足，继续努力。</p><hr>]]></content>
+    <content type="html"><![CDATA[<h2>面经--瓜子二手车数据分析岗位</h2><hr><p>面试约的上午九点半，去了直接面试，估计去的太早了。</p><hr><h3>一面</h3><ul><li><p>1.自我介绍.</p></li><li><p>2.介绍一下机器学习模型都有哪些，判别模型和生成模型区别，具体有哪些。</p></li><li><p>3.推导logistic的损失函数。</p></li><li><p>4.什么是过拟合，过拟合如何解决。</p></li><li><p>5.什么是gbdt，gbdt如何确定第一棵树，没答出来，她换了个问法，说给你两个特征x，x1是连续的，x2是非连续的，和对应的label，具体的构建gbdt的方法。</p></li><li><p>6.描述kmeans算法，难度加深，给定一个每个点和其他点的距离而不是坐标，该如何聚类。</p></li><li><p>7.最后一道算法题：不用内置函数求sqrt，给定x和 $\Sigma$, 其中$ \Sigma $是误差项。应该用二分查找，但是最后没写出来。</p></li></ul><p>一面结束，三十分钟左右。</p><hr><h3>二面</h3><ul><li><p>1.自我介绍。</p></li><li><p>2.什么是极大似然估计，如何推导。</p></li><li><p>3.什么是最大后验概率，如何推导。</p></li><li><p>4.描述一下朴素贝叶斯。</p></li><li><p>5.算法题：旋转数组中找到x。leetcode33题</p></li><li><p>6.1求概率：得分问题，赢一局得一分，输一局，不扣分，赢和输概率为p和q，n局得到m分的概率是。</p></li><li><p>6.2前面的问题难度加大，输一局扣一分，求n局得到m分的概率是。</p></li><li><p>6.3难度再提升，扣为0分不降分，n局得到m分的概率是。当时没做出来（应该用动态规划）</p></li><li><p>7.1用一枚硬币（1/2的概率）求出一个1/3的概率。</p></li><li><p>7.2用一枚硬币（1/2的概率）求出一个1/3的概率。</p></li><li><p>7.3用不均匀一枚硬币（概率不为1/2）求出一个1/3的概率。</p></li></ul><p>二面面试官问我有什么要问的，我问了一下他所在的部门是做什么的，都有什么方向，他说在做分类推荐。二面结束，共四十分钟左右，面试官很和善，但是他出的问题都不是我自己独立解答的，80%都需要他的一些指引，认识到了自己的不足，继续努力。</p><hr>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h2&gt;面经--瓜子二手车数据分析算法工程师&lt;/h2&gt;
+        &lt;h2&gt;面经--瓜子二手车数据分析岗位&lt;/h2&gt;
 &lt;hr&gt;
 &lt;p&gt;面试约的上午九点半，去了直接面试，估计去的太早了。&lt;/p&gt;
 &lt;hr&gt;
@@ -358,15 +427,13 @@
 &lt;p&gt;1.自我介绍.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;2.介绍一下机器学习模型都有哪些，判
+&lt;p&gt;2.介绍一下机器学习模型都有哪些，判别模型
       
     
     </summary>
     
     
       <category term="面经" scheme="http://Buevara.github.io/tags/%E9%9D%A2%E7%BB%8F/"/>
-    
-      <category term="数据分析" scheme="http://Buevara.github.io/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
     
   </entry>
   
@@ -407,17 +474,17 @@
     <link href="http://Buevara.github.io/2018/03/31/%E9%9D%A2%E7%BB%8F--%E5%B0%8F%E7%B1%B3%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%B2%97%E4%BD%8D/"/>
     <id>http://Buevara.github.io/2018/03/31/面经--小米机器学习岗位/</id>
     <published>2018-03-31T11:40:13.000Z</published>
-    <updated>2018-04-16T01:29:30.718Z</updated>
+    <updated>2018-05-20T05:19:02.819Z</updated>
     
-    <content type="html"><![CDATA[<h2>面经--小米机器学习算法工程师</h2><hr><p>感谢两位校友@<a href="https://marcovaldong.github.io/" target="_blank" rel="noopener">Marcovaldo</a>和@<a href="http://coconlp.top/" target="_blank" rel="noopener">KillersDeath</a>提供的面经。面试约的下午三点，第一次面试，心里有点紧张。</p><hr><h3>一面</h3><ul><li><p>1.自我介绍.</p></li><li><p>2.介绍一下机器学习模型都有哪些。</p></li><li><p>3.深度学习网络的网络特性和不同，主要说了Alexnet和ResNet的主要特征。说的时候问到是不是用layers直接写，我说最早也用conv和pooling，relu写过浅层的网络。</p></li><li><p>4.梯度爆炸和梯度消失，梯度爆炸当时没理解清，没回答的很明白。这个解释很好：<a href="https://www.zhihu.com/question/66027838/" target="_blank" rel="noopener">梯度爆炸</a></p></li><li><p>5.项目上对如何找特征，用了什么模型和技巧，损失函数用的什么。我说用的gbdt，xgboost和SVM，他问我gbdt和SVM哪个对特征不需要处理（gbdt）， xgboost和gbdt的区别，回答速度快。问为什么xgboost速度快，回答用了二阶导数，问xgboost可以自定义损失函数，那你比赛利用的损失函数是什么，你对你的损失函数求一下二阶导，这坑挖的，算了半天没算出来。</p></li><li><p>6.L1、L2正则化的区别，为什么会产生稀疏性，为什么会降低特征权重。</p></li><li><p>7.给1张5*5*3的图片，3*3*64的卷积，用到了多少参数。（应该是想问我卷积层参数共享）</p></li><li><p>8.最后一道算法题：排序数组中给定某个重复出现数字第一次出现的下标。 剑指offer原题，算了半天用了两次二分查找，才写出来，面试官估计不咋满意。</p></li></ul><p>一面结束，四十分钟左右。</p><hr><h3>二面</h3><p>面试官应该是C++大神，想问我指针和数据流方面的题，但我都不会。于是问了三道算法题和一些小问题：</p><ul><li><p>1.一个n*m的矩阵，所有数无顺序，求第k大的数。想用快排，面试官说可以，但是不是最好的。最后没想出来，结束后和同学讨论应该是堆排序加上mapreduce。</p></li><li><p>2.反转链表。剑指offer原题。</p></li><li><p>3.中间问了一下函数的传参问题。</p></li><li><p>4.问了堆排序。</p></li><li><p>5.旋转数组找k。leetcode33题。</p></li></ul><p>二面结束，三十分钟左右，写算法特别慢，估计挂了。</p><hr>]]></content>
+    <content type="html"><![CDATA[<h2>面经--小米机器学习算法岗位</h2><hr><p>感谢两位校友@<a href="https://marcovaldong.github.io/" target="_blank" rel="noopener">Marcovaldo</a>和@<a href="http://coconlp.top/" target="_blank" rel="noopener">KillersDeath</a>提供的面经。面试约的下午三点，第一次面试，心里有点紧张。</p><hr><h3>一面</h3><ul><li><p>1.自我介绍.</p></li><li><p>2.介绍一下机器学习模型都有哪些。</p></li><li><p>3.深度学习网络的网络特性和不同，主要说了Alexnet和ResNet的主要特征。说的时候问到是不是用layers直接写，我说最早也用conv和pooling，relu写过浅层的网络。</p></li><li><p>4.梯度爆炸和梯度消失，梯度爆炸当时没理解清，没回答的很明白。这个解释很好：<a href="https://www.zhihu.com/question/66027838/" target="_blank" rel="noopener">梯度爆炸</a></p></li><li><p>5.项目上对如何找特征，用了什么模型和技巧，损失函数用的什么。我说用的gbdt，xgboost和SVM，他问我gbdt和SVM哪个对特征不需要处理（gbdt）， xgboost和gbdt的区别，回答速度快。问为什么xgboost速度快，回答用了二阶导数，问xgboost可以自定义损失函数，那你比赛利用的损失函数是什么，你对你的损失函数求一下二阶导，这坑挖的，算了半天没算出来。</p></li><li><p>6.L1、L2正则化的区别，为什么会产生稀疏性，为什么会降低特征权重。</p></li><li><p>7.给1张5*5*3的图片，3*3*64的卷积，用到了多少参数。（应该是想问我卷积层参数共享）</p></li><li><p>8.最后一道算法题：排序数组中给定某个重复出现数字第一次出现的下标。 剑指offer原题，算了半天用了两次二分查找，才写出来，面试官估计不咋满意。</p></li></ul><p>一面结束，四十分钟左右。</p><hr><h3>二面</h3><p>面试官应该是C++大神，想问我指针和数据流方面的题，但我都不会。于是问了三道算法题和一些小问题：</p><ul><li><p>1.一个n*m的矩阵，所有数无顺序，求第k大的数。想用快排，面试官说可以，但是不是最好的。最后没想出来，结束后和同学讨论应该是堆排序加上mapreduce。</p></li><li><p>2.反转链表。剑指offer原题。</p></li><li><p>3.中间问了一下函数的传参问题。</p></li><li><p>4.问了堆排序。</p></li><li><p>5.旋转数组找k。leetcode33题。</p></li></ul><p>二面结束，三十分钟左右，写算法特别慢，估计挂了。</p><hr>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h2&gt;面经--小米机器学习算法工程师&lt;/h2&gt;
+        &lt;h2&gt;面经--小米机器学习算法岗位&lt;/h2&gt;
 &lt;hr&gt;
-&lt;p&gt;感谢两位校友@&lt;a href=&quot;https://marcovaldong.github.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Marcovaldo&lt;/a&gt;和@&lt;a href=&quot;ht
+&lt;p&gt;感谢两位校友@&lt;a href=&quot;https://marcovaldong.github.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Marcovaldo&lt;/a&gt;和@&lt;a href=&quot;htt
       
     
     </summary>
@@ -589,59 +656,6 @@
       <category term="深度学习" scheme="http://Buevara.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
     
       <category term="keras" scheme="http://Buevara.github.io/tags/keras/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>网络安全--日志分析：报警关联</title>
-    <link href="http://Buevara.github.io/2017/07/03/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8--%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90%EF%BC%9A%E6%8A%A5%E8%AD%A6%E5%85%B3%E8%81%94/"/>
-    <id>http://Buevara.github.io/2017/07/03/网络安全--日志分析：报警关联/</id>
-    <published>2017-07-03T06:25:13.000Z</published>
-    <updated>2018-04-11T12:22:36.332Z</updated>
-    
-    <content type="html"><![CDATA[<h2>网络安全--日志分析：报警关联</h2><hr><p>警关联分析技术对以入侵报警信息为主的安全报警进行组合、解释和分析。目标是对报警信息的求精，以对攻击规划进行识别和场景重构。报警关联是一个过程，分析了由一个或多个入侵检测系统产生的警报，提供了更加简洁和高层次的入侵或企图侵入的判断。尽管关联过程往往是由一个步骤提出，分析实际通过若干组成部分协作完成，各自有具体的目标。通过对来自于不同类型IDS和其他安全设备所产生的报警进行聚合与关联，可以有效地解决入侵检测分类技术由于硬件速度、算法假设和复杂网络环境的影响所很难克服的误报和漏报偏高等问题，为自动、深入的报警处理打下基础，可以实现如下目标：</p><blockquote><ul><li>1.消除或减少重复报警。网络上不同的IDS 针对同一个安全事件都可能报警，即使是同一个 IDS也可能对某个安全事件发出多个报警。这些重复报警少则几个，多则上万。通过对报警的聚合，可以大大减少重复报警率。</li></ul></blockquote><hr><blockquote><ul><li>2.降低误报率。通过将一个攻击过程相关报警信息关联在一起，可以消除某些孤立和随机事件产生的误报警。另外，报警信息同被保护网络系统本身的信息相互比对就可以很好地滤除无关报警，降低误报率。</li></ul></blockquote><hr><blockquote><ul><li>降低漏报率。目前，没有一种单一的 IDS 能够检测到所有网络攻击。不同 IDS 之间的报警通过关联，可以相互补充，防止漏报的发生。</li></ul></blockquote><hr><blockquote><ul><li>3.发现高层攻击策略。将入侵过程的一系列攻击活动关联在一起，重建攻击过程，这样就可以对入侵的整体情况进行描述，有利于对入侵的理解，发现攻击策略，克服了以往IDS那种检测结果过于细化和底层缺点，为人侵的意图识别、入侵行动预测和入侵响应打下了基础。</li></ul></blockquote><hr><blockquote><ul><li>4.扩大了IDS的检测范围。在较大型的交换式网络统中，单个的IDS(不论是基于网络的还是基于主机的)其检测范围和处理能力是有限的，要想掌握整个网络的安全情况，就要将多个 IDS和安全设备布置在网络上的不同位置，然后将来自于这些安全设备的报警进行融合处理，从而实现全网范围内的安全防御。</li></ul></blockquote><hr><p>目前已经提出的入侵报警关联分析方法，主要可以分为报警聚类方法、基于攻击规划库的报警关联方法和基于攻击行为建模的报警关联方法三大类。</p><h5>报警聚类方法</h5><blockquote><p>1.报警聚类方法属于最初步的关联分析，通过报警属性值之间的相似性对报警进行聚类，使得同个聚类的报警集合具有某些相同的特性，然后选择一个抽象的“元报警”事件作为该聚类的代表元。此类方法不能够完全揭示出相关报警之间的因果联系，无法对报警反映的攻击场景给出清晰的解释，也无法预测攻击者的目标和进一步的攻击规划。</p></blockquote><h5>基于攻击规划库的报警关联方法</h5><blockquote><p>2.基于攻击规划库的报警关联方法在拥有一个完整的已知攻击规划库的基础上，通过一系列关联分析技术来识别报警流中包含的与攻击规划库中的攻击规划相一致的攻击场景实例。基于攻击规划库的报警关联方法是基于封闭世界假说，需要一个完整的攻击规划库作为支撑基础，但在实际环境中，由于攻击动作的多样性和攻击过程的随意性以及新的攻击工具和技术的不断出现，使得构建一个完善的攻击规划库极为困难。此外，由于存在并行的攻击场景，上述的各种方法对每个攻击场景维护中间的状态，从而导致其存储代价和计算代价都非常庞大。上述两个缺陷使得基于攻击场景库的报警关联方法难以在实际中得到广泛的有效应用。</p></blockquote><h5>基于攻击行为建模的报警关联方法</h5><blockquote><p>3.基于攻击行为建模的报警关联方法通过对攻击动作的前提条件和造成的后果进行描述，构建攻击模型，如果一个攻击动作的后果使得另一攻击动作的前提条件得到满足，则认为这两个攻击动作之间存在因果关系。基于攻击行为建模的报警关联算法就利用这些因果关系将观察到的报警进行连接，构造出整个攻击场景。基于攻击行为建模的报警关联方法不需要对所有可能的攻击规划进行描述和存储，只需要对单个攻击行为动作进行建模，准确刻画其所需的前提条件和造成的后果，因此攻击知识模型的构建和维护较为可行，另外构建的攻击知识模型存在较强的灵活性，能够对一些未知的攻击场景进行识别。</p></blockquote><p>现有的入侵报警关联分析技术还存在着如下一些问题：</p><ul><li>[ ]  首先，能够完成攻击规划识别的关联分析技术都需要有一个领域知识库的支撑，虽然目前在攻击关联知识模型方面有一些研究工作，但目前尚未有完整的、实际可行的网络攻防知识库的构建方案。攻防知识库构建的困难阻碍了关联分析技术的实际应用；</li><li>[ ]  其次，现有的入侵报警关联分析技术大多仅仅根据固定的模式对报警进行关联，而未对受监控系统以及攻击者的状态进行有效跟踪；</li><li>[ ]  第三，缺乏对攻击者意图的识别，无法为正确及时的响应提供支持；最后，由于在实际网络环境中很难获得攻击场景测试数据并准确地从背景网络流量中对其进行正确标识，因此对入侵报警关联分析技术的测试和验证普遍缺乏足够的攻击场景数据，这也使得目前大多数的入侵报警关联分析技术研究仅仅针对几个人工构造的攻击场景数据集，并不能够体现实用性。</li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2&gt;网络安全--日志分析：报警关联&lt;/h2&gt;
-&lt;hr&gt;
-&lt;p&gt;警关联分析技术对以入侵报警信息为主的安全报警进行组合、解释和分析。目标是对报警信息的求精，以对攻击规划进行识别和场景重构。
-报警关联是一个过程，分析了由一个或多个入侵检测系统产生的警报，提供了更加简洁和高层次的入侵
-      
-    
-    </summary>
-    
-    
-      <category term="网络安全" scheme="http://Buevara.github.io/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"/>
-    
-      <category term="日志分析" scheme="http://Buevara.github.io/tags/%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>机器学习--参数模型和无参数模型的区别</title>
-    <link href="http://Buevara.github.io/2017/04/12/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0--%E5%8F%82%E6%95%B0%E6%A8%A1%E5%9E%8B%E5%92%8C%E6%97%A0%E5%8F%82%E6%95%B0%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
-    <id>http://Buevara.github.io/2017/04/12/机器学习--参数模型和无参数模型的区别/</id>
-    <published>2017-04-12T08:49:12.000Z</published>
-    <updated>2018-05-20T04:31:09.531Z</updated>
-    
-    <content type="html"><![CDATA[<h1>机器学习--参数模型和无参数模型的区别</h1><hr><p>在统计学中，参数模型通常假设总体（随机变量）服从某一个分布，该分布由一些参数确定（比如正太分布由均值和方差确定），在此基础上构建的模型称为参数模型；非参数模型对于总体的分布不做任何假设，只是知道总体是一个随机变量，其分布是存在的（分布中也可能存在参数），但是无法知道其分布的形式，更不知道分布的相关参数，只有在给定一些样本的条件下，能够依据非参数统计的方法进行推断。</p><p>从上述的区别中可以看出，问题中有没有参数，并不是参数模型和非参数模型的区别。其区别主要在于总体的分布形式是否已知。而为何强调“参数”与“非参数”，主要原因在于参数模型的分布可以有参数直接确定。</p><p><img src="https://github.com/Buevara/blog_img/raw/master/4.26/4.26-1.png" alt="4.26-1"><img src="https://github.com/Buevara/blog_img/raw/master/4.26/4.26-2.png" alt="4.26-2"></p><p>###参数机器学习算法</p><blockquote><p>假设可以最大程度地简化学习过程，与此同时也限制可以学习到是什么。这种算法简化成一个已知的函数形式，这称为参数机器学习算法。</p></blockquote><p>这种算法包括两种步骤：     1. 选择一种目标函数的形式；     2. 从训练数据中学习目标函数的系数。  一种最容易理解目标（映射）函数的形式就是一条直线，用于线性回归：此处的、和是直线的系数，用于控制直线的截距和斜率，和是两个输入变量。把目标函数的形式假设为一条直线大大简化了学习过程。现在，我们需要做的是估计这个直线等式的系数，和有一个预测模型的问题。  通常假设函数的形式是一个输入变量的线性组合，因此这种参数机器学习算法经常也称为“线性机器学习算法”。  问题是，实际的未知潜在函数可能不是一个线性函数，比如一条直线。它 可能接近一条直线和需要一些细微的输入调整。或者可能不像一条直线，在这种情况下，假设就是错误的，这种方法将会产生很差的结果。参数机器学习算法的一些常见例子包括：  Logistic Regression,LDA（线性判别分析）,感知机,朴素贝叶斯,简单的神经网络</p><blockquote><p>参数机器学习算法的优点：简单：这些算法很容易理解和解释结果；快速：参数模型可以很快从数据中学习；少量的数据：它们不需要太多的训练数据，甚至可以很好地拟合有缺陷的数。参数机器学习算法的局限性：约束：这些算法选择一种函数形式高度低限制模型本身；有限的复杂性：这种算法可能更适合简单的问题；不适合：在实践中，这些方法不太可能匹配潜在的目标（映射）函数。</p></blockquote><hr><p>###非参数机器学习算法</p><blockquote><p>不对目标函数的形式作出强烈假设的算法称为非参数机器学习算法。通过不做假设，它们可以从训练数据中自由地学习任何函数形式。</p></blockquote><p>在构造目标函数时，非参的方法寻找最合适的训练数据，同时保留一些对不可见数据的泛化能力。因此，这些非参方法能够拟合大多数的函数形式。  一种理解非参模型的最好例子是KNN算法，对于一个新的数据实例，KNN基于K个最相似的训练模式（已标记的实例）。这种方法除了模式可能更接近有一个相似的输出变量之外，不需要对目标函数的形式作出任何的假设。  非参数机器学习算法的一些常见例子包括：  KNN,决策树,比如CART和C4.5,SVM</p><blockquote><p>非参数机器学习算法的优点：灵活性：拟合大量的不同函数形式；能力：关于潜在的函数不需要假设（或者若假设）；性能：可以得到用于预测的高性能模型。  非参数机器学习算法的局限性：更多的数据：需要更多的训练数据用于估计目标函数；慢：训练很慢，因为它们常常需要训练更多的参数；过拟合：更多的过度拟合训练数据风险，同时它更难解释为什么要做出的具体预测。</p></blockquote><hr>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1&gt;机器学习--参数模型和无参数模型的区别&lt;/h1&gt;
-&lt;hr&gt;
-&lt;p&gt;在统计学中，参数模型通常假设总体（随机变量）服从某一个分布，该分布由一些参数确定（比如正太分布由均值和方差确定），在此基础上构建的模型称为参数模型；非参数模型对于总体的分布不做任何假设，只是知道总体是一个随
-      
-    
-    </summary>
-    
-    
-      <category term="机器学习" scheme="http://Buevara.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
