@@ -83,7 +83,7 @@
   <entry>
     <title><![CDATA[深度学习--Inception和Xception网络]]></title>
     <url>%2F2018%2F04%2F15%2F%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0--Inception%E5%92%8CXception%E7%BD%91%E7%BB%9C%2F</url>
-    <content type="text"><![CDATA[深度学习--Inception和Xception网络 https://blog.csdn.net/yuanchheneducn/article/details/53045551 https://blog.csdn.net/u010402786/article/details/52433324 https://www.jianshu.com/p/0583f1ba068c https://blog.csdn.net/xbinworld/article/details/61674836 https://zhuanlan.zhihu.com/p/33999416 https://blog.csdn.net/lynnandwei/article/details/53736235 xception https://blog.csdn.net/u014380165/article/details/75142710 卷及操作：https://zhuanlan.zhihu.com/p/29367273]]></content>
+    <content type="text"><![CDATA[深度学习--Inception和Xception网络 整理了一些Inception和Xception网络的资料： Inception v1到v4演变 网络模型中Inception的作用与结构全解析 卷积神经网络工作原理研究-Inception结构研究 卷积神经网络结构变化 关于「Inception」和「Xception」的那些事 inception V4 与resnet Xception算法详解 CNN卷及操作详解]]></content>
       <tags>
         <tag>深度学习</tag>
         <tag>网络模型</tag>
