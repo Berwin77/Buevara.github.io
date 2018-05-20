@@ -185,12 +185,12 @@
             <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
                 <h1>python基础--pandas包和sklearn包的方法整理</h1>
 <hr>
-<p>pandas的操作：
-1.pandas读取txt：https://segmentfault.com/q/1010000012437263
-2.pandas获取datetime的days，months，years：http://www.jb51.net/article/105840.htm
-3.pandas看有多少个不重复的用户：https://blog.csdn.net/jasonwang_/article/details/78984852
-4.kaggle预测房价：https://www.leiphone.com/news/201704/Py7Mu3TwRF97pWc7.html
-5.删除某些属性为x的行：a = df[(True^df['value'].isin([3]))]  ##删除表df中value属性为3的行
+<p>pandas的操作：</p>
+<p>1.pandas读取txt：https://segmentfault.com/q/1010000012437263</p>
+<p>2.pandas获取datetime的days，months，years：http://www.jb51.net/article/105840.htm</p>
+<p>3.pandas看有多少个不重复的用户：https://blog.csdn.net/jasonwang_/article/details/78984852</p>
+<p>4.kaggle预测房价：https://www.leiphone.com/news/201704/Py7Mu3TwRF97pWc7.html</p>
+<p>5.删除某些属性为x的行：a = df[(True^df['value'].isin([3]))]  ##删除表df中value属性为3的行
 index重置：
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">test4</span><span class="params">()</span>:</span>  </span><br><span class="line">    obj3 = Series([<span class="string">'blue'</span>, <span class="string">'purple'</span>, <span class="string">'yellow'</span>], index=[<span class="number">0</span>, <span class="number">2</span>, <span class="number">4</span>])  </span><br><span class="line">    <span class="keyword">print</span> obj3  </span><br><span class="line">    obj4 = obj3.reset_index(drop=<span class="keyword">True</span>)  </span><br><span class="line">    <span class="keyword">print</span> obj4  </span><br><span class="line">    <span class="keyword">print</span> type(obj4)</span><br></pre></td></tr></table></figure></p>
 <p>6.pandas.DataFrame.drop_duplicates后面inplace=True与inplace=False的区别：</p>
