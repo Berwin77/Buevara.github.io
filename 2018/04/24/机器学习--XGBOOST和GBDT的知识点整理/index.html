@@ -18,11 +18,11 @@
     <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
     <title>
         
-        算法基础--各种排序算法的性质｜Buevara&#39;s blog
+        机器学习--XGBOOST和GBDT的知识点整理｜Buevara&#39;s blog
         
     </title>
 
-    <link rel="canonical" href="http://Buevara.github.io/2018/01/31/算法基础--各种排序算法的性质/">
+    <link rel="canonical" href="http://Buevara.github.io/2018/04/24/机器学习--XGBOOST和GBDT的知识点整理/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -145,12 +145,12 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
                 <div class="post-heading">
-                    <h1>算法基础--各种排序算法的性质</h1>
+                    <h1>机器学习--XGBOOST和GBDT的知识点整理</h1>
                     
                     <span class="meta">
                          作者 Buevara
                         <span>
-                          日期 2018-01-31
+                          日期 2018-04-24
                          </span>
                          <span>
                          本文阅读量 <span id="busuanzi_value_page_pv">
@@ -159,11 +159,11 @@
                     
                     <div class="tags text-center">
                         
-                        <a class="tag" href="/tags/#算法"
-                           title="算法">算法</a>
+                        <a class="tag" href="/tags/#机器学习"
+                           title="机器学习">机器学习</a>
                         
-                        <a class="tag" href="/tags/#排序"
-                           title="排序">排序</a>
+                        <a class="tag" href="/tags/#树模型"
+                           title="树模型">树模型</a>
                         
                     </div>
                 </div>
@@ -172,7 +172,7 @@
     </div>
     <div class="post-title-haojen">
         <span>
-            算法基础--各种排序算法的性质
+            机器学习--XGBOOST和GBDT的知识点整理
         </span>
     </div>
 </header>
@@ -183,98 +183,34 @@
         <div class="row">
             <!-- Post Container -->
             <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
-                <table>
-<thead>
-<tr>
-<th>算法种类</th>
-<th>最好情况</th>
-<th>平均情况</th>
-<th>最坏情况</th>
-<th>空间复杂度</th>
-<th>是否稳定</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>直接插入排序</td>
-<td>O(n)</td>
-<td>O(n^2)</td>
-<td>O(n^2)</td>
-<td>O(1)</td>
-<td>是</td>
-</tr>
-<tr>
-<td>冒泡排序</td>
-<td>O(n)</td>
-<td>O(n^2)</td>
-<td>O(n^2)</td>
-<td>O(1)</td>
-<td>是</td>
-</tr>
-<tr>
-<td>简单选择排序</td>
-<td>O(n^2)</td>
-<td>O(n^2)</td>
-<td>O(n^2)</td>
-<td>O(1)</td>
-<td>否</td>
-</tr>
-<tr>
-<td>希尔排序</td>
-<td></td>
-<td></td>
-<td></td>
-<td>O(1)</td>
-<td>否</td>
-</tr>
-<tr>
-<td>快速排序</td>
-<td>O(nlogn)</td>
-<td>O(nlogn)</td>
-<td>O(n^2)</td>
-<td>O(logn)</td>
-<td>否</td>
-</tr>
-<tr>
-<td>堆排序</td>
-<td>O(nlogn)</td>
-<td>O(nlogn)</td>
-<td>O(nlogn)</td>
-<td>O(1)</td>
-<td>否</td>
-</tr>
-<tr>
-<td>2-路归并</td>
-<td>O(nlogn)</td>
-<td>O(nlogn)</td>
-<td>O(nlogn)</td>
-<td>O(n)</td>
-<td>是</td>
-</tr>
-<tr>
-<td>基数排序</td>
-<td>O(d(n+r))</td>
-<td>O(d(n+r))</td>
-<td>O(d(n+r))</td>
-<td>O(r)</td>
-<td>是</td>
-</tr>
-</tbody>
-</table>
-<h2>快速排序</h2>
-<p>快速排序是每趟都确定一个元素的位置，并且在它的位置左边的都比它小，在它右边的都比它大。</p>
-<p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">void QuickSort(ElemType A[], int low, int high)&#123;</span><br><span class="line">    <span class="keyword">if</span>(low &lt; high)&#123;</span><br><span class="line">        int pivotpos = Partition(A, low, high);</span><br><span class="line">        QuickSort(A, low, pivotpos<span class="number">-1</span>);</span><br><span class="line">        QuickSort(A, pivotpos+<span class="number">1</span>, high);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int Partition(ElemType A[], int low, int high)&#123;</span><br><span class="line">    ElemType pivot = A[low];</span><br><span class="line">    <span class="keyword">while</span>(low &lt; high)&#123;</span><br><span class="line">        <span class="keyword">while</span>(low&lt;high &amp;&amp; A[high] &gt; pivot) high--;</span><br><span class="line">        A[low] = A[high];</span><br><span class="line">        <span class="keyword">while</span>(low&lt;high &amp;&amp; A[low] &lt; pivot) low++;</span><br><span class="line">    &#125;</span><br><span class="line">    A[low] = pivot;</span><br><span class="line">    <span class="keyword">return</span> low;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h2>堆排序</h2>
-<p>堆排序是先要构建成大顶堆，而后依次将root跟二叉树最后一个元素互换，每次互换后都要将二叉树再调整回大顶堆。</p>
-<p>下面是建立大顶堆的过程：
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">BuildMaxHeap</span><span class="params">(ElemType A[], <span class="keyword">int</span> len)</span></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(i=len/<span class="number">2</span>;i&gt;<span class="number">0</span>;i--)</span><br><span class="line">        AdjustDown(A, i, len);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">AdjustDown</span><span class="params">(ElemType A[], <span class="keyword">int</span> k, <span class="keyword">int</span> len)</span></span>&#123;</span><br><span class="line">    A[<span class="number">0</span>] = A[k];</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">2</span>*k;i&lt;=len;i*=<span class="number">2</span>)&#123;</span><br><span class="line">        <span class="keyword">if</span>(i&lt;len&amp;&amp;A[i]&lt;A[i+<span class="number">1</span>])</span><br><span class="line">            i++;</span><br><span class="line">        <span class="keyword">if</span>(A[i] &gt; A[<span class="number">0</span>])</span><br><span class="line">            A[k] = A[i];</span><br><span class="line">            k = i;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>下面是堆排序算法：
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">HeapSort</span><span class="params">(ElemType A[], <span class="keyword">int</span> len)</span></span>&#123;</span><br><span class="line">    BuildMaxHeap(A, len);</span><br><span class="line">    <span class="keyword">for</span>(i=len;i&gt;<span class="number">1</span>;i--)&#123;</span><br><span class="line">        Swap(A[i], A[<span class="number">1</span>]);</span><br><span class="line">        AdjustDown(A, i<span class="number">-1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>堆支持删除和插入操作。删除堆顶元素时先将堆顶元素与最后一个元素互换，之后进行向下调整。插入元素时，直接将元素插入到最后的位置，之后进行向上调整。下面是执行向上调整的函数：
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">AdjustUp</span><span class="params">(ElemType A[], <span class="keyword">int</span> k)</span></span>&#123;</span><br><span class="line"><span class="comment">//参数k为向上调整的结点，也就是堆中的元素个数</span></span><br><span class="line">    A[<span class="number">0</span>] = A[k];</span><br><span class="line">    <span class="keyword">int</span> i = k / <span class="number">2</span>;</span><br><span class="line">    <span class="keyword">while</span>(i&gt;<span class="number">0</span>&amp;&amp;A[i]&lt;A[<span class="number">0</span>])&#123;</span><br><span class="line">        A[k] = A[i];</span><br><span class="line">        k = i;</span><br><span class="line">        i = k/<span class="number">2</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    A[k] = A[<span class="number">0</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h2>简单选择排序</h2>
-<p>假设排序表为L[1...n]，第i趟排序即从L[1...n]中选择关键字最小的元素与L[i]进行交换，每一趟排序都可以确定一个元素的最终位置，经过n-1趟排序就可以使整个排序表有序。
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">SelectSort</span><span class="params">(ElemType A[], <span class="keyword">int</span> n)</span></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;n<span class="number">-1</span>;i++)&#123;</span><br><span class="line">        min = i;</span><br><span class="line">        <span class="keyword">for</span>(j=i+<span class="number">1</span>;j&lt;n;j++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(A[j] &lt; A[min])</span><br><span class="line">                min = j;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(min!=i)</span><br><span class="line">            Swap(A[i], A[min]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+                <h2>机器学习--XGBOOST和GBDT的知识点整理</h2>
+<hr>
+<h3>1.树模型缺失值</h3>
+<p>树模型：
+如何处理缺失值：
+按照我自己的理解就是：在属性a下假如存在缺失值的话，在计算属性a下的信息增益或者信息增率时，把具有缺失值的元组去掉，把具有完整值的属性a代入计算，用去掉缺失值计算结果进行比较。</p>
+<p>如图，假设有100个样本，针对属性A，有20个样本是缺失值。树模型处理缺失样本的时候，会先忽略属性A缺失的样本，然后采用某种属性选择度量（信息增益、增益率、基尼指数）对剩下的样本（现在有80个）进行分裂。假设将这80个样本分裂到图中的三个节点，三个节点分配到的样本数分别为30、25、25（称这个过程为过程一）。然后将属性A缺失的20个样本均加入到这三个节点中（称这个过程为过程二）。在过程一中加入节点的样本的权值均为1，而在过程二中加入节点的样本的权值为：该节点中属性A未缺失的样本数/父节点中属性A未缺失的样本数，如属性A缺失的样本添加到节点1之后的权重为 30/80 = 0.375。
+<img src="https://github.com/Buevara/blog_img/raw/master/4.18/4.18-5.png" alt="4.18-5"></p>
+<h3>2.为什么树模型不需要归一化特征？</h3>
+<p>概率模型不需要归一化，因为它们不关心变量的值，而是关心变量的分布和变量之间的条件概率。像svm、线性回归之类的最优化问题就需要归一化。决策树属于前者。</p>
+<h3>3.xgboost</h3>
+<p>https://blog.csdn.net/github_38414650/article/details/76061893</p>
+<h3>4.为什么xgboost比gbdt更快？</h3>
+<p>https://www.zhihu.com/question/41354392
+http://idatamining.net/blog/?p=1901</p>
+<blockquote>
+<p>1.可并行的近似直方图算法。树节点在进行分裂时，我们需要计算每个特征的每个分割点对应的增益，即用贪心法枚举所有可能的分割点。当数据无法一次载入内存或者在分布式情况下，贪心算法效率就会变得很低，所以xgboost还提出了一种可并行的近似直方图算法，用于高效地生成候选的分割点。利用直方图的离散，找到最优的切分点。</p>
+</blockquote>
+<blockquote>
+<p>2.既提供了单机多线程并行加速，也支持多机分布式加速。也就提供了若干种不同的并行建树的updater实现，按并行策略的不同，包括：<br>
+I). inter-feature exact parallelism （特征级精确并行）   II). inter-feature approximate parallelism（特征级近似并行，基于特征分bin计算，减少了枚举所有特征分裂点的开销）<br>
+III). intra-feature parallelism （特征内并行）
+IV). inter-node parallelism  （多机并行）</p>
+</blockquote>
+<blockquote>
+<p>3.把连续的浮点特征值离散化成k个整数，同时构造一个宽度为k的直方图。在 遍历数据的时候，根据离散化后的值作为索引在直方图中累积统计量，当遍历一次数据后，直方图累积了需要的统计量，然后根据直方图的离散值，遍历寻找最优的分割点。
+4.xgboost工具支持并行。boosting不是一种串行的结构吗?怎么并行的？注意xgboost的并行不是tree粒度的并行，xgboost也是一次迭代完才能进行下一次迭代的（第t次迭代的代价函数里包含了前面t-1次迭代的预测值）。xgboost的并行是在特征粒度上的。我们知道，决策树的学习最耗时的一个步骤就是对特征的值进行排序（因为要确定最佳分割点），xgboost在训练之前，预先对数据进行了排序，然后保存为block结构，后面的迭代中重复地使用这个结构，大大减小计算量。这个block结构也使得并行成为了可能，在进行节点的分裂时，需要计算每个特征的增益，最终选增益最大的那个特征去做分裂，那么各个特征的增益计算就可以开多线程进行。</p>
+</blockquote>
 
                 <hr>
                 
@@ -282,14 +218,14 @@
                 <ul class="pager">
                     
                     <li class="previous">
-                        <a href="/2018/03/25/算法基础--回文串问题/" data-toggle="tooltip" data-placement="top"
-                           title="算法基础--回文串问题">&larr; Previous Post</a>
+                        <a href="/2018/04/24/面经--360机器学习算法岗位（二面挂）/" data-toggle="tooltip" data-placement="top"
+                           title="面经--360机器学习算法岗位">&larr; Previous Post</a>
                     </li>
                     
                     
                     <li class="next">
-                        <a href="/2017/09/03/python基础--pandas包和sklearn包的方法整理/" data-toggle="tooltip" data-placement="top"
-                           title="python基础--pandas包和sklearn包的方法整理">Next Post &rarr;</a>
+                        <a href="/2018/04/19/面经--阿里巴巴机器学习算法岗位（一面挂）/" data-toggle="tooltip" data-placement="top"
+                           title="面经--阿里巴巴机器学习岗位">Next Post &rarr;</a>
                     </li>
                     
                 </ul>
@@ -324,7 +260,7 @@
 
             <div class="hidden-xs col-sm-3 toc-col">
                 <div class="toc-wrap">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-text">快速排序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-text">堆排序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-text">简单选择排序</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-text">机器学习--XGBOOST和GBDT的知识点整理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">1.树模型缺失值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">2.为什么树模型不需要归一化特征？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">3.xgboost</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">4.为什么xgboost比gbdt更快？</span></a></li></ol></li></ol>
                 </div>
             </div>
         </div>
@@ -346,11 +282,11 @@
                     </h5>
                     <div class="tags">
                         
-                        <a class="tag" href="/tags/#算法"
-                           title="算法">算法</a>
+                        <a class="tag" href="/tags/#机器学习"
+                           title="机器学习">机器学习</a>
                         
-                        <a class="tag" href="/tags/#排序"
-                           title="排序">排序</a>
+                        <a class="tag" href="/tags/#树模型"
+                           title="树模型">树模型</a>
                         
                     </div>
                 </section>
