@@ -200,30 +200,30 @@ index重置：
 t.drop_duplicates(inplace=True) 则，对t中重复将被去除。
 drop_duplicates(inplace=False)将不改变原来的dataFrame，而将结果生成在一个新的dataFrame中。
 如：
-s = t.drop_duplicates(inplace=False) 则，t的内容不发生改变，s的内容是去除重复后的内容</p>
+s = t.drop_duplicates(inplace=False)则，t的内容不发生改变，s的内容是去除重复后的内容</p>
 </blockquote>
 <p>7.pandas填充缺失值：</p>
 <blockquote>
-<p>填充缺失数据（fillna）!!
+<p>填充缺失数据 fillna
 常数调用df.fillna(0)
 字典调用，对不同的列填充不同的值df.fillna({1:0.5, 3:-1})
-fillna默认会返回新对象！！，就地修改： _ = df.fillna(0, inplace=True)
+fillna默认会返回新对象！！，就地修改： _ = df.fillna(0,inplace=True)
 对reindex有效的插值方法也可用于fillna</p>
 </blockquote>
 <p>8.判断df中是否有缺失值：df.isnull().any()</p>
 <p>9.删除pandas DataFrame的某一/几列：</p>
-<blockquote></blockquote>
+<blockquote>
 <p>方法一：直接del DF['column-name']
 方法二：采用drop方法，有下面三种等价的表达式：</p>
 <ol>
 <li>DF= DF.drop('column_name', 1)；</li>
 <li>DF.drop('column_name',axis=1, inplace=True)</li>
-<li>DF.drop(DF.columns[ : ], axis=1,inplace=True)   # Note: zero indexed
+<li>DF.drop(DF.columns[ : ], axis=1,inplace=True)  #Note:zero indexed
 注意：凡是会对原数组作出修改并返回一个新数组的，往往都有一个 inplace可选参数。如果手动设定为True（默认为False），那么原数组直接就被替换。也就是说，采用inplace=True之后，原数组名（如2和3情况所示）对应的内存值直接改变；而采用inplace=False之后，原数组名对应的内存值并不改变，需要将新的结果赋给一个新的数组或者覆盖原数组的内存位置（如1情况所示）。</li>
 </ol>
-<blockquote></blockquote>
+</blockquote>
 <p>10.表格合并：  https://www.cnblogs.com/bigshow1949/p/7016245.html</p>
-<blockquote></blockquote>
+<blockquote>
 <p>缺失值处理方法：填0 丢弃 找规律填值（中位数，平均数）
 处理缺失值
 第一种方法 ： 丢弃
@@ -231,7 +231,7 @@ f.dropna(inplace=True)
 第二种方法 ：  填0
 f.fillna(0, inplace=True)
 第三种方法 ：  找规律</p>
-<blockquote></blockquote>
+</blockquote>
 <p>11.按某一列的值进行排序：
 d = df.sort_values(by=['value'], ascending=False)
 ascending=False 降序  True升序</p>
