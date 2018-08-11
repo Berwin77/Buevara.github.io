@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://Buevara.github.io/"/>
-  <updated>2018-08-11T13:57:25.109Z</updated>
+  <updated>2018-08-11T14:20:23.781Z</updated>
   <id>http://Buevara.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>深度学习基础--BN层的作用详解</title>
+    <link href="http://Buevara.github.io/2018/06/03/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80--BN%E5%B1%82%E7%9A%84%E4%BD%9C%E7%94%A8%E8%AF%A6%E8%A7%A3/"/>
+    <id>http://Buevara.github.io/2018/06/03/深度学习基础--BN层的作用详解/</id>
+    <published>2018-06-03T04:05:35.000Z</published>
+    <updated>2018-08-11T14:20:23.781Z</updated>
+    
+    <content type="html"><![CDATA[<h1>深度学习基础--BN层的作用详解.md</h1><p><a href="https://blog.csdn.net/myarrow/article/details/51848285" target="_blank" rel="noopener">详情见cs231n学习笔记-激活函数-BN-参数优化</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1&gt;深度学习基础--BN层的作用详解.md&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/myarrow/article/details/51848285&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;详情见cs231n学习笔
+      
+    
+    </summary>
+    
+    
+      <category term="深度学习" scheme="http://Buevara.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>算法基础--排序算法复杂度总结</title>
@@ -38,30 +62,6 @@
     
     
       <category term="算法" scheme="http://Buevara.github.io/tags/%E7%AE%97%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>深度学习基础--BN层的作用详解</title>
-    <link href="http://Buevara.github.io/2018/06/01/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80--BN%E5%B1%82%E7%9A%84%E4%BD%9C%E7%94%A8%E8%AF%A6%E8%A7%A3/"/>
-    <id>http://Buevara.github.io/2018/06/01/深度学习基础--BN层的作用详解/</id>
-    <published>2018-06-01T07:05:35.000Z</published>
-    <updated>2018-08-11T14:19:31.965Z</updated>
-    
-    <content type="html"><![CDATA[<h1>深度学习基础--BN层的作用详解.md</h1><p><a href="https://blog.csdn.net/myarrow/article/details/51848285" target="_blank" rel="noopener">详情见cs231n学习笔记-激活函数-BN-参数优化</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1&gt;深度学习基础--BN层的作用详解.md&lt;/h1&gt;
-&lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/myarrow/article/details/51848285&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;详情见cs231n学习笔
-      
-    
-    </summary>
-    
-    
-      <category term="深度学习" scheme="http://Buevara.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
@@ -201,6 +201,36 @@
   </entry>
   
   <entry>
+    <title>机器学习--XGBOOST和GBDT的知识点整理</title>
+    <link href="http://Buevara.github.io/2018/04/24/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0--XGBOOST%E5%92%8CGBDT%E7%9A%84%E7%9F%A5%E8%AF%86%E7%82%B9%E6%95%B4%E7%90%86/"/>
+    <id>http://Buevara.github.io/2018/04/24/机器学习--XGBOOST和GBDT的知识点整理/</id>
+    <published>2018-04-24T12:28:35.000Z</published>
+    <updated>2018-05-28T04:20:21.062Z</updated>
+    
+    <content type="html"><![CDATA[<h2>机器学习--XGBOOST和GBDT的知识点整理</h2><hr><h3>1.树模型缺失值</h3><p>树模型：如何处理缺失值：按照我自己的理解就是：在属性a下假如存在缺失值的话，在计算属性a下的信息增益或者信息增率时，把具有缺失值的元组去掉，把具有完整值的属性a代入计算，用去掉缺失值计算结果进行比较。</p><p>如图，假设有100个样本，针对属性A，有20个样本是缺失值。树模型处理缺失样本的时候，会先忽略属性A缺失的样本，然后采用某种属性选择度量（信息增益、增益率、基尼指数）对剩下的样本（现在有80个）进行分裂。假设将这80个样本分裂到图中的三个节点，三个节点分配到的样本数分别为30、25、25（称这个过程为过程一）。然后将属性A缺失的20个样本均加入到这三个节点中（称这个过程为过程二）。在过程一中加入节点的样本的权值均为1，而在过程二中加入节点的样本的权值为：该节点中属性A未缺失的样本数/父节点中属性A未缺失的样本数，如属性A缺失的样本添加到节点1之后的权重为 30/80 = 0.375。<img src="https://github.com/Buevara/blog_img/raw/master/4.18/4.18-5.png" alt="4.18-5"></p><h3>2.为什么树模型不需要归一化特征？</h3><p>概率模型不需要归一化，因为它们不关心变量的值，而是关心变量的分布和变量之间的条件概率。像svm、线性回归之类的最优化问题就需要归一化。决策树属于前者。</p><h3>3.xgboost</h3><p>https://blog.csdn.net/github_38414650/article/details/76061893</p><h3>4.为什么xgboost比gbdt更快？</h3><p>https://www.zhihu.com/question/41354392http://idatamining.net/blog/?p=1901</p><blockquote><p>1.可并行的近似直方图算法。树节点在进行分裂时，我们需要计算每个特征的每个分割点对应的增益，即用贪心法枚举所有可能的分割点。当数据无法一次载入内存或者在分布式情况下，贪心算法效率就会变得很低，所以xgboost还提出了一种可并行的近似直方图算法，用于高效地生成候选的分割点。利用直方图的离散，找到最优的切分点。</p></blockquote><blockquote><p>2.既提供了单机多线程并行加速，也支持多机分布式加速。也就提供了若干种不同的并行建树的updater实现，按并行策略的不同，包括：<br>I). inter-feature exact parallelism （特征级精确并行）   II). inter-feature approximate parallelism（特征级近似并行，基于特征分bin计算，减少了枚举所有特征分裂点的开销）<br>III). intra-feature parallelism （特征内并行）IV). inter-node parallelism  （多机并行）</p></blockquote><blockquote><p>3.把连续的浮点特征值离散化成k个整数，同时构造一个宽度为k的直方图。在 遍历数据的时候，根据离散化后的值作为索引在直方图中累积统计量，当遍历一次数据后，直方图累积了需要的统计量，然后根据直方图的离散值，遍历寻找最优的分割点。</p><p>4.xgboost工具支持并行。boosting不是一种串行的结构吗?怎么并行的？注意xgboost的并行不是tree粒度的并行，xgboost也是一次迭代完才能进行下一次迭代的（第t次迭代的代价函数里包含了前面t-1次迭代的预测值）。xgboost的并行是在特征粒度上的。我们知道，决策树的学习最耗时的一个步骤就是对特征的值进行排序（因为要确定最佳分割点），xgboost在训练之前，预先对数据进行了排序，然后保存为block结构，后面的迭代中重复地使用这个结构，大大减小计算量。这个block结构也使得并行成为了可能，在进行节点的分裂时，需要计算每个特征的增益，最终选增益最大的那个特征去做分裂，那么各个特征的增益计算就可以开多线程进行。</p></blockquote><p><img src="https://github.com/Buevara/blog_img/raw/master/4.18/4.18-13.png" alt="4.18-13"><img src="https://github.com/Buevara/blog_img/raw/master/4.18/4.18-14.png" alt="4.18-14"><img src="https://github.com/Buevara/blog_img/raw/master/4.18/4.18-15.png" alt="4.18-15"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2&gt;机器学习--XGBOOST和GBDT的知识点整理&lt;/h2&gt;
+&lt;hr&gt;
+&lt;h3&gt;1.树模型缺失值&lt;/h3&gt;
+&lt;p&gt;树模型：
+如何处理缺失值：
+按照我自己的理解就是：在属性a下假如存在缺失值的话，在计算属性a下的信息增益或者信息增率时，把具有缺失值的元组去掉，把具有完整值的属
+      
+    
+    </summary>
+    
+    
+      <category term="机器学习" scheme="http://Buevara.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="树模型" scheme="http://Buevara.github.io/tags/%E6%A0%91%E6%A8%A1%E5%9E%8B/"/>
+    
+  </entry>
+  
+  <entry>
     <title>面经--360机器学习算法岗位</title>
     <link href="http://Buevara.github.io/2018/04/24/%E9%9D%A2%E7%BB%8F--360%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95%E5%B2%97%E4%BD%8D%EF%BC%88%E4%BA%8C%E9%9D%A2%E6%8C%82%EF%BC%89/"/>
     <id>http://Buevara.github.io/2018/04/24/面经--360机器学习算法岗位（二面挂）/</id>
@@ -228,36 +258,6 @@
     
     
       <category term="面经" scheme="http://Buevara.github.io/tags/%E9%9D%A2%E7%BB%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>机器学习--XGBOOST和GBDT的知识点整理</title>
-    <link href="http://Buevara.github.io/2018/04/24/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0--XGBOOST%E5%92%8CGBDT%E7%9A%84%E7%9F%A5%E8%AF%86%E7%82%B9%E6%95%B4%E7%90%86/"/>
-    <id>http://Buevara.github.io/2018/04/24/机器学习--XGBOOST和GBDT的知识点整理/</id>
-    <published>2018-04-24T12:28:35.000Z</published>
-    <updated>2018-05-28T04:20:21.062Z</updated>
-    
-    <content type="html"><![CDATA[<h2>机器学习--XGBOOST和GBDT的知识点整理</h2><hr><h3>1.树模型缺失值</h3><p>树模型：如何处理缺失值：按照我自己的理解就是：在属性a下假如存在缺失值的话，在计算属性a下的信息增益或者信息增率时，把具有缺失值的元组去掉，把具有完整值的属性a代入计算，用去掉缺失值计算结果进行比较。</p><p>如图，假设有100个样本，针对属性A，有20个样本是缺失值。树模型处理缺失样本的时候，会先忽略属性A缺失的样本，然后采用某种属性选择度量（信息增益、增益率、基尼指数）对剩下的样本（现在有80个）进行分裂。假设将这80个样本分裂到图中的三个节点，三个节点分配到的样本数分别为30、25、25（称这个过程为过程一）。然后将属性A缺失的20个样本均加入到这三个节点中（称这个过程为过程二）。在过程一中加入节点的样本的权值均为1，而在过程二中加入节点的样本的权值为：该节点中属性A未缺失的样本数/父节点中属性A未缺失的样本数，如属性A缺失的样本添加到节点1之后的权重为 30/80 = 0.375。<img src="https://github.com/Buevara/blog_img/raw/master/4.18/4.18-5.png" alt="4.18-5"></p><h3>2.为什么树模型不需要归一化特征？</h3><p>概率模型不需要归一化，因为它们不关心变量的值，而是关心变量的分布和变量之间的条件概率。像svm、线性回归之类的最优化问题就需要归一化。决策树属于前者。</p><h3>3.xgboost</h3><p>https://blog.csdn.net/github_38414650/article/details/76061893</p><h3>4.为什么xgboost比gbdt更快？</h3><p>https://www.zhihu.com/question/41354392http://idatamining.net/blog/?p=1901</p><blockquote><p>1.可并行的近似直方图算法。树节点在进行分裂时，我们需要计算每个特征的每个分割点对应的增益，即用贪心法枚举所有可能的分割点。当数据无法一次载入内存或者在分布式情况下，贪心算法效率就会变得很低，所以xgboost还提出了一种可并行的近似直方图算法，用于高效地生成候选的分割点。利用直方图的离散，找到最优的切分点。</p></blockquote><blockquote><p>2.既提供了单机多线程并行加速，也支持多机分布式加速。也就提供了若干种不同的并行建树的updater实现，按并行策略的不同，包括：<br>I). inter-feature exact parallelism （特征级精确并行）   II). inter-feature approximate parallelism（特征级近似并行，基于特征分bin计算，减少了枚举所有特征分裂点的开销）<br>III). intra-feature parallelism （特征内并行）IV). inter-node parallelism  （多机并行）</p></blockquote><blockquote><p>3.把连续的浮点特征值离散化成k个整数，同时构造一个宽度为k的直方图。在 遍历数据的时候，根据离散化后的值作为索引在直方图中累积统计量，当遍历一次数据后，直方图累积了需要的统计量，然后根据直方图的离散值，遍历寻找最优的分割点。</p><p>4.xgboost工具支持并行。boosting不是一种串行的结构吗?怎么并行的？注意xgboost的并行不是tree粒度的并行，xgboost也是一次迭代完才能进行下一次迭代的（第t次迭代的代价函数里包含了前面t-1次迭代的预测值）。xgboost的并行是在特征粒度上的。我们知道，决策树的学习最耗时的一个步骤就是对特征的值进行排序（因为要确定最佳分割点），xgboost在训练之前，预先对数据进行了排序，然后保存为block结构，后面的迭代中重复地使用这个结构，大大减小计算量。这个block结构也使得并行成为了可能，在进行节点的分裂时，需要计算每个特征的增益，最终选增益最大的那个特征去做分裂，那么各个特征的增益计算就可以开多线程进行。</p></blockquote><p><img src="https://github.com/Buevara/blog_img/raw/master/4.18/4.18-13.png" alt="4.18-13"><img src="https://github.com/Buevara/blog_img/raw/master/4.18/4.18-14.png" alt="4.18-14"><img src="https://github.com/Buevara/blog_img/raw/master/4.18/4.18-15.png" alt="4.18-15"></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2&gt;机器学习--XGBOOST和GBDT的知识点整理&lt;/h2&gt;
-&lt;hr&gt;
-&lt;h3&gt;1.树模型缺失值&lt;/h3&gt;
-&lt;p&gt;树模型：
-如何处理缺失值：
-按照我自己的理解就是：在属性a下假如存在缺失值的话，在计算属性a下的信息增益或者信息增率时，把具有缺失值的元组去掉，把具有完整值的属
-      
-    
-    </summary>
-    
-    
-      <category term="机器学习" scheme="http://Buevara.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
-    
-      <category term="树模型" scheme="http://Buevara.github.io/tags/%E6%A0%91%E6%A8%A1%E5%9E%8B/"/>
     
   </entry>
   
