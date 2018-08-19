@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://Buevara.github.io/"/>
-  <updated>2018-08-11T14:20:23.781Z</updated>
+  <updated>2018-08-19T11:45:46.718Z</updated>
   <id>http://Buevara.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>机器学习--树模型的三种分列方式</title>
+    <link href="http://Buevara.github.io/2018/08/10/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0--%E6%A0%91%E6%A8%A1%E5%9E%8B%E7%9A%84%E4%B8%89%E7%A7%8D%E5%88%86%E8%A3%82%E6%96%B9%E5%BC%8F/"/>
+    <id>http://Buevara.github.io/2018/08/10/机器学习--树模型的三种分裂方式/</id>
+    <published>2018-08-10T02:28:35.000Z</published>
+    <updated>2018-08-19T11:45:46.718Z</updated>
+    
+    <content type="html"><![CDATA[<h2>树模型的三种分列方式</h2><p>分别是利用信息增益的ID3算法，利用信息增益比的C4.5算法和利用基尼系数的CART树。<img src="https://github.com/Buevara/blog_img/raw/master/8.19/0.png" alt="0"></p><hr><h3>1.ID3算法</h3><p>ID3算法规定变量必须是离散值，且可以有多个分支（多叉树），而且不进行剪枝操作。且容易过拟合。<img src="https://github.com/Buevara/blog_img/raw/master/8.19/1-4.png" alt="1-4">例如：</p><p><img src="https://github.com/Buevara/blog_img/raw/master/8.19/1-1.png" alt="1-1">先求出信息熵（经验熵）:<img src="https://github.com/Buevara/blog_img/raw/master/8.19/1-2.png" alt="1-2">再根据不同的特征求出经验条件熵：<img src="https://github.com/Buevara/blog_img/raw/master/8.19/1-3.png" alt="1-3">其中：H(活动|天气) = 5/14*((-2/5)*log(2/5)+((-3/5)<em>log(3/5)))+4/14</em>((-4/4)<em>log(4/4)) + 5/14</em>((-2/5)*log(2/5)+((-3/5)*log(3/5)))<img src="https://github.com/Buevara/blog_img/raw/master/8.19/1-5.png" alt="1-5">最后构造：<img src="https://github.com/Buevara/blog_img/raw/master/8.19/1-6.png" alt="1-6">g(活动|天气) = H(活动)-H(活动|天气)</p><h3>2.C4.5算法</h3><p>ID3采用的信息增益度量存在一个缺点，它一般会优先选择有较多属性值的Feature,因为属性值多的Feature会有相对较大的信息增益(信息增益反映的给定一个条件以后不确定性减少的程度,必然是分得越细的数据集确定性更高,也就是条件熵越小,信息增益越大).为了避免这个不足C4.5中是用信息增益比率(gain ratio)来作为选择分支的准则。信息增益比率通过引入一个被称作分裂信息(Split information)的项来惩罚取值较多的Feature。除此之外，C4.5还弥补了ID3中不能处理特征属性值连续的问题。C4.5可以处理连续变量，也可以进行多叉树，引入分裂信息进行惩罚。也进行剪枝。可以处理缺失值，分为赋最常见值或丢弃缺失样本。由于处理连续值需要对特征值排序，所以比ID3慢。<img src="https://github.com/Buevara/blog_img/raw/master/8.19/2-1.png" alt="2-1">如上例所示：g(活动|天气) = H(活动)-H(活动|天气)gainratio(活动|天气) = g(活动|天气) / Ha(活动)Ha(活动) = -(5/14<em>log(5/14)) +(-(4/14</em>log(4/14))) +(-5/14*log(5/14))</p><h3>3.CART</h3><p>CART即可以回归又可以分类，必须是二叉树。<img src="https://github.com/Buevara/blog_img/raw/master/8.19/3-1.png" alt="3-1">对于二分类：Gini（P）= 2p(1-p)</p><h3>4.决策树的剪枝</h3><p>没找到好的答案，稍后补上。</p><h3>5.分类树 VS 回归树</h3><p>提到决策树算法，很多想到的就是上面提到的ID3、C4.5、CART分类决策树。其实决策树分为分类树和回归树，前者用于分类，如晴天/阴天/雨天、用户性别、邮件是否是垃圾邮件，后者用于预测实数值，如明天的温度、用户的年龄等。</p><p>作为对比，先说分类树，我们知道ID3、C4.5分类树在每次分枝时，是穷举每一个特征属性的每一个阈值，找到使得按照feature&lt;=阈值，和feature&gt;阈值分成的两个分枝的熵最大的feature和阈值。按照该标准分枝得到两个新节点，用同样方法继续分枝直到所有人都被分入性别唯一的叶子节点，或达到预设的终止条件，若最终叶子节点中的性别不唯一，则以多数人的性别作为该叶子节点的性别。</p><p>回归树总体流程也是类似，不过在每个节点（不一定是叶子节点）都会得一个预测值，以年龄为例，该预测值等于属于这个节点的所有人年龄的平均值。分枝时穷举每一个feature的每个阈值找最好的分割点，但衡量最好的标准<strong>不再是最大熵，而是最小化均方差</strong>--即（每个人的年龄-预测年龄）^2 的总和 / N，或者说是每个人的预测误差平方和 除以 N。这很好理解，被预测出错的人数越多，错的越离谱，均方差就越大，通过最小化均方差能够找到最靠谱的分枝依据。分枝直到每个叶子节点上人的年龄都唯一（这太难了）或者达到预设的终止条件（如叶子个数上限），若最终叶子节点上人的年龄不唯一，则以该节点上所有人的平均年龄做为该叶子节点的预测年龄。回归树具体参考(https://blog.csdn.net/weixin_40604987/article/details/79296427)参考:https://www.cnblogs.com/wxquare/p/5379970.htmlhttps://wenku.baidu.com/view/7aa9fbd776eeaeaad1f3305d.html<img src="https://github.com/Buevara/blog_img/raw/master/4.18/4.18-15.png" alt="4.18-15"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2&gt;树模型的三种分列方式&lt;/h2&gt;
+&lt;p&gt;分别是利用信息增益的ID3算法，利用信息增益比的C4.5算法和利用基尼系数的CART树。
+&lt;img src=&quot;https://github.com/Buevara/blog_img/raw/master/8.19/0.png&quot; alt
+      
+    
+    </summary>
+    
+    
+      <category term="机器学习" scheme="http://Buevara.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="树模型" scheme="http://Buevara.github.io/tags/%E6%A0%91%E6%A8%A1%E5%9E%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>深度学习基础--BN层的作用详解</title>
@@ -598,41 +625,6 @@
     
     
       <category term="面经" scheme="http://Buevara.github.io/tags/%E9%9D%A2%E7%BB%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>算法基础--数学问题</title>
-    <link href="http://Buevara.github.io/2018/03/25/%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80--%E6%95%B0%E5%AD%A6%E9%97%AE%E9%A2%98/"/>
-    <id>http://Buevara.github.io/2018/03/25/算法基础--数学问题/</id>
-    <published>2018-03-25T00:40:35.000Z</published>
-    <updated>2018-04-12T14:25:37.861Z</updated>
-    
-    <content type="html"><![CDATA[<h3>记录一下算法中出现的数学问题。</h3><blockquote><p>1.计算最小公倍数2.计算平方根3.不用加减乘除运算符做加法</p></blockquote><hr><h3>1.计算最小公倍数</h3><blockquote><p>题目要求：给定一个数n，求n之前（包括n）所有正整数的值得最小公倍数。</p></blockquote><p>解题思路：判断小于n的数里有多少个质数，质数由z1，z2，z3...zm组成，求得对于每一个质数z的$ int(log_{z}^{n}) $，</p><p>例如： 5小于等于5的质数由[2,3,5]答案是：2<sup>{int(log_{2}</sup>{5})}* 3<sup>{int(log_{3}</sup>{5})}* 5<sup>{int(log_{3}</sup>{5})} = 60</p><p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> math</span><br><span class="line"><span class="comment">#!/usr/bin/python</span></span><br><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">isPrime</span><span class="params">(n)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> n&lt;=<span class="number">2</span>:</span><br><span class="line">        <span class="keyword">return</span> n</span><br><span class="line">    prime = [<span class="number">2</span>]</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">3</span>, n+<span class="number">1</span>):</span><br><span class="line">        sign = <span class="keyword">True</span></span><br><span class="line">        m = int(math.sqrt(i))</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> prime:</span><br><span class="line">            <span class="keyword">if</span> i%j == <span class="number">0</span>:</span><br><span class="line">                sign = <span class="keyword">False</span></span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">        <span class="keyword">if</span> sign:</span><br><span class="line">            prime.append(i)</span><br><span class="line">    <span class="keyword">return</span> prime</span><br><span class="line">    </span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">logK</span><span class="params">(k, n)</span>:</span></span><br><span class="line">    res = k</span><br><span class="line">    <span class="keyword">while</span> res &lt; n:</span><br><span class="line">        res *= k</span><br><span class="line">    <span class="keyword">if</span> res&gt; n:</span><br><span class="line">        <span class="keyword">return</span> int(res/k)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> res</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">tosum</span><span class="params">(l, n)</span>:</span></span><br><span class="line">    summ = <span class="number">1</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> l:</span><br><span class="line">        summ *= logK(i, n)</span><br><span class="line">    <span class="keyword">return</span> summ</span><br><span class="line">        </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">solve</span><span class="params">(n)</span>:</span></span><br><span class="line">    l = isPrime(n)</span><br><span class="line">    <span class="keyword">return</span> tosum(l, n)</span><br><span class="line">    </span><br><span class="line">print(solve(<span class="number">10</span>))  <span class="comment">##例子</span></span><br></pre></td></tr></table></figure></p><hr><h3>2.求平方根</h3><blockquote><p>题目要求：给定一个数n和误差参数 $ \varepsilon  $，求数n的平方根，并且误差不能大于 $ \varepsilon  $。</p></blockquote><p>解题思路：二分查找的经典题。每次start和end的中点mid的平方+e和目标值n做比较。<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">#!/usr/bin/python</span></span><br><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">binary</span><span class="params">(s, start, end, e)</span>:</span></span><br><span class="line">    mid = (start+end)/<span class="number">2.0</span></span><br><span class="line">    <span class="keyword">if</span> mid**<span class="number">2</span>+e &gt;=s <span class="keyword">and</span> s&gt;=mid**<span class="number">2</span>-e:</span><br><span class="line">        <span class="keyword">return</span> mid</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">if</span> mid**<span class="number">2</span>+e &gt;s:</span><br><span class="line">            <span class="keyword">return</span> binary(s, start, mid,e)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">return</span> binary(s, mid, end, e)</span><br><span class="line">        </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">tosqrt</span><span class="params">(n, e)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> n&lt;=<span class="number">1</span>:</span><br><span class="line">        <span class="keyword">return</span> n</span><br><span class="line">    start = <span class="number">0</span></span><br><span class="line">    end = n</span><br><span class="line">    <span class="keyword">return</span> binary(n, start, end, e)</span><br><span class="line">    </span><br><span class="line">print(tosqrt(<span class="number">10</span>, <span class="number">0.5</span>)) <span class="comment">##测试</span></span><br></pre></td></tr></table></figure></p><hr><h3>3. 不用加减乘除运算符做加法(<a href="https://www.nowcoder.com/practice/59ac416b4b944300b617d4f7f111b215?tpId=13&amp;tqId=11201&amp;tPage=1&amp;rp=1&amp;ru=/ta/coding-interviews&amp;qru=/ta/coding-interviews/question-ranking" target="_blank" rel="noopener">剑指offer</a>)</h3><blockquote><p>设计一个算法，不使用加减乘数运算符号实现加法运算。</p></blockquote><p>解题思路：</p><p>位运算：</p><p>第一步：计算两个数的对应位，但是不计算进步，主要有四种情况，0+0=0，0+1=1，1+0=1，1+1=0，可以看出这正好对应异或操作。</p><p>第二步：计算两个数的进位，只有在1+1的情况下才会有进位，这正好对应与运算，计算完之后，每位上的数正好是后一位的进位，这时把结果左移一位即可。</p><p>第三步：把第一步的结果和第二步的结果相加，查看是否有进位，如果有进位重复第一步和第二步，直到没有进位为止。注意：python如果数值大于32位，自动转化为long，我们不能让数值转换为long，做了一些限制。更为详细请点击：<a href="https://www.v2ex.com/t/195894" target="_blank" rel="noopener">参考python的int整型转化long</a><img src="https://github.com/Buevara/blog_img/raw/master/4.11/4.11-1.png" alt="4.11-1"><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/python</span></span><br><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">Add</span><span class="params">(self, a, b)</span>:</span></span><br><span class="line"><span class="comment">## python int最大值</span></span><br><span class="line">        MAX = <span class="number">0x7FFFFFFF</span></span><br><span class="line"><span class="comment">## python int最小值</span></span><br><span class="line">        MIN = <span class="number">0x80000000</span></span><br><span class="line"><span class="comment">## 防止转化成long的标志数</span></span><br><span class="line">        mask = <span class="number">0xFFFFFFFF</span></span><br><span class="line">        <span class="keyword">while</span> b != <span class="number">0</span>:</span><br><span class="line"></span><br><span class="line">            a, b = (a ^ b) &amp; mask, ((a &amp; b) &lt;&lt; <span class="number">1</span>) &amp; mask <span class="comment">##转换</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> a <span class="keyword">if</span> a &lt;= MAX <span class="keyword">else</span> ~(a ^ mask) <span class="comment">##防止越界</span></span><br></pre></td></tr></table></figure></p><hr>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h3&gt;记录一下算法中出现的数学问题。&lt;/h3&gt;
-&lt;blockquote&gt;
-&lt;p&gt;1.计算最小公倍数
-2.计算平方根
-3.不用加减乘除运算符做加法&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;h3&gt;1.计算最小公倍数&lt;/h3&gt;
-&lt;blockquote&gt;
-&lt;p&gt;题目要求：
-给定
-      
-    
-    </summary>
-    
-    
-      <category term="算法" scheme="http://Buevara.github.io/tags/%E7%AE%97%E6%B3%95/"/>
-    
-      <category term="数学" scheme="http://Buevara.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
     
   </entry>
   

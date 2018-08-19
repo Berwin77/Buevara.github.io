@@ -18,11 +18,11 @@
     <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
     <title>
         
-        深度学习基础--BN层的作用详解｜Buevara&#39;s blog
+        机器学习--树模型的三种分列方式｜Buevara&#39;s blog
         
     </title>
 
-    <link rel="canonical" href="http://Buevara.github.io/2018/06/03/深度学习基础--BN层的作用详解/">
+    <link rel="canonical" href="http://Buevara.github.io/2018/08/10/机器学习--树模型的三种分裂方式/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -145,12 +145,12 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
                 <div class="post-heading">
-                    <h1>深度学习基础--BN层的作用详解</h1>
+                    <h1>机器学习--树模型的三种分列方式</h1>
                     
                     <span class="meta">
                          作者 Buevara
                         <span>
-                          日期 2018-06-03
+                          日期 2018-08-10
                          </span>
                          <span>
                          本文阅读量 <span id="busuanzi_value_page_pv">
@@ -159,8 +159,11 @@
                     
                     <div class="tags text-center">
                         
-                        <a class="tag" href="/tags/#深度学习"
-                           title="深度学习">深度学习</a>
+                        <a class="tag" href="/tags/#机器学习"
+                           title="机器学习">机器学习</a>
+                        
+                        <a class="tag" href="/tags/#树模型"
+                           title="树模型">树模型</a>
                         
                     </div>
                 </div>
@@ -169,7 +172,7 @@
     </div>
     <div class="post-title-haojen">
         <span>
-            深度学习基础--BN层的作用详解
+            机器学习--树模型的三种分列方式
         </span>
     </div>
 </header>
@@ -180,23 +183,59 @@
         <div class="row">
             <!-- Post Container -->
             <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
-                <h1>深度学习基础--BN层的作用详解.md</h1>
-<p><a href="https://blog.csdn.net/myarrow/article/details/51848285" target="_blank" rel="noopener">详情见cs231n学习笔记-激活函数-BN-参数优化</a></p>
+                <h2>树模型的三种分列方式</h2>
+<p>分别是利用信息增益的ID3算法，利用信息增益比的C4.5算法和利用基尼系数的CART树。
+<img src="https://github.com/Buevara/blog_img/raw/master/8.19/0.png" alt="0"></p>
+<hr>
+<h3>1.ID3算法</h3>
+<p>ID3算法规定变量必须是离散值，且可以有多个分支（多叉树），而且不进行剪枝操作。且容易过拟合。
+<img src="https://github.com/Buevara/blog_img/raw/master/8.19/1-4.png" alt="1-4">
+例如：</p>
+<p><img src="https://github.com/Buevara/blog_img/raw/master/8.19/1-1.png" alt="1-1">
+先求出信息熵（经验熵）:
+<img src="https://github.com/Buevara/blog_img/raw/master/8.19/1-2.png" alt="1-2">
+再根据不同的特征求出经验条件熵：
+<img src="https://github.com/Buevara/blog_img/raw/master/8.19/1-3.png" alt="1-3">
+其中：
+H(活动|天气) = 5/14*((-2/5)*log(2/5)+((-3/5)<em>log(3/5)))+4/14</em>((-4/4)<em>log(4/4)) + 5/14</em>((-2/5)*log(2/5)+((-3/5)*log(3/5)))
+<img src="https://github.com/Buevara/blog_img/raw/master/8.19/1-5.png" alt="1-5">
+最后构造：
+<img src="https://github.com/Buevara/blog_img/raw/master/8.19/1-6.png" alt="1-6">
+g(活动|天气) = H(活动)-H(活动|天气)</p>
+<h3>2.C4.5算法</h3>
+<p>ID3采用的信息增益度量存在一个缺点，它一般会优先选择有较多属性值的Feature,因为属性值多的Feature会有相对较大的信息增益(信息增益反映的给定一个条件以后不确定性减少的程度,必然是分得越细的数据集确定性更高,也就是条件熵越小,信息增益越大).为了避免这个不足C4.5中是用信息增益比率(gain ratio)来作为选择分支的准则。信息增益比率通过引入一个被称作分裂信息(Split information)的项来惩罚取值较多的Feature。除此之外，C4.5还弥补了ID3中不能处理特征属性值连续的问题。
+C4.5可以处理连续变量，也可以进行多叉树，引入分裂信息进行惩罚。也进行剪枝。可以处理缺失值，分为赋最常见值或丢弃缺失样本。由于处理连续值需要对特征值排序，所以比ID3慢。
+<img src="https://github.com/Buevara/blog_img/raw/master/8.19/2-1.png" alt="2-1">
+如上例所示：
+g(活动|天气) = H(活动)-H(活动|天气)
+gainratio(活动|天气) = g(活动|天气) / Ha(活动)
+Ha(活动) = -(5/14<em>log(5/14)) +(-(4/14</em>log(4/14))) +(-5/14*log(5/14))</p>
+<h3>3.CART</h3>
+<p>CART即可以回归又可以分类，必须是二叉树。
+<img src="https://github.com/Buevara/blog_img/raw/master/8.19/3-1.png" alt="3-1">
+对于二分类：
+Gini（P）= 2p(1-p)</p>
+<h3>4.决策树的剪枝</h3>
+<p>没找到好的答案，稍后补上。</p>
+<h3>5.分类树 VS 回归树</h3>
+<p>提到决策树算法，很多想到的就是上面提到的ID3、C4.5、CART分类决策树。其实决策树分为分类树和回归树，前者用于分类，如晴天/阴天/雨天、用户性别、邮件是否是垃圾邮件，后者用于预测实数值，如明天的温度、用户的年龄等。</p>
+<p>作为对比，先说分类树，我们知道ID3、C4.5分类树在每次分枝时，是穷举每一个特征属性的每一个阈值，找到使得按照feature&lt;=阈值，和feature&gt;阈值分成的两个分枝的熵最大的feature和阈值。按照该标准分枝得到两个新节点，用同样方法继续分枝直到所有人都被分入性别唯一的叶子节点，或达到预设的终止条件，若最终叶子节点中的性别不唯一，则以多数人的性别作为该叶子节点的性别。</p>
+<p>回归树总体流程也是类似，不过在每个节点（不一定是叶子节点）都会得一个预测值，以年龄为例，该预测值等于属于这个节点的所有人年龄的平均值。分枝时穷举每一个feature的每个阈值找最好的分割点，但衡量最好的标准<strong>不再是最大熵，而是最小化均方差</strong>--即（每个人的年龄-预测年龄）^2 的总和 / N，或者说是每个人的预测误差平方和 除以 N。这很好理解，被预测出错的人数越多，错的越离谱，均方差就越大，通过最小化均方差能够找到最靠谱的分枝依据。分枝直到每个叶子节点上人的年龄都唯一（这太难了）或者达到预设的终止条件（如叶子个数上限），若最终叶子节点上人的年龄不唯一，则以该节点上所有人的平均年龄做为该叶子节点的预测年龄。
+回归树具体参考(https://blog.csdn.net/weixin_40604987/article/details/79296427)
+参考:
+https://www.cnblogs.com/wxquare/p/5379970.html
+https://wenku.baidu.com/view/7aa9fbd776eeaeaad1f3305d.html
+<img src="https://github.com/Buevara/blog_img/raw/master/4.18/4.18-15.png" alt="4.18-15"></p>
 
                 <hr>
                 
 
                 <ul class="pager">
                     
-                    <li class="previous">
-                        <a href="/2018/08/10/机器学习--树模型的三种分裂方式/" data-toggle="tooltip" data-placement="top"
-                           title="机器学习--树模型的三种分列方式">&larr; Previous Post</a>
-                    </li>
-                    
                     
                     <li class="next">
-                        <a href="/2018/06/01/算法基础--排序算法总结/" data-toggle="tooltip" data-placement="top"
-                           title="算法基础--排序算法复杂度总结">Next Post &rarr;</a>
+                        <a href="/2018/06/03/深度学习基础--BN层的作用详解/" data-toggle="tooltip" data-placement="top"
+                           title="深度学习基础--BN层的作用详解">Next Post &rarr;</a>
                     </li>
                     
                 </ul>
@@ -231,7 +270,7 @@
 
             <div class="hidden-xs col-sm-3 toc-col">
                 <div class="toc-wrap">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-text">深度学习基础--BN层的作用详解.md</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-text">树模型的三种分列方式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">1.ID3算法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">2.C4.5算法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">3.CART</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">4.决策树的剪枝</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">5.分类树 VS 回归树</span></a></li></ol></li></ol>
                 </div>
             </div>
         </div>
@@ -253,8 +292,11 @@
                     </h5>
                     <div class="tags">
                         
-                        <a class="tag" href="/tags/#深度学习"
-                           title="深度学习">深度学习</a>
+                        <a class="tag" href="/tags/#机器学习"
+                           title="机器学习">机器学习</a>
+                        
+                        <a class="tag" href="/tags/#树模型"
+                           title="树模型">树模型</a>
                         
                     </div>
                 </section>
