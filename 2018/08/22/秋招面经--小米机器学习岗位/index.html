@@ -18,11 +18,11 @@
     <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
     <title>
         
-        算法基础--数学问题｜Buevara&#39;s blog
+        秋招面经--小米机器学习岗位｜Buevara&#39;s blog
         
     </title>
 
-    <link rel="canonical" href="http://Buevara.github.io/2018/03/25/算法基础--数学问题/">
+    <link rel="canonical" href="http://Buevara.github.io/2018/08/22/秋招面经--小米机器学习岗位/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -145,12 +145,12 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
                 <div class="post-heading">
-                    <h1>算法基础--数学问题</h1>
+                    <h1>秋招面经--小米机器学习岗位</h1>
                     
                     <span class="meta">
                          作者 Buevara
                         <span>
-                          日期 2018-03-25
+                          日期 2018-08-22
                          </span>
                          <span>
                          本文阅读量 <span id="busuanzi_value_page_pv">
@@ -159,11 +159,8 @@
                     
                     <div class="tags text-center">
                         
-                        <a class="tag" href="/tags/#算法"
-                           title="算法">算法</a>
-                        
-                        <a class="tag" href="/tags/#数学"
-                           title="数学">数学</a>
+                        <a class="tag" href="/tags/#面经"
+                           title="面经">面经</a>
                         
                     </div>
                 </div>
@@ -172,7 +169,7 @@
     </div>
     <div class="post-title-haojen">
         <span>
-            算法基础--数学问题
+            秋招面经--小米机器学习岗位
         </span>
     </div>
 </header>
@@ -183,64 +180,80 @@
         <div class="row">
             <!-- Post Container -->
             <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
-                <h3>记录一下算法中出现的数学问题。</h3>
-<blockquote>
-<p>1.计算最小公倍数
-2.计算平方根
-3.不用加减乘除运算符做加法</p>
-</blockquote>
+                <h2>秋招面经--小米机器学习算法岗位</h2>
 <hr>
-<h3>1.计算最小公倍数</h3>
-<blockquote>
-<p>题目要求：
-给定一个数n，求n之前（包括n）所有正整数的值得最小公倍数。</p>
-</blockquote>
-<p>解题思路：
-判断小于n的数里有多少个质数，质数由z1，z2，z3...zm组成，求得对于每一个质数z的$ int(log_{z}^{n}) $，</p>
-<p>例如： 5
-小于等于5的质数由[2,3,5]
-答案是：2<sup>{int(log_{2}</sup>{5})}* 3<sup>{int(log_{3}</sup>{5})}* 5<sup>{int(log_{3}</sup>{5})} = 60</p>
-<p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> math</span><br><span class="line"><span class="comment">#!/usr/bin/python</span></span><br><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">isPrime</span><span class="params">(n)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> n&lt;=<span class="number">2</span>:</span><br><span class="line">        <span class="keyword">return</span> n</span><br><span class="line">    prime = [<span class="number">2</span>]</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">3</span>, n+<span class="number">1</span>):</span><br><span class="line">        sign = <span class="keyword">True</span></span><br><span class="line">        m = int(math.sqrt(i))</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> prime:</span><br><span class="line">            <span class="keyword">if</span> i%j == <span class="number">0</span>:</span><br><span class="line">                sign = <span class="keyword">False</span></span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">        <span class="keyword">if</span> sign:</span><br><span class="line">            prime.append(i)</span><br><span class="line">    <span class="keyword">return</span> prime</span><br><span class="line">    </span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">logK</span><span class="params">(k, n)</span>:</span></span><br><span class="line">    res = k</span><br><span class="line">    <span class="keyword">while</span> res &lt; n:</span><br><span class="line">        res *= k</span><br><span class="line">    <span class="keyword">if</span> res&gt; n:</span><br><span class="line">        <span class="keyword">return</span> int(res/k)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> res</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">tosum</span><span class="params">(l, n)</span>:</span></span><br><span class="line">    summ = <span class="number">1</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> l:</span><br><span class="line">        summ *= logK(i, n)</span><br><span class="line">    <span class="keyword">return</span> summ</span><br><span class="line">        </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">solve</span><span class="params">(n)</span>:</span></span><br><span class="line">    l = isPrime(n)</span><br><span class="line">    <span class="keyword">return</span> tosum(l, n)</span><br><span class="line">    </span><br><span class="line">print(solve(<span class="number">10</span>))  <span class="comment">##例子</span></span><br></pre></td></tr></table></figure></p>
+<p>说来也巧，春招第一家是小米，秋招小米是第二家，第一家是搜狗(已挂)。
+面试约的下午两点，准时开始面试。</p>
 <hr>
-<h3>2.求平方根</h3>
-<blockquote>
-<p>题目要求：
-给定一个数n和误差参数 $ \varepsilon  $，求数n的平方根，并且误差不能大于 $ \varepsilon  $。</p>
-</blockquote>
-<p>解题思路：
-二分查找的经典题。
-每次start和end的中点mid的平方+e和目标值n做比较。
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">#!/usr/bin/python</span></span><br><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">binary</span><span class="params">(s, start, end, e)</span>:</span></span><br><span class="line">    mid = (start+end)/<span class="number">2.0</span></span><br><span class="line">    <span class="keyword">if</span> mid**<span class="number">2</span>+e &gt;=s <span class="keyword">and</span> s&gt;=mid**<span class="number">2</span>-e:</span><br><span class="line">        <span class="keyword">return</span> mid</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">if</span> mid**<span class="number">2</span>+e &gt;s:</span><br><span class="line">            <span class="keyword">return</span> binary(s, start, mid,e)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">return</span> binary(s, mid, end, e)</span><br><span class="line">        </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">tosqrt</span><span class="params">(n, e)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> n&lt;=<span class="number">1</span>:</span><br><span class="line">        <span class="keyword">return</span> n</span><br><span class="line">    start = <span class="number">0</span></span><br><span class="line">    end = n</span><br><span class="line">    <span class="keyword">return</span> binary(n, start, end, e)</span><br><span class="line">    </span><br><span class="line">print(tosqrt(<span class="number">10</span>, <span class="number">0.5</span>)) <span class="comment">##测试</span></span><br></pre></td></tr></table></figure></p>
+<h3>一面</h3>
+<ul>
+<li>
+<p>1.自我介绍.</p>
+</li>
+<li>
+<p>2.项目中用到的模型融合为什么不能无限的加全连接层？</p>
+</li>
+<li>
+<p>我答全连接层越多会过拟合，面试官好像觉得我说的不对，他说是防止梯度爆炸或者梯度消失，存在疑惑？参考文献：https://blog.csdn.net/guoyunfei20/article/details/78283043</p>
+</li>
+<li>
+<p>3.如何进行迁移训练，举例如何用猫狗分类的模型迁移到人脸项目中？</p>
+</li>
+<li>
+<p>完全懵逼，我说直接取卷积层进行使用，他说还有别的方法，这样太粗暴了。可以用freeze的方式，一次训练某几层，freeze某几层。</p>
+</li>
+<li>
+<p>回来查资料才发现应该是让我解答迁移学习和fine-tune：
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">迁移学习：</span><br><span class="line">迁移学习，是一种思想吧，并不是一种特定的算法或者模型，目的是将已学习到的知识应用到其他领域，提高在目标领域上的性能，比如说一个通用的语音模型迁移到某个人的语音识别，一个ImageNet上的图片分类问题迁移到医疗疾病识别上。</span><br><span class="line"></span><br><span class="line">而实现迁移学习最主要的方法则是finetune, 需要说明一点的是，很多人会把迁移学习和finetune混淆，其实两者是有区别的，finetune只是实现迁移学习的一种方法而已， 而finetune本身既可以用于迁移学习，也可以用于自身原有的训练学习，比如在已经初步训练好的一个模型基础上，用同样的数据再来训练微调，这也是finetune.而且，在深度学习领域，因为模型都比较复杂，train from scratch 一般需要耗费很长的时间，少则1-2周，多则1-2个月也是有可能的，如果没有GPU,那就不知道哪个猴年马月才能训练好，所以多数都是用finetune来训练的。</span><br><span class="line">    那么finetune该怎么使用呢？？一般可有如下几种情形：</span><br><span class="line"></span><br><span class="line">1. 自己的数据集比较小，和原先的数据集比较类似。首先，两者是比较类似的，所以可做浅层次的finetune，即只改最后几层，一般是只训练最后的分类层（数据集太少如果训练很多层的话，容易过拟合），而前面层的权重啥的不做改动，直接用来生成CNN feature。同时，因为数据集比较小，最好训练线性分类器。</span><br><span class="line"></span><br><span class="line">2. 自己的数据集比较大，和原先的数据集比价类似。由于数据集比较，所以可以训练整个网络，即finetune through the full network, 这样既不会过拟合也能取得不错的效果。那么什么是finetune through the full network呢？用原有的模型（pre-trained model）的参数来初始化，然后再结合当前的数据集继续训练。</span><br><span class="line"></span><br><span class="line">3. 自己的数据集比较小，而且和原先的数据集很不相同。如前所述，小数据集最好训练线性分类器，而同时两者又不相同，那么就不能只训练最后几层了，可以选取从中间或者更早的某一层开始训练，也不建议特别往前，因为数据集比较小太往前开始训练容易过拟合。</span><br><span class="line"></span><br><span class="line">4. 数据集比较大，而且和原先的数据集很不相同。这种情形我们可以train from sratch，就是完全从随机参数开始训练，不用迁移学习，不用以前别的模型的参数。其实，而且实际中，往往也会用迁移学习，用先前的模型的参数来初始化，然后再训练，即finetune through the full network。</span><br><span class="line"></span><br><span class="line">参考答案：</span><br><span class="line">https://www.zhihu.com/question/49534423</span><br><span class="line">https://blog.csdn.net/u010402786/article/details/70141261</span><br></pre></td></tr></table></figure></p>
+</li>
+<li>
+<p>3.过拟合的主要原因？如何解决？为什么用L1和L2，L1和L2的原理，为什么有时同时用呢？</p>
+</li>
+<li>
+<p>同时用的原因就是既可以筛除特性，又可以降低特征权值w，当时没打上来。唉！参考文献：https://www.cnblogs.com/yxwkf/p/5268577.html</p>
+</li>
+<li>
+<p>4.xgboost的原理？</p>
+</li>
+<li>
+<p>中间问我GBDT为什么要用梯度进行下降方向作为更新。他看我写公式不怎么熟练，就解释了霍夫曼编码和二叉树的联系，为什么xgboost要用泰勒展开式。我听得目瞪口呆，他说没事，互相讨论是进步的一种方式。</p>
+</li>
+<li>
+<p>5.结束之前让我问他问题，我就好奇的问了他是不是搞理论的，他说是博士研究编码，之前在外企工作。</p>
+</li>
+</ul>
+<p>一面结束，四十分钟左右。</p>
 <hr>
-<h3>3. 不用加减乘除运算符做加法(<a href="https://www.nowcoder.com/practice/59ac416b4b944300b617d4f7f111b215?tpId=13&amp;tqId=11201&amp;tPage=1&amp;rp=1&amp;ru=/ta/coding-interviews&amp;qru=/ta/coding-interviews/question-ranking" target="_blank" rel="noopener">剑指offer</a>)</h3>
-<blockquote>
-<p>设计一个算法，不使用加减乘数运算符号实现加法运算。</p>
-</blockquote>
-<p>解题思路：</p>
-<p>位运算：</p>
-<p>第一步：计算两个数的对应位，但是不计算进步，主要有四种情况，0+0=0，0+1=1，1+0=1，1+1=0，可以看出这正好对应异或操作。</p>
-<p>第二步：计算两个数的进位，只有在1+1的情况下才会有进位，这正好对应与运算，计算完之后，每位上的数正好是后一位的进位，这时把结果左移一位即可。</p>
-<p>第三步：把第一步的结果和第二步的结果相加，查看是否有进位，如果有进位重复第一步和第二步，直到没有进位为止。
-注意：python如果数值大于32位，自动转化为long，我们不能让数值转换为long，做了一些限制。更为详细请点击：
-<a href="https://www.v2ex.com/t/195894" target="_blank" rel="noopener">参考python的int整型转化long</a>
-<img src="https://github.com/Buevara/blog_img/raw/master/4.11/4.11-1.png" alt="4.11-1">
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/python</span></span><br><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">Add</span><span class="params">(self, a, b)</span>:</span></span><br><span class="line">	<span class="comment">## python int最大值</span></span><br><span class="line">        MAX = <span class="number">0x7FFFFFFF</span></span><br><span class="line">	<span class="comment">## python int最小值</span></span><br><span class="line">        MIN = <span class="number">0x80000000</span></span><br><span class="line">	<span class="comment">## 防止转化成long的标志数</span></span><br><span class="line">        mask = <span class="number">0xFFFFFFFF</span></span><br><span class="line">        <span class="keyword">while</span> b != <span class="number">0</span>:</span><br><span class="line"></span><br><span class="line">            a, b = (a ^ b) &amp; mask, ((a &amp; b) &lt;&lt; <span class="number">1</span>) &amp; mask <span class="comment">##转换</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> a <span class="keyword">if</span> a &lt;= MAX <span class="keyword">else</span> ~(a ^ mask) <span class="comment">##防止越界</span></span><br></pre></td></tr></table></figure></p>
+<h3>二面</h3>
+<p>面试官应该是工程专家（从发型就能看出来）：</p>
+<ul>
+<li>1.讲一下京东实习的内容，blabla讲了一堆，对我说不关心架构，只关心如何运行分布式，然后气氛突然很尴尬。</li>
+<li>2.问了我的京东算法大赛，讲了一下思路，问了一下第一名的解题思路，差别有多大。</li>
+<li>3.xgboost和GBDT的差别？</li>
+<li>4.如何把算法封装，外部调用？一脸懵逼中。。。</li>
+<li>5.算法题，普通数组中的topK大的数？</li>
+<li>就是快速排序，问了我时间复杂度，我说nlogn，他说这道题的算法是吗？我说nlogk，让我继续写，写了不到十分钟，结束。</li>
+<li>6.算法题，一个字符串的全排列？</li>
+<li>基础递归，很简单</li>
+<li>7.最后问我你的技术栈还有什么，让我想想还有什么优势，想了半天，啥也没说，最后临走问我期望工作地点，选北京还是武汉？我说都可以。</li>
+</ul>
+<p>二面结束，一个小时左右。总体面试还是很慌，毕竟才第二次。</p>
 <hr>
+<p>PS：搜狗面试全程项目，没什么营养，只有一道算法题有价值：</p>
+<ul>
+<li>10w条数据的语料库，每条2-3个词，给一句话‘我今天来搜狗面试’,从后向前分词，如‘我今天来搜狗面/试’，遇到语料库的词，提取，没有继续向前，若只剩一个字，直接提取，请写出程序？</li>
+<li>用了最基础匹配算法，觉得肯定和10w有关，结果讲完就没有然后了。 之后就gg了。</li>
+</ul>
 
                 <hr>
                 
 
                 <ul class="pager">
                     
-                    <li class="previous">
-                        <a href="/2018/03/31/面经--小米机器学习岗位/" data-toggle="tooltip" data-placement="top"
-                           title="面经--小米机器学习岗位">&larr; Previous Post</a>
-                    </li>
-                    
                     
                     <li class="next">
-                        <a href="/2018/03/25/算法基础--回文串问题/" data-toggle="tooltip" data-placement="top"
-                           title="算法基础--回文串问题">Next Post &rarr;</a>
+                        <a href="/2018/08/10/机器学习--树模型的三种分裂方式/" data-toggle="tooltip" data-placement="top"
+                           title="机器学习--树模型的三种分列方式">Next Post &rarr;</a>
                     </li>
                     
                 </ul>
@@ -275,7 +288,7 @@
 
             <div class="hidden-xs col-sm-3 toc-col">
                 <div class="toc-wrap">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">记录一下算法中出现的数学问题。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">1.计算最小公倍数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">2.求平方根</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">3. 不用加减乘除运算符做加法(剑指offer)</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-text">秋招面经--小米机器学习算法岗位</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">一面</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-text">二面</span></a></li></ol></li></ol>
                 </div>
             </div>
         </div>
@@ -297,11 +310,8 @@
                     </h5>
                     <div class="tags">
                         
-                        <a class="tag" href="/tags/#算法"
-                           title="算法">算法</a>
-                        
-                        <a class="tag" href="/tags/#数学"
-                           title="数学">数学</a>
+                        <a class="tag" href="/tags/#面经"
+                           title="面经">面经</a>
                         
                     </div>
                 </section>
