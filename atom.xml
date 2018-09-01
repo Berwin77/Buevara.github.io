@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://Buevara.github.io/"/>
-  <updated>2018-08-24T14:45:14.314Z</updated>
+  <updated>2018-09-01T09:23:25.288Z</updated>
   <id>http://Buevara.github.io/</id>
   
   <author>
@@ -15,6 +15,40 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>秋招面经--作业帮机器学习岗位</title>
+    <link href="http://Buevara.github.io/2018/09/01/%E7%A7%8B%E6%8B%9B%E9%9D%A2%E7%BB%8F--%E4%BD%9C%E4%B8%9A%E5%B8%AE%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95%E5%B2%97%E4%BD%8D/"/>
+    <id>http://Buevara.github.io/2018/09/01/秋招面经--作业帮机器学习算法岗位/</id>
+    <published>2018-09-01T07:42:13.000Z</published>
+    <updated>2018-09-01T09:23:25.288Z</updated>
+    
+    <content type="html"><![CDATA[<h2>秋招面经--作业帮机器学习算法岗位</h2><p>比较少， 合起来整理。</p><hr><h3>作业帮 一面</h3><ul><li><p>1.自我介绍。</p></li><li><p>2.JD项目介绍，讲了一下如何分布式构建问题。</p></li><li><p>3.项目里faster-rcnn原理， 损失函数。</p></li><li><p>4.比赛里用到的xgboost的分裂规则，其中xgboost里有model.get_fscore()方法，得分机制是什么?(所有决策树的特征和进行排序)</p></li><li><p>5.树模型和svm，lr的区别？ 为什么svm和lr要进行特征归一化。</p></li><li><p>6.lr是线性分类器吗？https://www.zhihu.com/question/29385169<img src="" alt="9.1-1"></p></li><li><p>7.算法3道题：</p></li><li><p>7.1 nums里面元素乘积小于K的子区间个数？ 滑窗法https://www.cnblogs.com/grandyang/p/7753959.html<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def search(self, nums, k):</span><br><span class="line">        if k &lt;=1:</span><br><span class="line">            return 0</span><br><span class="line">        count = 0</span><br><span class="line">        t = 1</span><br><span class="line">        start = 0</span><br><span class="line">        for j in range(0, len(nums)):</span><br><span class="line">            t *= nums[j]</span><br><span class="line">            while t &gt;= k:</span><br><span class="line">                t /= nums[start]</span><br><span class="line">                start += 1</span><br><span class="line">            count += j-start+1</span><br><span class="line">        return count</span><br><span class="line">a = Solution()</span><br><span class="line">print(a.search([10, 5, 2, 6], 100))</span><br></pre></td></tr></table></figure></p></li><li><p>7.2 长度为n的数组，其中所有数都小于等于n大于0，求重复值和缺失值</p></li><li><p>7.3 有序二维矩阵中第K小的元素  https://blog.csdn.net/weixin_39915444/article/details/80732634<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def search(self, nums, k):</span><br><span class="line">        left = nums[0][0]</span><br><span class="line">        right = nums[len(nums)-1][len(nums[0])-1]</span><br><span class="line">        while (left &lt;= right):</span><br><span class="line">            mid = (left+right)//2</span><br><span class="line">            count = self.tocount(nums, mid)</span><br><span class="line">            if count &gt;= k:</span><br><span class="line">                right = mid -1 </span><br><span class="line">            if count &lt; k:</span><br><span class="line">                left = mid + 1</span><br><span class="line">        return mid</span><br><span class="line">        </span><br><span class="line">    def tocount(self, nums, mid):</span><br><span class="line">        count = 0</span><br><span class="line">        i = len(nums)-1</span><br><span class="line">        j = 0</span><br><span class="line">        while i &gt;=0 and j&lt;len(nums[0]):</span><br><span class="line">            if nums[i][j] &lt;= mid:</span><br><span class="line">                count += i+1</span><br><span class="line">                j += 1</span><br><span class="line">            else:</span><br><span class="line">                i -= 1</span><br><span class="line">        return count</span><br></pre></td></tr></table></figure></p></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2&gt;秋招面经--作业帮机器学习算法岗位&lt;/h2&gt;
+&lt;p&gt;比较少， 合起来整理。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3&gt;作业帮 一面&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;1.自我介绍。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;2.JD项目介绍，讲了一下如何分布式构建问题。&lt;/p&gt;
+&lt;/li&gt;
+
+      
+    
+    </summary>
+    
+    
+      <category term="面经" scheme="http://Buevara.github.io/tags/%E9%9D%A2%E7%BB%8F/"/>
+    
+  </entry>
   
   <entry>
     <title>秋招面经--360机器学习岗位</title>
@@ -599,38 +633,6 @@
     
     
       <category term="面经" scheme="http://Buevara.github.io/tags/%E9%9D%A2%E7%BB%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>机器学习--L1正则化项和L2正则化项理解</title>
-    <link href="http://Buevara.github.io/2018/04/01/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0--L1%E6%AD%A3%E5%88%99%E5%8C%96%E9%A1%B9%E5%92%8CL2%E6%AD%A3%E5%88%99%E5%8C%96%E9%A1%B9%E7%90%86%E8%A7%A3/"/>
-    <id>http://Buevara.github.io/2018/04/01/机器学习--L1正则化项和L2正则化项理解/</id>
-    <published>2018-04-01T04:17:56.000Z</published>
-    <updated>2018-08-30T06:32:58.732Z</updated>
-    
-    <content type="html"><![CDATA[<h2>L1正则化项和L2正则化项的理解</h2><hr><p>概念：</p><blockquote><p>L1正则化是指权值向量w中各个元素的绝对值之和，通常表示为$ ||W||_{1} $</p></blockquote><blockquote><p>L2正则化是指权值向量w中各个元素的平方和然后再求平方根（可以看到Ridge回归的L2正则化项有平方符号），通常表示为$ ||W||_{2} $</p></blockquote><p><img src="https://github.com/Buevara/blog_img/raw/master/8.30/l1%E5%92%8Cl2%E5%88%86%E5%B8%83.png" alt="8.30"></p><p>先抛出个结论：</p><blockquote><p>L1正则化可以产生稀疏权值矩阵，即产生一个稀疏模型，可以用于特征选择,L1范数.L2范数是指向量各元素的平方和然后求平方根。我们让L2范数的正则项$ ||W||_{2} $最小，可以使得W的每个元素都很小，都接近于0，但与L1范数不同，它不会让它等于0，而是接近于0，大比起1范数，更常用L2范数。通过L2范数，我们可以实现了对模型空间的限制，从而在一定程度上避免了过拟合；一定程度上，L1也可以防止过拟合</p></blockquote><hr><h3>L1正则化</h3><p>为什么L1正则化可以产生稀疏模型（L1是怎么让系数等于零的），以及为什么L2正则化可以防止过拟合？假设有如下带L1正则化的损失函数：<img src="https://github.com/Buevara/blog_img/raw/master/4.9/MLE4.9-18.png" alt="4.9-18"></p><p>其中$ J0 $是原始的损失函数，加号后面的一项是$ L1 $正则化项，$ α $是正则化系数。注意到$ L1 $正则化是权值的绝对值之和，$J$是带有绝对值符号的函数，因此$J$是不完全可微的。机器学习的任务就是要通过一些方法（比如梯度下降）求出损失函数的最小值。当我们在原始损失函数$J0$后添加$L1$正则化项时，相当于对$J0$做了一个约束。令$L=α∑w|w|$，则$J=J0+L$，此时我们的任务变成在$L$约束下求出$J0$取最小值的解。考虑二维的情况，即只有两个权值$w1$和$w2$，此时$L=|w1|+|w2|$对于梯度下降法，求解$J0$的过程可以画出等值线，同时$L1$正则化的函数$L$也可以在$w1w2$的二维平面上画出来。如下图<img src="https://github.com/Buevara/blog_img/raw/master/4.9/MLE4.9-19.png" alt="4.9-19"></p><p>图中等值线是$J0$的等值线，黑色方形是$L$函数的图形。在图中，当$J0$等值线与$L$图形首次相交的地方就是最优解。上图中$J0$与$L$在$L$的一个顶点处相交，这个顶点就是最优解。注意到这个顶点的值是$(w1,w2)=(0,w)$。可以直观想象，因为$L$函数有很多『突出的角』（二维情况下四个，多维情况下更多），$J0$与这些角接触的机率会远大于与$L$其它部位接触的机率，而在这些角上，会有很多权值等于$0$，这就是为什么$L1$正则化可以产生稀疏模型，进而可以用于特征选择。</p><p>而正则化前面的系数$α$，可以控制L图形的大小。$α$越小，$L$的图形越大（上图中的黑色方框）；$α$越大，$L$的图形就越小，可以小到黑色方框只超出原点范围一点点，这是最优点的值$(w1,w2)=(0,w)$中的$w$可以取到很小的值。</p><hr><h3>L2正则化</h3><p>假设有如下带L2正则化的损失函数：<img src="https://github.com/Buevara/blog_img/raw/master/4.9/MLE4.9-20.png" alt="4.9-20">同样可以画出他们在二维平面上的图形，如下：<img src="https://github.com/Buevara/blog_img/raw/master/4.9/MLE4.9-21.png" alt="4.9-21">二维平面下L2正则化的函数图形是个圆，与方形相比，被磨去了棱角。因此J0与L相交时使得w1或w2等于零的机率小了许多，这就是为什么L2正则化不具有稀疏性的原因。</p><hr><h3>L2正则化和过拟合</h3><p>拟合过程中通常都倾向于让权值尽可能小，最后构造一个所有参数都比较小的模型。因为一般认为参数值小的模型比较简单，能适应不同的数据集，也在一定程度上避免了过拟合现象。可以设想一下对于一个线性回归方程，若参数很大，那么只要数据偏移一点点，就会对结果造成很大的影响；但如果参数足够小，数据偏移得多一点也不会对结果造成什么影响，专业一点的说法是『抗扰动能力强』。</p><blockquote><p>那为什么L2正则化可以获得值很小的参数？</p></blockquote><p>以线性回归中的梯度下降法为例。假设要求的参数为$θ$，$hθ(x)$是我们的假设函数，那么线性回归的代价函数如下：以线性回归中的梯度下降法为例。假设要求的参数为$θ，hθ(x)$是我们的假设函数，那么线性回归的代价函数如下：<img src="https://github.com/Buevara/blog_img/raw/master/4.9/MLE4.9-22.png" alt="4.9-22">那么在梯度下降法中，最终用于迭代计算参数θ的迭代式为：<img src="https://github.com/Buevara/blog_img/raw/master/4.9/MLE4.9-23.png" alt="4.9-23"><img src="https://github.com/Buevara/blog_img/raw/master/4.9/MLE4.9-24.png" alt="4.9-24">其中$α$是learning rate. 上式是没有添加L2正则化项的迭代公式，如果在原始代价函数之后添加L2正则化，则迭代公式会变成下面的样子：<img src="https://github.com/Buevara/blog_img/raw/master/4.9/MLE4.9-25.png" alt="4.9-25">其中$λ$就是正则化参数。从上式可以看到，与未添加$L2$正则化的迭代公式相比，每一次迭代，$θj$都要先乘以一个小于1的因子，从而使得$θj$不断减小，因此总得来看，$θ$是不断减小的。最开始也提到$L1$正则化一定程度上也可以防止过拟合。之前做了解释，当$L1$的正则化系数很小时，得到的最优解会很小，可以达到和$L2$正则化类似的效果。</p><hr><h3>正则化参数的选择</h3><blockquote><p>通常越大的$λ$可以让代价函数在参数为$0$时取到最小值。</p></blockquote><p><img src="https://github.com/Buevara/blog_img/raw/master/4.9/MLE4.9-26.png" alt="4.9-26"></p><p>分别取$λ=0.5$和$λ=2$，可以看到越大的$λ$越容易使$F(x)$在$x=0$时取到最小值。</p><blockquote><p>$λ$越大，$θj$衰减得越快。另一个理解可以参考上图，$λ$越大，$L2$圆的半径越小，最后求得代价函数最值时各参数也会变得很小。</p></blockquote><h2>除了：L1和L2 regularization外，正则化常用的方法还有：数据集扩增、dropout</h2><p>文章转自 <a href="https://blog.csdn.net/jinping_shi/article/details/52433975" target="_blank" rel="noopener">阿拉丁吃米粉的博客</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2&gt;L1正则化项和L2正则化项的理解&lt;/h2&gt;
-&lt;hr&gt;
-&lt;p&gt;概念：&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;L1正则化是指权值向量w中各个元素的绝对值之和，通常表示为$ ||W||_{1} $&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;L2正则化
-      
-    
-    </summary>
-    
-    
-      <category term="机器学习" scheme="http://Buevara.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
-    
-      <category term="正则化" scheme="http://Buevara.github.io/tags/%E6%AD%A3%E5%88%99%E5%8C%96/"/>
     
   </entry>
   
