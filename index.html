@@ -1,770 +1,1808 @@
 <!DOCTYPE html>
-<html lang="en">
 
-<!-- Head tag -->
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="">
 <head>
-    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="keyword" content="">
-    <meta name="theme-color" content="#600090">
-    <meta name="msapplication-navbutton-color" content="#600090">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="#600090">
-    <link rel="shortcut icon" href="https://github.com/Buevara/blog_img/raw/master/fengmian/guevara.jpeg">
-    <link rel="alternate" type="application/atom+xml" title="Buevara" href="/atom.xml">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
-    <title>
-        
-        Buevara&#39;s blog
-        
-    </title>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
 
-    <link rel="canonical" href="http://Buevara.github.io/">
 
-    <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/blog-style.css">
 
-    <!-- Pygments Github CSS -->
-    <link rel="stylesheet" href="/css/syntax.css"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Buevara" type="application/atom+xml" />
+
+
+
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Buevara">
+<meta property="og:url" content="http://Buevara.github.io/index.html">
+<meta property="og:site_name" content="Buevara">
+<meta property="og:locale" content="default">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Buevara">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://Buevara.github.io/"/>
+
+
+
+
+
+  <title>Buevara</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  
+
+
+
+
+
+
+
+
 </head>
 
-<style>
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
 
-    header.intro-header {
-        background-image: url('https://github.com/Buevara/blog_img/raw/master/fengmian/guevara.jpeg')
-    }
-</style>
-<!-- hack iOS CSS :active style -->
-<body ontouchstart="" class="animated fadeIn">
-<!-- hexo-inject:begin --><!-- hexo-inject:end --><!-- Navigation -->
-<nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost = "false" data-istags="false
-" data-ishome = "true" >
-    <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header page-scroll">
-            <button type="button" class="navbar-toggle">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand animated pulse" href="/">
-                <span class="brand-logo">
-                    Buevara
-                </span>
-                's Blog
-            </a>
-        </div>
+  
+  
+    
+  
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <!-- Known Issue, found by Hux:
-            <nav>'s height woule be hold on by its content.
-            so, when navbar scale out, the <nav> will cover tags.
-            also mask any touch event of tags, unfortunately.
-        -->
-        <!-- /.navbar-collapse -->
-        <div id="huxblog_navbar">
-            <div class="navbar-collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="/">Home</a>
-                    </li>
-					
-                    
-                        
-							
-                        <li>
-                            <a href="/tags/">Tags</a>
-                        </li>
-							
-						
-                    
-					
-					
-                </ul>
-            </div>
-        </div>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left 
+  page-home">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Buevara</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
     </div>
-    <!-- /.container -->
+      
+        <p class="site-subtitle">To hard!To work!</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
 </nav>
-<script>
-    // Drop Bootstarp low-performance Navbar
-    // Use customize navbar with high-quality material design animation
-    // in high-perf jank-free CSS3 implementation
-//    var $body   = document.body;
-    var $toggle = document.querySelector('.navbar-toggle');
-    var $navbar = document.querySelector('#huxblog_navbar');
-    var $collapse = document.querySelector('.navbar-collapse');
-
-    $toggle.addEventListener('click', handleMagic)
-    function handleMagic(e){
-        if ($navbar.className.indexOf('in') > 0) {
-        // CLOSE
-            $navbar.className = " ";
-            // wait until animation end.
-            setTimeout(function(){
-                // prevent frequently toggle
-                if($navbar.className.indexOf('in') < 0) {
-                    $collapse.style.height = "0px"
-                }
-            },400)
-        }else{
-        // OPEN
-            $collapse.style.height = "auto"
-            $navbar.className += " in";
-        }
-    }
-</script>
-
-<!-- Main Content -->
 
 
-<style>
 
-    .custom-haojen-container .post-preview:nth-of-type(1),
-    .custom-haojen-container .post-preview-poetry:nth-of-type(1) {
-        text-align: center;
-        background-repeat: no-repeat;
-        border-radius: 3px;
-        background-size: cover;
-        padding: 0;
-        height: 300px;
-        display: table;
-        width: 100%;
-        background-color: rgba(0, 0, 0, 0.16);
-    }
+ </div>
+    </header>
 
-    /*去掉诗歌的背景图片*/
-    .custom-haojen-container .post-preview-poetry:nth-of-type(1) {
-        background-image: none !important;
-        background-color: rgba(255, 248, 220, 0.5);
-    }
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
 
-    .custom-haojen-container .post-preview:nth-child(1) h2,
-    .custom-haojen-container .post-preview:nth-child(1) .post-meta,
-    .custom-haojen-container .post-preview:nth-child(1) .post-subtitle {
-        text-shadow: 0 0 40px rgba(0, 0, 0, 1);
-        letter-spacing: 1px;
-        color: #fff;
-        margin-top: 0;
-        padding-left: 60px;
-        padding-right: 60px;
-    }
+  
 
-    .custom-haojen-container .post-preview:nth-child(1) .post-meta {
-        font-size: .9em;
-        font-weight: 300;
-        margin-top: 0;
-    }
+  
+  
+  
 
-    .custom-haojen-container .post-preview-poetry:nth-child(1) .post-subtitle {
-        letter-spacing: 6px;
-        font-size: 18px;
-        font-family: unset;
-        font-weight: 400;
-        color: rgba(0, 0, 0, .75)
-    }
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://Buevara.github.io/2019/07/15/Spark基础(一)--大数据技术介绍/">
 
-    /*不显示摘要*/
-    .custom-haojen-container .post-preview:nth-child(1) .post-content-preview {
-        display: none
-    }
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Buevara">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
 
-    /*只第一个显示背景图片*/
-    .custom-haojen-container .post-preview:not(:nth-child(1)) {
-        background-image: none !important;
-    }
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Buevara">
+    </span>
 
-    /*第一个分界线去掉*/
-    .custom-haojen-container hr:nth-of-type(1) {
-        display: none;
-    }
+    
+      <header class="post-header">
 
-    /*主题*/
-    .custom-haojen-container .post-preview:nth-of-type(1) > a {
-        display: table-cell;
-        vertical-align: middle;
-    }
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/07/15/Spark基础(一)--大数据技术介绍/" itemprop="url">Spark基础(一)--大数据技术介绍</a></h1>
+        
 
-    /*诗词标题*/
-    .custom-haojen-container .post-preview-poetry:nth-child(1) h2 {
-        font-size: 35px;
-        font-family: STKaiti;
-        color: rgba(0, 0, 0, .8);
-    }
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-15T11:28:10+08:00">
+                2019-07-15
+              </time>
+            
 
-    .custom-haojen-container .post-preview-poetry:nth-of-type(1) .post-meta {
-        color: #0e2231;
-    }
+            
 
-    @media (max-width: 768px) {
-        .custom-haojen-container .post-preview:nth-child(1) {
-            height: 240px;
-        }
+            
+          </span>
 
-        .custom-haojen-container .post-preview-poetry:nth-child(1) h2 {
-            font-size: 28px !important;
-            margin-top: 0;
-        }
+          
 
-        .custom-haojen-container .post-preview:nth-child(1) .post-subtitle {
-            font-size: 18px;
-            font-weight: 400;
-            padding-left: 0;
-            padding-right: 0;
-        }
+          
+            
+          
 
-        .custom-haojen-container .post-preview:nth-of-type(1) > a {
-            padding: 20px
-        }
-    }
+          
+          
 
-    /*手机屏幕*/
-    @media (max-width: 400px) {
-        .custom-haojen-container .post-preview:nth-child(1) {
-            height: 195px;
-        }
+          
 
-        .custom-haojen-container .post-preview-poetry:nth-child(1) h2 {
-            font-size: 20px !important;
-        }
+          
 
-        .custom-haojen-container .post-preview:nth-child(1) .post-subtitle {
-            font-size: 16px;
-        }
+          
 
-        .custom-haojen-container .post-preview:nth-child(1) a {
-            padding: 30px 20px;
-        }
-    }
-</style>
+        </div>
+      </header>
+    
 
-<!-- Page Header -->
-<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 visible-xs-block visible-sm-block">
-    <div class="row">
-        <header class="intro-header">
-            <div class="container">
-                <div class="site-heading text-center">
-                    <div class="about-me">
-                        <!--移动端头部显示-->
-                        <img src="https://github.com/Buevara/blog_img/raw/master/fengmian/guevara.jpeg"/>
-                        <h5><a href="/about/">Buevara</a></h5>
-                        <p>life was like a box a chocolates, never know what you&#39;re gonna get.</p>
-                    </div>
-                </div>
-            </div>
-        </header>
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>本篇博客是学习<a href="http://dblab.xmu.edu.cn/blog/spark/" target="_blank" rel="noopener">子雨大数据之Spark入门教程</a>的学习笔记，仅作学习之用。</p>
+<h2>1.代表性的大数据技术</h2>
+<ul>
+<li>Hadoop</li>
+<li>Spark</li>
+<li>Flink</li>
+<li>Beam</li>
+</ul>
+<p>主要计算模式如图1-1
+<img src="https://raw.githubusercontent.com/Buevara/blog_img/master/Spark_Study/1.BigData%20Introduction/1-1.png" alt="图1-1 大数据主要计算模式"></p>
+<h3>1.1 Hadoop</h3>
+<p>Hadoop的生态系统图如图1-2
+<img src="https://raw.githubusercontent.com/Buevara/blog_img/master/Spark_Study/1.BigData%20Introduction/1-2.png" alt="图1-2 hadoop生态系统"></p>
+<p>开源谷歌GFS，利用MapReduce分布式并行编程，<strong>MapReduce</strong>和<strong>HDFS</strong>是Hadoop的两大核心。</p>
+<ul>
+<li>
+<p>HDFS 分布式文件管理系统</p>
+</li>
+<li>
+<p>Hive 数据仓库</p>
+</li>
+</ul>
+<blockquote>
+<p>数据仓库，借助底层HDFS和HBase完成存储，接受用户的SQL语句，转换为MapReduce程序进行查询，避免了大量的费时处理，类似于一个接口</p>
+</blockquote>
+<ul>
+<li>Pig 数据流处理</li>
+</ul>
+<blockquote>
+<p>数据流转换，存入数据仓库中</p>
+</blockquote>
+<ul>
+<li>Mahout 数据挖掘库</li>
+</ul>
+<blockquote>
+<p>支持MapReduce，写好了算法库，专门用来解决机器学习的算法，现在已经转向Spark平台</p>
+</blockquote>
+<ul>
+<li>Flume 日志收集</li>
+</ul>
+<blockquote>
+<p>日志实时采集。</p>
+</blockquote>
+<ul>
+<li>Sqoop 数据ETL</li>
+</ul>
+<blockquote>
+<p>关系型数据库批量导出并存入非关系型数据库（HBase、HDFS）。也可以将非关系型数据库数据转换为关系型数据库数据。</p>
+</blockquote>
+<ul>
+<li>HBase 分布式数据库</li>
+</ul>
+<blockquote>
+<p>非关系型数据库，列族数据库。</p>
+</blockquote>
+<ul>
+<li>Zookeeper 分布式协作服务</li>
+</ul>
+<blockquote>
+<p>选择在服务器中选择主管家，备用管家的任务。</p>
+</blockquote>
+<ul>
+<li>Ambari 安装、部署、配置和管理工具</li>
+</ul>
+<blockquote>
+<p>可视化监视和自动化部署。</p>
+</blockquote>
+<ul>
+<li><strong>MapReduce 分布式计算框架</strong></li>
+</ul>
+<blockquote>
+<p>MapReduce将复杂的、运行于大规模集群上的并行计算过程高度地抽象到了两个函数：Map和Reduce编程容易，不需要掌握分布式并行编程细节，也可以很容易把自己的程序运行在分布式系统上，完成海量数据的计算•MapReduce采用“分而治之”策略，一个存储在分布式文件系统中的大规模数据集，会被切分成许多独立的分片（split），这些分片可以被多个Map任务并行处理
+图1-3 为MapReduce的工作流程。
+第一步先进行分片，有多少个分片就有多少个Map。计算后给到Reduce合并，Reduce必须等所有Map结束才可运行。</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/Buevara/blog_img/master/Spark_Study/1.BigData%20Introduction/1-3.png" alt="图1-3 MapReduce工作流程"></p>
+<blockquote>
+<p>什么是数据向计算靠拢，什么是计算向数据靠拢？</p>
+<blockquote>
+<p>举例：NLP任务，把许多词块放到不同的机器上，为了做计算，讲不同的词块拉倒同一台机器上进行处理，叫做数据向计算靠拢。代价非常大。
+非常大的文件放在不同机器上，如果这台机器A速度快，把MapReduce分发代码程序到这台机器A上，靠近数据所在地方运行程序，把结果传给管家节点，进行汇总。这叫计算向数据靠拢。</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>MapReduce采用计算向数据靠拢，如图1-4所示。</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/Buevara/blog_img/master/Spark_Study/1.BigData%20Introduction/1-4.png" alt="图1-4  计算向数据靠拢示意图"></p>
+<blockquote>
+<p>Hadoop不需要了解底层技术，所有和分布式并行编程细节，编程简单，和开发单机版本无太大区别。</p>
+</blockquote>
+<ul>
+<li><strong>YARN 资源调度和管理框架</strong></li>
+</ul>
+<blockquote>
+<p>为MapReduce提供资源，进行调度，类似于“管家”</p>
+</blockquote>
+<blockquote>
+<p>YARN 为什们那么重要？</p>
+<blockquote>
+<p>如图1-5。原来的方法造成不同集群利用不平衡。
+<img src="https://raw.githubusercontent.com/Buevara/blog_img/master/Spark_Study/1.BigData%20Introduction/1-5.png" alt="图1-5 YARN的重要性"></p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>所以引入YARN，如图1-6。优点如图1-7。</p>
+</blockquote>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/Buevara/blog_img/master/Spark_Study/1.BigData%20Introduction/1-6.png" alt="图1-6 YARN工作原理"></p>
+<p><img src="https://raw.githubusercontent.com/Buevara/blog_img/master/Spark_Study/1.BigData%20Introduction/1-7.png" alt="图1-7 YARN的优势"></p>
+<h3>1.2 Spark</h3>
+<p>Spark慢慢代替Hadoop中的MapReduce。Spark架构图如图1-8所示。</p>
+<p><img src="https://raw.githubusercontent.com/Buevara/blog_img/master/Spark_Study/1.BigData%20Introduction/1-8.png" alt="图1-8 Spark架构图"></p>
+<ul>
+<li>Spark Core</li>
+</ul>
+<blockquote>
+<p>我们通常所学习的。</p>
+</blockquote>
+<ul>
+<li>Spark SQL</li>
+</ul>
+<blockquote>
+<p>对关系型数据库进行存取。</p>
+</blockquote>
+<ul>
+<li>Spark Streaming</li>
+</ul>
+<blockquote>
+<p>进行流计算。</p>
+</blockquote>
+<ul>
+<li>MLib</li>
+</ul>
+<blockquote>
+<p>做机器学习算法。</p>
+</blockquote>
+<ul>
+<li>GraphX</li>
+</ul>
+<blockquote>
+<p>做图算法。</p>
+</blockquote>
+<p>Spark生态系统如图1-9所示。</p>
+<p><img src="https://raw.githubusercontent.com/Buevara/blog_img/master/Spark_Study/1.BigData%20Introduction/1-9.png" alt="图1-9 Spark生态系统"></p>
+<p>相比于Hadoop优势：全方位软件栈，只要学习掌握Spark自身一门语言，就可以编写不同应用环境下的应用程序。
+Spark可以和Hadoop进行兼容，例如Spark可以对HDFS进行存取，也可以HIVE+Spark，HBase+Spark，NoSQL+Spark。</p>
+<p>图1-10、图1-11、图1-12和图1-13是Spark和Hadoop进行对比：
+<img src="https://raw.githubusercontent.com/Buevara/blog_img/master/Spark_Study/1.BigData%20Introduction/1-10.png" alt="图1-10 Spark和Hadoop进行对比"></p>
+<p>1.机器学习算法是一个不断迭代的过程，对于磁盘的IO性能消耗非常大。没法在MapReduce实现。
+2.耗时过长，Reduce需要在所有Map都结束后才能运行。</p>
+<p><img src="https://raw.githubusercontent.com/Buevara/blog_img/master/Spark_Study/1.BigData%20Introduction/1-11.png" alt="图1-11 Spark和Hadoop进行对比"></p>
+<p><img src="https://raw.githubusercontent.com/Buevara/blog_img/master/Spark_Study/1.BigData%20Introduction/1-12.png" alt="图1-12 Spark和Hadoop进行对比"></p>
+<p><img src="https://raw.githubusercontent.com/Buevara/blog_img/master/Spark_Study/1.BigData%20Introduction/1-13.png" alt="图1-13 Spark和Hadoop进行对比"></p>
+<h3>1.3 Flink</h3>
+<p>Flink架构图如图1-14所示。
+<img src="https://raw.githubusercontent.com/Buevara/blog_img/master/Spark_Study/1.BigData%20Introduction/1-14.png" alt="图1-14 Flink架构图"></p>
+<p>Flink和Spark的对比如图1-15、图1-16、图1-17所示。
+<img src="https://raw.githubusercontent.com/Buevara/blog_img/master/Spark_Study/1.BigData%20Introduction/1-15.png" alt="图1-15 Flink和Spark的比较"></p>
+<p><img src="https://raw.githubusercontent.com/Buevara/blog_img/master/Spark_Study/1.BigData%20Introduction/1-16.png" alt="图1-16 Flink和Spark的比较"></p>
+<p><img src="https://raw.githubusercontent.com/Buevara/blog_img/master/Spark_Study/1.BigData%20Introduction/1-17.png" alt="图1-17 Flink和Spark的比较"></p>
+<p>Flink略晚于Spark面世，所以用的并没有Spark广泛。</p>
+<h3>1.4 Beam</h3>
+<p>谷歌开发的集大成的大数据平台。谷歌正在大力推广。</p>
+
+          
+        
+      
     </div>
-</div>
-<!-- Main Content -->
-<div class="container custom-haojen-container">
-    <!-- Post Container -->
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-1 col-md-8 col-md-offset-1 col-sm-12 col-xs-12 post-container">
-            <!-- Main Content -->
-
-
-
-<div class="post-preview "
-     style="background-image: url('https://github.com/Buevara/blog_img/raw/master/fengmian/5yue_mobile.jpg')">
-    <a href="/2019/07/15/Spark基础(一)--大数据技术介绍/">
-        <h2 class="post-title">
-            Spark基础(一)--大数据技术介绍
-        </h2>
-        <p class="post-meta">
-            <i class="fa fa-calendar" aria-hidden="true"></i> 2019-07-15
-        </p>
-        
-        <div class="post-content-preview">
-            <p>
-                本篇博客是学习子雨大数据之Spark入门教程的学习笔记，仅作学习之用。
-1.代表性的大数据技术
-
-Hadoop
-Spark
-Flink
-Beam
-
-主要计算模式如图1-1
-
-1.1 Hadoop
-Hadoop的生态系统图如图1-2
-
-开源谷歌GFS，利用MapReduce分布式并行编程，MapR..
-            </p>
-        </div>
-    </a>
-
-</div>
-
-<hr>
-
-
-
-<div class="post-preview "
-     style="background-image: url('https://github.com/Buevara/blog_img/raw/master/fengmian/5yue_mobile.jpg')">
-    <a href="/2018/09/24/算法基础--股票买卖问题/">
-        <h2 class="post-title">
-            算法基础--股票买卖问题
-        </h2>
-        <p class="post-meta">
-            <i class="fa fa-calendar" aria-hidden="true"></i> 2018-09-24
-        </p>
-        
-        <div class="post-content-preview">
-            <p>
-                股票买卖问题总结：
-
-&apos;&apos;&apos;股票买卖问题总结：1. 只能买卖一次2. 买卖无限次3. 买卖无限次但是每次需要手续费a元4. 买卖无限次，但每次卖出后需要“冷静”一天5. 只能买卖两次6. 买卖小于等于两次7. 买卖小于等于k次参考文献：https://segment..
-            </p>
-        </div>
-    </a>
-
-</div>
-
-<hr>
-
-
-
-<div class="post-preview "
-     style="background-image: url('https://github.com/Buevara/blog_img/raw/master/fengmian/5yue_mobile.jpg')">
-    <a href="/2018/09/01/秋招面经--作业帮机器学习算法岗位/">
-        <h2 class="post-title">
-            秋招面经--作业帮机器学习岗位
-        </h2>
-        <p class="post-meta">
-            <i class="fa fa-calendar" aria-hidden="true"></i> 2018-09-01
-        </p>
-        
-        <div class="post-content-preview">
-            <p>
-                秋招面经--作业帮机器学习算法岗位
-比较少， 合起来整理。
-
-作业帮 一面
-
-
-1.自我介绍。
-
-
-2.JD项目介绍，讲了一下如何分布式构建问题。
-
-
-3.项目里faster-rcnn原理， 损失函数。
-
-
-4.比赛里用到的xgboost的分裂规则，其中xgboost里有model.get_fs..
-            </p>
-        </div>
-    </a>
-
-</div>
-
-<hr>
-
-
-
-<div class="post-preview "
-     style="background-image: url('https://github.com/Buevara/blog_img/raw/master/fengmian/5yue_mobile.jpg')">
-    <a href="/2018/08/24/秋招面经--360机器学习算法岗位/">
-        <h2 class="post-title">
-            秋招面经--360机器学习岗位
-        </h2>
-        <p class="post-meta">
-            <i class="fa fa-calendar" aria-hidden="true"></i> 2018-08-24
-        </p>
-        
-        <div class="post-content-preview">
-            <p>
-                秋招面经--360机器学习算法岗位
-
-一站式服务只享受了第一站，说来很羞愧。
-
-一面
-
-1.自我介绍。
-2.JD项目介绍，讲了一下如何分布式构建问题。
-3.CNN流程，如何进行卷积，如何pooling，什么是权值共享，哪些权值不共享，为什么感受野越来越大？为什么是从细节到整体？
-4.激活函数有什..
-            </p>
-        </div>
-    </a>
-
-</div>
-
-<hr>
-
-
-
-<div class="post-preview "
-     style="background-image: url('https://github.com/Buevara/blog_img/raw/master/fengmian/5yue_mobile.jpg')">
-    <a href="/2018/08/10/机器学习--树模型的三种分裂方式/">
-        <h2 class="post-title">
-            机器学习--树模型的三种分列方式
-        </h2>
-        <p class="post-meta">
-            <i class="fa fa-calendar" aria-hidden="true"></i> 2018-08-10
-        </p>
-        
-        <div class="post-content-preview">
-            <p>
-                树模型的三种分列方式
-分别是利用信息增益的ID3算法，利用信息增益比的C4.5算法和利用基尼系数的CART树。
-
-
-1.ID3算法
-ID3算法规定变量必须是离散值，且可以有多个分支（多叉树），而且不进行剪枝操作。且容易过拟合。
-
-例如：
-
-先求出信息熵（经验熵）:
-
-再根据不同的特征求出经验条件..
-            </p>
-        </div>
-    </a>
-
-</div>
-
-<hr>
-
-
-
-<div class="post-preview "
-     style="background-image: url('https://github.com/Buevara/blog_img/raw/master/fengmian/5yue_mobile.jpg')">
-    <a href="/2018/06/03/深度学习基础--BN层的作用详解/">
-        <h2 class="post-title">
-            深度学习基础--BN层的作用详解
-        </h2>
-        <p class="post-meta">
-            <i class="fa fa-calendar" aria-hidden="true"></i> 2018-06-03
-        </p>
-        
-        <div class="post-content-preview">
-            <p>
-                深度学习基础--BN层的作用详解.md
-详情见cs231n学习笔记-激活函数-BN-参数优化
-
-            </p>
-        </div>
-    </a>
-
-</div>
-
-<hr>
-
-
-
-<div class="post-preview "
-     style="background-image: url('https://github.com/Buevara/blog_img/raw/master/fengmian/5yue_mobile.jpg')">
-    <a href="/2018/06/01/算法基础--排序算法总结/">
-        <h2 class="post-title">
-            算法基础--排序算法复杂度总结
-        </h2>
-        <p class="post-meta">
-            <i class="fa fa-calendar" aria-hidden="true"></i> 2018-06-01
-        </p>
-        
-        <div class="post-content-preview">
-            <p>
-                算法基础--排序算法复杂度总结
-
-
-            </p>
-        </div>
-    </a>
-
-</div>
-
-<hr>
-
-
-
-<div class="post-preview "
-     style="background-image: url('https://github.com/Buevara/blog_img/raw/master/fengmian/5yue_mobile.jpg')">
-    <a href="/2018/05/19/算法基础--背包问题(下篇)/">
-        <h2 class="post-title">
-            算法基础--背包问题(下篇)
-        </h2>
-        <p class="post-meta">
-            <i class="fa fa-calendar" aria-hidden="true"></i> 2018-05-19
-        </p>
-        
-        <div class="post-content-preview">
-            <p>
-                算法基础--背包问题(下篇)
-背包问题是面试中非常常见的考点，今天整理一下。
-由于篇幅过长，所以分成上、中、下三篇进行分析。
-本篇是下篇：主要讨论求解满足背包最优的解决方案。
-
-11. 0-1背包满足最大条件的最优方案问题
-
-问题描述：
-m是背包的容量。n个物品，A表示物品重量，V表示物品的价值..
-            </p>
-        </div>
-    </a>
-
-</div>
-
-<hr>
-
-
-
-
-<!-- 翻页 pager -->
-
-<ul class="pager">
     
     
-    <li class="next">
-        <a href="/page/2/">Older Posts &rarr;</a>
-    </li>
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://Buevara.github.io/2018/09/24/算法基础--股票买卖问题/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Buevara">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Buevara">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/24/算法基础--股票买卖问题/" itemprop="url">算法基础--股票买卖问题</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-24T10:28:35+08:00">
+                2018-09-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2>股票买卖问题总结：</h2>
+<hr>
+<p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&apos;&apos;&apos;</span><br><span class="line">股票买卖问题总结：</span><br><span class="line">1. 只能买卖一次</span><br><span class="line">2. 买卖无限次</span><br><span class="line">3. 买卖无限次但是每次需要手续费a元</span><br><span class="line">4. 买卖无限次，但每次卖出后需要“冷静”一天</span><br><span class="line">5. 只能买卖两次</span><br><span class="line">6. 买卖小于等于两次</span><br><span class="line">7. 买卖小于等于k次</span><br><span class="line"></span><br><span class="line">参考文献：</span><br><span class="line">https://segmentfault.com/a/1190000006672807#articleHeader3</span><br><span class="line">https://blog.csdn.net/sinat_35261315/article/details/79023510</span><br><span class="line">&apos;&apos;&apos;</span><br><span class="line"></span><br><span class="line">################################## 1.只买卖一次 #########################################</span><br><span class="line">##输入: [7,1,5,3,6,4]</span><br><span class="line">##输出: 5</span><br><span class="line">###第一种 添加两个数组 一个是从第i位起，后面的最大值（包括第i位）， 另一个是第i位以及之前，最小值</span><br><span class="line">def solve1_1(nums):</span><br><span class="line">    if len(nums) == 0 or len(nums) == 1:</span><br><span class="line">        return 0</span><br><span class="line">    n1 = [0]*len(nums)</span><br><span class="line">    n2 = [0]*len(nums)</span><br><span class="line">    n2[0] = nums[0]</span><br><span class="line">    for i in range(1, len(nums)):</span><br><span class="line">        n2[i] = min(nums[i-1], nums[i])</span><br><span class="line"></span><br><span class="line">    n1[len(nums)-1] = nums[len(nums)-1]</span><br><span class="line">    for i in range(len(nums)-2, -1, -1):</span><br><span class="line">        n1[i] = max(nums[i], n1[i+1])</span><br><span class="line">    result = map(lambda x,y:x-y,  n1, n2)</span><br><span class="line">    return max(result)</span><br><span class="line">#print(solve1_1([7,1,5,3,6,4]))</span><br><span class="line"></span><br><span class="line">###第二种方法 思想一样 但是不创建两个数组</span><br><span class="line"></span><br><span class="line">def solve1_2(nums):</span><br><span class="line">    if len(nums) == 0 or len(nums) == 1:</span><br><span class="line">        return 0</span><br><span class="line">    minn = nums[0]###初始化minn最小值</span><br><span class="line">    max_diff = 0 ###初始化最大收益值</span><br><span class="line">    for i in range(1, len(nums)):</span><br><span class="line">        if nums[i-1] &lt; minn:</span><br><span class="line">            minn = nums[i-1]</span><br><span class="line">        if max_diff&lt; nums[i] - minn:</span><br><span class="line">            max_diff = nums[i] - minn</span><br><span class="line">    return max_diff</span><br><span class="line">#print(solve1_2([7,1,5,3,6,4]))</span><br><span class="line"></span><br><span class="line">################################## 2.可以买卖无限次 #########################################</span><br><span class="line">&apos;&apos;&apos;</span><br><span class="line">要求和上面一样，不过这次可以进行多次交易，即买，卖，买，卖，买，卖…，其中买卖不能在同一天进行</span><br><span class="line"></span><br><span class="line">这样就不能像上面那样只求一次了，其实仔细想一下，序列无非三种排列</span><br><span class="line"></span><br><span class="line">递增，假设A&lt;B&lt;C&lt;D</span><br><span class="line">递减，假设A&gt;B&gt;C&gt;D</span><br><span class="line">无序，假设A&lt;B&gt;C&lt;D</span><br><span class="line">对于递增序列，最大的差值就是D−A，因为(D−A)=(D−C)+(C−B)+(B−A)&gt;(D−C)+(B−A)</span><br><span class="line">对于递减序列，为0</span><br><span class="line"></span><br><span class="line">对于无序序列，总可以找到若干个递增序列，就上面的例子而言最大差值为(B−A)+(D−C)，而实际上也可以写成(D−C)+max(C−B,0)+(B−A)，和递增序列的形式是一样的</span><br><span class="line"></span><br><span class="line">所以只要依次计算prices[i]−prices[i−1]即可</span><br><span class="line">&apos;&apos;&apos;</span><br><span class="line">def solve2_1(nums):</span><br><span class="line">    result = 0</span><br><span class="line"></span><br><span class="line">    for i in range(1, len(nums)):</span><br><span class="line"></span><br><span class="line">        if nums[i]&gt;nums[i-1]:</span><br><span class="line">            result += nums[i]-nums[i-1]</span><br><span class="line">    return result</span><br><span class="line">#print(solve2_1([1, 2, 1, 3, 0, 4]))</span><br><span class="line"></span><br><span class="line">################################## 3.买卖无限次但是需要手续费 ################################</span><br><span class="line">&apos;&apos;&apos;</span><br><span class="line">输入: prices = [1, 3, 2, 8, 4, 9], fee = 2</span><br><span class="line">输出: 8   解释: 能够达到的最大利润:  </span><br><span class="line">在此处买入 prices[0] = 1   在此处卖出 prices[3] = 8</span><br><span class="line">在此处买入 prices[4] = 4   在此处卖出 prices[5] = 9</span><br><span class="line">总利润: ((8 - 1) - 2) + ((9 - 4) - 2) = 8.</span><br><span class="line">&apos;&apos;&apos;</span><br><span class="line"></span><br><span class="line">&apos;&apos;&apos;</span><br><span class="line">第一解法：贪心算法  不是很好理解  个人不推荐</span><br><span class="line">选择的关键是找到一个最大后是不是能够卖掉stock，重新开始寻找买入机会。比如序列1 3 2 8，如果发现2小于3就完成交易买1卖3，此时由于fee=2，（3-1-fee）+(8-2-fee)&lt;8-1-fee)，所以说明卖早了，令max是当前最大price，当（maxx-price[i]&gt;=fee）时可以在max处卖出，且不会存在卖早的情况，再从i开始重新寻找买入机会。</span><br><span class="line">cur_diff记录了当前一次交易能得到的最大收益，只有当maxx-prices[i]&gt;=fee时，才将cur_diff累加到总的收益中。最后一次交易不需要考虑是否早卖了，所以直接累加最后一次的cur_diff。</span><br><span class="line"></span><br><span class="line">&apos;&apos;&apos;</span><br><span class="line"></span><br><span class="line">def solve3_1(nums, fee):</span><br><span class="line">    ##每次收取fee元手续费</span><br><span class="line">    minn = nums[0]</span><br><span class="line">    maxx = nums[0]</span><br><span class="line">    result = 0</span><br><span class="line">    cur_diff = 0</span><br><span class="line">    for i in range(1, len(nums)):</span><br><span class="line">        minn = min(minn, nums[i])</span><br><span class="line">        maxx = max(maxx, nums[i])</span><br><span class="line">        print(&apos;min, max&apos;, minn, maxx)</span><br><span class="line">        cur_diff = max(cur_diff, nums[i]-minn-fee)</span><br><span class="line">        print(&apos;cur_diff&apos;, cur_diff)</span><br><span class="line">        if maxx - nums[i] &gt;= fee:</span><br><span class="line">            result += cur_diff</span><br><span class="line">            cur_diff = 0</span><br><span class="line">            minn = nums[i]</span><br><span class="line">            maxx = nums[i]</span><br><span class="line">        print(&apos;result&apos;, result)</span><br><span class="line">    return result+cur_diff</span><br><span class="line"></span><br><span class="line">#print(solve3_1([1, 3, 2, 8, 4, 9], 2))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&apos;&apos;&apos;</span><br><span class="line">第二种解法： 动态规划 </span><br><span class="line">分析每天的行为，我们可以知道，主要的行为就是售出和购入。所以我们建立两个动态规划数组：sold和hold，其中</span><br><span class="line">sold[i]保存的是第i天出售股票后的最大利润，有两个状态，一个是在i天售出的利润，</span><br><span class="line">或者保持前一天也就是sold[i-1]的售出利润，选择其中的最大利润。</span><br><span class="line">hold[i]保存的是第i天持有股票的最大利润，也有两个状态，一个是在i天购入的利润，</span><br><span class="line">或者保持前一天也就是hold[i-1]的持有利润，选择其中的最大利润。</span><br><span class="line">写为动态规划式为： </span><br><span class="line">sold[i] = max(sold[i−1],hold[i−1]+prices[i]−fee); </span><br><span class="line">hold[i] = max(Hold[i-1],sold[i−1]−prices[i])</span><br><span class="line"></span><br><span class="line">https://blog.csdn.net/Koala_Tree/article/details/78530510</span><br><span class="line">&apos;&apos;&apos;</span><br><span class="line">def solve3_2(nums, fee):</span><br><span class="line">    sold = [0]*len(nums)</span><br><span class="line">    hold = [0]*len(nums)</span><br><span class="line">    hold[0] = -nums[0]</span><br><span class="line">    for i in range(1, len(nums)):</span><br><span class="line">        sold[i] = max(sold[i-1], hold[i-1] + nums[i]-fee)</span><br><span class="line">        hold[i] = max(hold[i-1], sold[i-1] - nums[i])</span><br><span class="line">    return sold[len(nums)-1]</span><br><span class="line">#print(solve3_2([1, 3, 2, 8, 4, 9], 2))</span><br><span class="line"></span><br><span class="line">&apos;&apos;&apos;</span><br><span class="line">第三种解法： 简化第二种解法空间复杂度 O(1)</span><br><span class="line">&apos;&apos;&apos;</span><br><span class="line">def solve3_3(nums, fee):</span><br><span class="line">    sold = 0</span><br><span class="line">    hold = -nums[0]</span><br><span class="line">    for i in range(1, len(nums)):</span><br><span class="line">        sold_old = sold</span><br><span class="line">        sold = max(sold, hold + nums[i]-fee)</span><br><span class="line">        hold = max(hold, sold_old - nums[i])</span><br><span class="line">    return sold</span><br><span class="line">#print(solve3_3([1, 3, 2, 8, 4, 9], 2))</span><br><span class="line"></span><br><span class="line">############################## 4.买卖无限次，但每次卖出后需要“冷静”1天 #######################</span><br><span class="line"></span><br><span class="line">&apos;&apos;&apos;</span><br><span class="line">prices = [1, 2, 3, 0, 2]</span><br><span class="line">maxProfit = 3</span><br><span class="line">transactions = [buy, sell, cooldown, buy, sell]</span><br><span class="line"></span><br><span class="line">根据3_2的思想 动态规划 sold和hold</span><br><span class="line">思路： </span><br><span class="line">sold[i] = max(hold[i-1] + price[i], sold[i-1])</span><br><span class="line">hold[i]  = max(sold[i-2] - price[i], hold[i-1]) </span><br><span class="line"></span><br><span class="line">https://www.cnblogs.com/grandyang/p/4997417.html</span><br><span class="line">&apos;&apos;&apos;</span><br><span class="line">def solve4_1(nums):</span><br><span class="line"></span><br><span class="line">    if len(nums) == 0 or len(nums) == 1:</span><br><span class="line">        return 0</span><br><span class="line">    sold = [0] * len(nums)</span><br><span class="line">    hold = [0] * len(nums)</span><br><span class="line">    hold[0] = -nums[0]</span><br><span class="line">    for i in range(1, len(nums)):</span><br><span class="line">        sold[i] = max(hold[i - 1] + nums[i], sold[i - 1])</span><br><span class="line">        hold[i] = max(sold[i - 2] - nums[i], hold[i - 1])</span><br><span class="line">    return sold[len(nums) - 1]</span><br><span class="line">#print(solve4_1([2, 1, 3, 0, 0, 3, 2]))</span><br><span class="line"></span><br><span class="line">&apos;&apos;&apos;</span><br><span class="line">第二种方法  简化 solve4_1 </span><br><span class="line">&apos;&apos;&apos;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def solve4_2(nums):</span><br><span class="line"></span><br><span class="line">    if len(nums) == 0 or len(nums) == 1:</span><br><span class="line">        return 0</span><br><span class="line">    sold = 0</span><br><span class="line">    pre_sold = 0</span><br><span class="line">    hold = -nums[0]</span><br><span class="line">    for i in range(1, len(nums)):</span><br><span class="line">        tmp = sold</span><br><span class="line">        sold = max(hold + nums[i], sold)</span><br><span class="line">        hold = max(pre_sold - nums[i], hold)</span><br><span class="line">        pre_sold = tmp</span><br><span class="line">    return sold</span><br><span class="line">#print(solve4_2([2, 1, 3, 0, 0, 3, 2]))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">################################## 5.只能买卖两次 #########################################</span><br><span class="line"></span><br><span class="line">##1, 2, 1, 3, 0, 4；最大收益为6，在第三天买入，第四天卖出，第五天买入，第六天卖出；</span><br><span class="line">&apos;&apos;&apos;</span><br><span class="line">第一种方式:</span><br><span class="line">两次股票交易的核心是可以定义一个交易点，在这个交易点之前可以做一次交易(赚的最大数目的钱为firstProf)，</span><br><span class="line">在这个交易点之后可以做一个交易(赚的最大数目的钱是secondProf)。</span><br><span class="line">那么要求的是max(firstProf+secondProf)。但是这个方法的时间复杂度是O(N^2)，空间复杂度是O(1)。</span><br><span class="line">&apos;&apos;&apos;</span><br><span class="line">def solve5_1(nums):</span><br><span class="line">    result = 0</span><br><span class="line">    for i in range(len(nums)):</span><br><span class="line">        k = solve1_2(nums[:i+1]) + solve1_2(nums[i:])</span><br><span class="line">        if result &lt; k:</span><br><span class="line">            result = k</span><br><span class="line">    return result</span><br><span class="line">#print(solve5_1([1, 2, 1, 3, 0, 4]))</span><br><span class="line"></span><br><span class="line">&apos;&apos;&apos;</span><br><span class="line">第二种方式:</span><br><span class="line">不同于Best Time to Buy and Sell Stock I中定义的初始状态A[i]表示第i天卖出挣的最大数目的钱，</span><br><span class="line">这个更进一步直接定义A[i]表示前i天赚的最大数目的钱。minPrice表示从第0天到第i-1天中的最低价格。</span><br><span class="line">A[0]=0。（初始状态）</span><br><span class="line">A[1]=max(prices[1]-prices[0],A[0])</span><br><span class="line">A[2]=max(prices[2]-minPrice,A[1])</span><br><span class="line">即A[i]=max(price[i]-minPrice,A[i-1]).</span><br><span class="line">A[0]=0</span><br><span class="line">另外一次扫描从数组后向前扫描，</span><br><span class="line">定义B[i]表示从第i天到最后一天n能赚的最大数目的钱。maxPrice表示第i+1天到n天的最高价格。</span><br><span class="line">B[n]=0。（初始状态）</span><br><span class="line">B[n-1]=max(maxPrice-prices[n-1],B[n])</span><br><span class="line">B[n-2]=max(maxPrice-prices[n-2],B[n-1])</span><br><span class="line">即B[i]=max(maxPrice-prices[i],B[i+1])</span><br><span class="line">B[n]=0</span><br><span class="line">那么以第i天为分割点能赚的最多数目的钱为A[i]+B[i]</span><br><span class="line">问题的解为max&#123;A[i]+B[i]&#125;。0&lt;=i&lt;=n。</span><br><span class="line">时间复杂度是O(N)，空间复杂度是O(N)。</span><br><span class="line">&apos;&apos;&apos;</span><br><span class="line">def solve5_2(nums):</span><br><span class="line">    result = 0</span><br><span class="line">    A = [0]*len(nums)</span><br><span class="line">    minn = nums[0]</span><br><span class="line">    for i in range(1, len(nums)):</span><br><span class="line">        if nums[i-1] &lt; minn:</span><br><span class="line">            minn = nums[i-1]</span><br><span class="line">        A[i] = max(nums[i] - minn, A[i-1])</span><br><span class="line">    B = [0] * len(nums)</span><br><span class="line">    end = len(nums)</span><br><span class="line">    maxx = nums[end-1]</span><br><span class="line">    for i in range(end-2, -1, -1):</span><br><span class="line">        if nums[i+1] &gt; maxx:</span><br><span class="line">            maxx = nums[i+1]</span><br><span class="line">        B[i] = max(maxx-nums[i], B[i+1])</span><br><span class="line">    #result = map(lambda x,y:x+y, A, B)</span><br><span class="line">    result = [A[i]+B[i] for i in range(len(A))]</span><br><span class="line">    return max(result)</span><br><span class="line">#print(solve5_2([1, 2, 1, 3, 0, 4]))</span><br><span class="line"></span><br><span class="line">&apos;&apos;&apos;</span><br><span class="line">最优化:时间复杂度O(n)，空间复杂度O(1)。</span><br><span class="line">第三种解法的核心是假设手上最开始只有0元钱，</span><br><span class="line">那么如果买入股票的价格为price，手上的钱需要减去这个price，</span><br><span class="line">如果卖出股票的价格为price，手上的钱需要加上这个price。</span><br><span class="line">它定义了4个状态：</span><br><span class="line">Buy1[i]表示前i天做第一笔交易买入股票后剩下的最多的钱；</span><br><span class="line">Sell1[i]表示前i天做第一笔交易卖出股票后剩下的最多的钱；</span><br><span class="line">Buy2[i]表示前i天做第二笔交易买入股票后剩下的最多的钱；</span><br><span class="line">Sell2[i]表示前i天做第二笔交易卖出股票后剩下的最多的钱；</span><br><span class="line">那么Sell2[i]=max&#123;Sell2[i-1],Buy2[i-1]+prices[i]&#125;</span><br><span class="line">       Buy2[i]=max&#123;Buy2[i-1],Sell1[i-1]-prices[i]&#125;</span><br><span class="line">       Sell1[i]=max&#123;Sell[i-1],Buy1[i-1]+prices[i]&#125;</span><br><span class="line">       Buy1[i]=max&#123;Buy[i-1],-prices[i]&#125;</span><br><span class="line">可以发现上面四个状态都是只与前一个状态有关，所以可以不使用数组而是使用变量来存储即可。</span><br><span class="line">&apos;&apos;&apos;</span><br><span class="line">def solve5_3(nums):</span><br><span class="line">    sell1 = 0</span><br><span class="line">    buy1 = -nums[0]</span><br><span class="line">    sell2 = 0</span><br><span class="line">    buy2 = 0</span><br><span class="line">    for i in range(1, len(nums)):</span><br><span class="line">        buy1 = max(buy1, -nums[i])</span><br><span class="line">        sell1 = max(sell1, buy1+nums[i])</span><br><span class="line">        buy2 = max(buy2, sell1-nums[i])</span><br><span class="line">        sell2 = max(sell2, buy2+nums[i])</span><br><span class="line">    return sell2</span><br><span class="line">#print(solve5_3([1, 2, 1, 3, 0, 4]))</span><br><span class="line"></span><br><span class="line">################################## 6.买卖小于等于2次 #########################################</span><br><span class="line">&apos;&apos;&apos;</span><br><span class="line">最多买两次就是第二种问题的一个变形，求买卖1次和买卖2次最大值，我们用solve4_2作为baseline来改造</span><br><span class="line">时间复杂度O(n),</span><br><span class="line">&apos;&apos;&apos;</span><br><span class="line"></span><br><span class="line">def solve6_1(nums):</span><br><span class="line">    result = 0</span><br><span class="line">    A = [0]*len(nums)###存从初始到第i天最大的收益</span><br><span class="line">    minn = nums[0]</span><br><span class="line">    for i in range(1, len(nums)):</span><br><span class="line">        if nums[i-1] &lt; minn:</span><br><span class="line">            minn = nums[i-1]</span><br><span class="line">        A[i] = max(nums[i] - minn, A[i-1])</span><br><span class="line">    B = [0] * len(nums)### 存从第i天开始到最后一天的最大收益</span><br><span class="line">    end = len(nums)</span><br><span class="line">    maxx = nums[end-1]</span><br><span class="line">    for i in range(end-2, -1, -1):</span><br><span class="line">        if nums[i+1] &gt; maxx:</span><br><span class="line">            maxx = nums[i+1]</span><br><span class="line">        B[i] = max(maxx-nums[i], B[i+1])</span><br><span class="line"></span><br><span class="line">    result = [A[i]+B[i] for i in range(len(A))]</span><br><span class="line">    return max(max(result), max(A))</span><br><span class="line">#print(solve6_1([1, 2, 1, 3, 0, 4]))</span><br><span class="line"></span><br><span class="line">&apos;&apos;&apos;</span><br><span class="line">也用solve5_3作为baseline来改造</span><br><span class="line">&apos;&apos;&apos;</span><br><span class="line">def solve6_2(nums):</span><br><span class="line">    sell1 = 0</span><br><span class="line">    buy1 = -nums[0]</span><br><span class="line">    sell2 = 0</span><br><span class="line">    buy2 = 0</span><br><span class="line">    for i in range(1, len(nums)):</span><br><span class="line">        buy1 = max(buy1, -nums[i])</span><br><span class="line">        sell1 = max(sell1, buy1+nums[i])</span><br><span class="line">        buy2 = max(buy2, sell1-nums[i])</span><br><span class="line">        sell2 = max(sell2, buy2+nums[i])</span><br><span class="line">    return max(sell2, sell1)</span><br><span class="line">#print(solve6_2([1, 2, 1, 3, 0, 4]))</span><br><span class="line"></span><br><span class="line">################################## 7.买卖小于等于k次 #########################################</span><br><span class="line">&apos;&apos;&apos;</span><br><span class="line">采用两种方法 均采用动态规划 复杂度相同： 时间复杂度O(n*k)，空间复杂度O(n) </span><br><span class="line">https://blog.csdn.net/smile_watermelon/article/details/47445981</span><br><span class="line"></span><br><span class="line">第一种：</span><br><span class="line"></span><br><span class="line">这里我们需要两个递推公式来分别更新两个变量local和global，我们其实可以求至少k次交易的最大利润。</span><br><span class="line">定义local[i][j]为在到达第i天时最多可进行j次交易并且最后一次交易在最后一天卖出的最大利润，此为局部最优。</span><br><span class="line">定义global[i][j]为在到达第i天时最多可进行j次交易的最大利润，此为全局最优。它们的递推式为：</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">local[i][j] = max(global[i-1][j-1]+max(diff,0), local[i-1][j]+diff); </span><br><span class="line">global[i][j] = max(local[i][j], global[i-1][j])</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">local[i][j] = max(global[i-1][j-1]+max(diff,0), local[i-1][j]+diff)</span><br><span class="line">需要看两个量，第一个是全局global到i-1天进行j-1次交易，然后加上今天的交易，</span><br><span class="line">如果今天是赚钱的话（也就是前面只要j-1次交易，最后一次交易取当前天）；</span><br><span class="line">第二个量则是取local第i-1天j次交易，然后加上今天的差值</span><br><span class="line">（这里因为local[i-1][j]比如包含第i-1天卖出的交易，所以现在变成第i天卖出，</span><br><span class="line">并不会增加交易次数，而且这里无论diff是不是大于0都一定要加上，</span><br><span class="line">因为否则就不满足local[i][j]必须在最后一天卖出的条件了）。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">global[i][j] = max(local[i][j], global[i-1][j])</span><br><span class="line">即，到第i天完成j次交易的最大收益，要么是第j次交易发生在第i天时的最大收益，</span><br><span class="line">要么是到第i-1天完成j次交易时的最大收益。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">如果k&gt;len(nums) 则问题退化成 问题2</span><br><span class="line">&apos;&apos;&apos;</span><br><span class="line">def solve7_1(nums, k):</span><br><span class="line"></span><br><span class="line">    if k == 0 or len(nums) ==0:</span><br><span class="line">        return 0</span><br><span class="line">    n = len(nums)</span><br><span class="line">    if k &gt; n:</span><br><span class="line">        ###退化成solve2_1</span><br><span class="line">        summ = 0</span><br><span class="line">        for i in range(1, n):</span><br><span class="line">            diff = nums[i]- nums[i-1]</span><br><span class="line">            summ+= max(0, diff)</span><br><span class="line">        return summ</span><br><span class="line">    else:</span><br><span class="line">        ### 行取 n  列取 k+1  因为交易笔数需要从1-k,第0列作为递推条件必须有</span><br><span class="line">        local = [[0]*(k+1) for _ in range(n)]</span><br><span class="line">        globall = [[0]*(k+1) for _ in range(n)]</span><br><span class="line">        for i in range(1, n):</span><br><span class="line">            diff = nums[i]-nums[i-1]</span><br><span class="line">            for j in range(1, k+1):</span><br><span class="line">                local[i][j] = max(globall[i-1][j-1]+max(diff, 0), local[i-1][j]+diff)</span><br><span class="line">                globall[i][j] = max(local[i][j], globall[i-1][j])</span><br><span class="line">        return globall[n-1][k]</span><br><span class="line"></span><br><span class="line">#print(solve7_1([2,4,1],2))</span><br></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://Buevara.github.io/2018/09/01/秋招面经--作业帮机器学习算法岗位/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Buevara">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Buevara">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/01/秋招面经--作业帮机器学习算法岗位/" itemprop="url">秋招面经--作业帮机器学习岗位</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-01T15:42:13+08:00">
+                2018-09-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2>秋招面经--作业帮机器学习算法岗位</h2>
+<p>比较少， 合起来整理。</p>
+<hr>
+<h3>作业帮 一面</h3>
+<ul>
+<li>
+<p>1.自我介绍。</p>
+</li>
+<li>
+<p>2.JD项目介绍，讲了一下如何分布式构建问题。</p>
+</li>
+<li>
+<p>3.项目里faster-rcnn原理， 损失函数。</p>
+</li>
+<li>
+<p>4.比赛里用到的xgboost的分裂规则，其中xgboost里有model.get_fscore()方法，得分机制是什么?(所有决策树的特征和进行排序)</p>
+</li>
+<li>
+<p>5.树模型和svm，lr的区别？ 为什么svm和lr要进行特征归一化。</p>
+</li>
+<li>
+<p>6.lr是线性分类器吗？
+https://www.zhihu.com/question/29385169
+<img src="https://github.com/Buevara/blog_img/raw/master/9.1/9.1-1.png" alt="9.1-1"></p>
+</li>
+<li>
+<p>7.算法3道题：</p>
+</li>
+<li>
+<p>7.1 nums里面元素乘积小于K的子区间个数？ 滑窗法
+https://www.cnblogs.com/grandyang/p/7753959.html
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def search(self, nums, k):</span><br><span class="line">        if k &lt;=1:</span><br><span class="line">            return 0</span><br><span class="line">        count = 0</span><br><span class="line">        t = 1</span><br><span class="line">        start = 0</span><br><span class="line">        for j in range(0, len(nums)):</span><br><span class="line">            t *= nums[j]</span><br><span class="line">            while t &gt;= k:</span><br><span class="line">                t /= nums[start]</span><br><span class="line">                start += 1</span><br><span class="line">            count += j-start+1</span><br><span class="line">        return count</span><br><span class="line">a = Solution()</span><br><span class="line">print(a.search([10, 5, 2, 6], 100))</span><br></pre></td></tr></table></figure></p>
+</li>
+<li>
+<p>7.2 长度为n的数组，其中所有数都小于等于n大于0，求重复值和缺失值</p>
+</li>
+<li>
+<p>7.3 有序二维矩阵中第K小的元素  https://blog.csdn.net/weixin_39915444/article/details/80732634
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def search(self, nums, k):</span><br><span class="line">        left = nums[0][0]</span><br><span class="line">        right = nums[len(nums)-1][len(nums[0])-1]</span><br><span class="line">        while (left &lt;= right):</span><br><span class="line">            mid = (left+right)//2</span><br><span class="line">            count = self.tocount(nums, mid)</span><br><span class="line">            if count &gt;= k:</span><br><span class="line">                right = mid -1 </span><br><span class="line">            if count &lt; k:</span><br><span class="line">                left = mid + 1</span><br><span class="line">        return mid</span><br><span class="line">        </span><br><span class="line">    def tocount(self, nums, mid):</span><br><span class="line">        count = 0</span><br><span class="line">        i = len(nums)-1</span><br><span class="line">        j = 0</span><br><span class="line">        while i &gt;=0 and j&lt;len(nums[0]):</span><br><span class="line">            if nums[i][j] &lt;= mid:</span><br><span class="line">                count += i+1</span><br><span class="line">                j += 1</span><br><span class="line">            else:</span><br><span class="line">                i -= 1</span><br><span class="line">        return count</span><br></pre></td></tr></table></figure></p>
+</li>
 </ul>
 
-
-        </div>
-        <!-- Sidebar Container -->
-        <div class="
-                col-lg-3 col-lg-offset-0
-                col-md-3 col-md-offset-0
-                col-sm-12
-                col-xs-12
-                sidebar-container
-            ">
-
-            <!-- About Me -->
-            <section class="visible-md visible-lg" style="padding: 0 18px">
-                <div class="short-about">
-                    <!--侧边栏头像-->
-                    
-                    <img src="https://github.com/Buevara/blog_img/raw/master/fengmian/guevara.jpeg"/>
-                    
-                    <h5><a href="/about/">Buevara</a></h5>
-                    
-                    <p>life was like a box a chocolates, never know what you&#39;re gonna get.</p>
-                    
-                    <hr>
-                    <!-- SNS Link 社交 -->
-                    <ul class="list-inline">
-                        
-                        
-                        
-
-                        
-
-                        
-
-                        
-
-                        
-                    </ul>
-                </div>
-            </section>
-
-            <!-- Featured Tags  标签 -->
-            
-            <section>
-                <div class="tags">
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    <a href="/tags/#机器学习" title="机器学习"
-                       rel="8">机器学习</a>
-                    
-                    
-                    
-                    <a href="/tags/#树模型" title="树模型"
-                       rel="2">树模型</a>
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    <a href="/tags/#深度学习" title="深度学习"
-                       rel="3">深度学习</a>
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    <a href="/tags/#面经" title="面经"
-                       rel="10">面经</a>
-                    
-                    
-                    
-                    <a href="/tags/#算法" title="算法"
-                       rel="9">算法</a>
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    <a href="/tags/#动态规划" title="动态规划"
-                       rel="6">动态规划</a>
-                    
-                    
-                    
-                    
-                    
-                    <a href="/tags/#背包问题" title="背包问题"
-                       rel="3">背包问题</a>
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                </div>
-            </section>
-            
-
-            
-
-        </div>
+          
+        
+      
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://Buevara.github.io/2018/08/24/秋招面经--360机器学习算法岗位/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Buevara">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Buevara">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/08/24/秋招面经--360机器学习算法岗位/" itemprop="url">秋招面经--360机器学习岗位</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-08-24T20:42:13+08:00">
+                2018-08-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2>秋招面经--360机器学习算法岗位</h2>
+<hr>
+<p>一站式服务只享受了第一站，说来很羞愧。</p>
+<hr>
+<h3>一面</h3>
+<ul>
+<li>1.自我介绍。</li>
+<li>2.JD项目介绍，讲了一下如何分布式构建问题。</li>
+<li>3.CNN流程，如何进行卷积，如何pooling，什么是权值共享，哪些权值不共享，为什么感受野越来越大？为什么是从细节到整体？</li>
+<li>4.激活函数有什么，优缺点？</li>
+<li>5.逻辑斯底回归如何求最小loss，为什么要加log（不会，面试官回答是要消除e，防止产生梯度的爆炸或者消失）什么是最大似然，如何推导的？</li>
+<li>6.挑项目里的算法讲一讲，选了gbdt和xgboost，其中梯度下降法和牛顿法的差别？就是牛顿法用了二阶导数，二梯度下降只用了一阶导数</li>
+<li>7.算法二选一：快排和2sum</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://Buevara.github.io/2018/08/10/机器学习--树模型的三种分裂方式/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Buevara">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Buevara">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/08/10/机器学习--树模型的三种分裂方式/" itemprop="url">机器学习--树模型的三种分列方式</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-08-10T10:28:35+08:00">
+                2018-08-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2>树模型的三种分列方式</h2>
+<p>分别是利用信息增益的ID3算法，利用信息增益比的C4.5算法和利用基尼系数的CART树。
+<img src="https://github.com/Buevara/blog_img/raw/master/8.19/0.png" alt="0"></p>
+<hr>
+<h3>1.ID3算法</h3>
+<p>ID3算法规定变量必须是离散值，且可以有多个分支（多叉树），而且不进行剪枝操作。且容易过拟合。
+<img src="https://github.com/Buevara/blog_img/raw/master/8.19/1-4.png" alt="1-4">
+例如：</p>
+<p><img src="https://github.com/Buevara/blog_img/raw/master/8.19/1-1.png" alt="1-1">
+先求出信息熵（经验熵）:
+<img src="https://github.com/Buevara/blog_img/raw/master/8.19/1-2.png" alt="1-2">
+再根据不同的特征求出经验条件熵：
+<img src="https://github.com/Buevara/blog_img/raw/master/8.19/1-3.png" alt="1-3">
+其中：
+H(活动|天气) = 5/14*((-2/5)*log(2/5)+((-3/5)<em>log(3/5)))+4/14</em>((-4/4)<em>log(4/4)) + 5/14</em>((-2/5)*log(2/5)+((-3/5)*log(3/5)))
+<img src="https://github.com/Buevara/blog_img/raw/master/8.19/1-5.png" alt="1-5">
+最后构造：
+<img src="https://github.com/Buevara/blog_img/raw/master/8.19/1-6.png" alt="1-6">
+g(活动|天气) = H(活动)-H(活动|天气)</p>
+<h3>2.C4.5算法</h3>
+<p>ID3采用的信息增益度量存在一个缺点，它一般会优先选择有较多属性值的Feature,因为属性值多的Feature会有相对较大的信息增益(信息增益反映的给定一个条件以后不确定性减少的程度,必然是分得越细的数据集确定性更高,也就是条件熵越小,信息增益越大).为了避免这个不足C4.5中是用信息增益比率(gain ratio)来作为选择分支的准则。信息增益比率通过引入一个被称作分裂信息(Split information)的项来惩罚取值较多的Feature。除此之外，C4.5还弥补了ID3中不能处理特征属性值连续的问题。
+C4.5可以处理连续变量，也可以进行多叉树，引入分裂信息进行惩罚。也进行剪枝。可以处理缺失值，分为赋最常见值或丢弃缺失样本。由于处理连续值需要对特征值排序，所以比ID3慢。
+<img src="https://github.com/Buevara/blog_img/raw/master/8.19/2-1.png" alt="2-1">
+如上例所示：
+g(活动|天气) = H(活动)-H(活动|天气)
+gainratio(活动|天气) = g(活动|天气) / Ha(活动)
+Ha(活动) = -(5/14<em>log(5/14)) +(-(4/14</em>log(4/14))) +(-5/14*log(5/14))</p>
+<h3>3.CART</h3>
+<p>CART即可以回归又可以分类，必须是二叉树。
+<img src="https://github.com/Buevara/blog_img/raw/master/8.19/3-1.png" alt="3-1">
+对于二分类：
+Gini（P）= 2p(1-p)</p>
+<h3>4.决策树的剪枝</h3>
+<p>没找到好的答案，稍后补上。</p>
+<h3>5.分类树 VS 回归树</h3>
+<p>提到决策树算法，很多想到的就是上面提到的ID3、C4.5、CART分类决策树。其实决策树分为分类树和回归树，前者用于分类，如晴天/阴天/雨天、用户性别、邮件是否是垃圾邮件，后者用于预测实数值，如明天的温度、用户的年龄等。</p>
+<p>作为对比，先说分类树，我们知道ID3、C4.5分类树在每次分枝时，是穷举每一个特征属性的每一个阈值，找到使得按照feature&lt;=阈值，和feature&gt;阈值分成的两个分枝的熵最大的feature和阈值。按照该标准分枝得到两个新节点，用同样方法继续分枝直到所有人都被分入性别唯一的叶子节点，或达到预设的终止条件，若最终叶子节点中的性别不唯一，则以多数人的性别作为该叶子节点的性别。</p>
+<p>回归树总体流程也是类似，不过在每个节点（不一定是叶子节点）都会得一个预测值，以年龄为例，该预测值等于属于这个节点的所有人年龄的平均值。分枝时穷举每一个feature的每个阈值找最好的分割点，但衡量最好的标准<strong>不再是最大熵，而是最小化均方差</strong>--即（每个人的年龄-预测年龄）^2 的总和 / N，或者说是每个人的预测误差平方和 除以 N。这很好理解，被预测出错的人数越多，错的越离谱，均方差就越大，通过最小化均方差能够找到最靠谱的分枝依据。分枝直到每个叶子节点上人的年龄都唯一（这太难了）或者达到预设的终止条件（如叶子个数上限），若最终叶子节点上人的年龄不唯一，则以该节点上所有人的平均年龄做为该叶子节点的预测年龄。
+回归树具体参考(https://blog.csdn.net/weixin_40604987/article/details/79296427)
+参考:
+https://www.cnblogs.com/wxquare/p/5379970.html
+https://wenku.baidu.com/view/7aa9fbd776eeaeaad1f3305d.html
+<img src="https://github.com/Buevara/blog_img/raw/master/4.18/4.18-15.png" alt="4.18-15"></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://Buevara.github.io/2018/06/03/深度学习基础--BN层的作用详解/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Buevara">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Buevara">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/06/03/深度学习基础--BN层的作用详解/" itemprop="url">深度学习基础--BN层的作用详解</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-06-03T12:05:35+08:00">
+                2018-06-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1>深度学习基础--BN层的作用详解.md</h1>
+<p><a href="https://blog.csdn.net/myarrow/article/details/51848285" target="_blank" rel="noopener">详情见cs231n学习笔记-激活函数-BN-参数优化</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://Buevara.github.io/2018/06/01/算法基础--排序算法总结/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Buevara">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Buevara">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/06/01/算法基础--排序算法总结/" itemprop="url">算法基础--排序算法复杂度总结</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-06-01T15:05:35+08:00">
+                2018-06-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1>算法基础--排序算法复杂度总结</h1>
+<p><img src="https://github.com/Buevara/blog_img/raw/master/8.11/1-1.png" alt="1-1"></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://Buevara.github.io/2018/05/19/算法基础--背包问题(下篇)/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Buevara">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Buevara">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/05/19/算法基础--背包问题(下篇)/" itemprop="url">算法基础--背包问题(下篇)</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-19T22:35:35+08:00">
+                2018-05-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1>算法基础--背包问题(下篇)</h1>
+<p>背包问题是面试中非常常见的考点，今天整理一下。
+由于篇幅过长，所以分成上、中、下三篇进行分析。
+本篇是下篇：主要讨论求解满足背包最优的解决方案。</p>
+<hr>
+<h3>11. 0-1背包满足最大条件的最优方案问题</h3>
+<blockquote>
+<p>问题描述：
+m是背包的容量。n个物品，A表示物品重量，V表示物品的价值。 计算出的装入背包物品的最大价值和最优装入方案输出。
+例如：10, [4,2,5],[6,1,2]
+结果：
+8
+1 0 1</p>
+</blockquote>
+<p>解题思路：</p>
+<p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">##当计算完dp之后（求得了最优值之后），进行回溯，只回溯dp[x][m]</span></span><br><span class="line">        <span class="comment">### res表示最终的结果</span></span><br><span class="line">        j = m</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(x, <span class="number">0</span>, <span class="number">-1</span>):</span><br><span class="line">            <span class="keyword">if</span> dp[i][j] &gt; dp[i<span class="number">-1</span>][j]:</span><br><span class="line">                res[i<span class="number">-1</span>] = <span class="number">1</span></span><br><span class="line">                j -= A[i<span class="number">-1</span>]</span><br></pre></td></tr></table></figure></p>
+<p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">backPackI</span><span class="params">(self, m, A, V)</span>:</span></span><br><span class="line">        x = len(A)</span><br><span class="line">        dp = [[<span class="number">0</span>]*(m+<span class="number">1</span>) <span class="keyword">for</span> _ <span class="keyword">in</span> range(x+<span class="number">1</span>)]</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, x+<span class="number">1</span>):</span><br><span class="line">            <span class="keyword">for</span> j <span class="keyword">in</span> range(<span class="number">1</span>, m+<span class="number">1</span>):</span><br><span class="line">                <span class="keyword">if</span> j - A[i<span class="number">-1</span>] &gt;=<span class="number">0</span>:</span><br><span class="line">                    dp[i][j] = max(dp[i<span class="number">-1</span>][j], dp[i<span class="number">-1</span>][j-A[i<span class="number">-1</span>]]+V[i<span class="number">-1</span>])</span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    dp[i][j] = dp[i<span class="number">-1</span>][j]</span><br><span class="line">        print(dp[x][m])</span><br><span class="line">        res = [<span class="number">0</span>]*x</span><br><span class="line">        j = m</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(x, <span class="number">0</span>, <span class="number">-1</span>):</span><br><span class="line">            <span class="keyword">if</span> dp[i][j] &gt; dp[i<span class="number">-1</span>][j]:</span><br><span class="line">                res[i<span class="number">-1</span>] = <span class="number">1</span></span><br><span class="line">                j -= A[i<span class="number">-1</span>]</span><br><span class="line">        print(res)</span><br><span class="line">            </span><br><span class="line">a = Solution()</span><br><span class="line">a.backPackI(<span class="number">10</span>, [<span class="number">4</span>,<span class="number">2</span>,<span class="number">5</span>],[<span class="number">6</span>,<span class="number">1</span>,<span class="number">2</span>])</span><br></pre></td></tr></table></figure></p>
+<hr>
+<h3>12. 完全背包满足最大条件的最优方案问题</h3>
+<blockquote>
+<p>问题描述：
+m是背包的容量。n个物品，A表示物品重量，V表示物品的价值。每个物品可以用无限次， 计算出的装入背包物品的最大价值和最优装入方案输出。
+例如：m=11, A=[2,3,5,7], V=[1,5,2,4]
+结果： 16   [1, 3, 0, 0]</p>
+</blockquote>
+<p>解题思路：</p>
+<blockquote></blockquote>
+<p>和上面的题的思路是一样的，但是需要考虑：</p>
+<ol>
+<li>将完全背包转换为0-1背包，也就是改变A和V
+使用newMatrix函数</li>
+<li>得到了res之后如何切分成原始A的数量
+用recover函数
+例如：
+A原始是:
+[2,3,5,7]
+newMatrix之后是:
+[2, 4, 6, 8, 10, 3, 6, 9, 5, 10, 7]
+res得到:
+[1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0]
+recover之后：
+[1, 3, 0, 0]</li>
+</ol>
+<blockquote></blockquote>
+<p>1.时间复杂度为O($m*(\sum_{i= 0}^{n-1}*\left \lfloor \frac{m}{A[i]} \right \rfloor) $)
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">newMatrix</span><span class="params">(self, m, a)</span>:</span></span><br><span class="line">        j = m//a</span><br><span class="line">        <span class="keyword">return</span> [i <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, j+<span class="number">1</span>)]</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">recover</span><span class="params">(self, tmp, res)</span>:</span></span><br><span class="line">        result = []</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(len(tmp)):</span><br><span class="line">            summ = <span class="number">0</span></span><br><span class="line">            aa, ii = tmp[i][<span class="number">0</span>],tmp[i][<span class="number">1</span>]</span><br><span class="line">            ss = res[:len(ii)]</span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> range(len(ss)):</span><br><span class="line">                <span class="keyword">if</span> ss[i] == <span class="number">1</span>:</span><br><span class="line">                    summ += ii[i]</span><br><span class="line">            res = res[len(ii):]</span><br><span class="line">            result.append(summ)</span><br><span class="line">        <span class="keyword">return</span> result</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">backPackII</span><span class="params">(self, m, A, V)</span>:</span></span><br><span class="line">        x = len(A)</span><br><span class="line">        a = []</span><br><span class="line">        v = []</span><br><span class="line">        tmp = []</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(x):</span><br><span class="line">            nums = self.newMatrix(m, A[i])</span><br><span class="line">            tmp.append((A[i], nums))</span><br><span class="line">            a.extend(A[i]*k <span class="keyword">for</span> k <span class="keyword">in</span> nums)</span><br><span class="line">            v.extend(V[i]*k <span class="keyword">for</span> k <span class="keyword">in</span> nums)</span><br><span class="line">        A = a</span><br><span class="line">        print(A)</span><br><span class="line">        V = v</span><br><span class="line">        x = len(A)</span><br><span class="line">        dp = [[<span class="number">0</span>]*(m+<span class="number">1</span>) <span class="keyword">for</span> _ <span class="keyword">in</span> range(x+<span class="number">1</span>)]</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, x+<span class="number">1</span>):</span><br><span class="line">            <span class="keyword">for</span> j <span class="keyword">in</span> range(<span class="number">1</span>, m+<span class="number">1</span>):</span><br><span class="line">                <span class="keyword">if</span> j - A[i<span class="number">-1</span>] &gt;=<span class="number">0</span>:</span><br><span class="line">                    dp[i][j] = max(dp[i<span class="number">-1</span>][j],dp[i<span class="number">-1</span>][j-A[i<span class="number">-1</span>]]+V[i<span class="number">-1</span>])</span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    dp[i][j] = dp[i<span class="number">-1</span>][j]</span><br><span class="line">        print(dp[x][m])</span><br><span class="line">        res = [<span class="number">0</span>]*x</span><br><span class="line">        <span class="comment">#print(res)</span></span><br><span class="line">        j = m</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(x, <span class="number">0</span>, <span class="number">-1</span>):</span><br><span class="line">            <span class="keyword">if</span> dp[i][j] &gt; dp[i<span class="number">-1</span>][j]:</span><br><span class="line">                res[i<span class="number">-1</span>] = <span class="number">1</span></span><br><span class="line">                j -= A[i<span class="number">-1</span>]</span><br><span class="line">        print(res)</span><br><span class="line">        result = self.recover(tmp, res)</span><br><span class="line">        print(result)</span><br><span class="line">q = Solution()</span><br><span class="line">q.backPackII(<span class="number">11</span>, [<span class="number">2</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">7</span>], [<span class="number">1</span>,<span class="number">5</span>,<span class="number">2</span>,<span class="number">4</span>])</span><br></pre></td></tr></table></figure></p>
+<p>2.时间复杂度为O($m*(\sum_{i= 0}^{n-1}*\left \lceil log_{2}^{\left \lfloor \frac{m}{A[i]} \right \rfloor} \right \rceil) $)
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">newMatrix</span><span class="params">(self, m, k)</span>:</span></span><br><span class="line">        n = m//k</span><br><span class="line">        res = []</span><br><span class="line">        idx = <span class="number">0</span></span><br><span class="line">        <span class="keyword">while</span> pow(<span class="number">2</span>, idx) &lt;= n:</span><br><span class="line">            res.append(pow(<span class="number">2</span>, idx))</span><br><span class="line">            n -= pow(<span class="number">2</span>, idx)</span><br><span class="line">            idx += <span class="number">1</span></span><br><span class="line">        <span class="keyword">if</span> n!=<span class="number">0</span>:</span><br><span class="line">            res.append(n)</span><br><span class="line">        <span class="keyword">return</span> res</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">recover</span><span class="params">(self, tmp, res)</span>:</span></span><br><span class="line">        result = []</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(len(tmp)):</span><br><span class="line">            summ = <span class="number">0</span></span><br><span class="line">            aa, ii = tmp[i][<span class="number">0</span>],tmp[i][<span class="number">1</span>]</span><br><span class="line">            ss = res[:len(ii)]</span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> range(len(ss)):</span><br><span class="line">                <span class="keyword">if</span> ss[i] == <span class="number">1</span>:</span><br><span class="line">                    summ += ii[i]</span><br><span class="line">            res = res[len(ii):]</span><br><span class="line">            result.append(summ) </span><br><span class="line">        <span class="keyword">return</span> result</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">backPackII</span><span class="params">(self, m, A, V)</span>:</span></span><br><span class="line">        x = len(A)</span><br><span class="line">        a = []</span><br><span class="line">        v = []</span><br><span class="line">        tmp = []</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(x):</span><br><span class="line">            nums = self.newMatrix(m, A[i])</span><br><span class="line">            tmp.append((A[i], nums))</span><br><span class="line">            a.extend([y*A[i] <span class="keyword">for</span> y <span class="keyword">in</span> nums])</span><br><span class="line">            v.extend([y*V[i] <span class="keyword">for</span> y <span class="keyword">in</span> nums])</span><br><span class="line">        A, V = a, v</span><br><span class="line">        x = len(A)   </span><br><span class="line">        dp = [[<span class="number">0</span>]*(m+<span class="number">1</span>) <span class="keyword">for</span> _ <span class="keyword">in</span> range(x+<span class="number">1</span>)]</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, x+<span class="number">1</span>):</span><br><span class="line">            <span class="keyword">for</span> j <span class="keyword">in</span> range(<span class="number">1</span>, m+<span class="number">1</span>):</span><br><span class="line">                <span class="keyword">if</span> j - A[i<span class="number">-1</span>] &gt;=<span class="number">0</span>:</span><br><span class="line">                    dp[i][j] = max(dp[i<span class="number">-1</span>][j],dp[i<span class="number">-1</span>][j-A[i<span class="number">-1</span>]]+V[i<span class="number">-1</span>]) </span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    dp[i][j] = dp[i<span class="number">-1</span>][j]</span><br><span class="line">        print(dp[x][m])</span><br><span class="line">        res = [<span class="number">0</span>]*x</span><br><span class="line">        j = m</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(x, <span class="number">0</span>, <span class="number">-1</span>):</span><br><span class="line">            <span class="keyword">if</span> dp[i][j] &gt; dp[i<span class="number">-1</span>][j]:</span><br><span class="line">                res[i<span class="number">-1</span>] = <span class="number">1</span></span><br><span class="line">                j -= A[i<span class="number">-1</span>]</span><br><span class="line">        print(res)</span><br><span class="line">        result = self.recover(tmp, res)</span><br><span class="line">        print(result)</span><br><span class="line">q = Solution()</span><br><span class="line">q.backPackII(<span class="number">11</span>, [<span class="number">2</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">7</span>], [<span class="number">1</span>,<span class="number">5</span>,<span class="number">2</span>,<span class="number">4</span>])</span><br></pre></td></tr></table></figure></p>
+<p>结果： 16  [1, 3, 0, 0]</p>
+<hr>
+<h3>13. 多重背包满足最大条件的最优方案问题</h3>
+<blockquote>
+<p>问题描述：
+m是背包的容量。n个物品，A表示物品重量，V表示物品的价值,nk表示物品可用的次数， 计算出的装入背包物品的最大价值和最优装入方案输出。
+例如：m=11, A=[2,3,5,7], V=[1,5,2,4]
+结果： 16   [1, 3, 0, 0]</p>
+</blockquote>
+<p>解题思路：</p>
+<p>和上题完全背包类似， 只是求$min(nk[i],\left \lfloor \frac{m}{A[i]} \right \rfloor))$ 或 $min(nk[i], \left \lceil log_{2}^{\left \lfloor \frac{m}{A[i]} \right \rfloor} \right \rceil)$</p>
+<p>1.时间复杂度O($m*(\sum_{i= 0}^{n-1}*min(nk[i],\left \lfloor \frac{m}{A[i]} \right \rfloor))$)
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">newMatrix</span><span class="params">(self, m, a, k)</span>:</span></span><br><span class="line">        j = m//a</span><br><span class="line">        j = min(j, k)</span><br><span class="line">        <span class="keyword">return</span> [i <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, j+<span class="number">1</span>)]</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">recover</span><span class="params">(self, tmp, res)</span>:</span></span><br><span class="line">        result = []</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(len(tmp)):</span><br><span class="line">            summ = <span class="number">0</span></span><br><span class="line">            aa, ii = tmp[i][<span class="number">0</span>],tmp[i][<span class="number">1</span>]</span><br><span class="line">            ss = res[:len(ii)]</span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> range(len(ss)):</span><br><span class="line">                <span class="keyword">if</span> ss[i] == <span class="number">1</span>:</span><br><span class="line">                    summ += ii[i]</span><br><span class="line">            res = res[len(ii):]</span><br><span class="line">            result.append(summ)</span><br><span class="line">        <span class="keyword">return</span> result</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">backPackII</span><span class="params">(self, m, A, V, nk)</span>:</span></span><br><span class="line">        x = len(A)</span><br><span class="line">        a = []</span><br><span class="line">        v = []</span><br><span class="line">        tmp = []</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(x):</span><br><span class="line">            nums = self.newMatrix(m, A[i], nk[i])</span><br><span class="line">            tmp.append((A[i], nums))</span><br><span class="line">            a.extend(A[i]*k <span class="keyword">for</span> k <span class="keyword">in</span> nums)</span><br><span class="line">            v.extend(V[i]*k <span class="keyword">for</span> k <span class="keyword">in</span> nums)</span><br><span class="line">        A = a</span><br><span class="line">        print(A)</span><br><span class="line">        V = v</span><br><span class="line">        x = len(A)</span><br><span class="line">        dp = [[<span class="number">0</span>]*(m+<span class="number">1</span>) <span class="keyword">for</span> _ <span class="keyword">in</span> range(x+<span class="number">1</span>)]</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, x+<span class="number">1</span>):</span><br><span class="line">            <span class="keyword">for</span> j <span class="keyword">in</span> range(<span class="number">1</span>, m+<span class="number">1</span>):</span><br><span class="line">                <span class="keyword">if</span> j - A[i<span class="number">-1</span>] &gt;=<span class="number">0</span>:</span><br><span class="line">                    dp[i][j] = max(dp[i<span class="number">-1</span>][j],dp[i<span class="number">-1</span>][j-A[i<span class="number">-1</span>]]+V[i<span class="number">-1</span>])</span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    dp[i][j] = dp[i<span class="number">-1</span>][j]</span><br><span class="line">        print(dp[x][m])</span><br><span class="line">        res = [<span class="number">0</span>]*x</span><br><span class="line">        <span class="comment">#print(res)</span></span><br><span class="line">        j = m</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(x, <span class="number">0</span>, <span class="number">-1</span>):</span><br><span class="line">            <span class="keyword">if</span> dp[i][j] &gt; dp[i<span class="number">-1</span>][j]:</span><br><span class="line">                res[i<span class="number">-1</span>] = <span class="number">1</span></span><br><span class="line">                j -= A[i<span class="number">-1</span>]</span><br><span class="line">        result = self.recover(tmp, res)</span><br><span class="line">        print(result)</span><br><span class="line">q = Solution()</span><br><span class="line">q.backPackII(<span class="number">11</span>, [<span class="number">2</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">7</span>], [<span class="number">1</span>,<span class="number">5</span>,<span class="number">2</span>,<span class="number">4</span>], [<span class="number">0</span>, <span class="number">3</span>, <span class="number">1</span>, <span class="number">1</span>])</span><br></pre></td></tr></table></figure></p>
+<p>2.时间复杂度为O($m*(\sum_{i= 0}^{n-1}*min(nk[i], \left \lceil log_{2}^{\left \lfloor \frac{m}{A[i]} \right \rfloor} \right \rceil)) $)
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">newMatrix</span><span class="params">(self, m, a, k)</span>:</span></span><br><span class="line">        n = m//a</span><br><span class="line">        n = min(n, k)</span><br><span class="line">        res = []</span><br><span class="line">        idx = <span class="number">0</span></span><br><span class="line">        <span class="keyword">while</span> pow(<span class="number">2</span>, idx) &lt;= n:</span><br><span class="line">            res.append(pow(<span class="number">2</span>, idx))</span><br><span class="line">            n -= pow(<span class="number">2</span>, idx)</span><br><span class="line">            idx += <span class="number">1</span></span><br><span class="line">        <span class="keyword">if</span> n!=<span class="number">0</span>:</span><br><span class="line">            res.append(n)</span><br><span class="line">        <span class="keyword">return</span> res</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">recover</span><span class="params">(self, tmp, res)</span>:</span></span><br><span class="line">        result = []</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(len(tmp)):</span><br><span class="line">            summ = <span class="number">0</span></span><br><span class="line">            aa, ii = tmp[i][<span class="number">0</span>],tmp[i][<span class="number">1</span>]</span><br><span class="line">            ss = res[:len(ii)]</span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> range(len(ss)):</span><br><span class="line">                <span class="keyword">if</span> ss[i] == <span class="number">1</span>:</span><br><span class="line">                    summ += ii[i]</span><br><span class="line">            res = res[len(ii):]</span><br><span class="line">            result.append(summ) </span><br><span class="line">        <span class="keyword">return</span> result</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">backPackII</span><span class="params">(self, m, A, V, nk)</span>:</span></span><br><span class="line">        x = len(A)</span><br><span class="line">        a = []</span><br><span class="line">        v = []</span><br><span class="line">        tmp = []</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(x):</span><br><span class="line">            nums = self.newMatrix(m, A[i], nk[i])</span><br><span class="line">            tmp.append((A[i], nums))</span><br><span class="line">            a.extend([y*A[i] <span class="keyword">for</span> y <span class="keyword">in</span> nums])</span><br><span class="line">            v.extend([y*V[i] <span class="keyword">for</span> y <span class="keyword">in</span> nums])</span><br><span class="line">        A, V = a, v</span><br><span class="line">        x = len(A)   </span><br><span class="line">        dp = [[<span class="number">0</span>]*(m+<span class="number">1</span>) <span class="keyword">for</span> _ <span class="keyword">in</span> range(x+<span class="number">1</span>)]</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, x+<span class="number">1</span>):</span><br><span class="line">            <span class="keyword">for</span> j <span class="keyword">in</span> range(<span class="number">1</span>, m+<span class="number">1</span>):</span><br><span class="line">                <span class="keyword">if</span> j - A[i<span class="number">-1</span>] &gt;=<span class="number">0</span>:</span><br><span class="line">                    dp[i][j] = max(dp[i<span class="number">-1</span>][j],dp[i<span class="number">-1</span>][j-A[i<span class="number">-1</span>]]+V[i<span class="number">-1</span>]) </span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    dp[i][j] = dp[i<span class="number">-1</span>][j]</span><br><span class="line">        print(dp[x][m])</span><br><span class="line">        res = [<span class="number">0</span>]*x</span><br><span class="line">        j = m</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(x, <span class="number">0</span>, <span class="number">-1</span>):</span><br><span class="line">            <span class="keyword">if</span> dp[i][j] &gt; dp[i<span class="number">-1</span>][j]:</span><br><span class="line">                res[i<span class="number">-1</span>] = <span class="number">1</span></span><br><span class="line">                j -= A[i<span class="number">-1</span>]</span><br><span class="line">        result = self.recover(tmp, res)</span><br><span class="line">        print(result)</span><br><span class="line">q = Solution()</span><br><span class="line">q.backPackII(<span class="number">11</span>, [<span class="number">2</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">7</span>], [<span class="number">1</span>,<span class="number">5</span>,<span class="number">2</span>,<span class="number">4</span>], [<span class="number">0</span>, <span class="number">3</span>, <span class="number">1</span>, <span class="number">1</span>])</span><br></pre></td></tr></table></figure></p>
+<p>结果：15   [0, 3, 0, 0]</p>
+<hr>
+<p>(全篇结束，如果有问题可以留言讨论)</p>
+<p>参考文献：
+[1] https://www.kancloud.cn/kancloud/pack/70125
+[2] https://www.jiuzhang.com
+[3] https://blog.csdn.net/luoshengkim/article/details/X6514558</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+  </section>
+
+  
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
+
+
+          </div>
+          
+
+
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Buevara</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">33</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Buevara</span>
+
+  
 </div>
 
-<!-- Footer -->
-<!-- Footer -->
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
-                <br>
-                <ul class="list-inline text-center">
-                
-                
-                
 
-                
-
-                
-
-                
-
-                
-
-                </ul>
-                <p class="copyright text-muted">
-                    Copyright &copy; Buevara 2016
-                    <br>
-                    <span id="busuanzi_container_site_pv" style="font-size: 12px;">全站总访问量: <span id="busuanzi_value_site_pv"></span> Times</span>
-                    <br>
-                    <!-- Theme by <a href="https://haojen.github.io/">Haojen Ma</a>-->
-                </p>
-
-            </div>
-        </div>
-    </div>
-</footer>
-
-<!-- jQuery -->
-<script src="/js/jquery.min.js"></script>
-
-<!-- Bootstrap Core JavaScript -->
-<script src="/js/bootstrap.min.js"></script>
-
-<!-- Custom Theme JavaScript -->
-<script src="/js/blog.js"></script>
-
-<!-- async load function -->
-<script>
-    function async(u, c) {
-      var d = document, t = 'script',
-          o = d.createElement(t),
-          s = d.getElementsByTagName(t)[0];
-      o.src = u;
-      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
-      s.parentNode.insertBefore(o, s);
-    }
-</script>
-
-<!-- jquery.tagcloud.js -->
-<script>
-    // only load tagcloud.js in tag.html
-    if($('#tag_cloud').length !== 0){
-        async("http://Buevara.github.io/js/jquery.tagcloud.js",function(){
-            $.fn.tagcloud.defaults = {
-                //size: {start: 1, end: 1, unit: 'em'},
-                color: {start: '#bbbbee', end: '#0085a1'},
-            };
-            $('#tag_cloud a').tagcloud();
-        })
-    }
-</script>
-
-<!--fastClick.js -->
-<script>
-    async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
-        var $nav = document.querySelector("nav");
-        if($nav) FastClick.attach($nav);
-    })
-</script>
-
-<!-- Google Analytics -->
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
 
 
 
-<!-- Baidu Tongji -->
+  <span class="post-meta-divider">|</span>
 
 
-<!-- swiftype -->
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
 <script type="text/javascript">
-  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
-  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
-  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
-  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
-
-  _st('install','','2.0.0');
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
 </script>
 
-<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
-<!--wechat title img-->
-<img class="wechat-title-img" src="https://github.com/Buevara/blog_img/raw/master/fengmian/guevara.jpeg">
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
 
 </body>
-
 </html>
