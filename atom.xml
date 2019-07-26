@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://Buevara.github.io/"/>
-  <updated>2019-07-26T08:36:25.953Z</updated>
+  <updated>2019-07-26T08:38:06.185Z</updated>
   <id>http://Buevara.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Spark基础(一)--大数据技术介绍</title>
+    <title>Spark基础(二二)--大数据技术介绍</title>
     <link href="http://Buevara.github.io/2019/10/15/Spark%E5%9F%BA%E7%A1%80(%E4%BA%8C)--%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%8A%80%E6%9C%AF%E4%BB%8B%E7%BB%8D%E7%9A%84%E5%89%AF%E6%9C%AC/"/>
     <id>http://Buevara.github.io/2019/10/15/Spark基础(二)--大数据技术介绍的副本/</id>
     <published>2019-10-15T02:28:10.000Z</published>
-    <updated>2019-07-26T08:36:25.953Z</updated>
+    <updated>2019-07-26T08:38:06.185Z</updated>
     
     <content type="html"><![CDATA[<p>本篇博客是学习<a href="http://dblab.xmu.edu.cn/blog/spark/" target="_blank" rel="noopener">子雨大数据之Spark入门教程</a>的学习笔记，仅作学习之用。</p><h2>1.代表性的大数据技术</h2><ul><li>Hadoop</li><li>Spark</li><li>Flink</li><li>Beam</li></ul><p>主要计算模式如图1-1<img src="https://raw.githubusercontent.com/Buevara/blog_img/master/Spark_Study/1.BigData%20Introduction/1-1.png" alt="图1-1 大数据主要计算模式"></p><h3>1.1 Hadoop</h3><p>Hadoop的生态系统图如图1-2<img src="https://raw.githubusercontent.com/Buevara/blog_img/master/Spark_Study/1.BigData%20Introduction/1-2.png" alt="图1-2 hadoop生态系统"></p><p>开源谷歌GFS，利用MapReduce分布式并行编程，<strong>MapReduce</strong>和<strong>HDFS</strong>是Hadoop的两大核心。</p><ul><li><p>HDFS 分布式文件管理系统</p></li><li><p>Hive 数据仓库</p></li></ul><blockquote><p>数据仓库，借助底层HDFS和HBase完成存储，接受用户的SQL语句，转换为MapReduce程序进行查询，避免了大量的费时处理，类似于一个接口</p></blockquote><ul><li>Pig 数据流处理</li></ul><blockquote><p>数据流转换，存入数据仓库中</p></blockquote><ul><li>Mahout 数据挖掘库</li></ul><blockquote><p>支持MapReduce，写好了算法库，专门用来解决机器学习的算法，现在已经转向Spark平台</p></blockquote><ul><li>Flume 日志收集</li></ul><blockquote><p>日志实时采集。</p></blockquote><ul><li>Sqoop 数据ETL</li></ul><blockquote><p>关系型数据库批量导出并存入非关系型数据库（HBase、HDFS）。也可以将非关系型数据库数据转换为关系型数据库数据。</p></blockquote><ul><li>HBase 分布式数据库</li></ul><blockquote><p>非关系型数据库，列族数据库。</p></blockquote><ul><li>Zookeeper 分布式协作服务</li></ul><blockquote><p>选择在服务器中选择主管家，备用管家的任务。</p></blockquote><ul><li>Ambari 安装、部署、配置和管理工具</li></ul><blockquote><p>可视化监视和自动化部署。</p></blockquote><ul><li><strong>MapReduce 分布式计算框架</strong></li></ul><blockquote><p>MapReduce将复杂的、运行于大规模集群上的并行计算过程高度地抽象到了两个函数：Map和Reduce编程容易，不需要掌握分布式并行编程细节，也可以很容易把自己的程序运行在分布式系统上，完成海量数据的计算•MapReduce采用“分而治之”策略，一个存储在分布式文件系统中的大规模数据集，会被切分成许多独立的分片（split），这些分片可以被多个Map任务并行处理图1-3 为MapReduce的工作流程。第一步先进行分片，有多少个分片就有多少个Map。计算后给到Reduce合并，Reduce必须等所有Map结束才可运行。</p></blockquote><p><img src="https://raw.githubusercontent.com/Buevara/blog_img/master/Spark_Study/1.BigData%20Introduction/1-3.png" alt="图1-3 MapReduce工作流程"></p><blockquote><p>什么是数据向计算靠拢，什么是计算向数据靠拢？</p><blockquote><p>举例：NLP任务，把许多词块放到不同的机器上，为了做计算，讲不同的词块拉倒同一台机器上进行处理，叫做数据向计算靠拢。代价非常大。非常大的文件放在不同机器上，如果这台机器A速度快，把MapReduce分发代码程序到这台机器A上，靠近数据所在地方运行程序，把结果传给管家节点，进行汇总。这叫计算向数据靠拢。</p></blockquote></blockquote><blockquote><p>MapReduce采用计算向数据靠拢，如图1-4所示。</p></blockquote><p><img src="https://raw.githubusercontent.com/Buevara/blog_img/master/Spark_Study/1.BigData%20Introduction/1-4.png" alt="图1-4  计算向数据靠拢示意图"></p><blockquote><p>Hadoop不需要了解底层技术，所有和分布式并行编程细节，编程简单，和开发单机版本无太大区别。</p></blockquote><ul><li><strong>YARN 资源调度和管理框架</strong></li></ul><blockquote><p>为MapReduce提供资源，进行调度，类似于“管家”</p></blockquote><blockquote><p>YARN 为什们那么重要？</p><blockquote><p>如图1-5。原来的方法造成不同集群利用不平衡。<img src="https://raw.githubusercontent.com/Buevara/blog_img/master/Spark_Study/1.BigData%20Introduction/1-5.png" alt="图1-5 YARN的重要性"></p></blockquote></blockquote><blockquote><blockquote><p>所以引入YARN，如图1-6。优点如图1-7。</p></blockquote></blockquote><p><img src="https://raw.githubusercontent.com/Buevara/blog_img/master/Spark_Study/1.BigData%20Introduction/1-6.png" alt="图1-6 YARN工作原理"></p><p><img src="https://raw.githubusercontent.com/Buevara/blog_img/master/Spark_Study/1.BigData%20Introduction/1-7.png" alt="图1-7 YARN的优势"></p><h3>1.2 Spark</h3><p>Spark慢慢代替Hadoop中的MapReduce。Spark架构图如图1-8所示。</p><p><img src="https://raw.githubusercontent.com/Buevara/blog_img/master/Spark_Study/1.BigData%20Introduction/1-8.png" alt="图1-8 Spark架构图"></p><ul><li>Spark Core</li></ul><blockquote><p>我们通常所学习的。</p></blockquote><ul><li>Spark SQL</li></ul><blockquote><p>对关系型数据库进行存取。</p></blockquote><ul><li>Spark Streaming</li></ul><blockquote><p>进行流计算。</p></blockquote><ul><li>MLib</li></ul><blockquote><p>做机器学习算法。</p></blockquote><ul><li>GraphX</li></ul><blockquote><p>做图算法。</p></blockquote><p>Spark生态系统如图1-9所示。</p><p><img src="https://raw.githubusercontent.com/Buevara/blog_img/master/Spark_Study/1.BigData%20Introduction/1-9.png" alt="图1-9 Spark生态系统"></p><p>相比于Hadoop优势：全方位软件栈，只要学习掌握Spark自身一门语言，就可以编写不同应用环境下的应用程序。Spark可以和Hadoop进行兼容，例如Spark可以对HDFS进行存取，也可以HIVE+Spark，HBase+Spark，NoSQL+Spark。</p><p>图1-10、图1-11、图1-12和图1-13是Spark和Hadoop进行对比：<img src="https://raw.githubusercontent.com/Buevara/blog_img/master/Spark_Study/1.BigData%20Introduction/1-10.png" alt="图1-10 Spark和Hadoop进行对比"></p><p>1.机器学习算法是一个不断迭代的过程，对于磁盘的IO性能消耗非常大。没法在MapReduce实现。2.耗时过长，Reduce需要在所有Map都结束后才能运行。</p><p><img src="https://raw.githubusercontent.com/Buevara/blog_img/master/Spark_Study/1.BigData%20Introduction/1-11.png" alt="图1-11 Spark和Hadoop进行对比"></p><p><img src="https://raw.githubusercontent.com/Buevara/blog_img/master/Spark_Study/1.BigData%20Introduction/1-12.png" alt="图1-12 Spark和Hadoop进行对比"></p><p><img src="https://raw.githubusercontent.com/Buevara/blog_img/master/Spark_Study/1.BigData%20Introduction/1-13.png" alt="图1-13 Spark和Hadoop进行对比"></p><h3>1.3 Flink</h3><p>Flink架构图如图1-14所示。<img src="https://raw.githubusercontent.com/Buevara/blog_img/master/Spark_Study/1.BigData%20Introduction/1-14.png" alt="图1-14 Flink架构图"></p><p>Flink和Spark的对比如图1-15、图1-16、图1-17所示。<img src="https://raw.githubusercontent.com/Buevara/blog_img/master/Spark_Study/1.BigData%20Introduction/1-15.png" alt="图1-15 Flink和Spark的比较"></p><p><img src="https://raw.githubusercontent.com/Buevara/blog_img/master/Spark_Study/1.BigData%20Introduction/1-16.png" alt="图1-16 Flink和Spark的比较"></p><p><img src="https://raw.githubusercontent.com/Buevara/blog_img/master/Spark_Study/1.BigData%20Introduction/1-17.png" alt="图1-17 Flink和Spark的比较"></p><p>Flink略晚于Spark面世，所以用的并没有Spark广泛。</p><h3>1.4 Beam</h3><p>谷歌开发的集大成的大数据平台。</p>]]></content>
     
@@ -374,36 +374,6 @@
   </entry>
   
   <entry>
-    <title>机器学习--XGBOOST和GBDT的知识点整理</title>
-    <link href="http://Buevara.github.io/2018/04/24/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0--XGBOOST%E5%92%8CGBDT%E7%9A%84%E7%9F%A5%E8%AF%86%E7%82%B9%E6%95%B4%E7%90%86/"/>
-    <id>http://Buevara.github.io/2018/04/24/机器学习--XGBOOST和GBDT的知识点整理/</id>
-    <published>2018-04-24T12:28:35.000Z</published>
-    <updated>2018-05-28T04:20:21.062Z</updated>
-    
-    <content type="html"><![CDATA[<h2>机器学习--XGBOOST和GBDT的知识点整理</h2><hr><h3>1.树模型缺失值</h3><p>树模型：如何处理缺失值：按照我自己的理解就是：在属性a下假如存在缺失值的话，在计算属性a下的信息增益或者信息增率时，把具有缺失值的元组去掉，把具有完整值的属性a代入计算，用去掉缺失值计算结果进行比较。</p><p>如图，假设有100个样本，针对属性A，有20个样本是缺失值。树模型处理缺失样本的时候，会先忽略属性A缺失的样本，然后采用某种属性选择度量（信息增益、增益率、基尼指数）对剩下的样本（现在有80个）进行分裂。假设将这80个样本分裂到图中的三个节点，三个节点分配到的样本数分别为30、25、25（称这个过程为过程一）。然后将属性A缺失的20个样本均加入到这三个节点中（称这个过程为过程二）。在过程一中加入节点的样本的权值均为1，而在过程二中加入节点的样本的权值为：该节点中属性A未缺失的样本数/父节点中属性A未缺失的样本数，如属性A缺失的样本添加到节点1之后的权重为 30/80 = 0.375。<img src="https://github.com/Buevara/blog_img/raw/master/4.18/4.18-5.png" alt="4.18-5"></p><h3>2.为什么树模型不需要归一化特征？</h3><p>概率模型不需要归一化，因为它们不关心变量的值，而是关心变量的分布和变量之间的条件概率。像svm、线性回归之类的最优化问题就需要归一化。决策树属于前者。</p><h3>3.xgboost</h3><p>https://blog.csdn.net/github_38414650/article/details/76061893</p><h3>4.为什么xgboost比gbdt更快？</h3><p>https://www.zhihu.com/question/41354392http://idatamining.net/blog/?p=1901</p><blockquote><p>1.可并行的近似直方图算法。树节点在进行分裂时，我们需要计算每个特征的每个分割点对应的增益，即用贪心法枚举所有可能的分割点。当数据无法一次载入内存或者在分布式情况下，贪心算法效率就会变得很低，所以xgboost还提出了一种可并行的近似直方图算法，用于高效地生成候选的分割点。利用直方图的离散，找到最优的切分点。</p></blockquote><blockquote><p>2.既提供了单机多线程并行加速，也支持多机分布式加速。也就提供了若干种不同的并行建树的updater实现，按并行策略的不同，包括：<br>I). inter-feature exact parallelism （特征级精确并行）   II). inter-feature approximate parallelism（特征级近似并行，基于特征分bin计算，减少了枚举所有特征分裂点的开销）<br>III). intra-feature parallelism （特征内并行）IV). inter-node parallelism  （多机并行）</p></blockquote><blockquote><p>3.把连续的浮点特征值离散化成k个整数，同时构造一个宽度为k的直方图。在 遍历数据的时候，根据离散化后的值作为索引在直方图中累积统计量，当遍历一次数据后，直方图累积了需要的统计量，然后根据直方图的离散值，遍历寻找最优的分割点。</p><p>4.xgboost工具支持并行。boosting不是一种串行的结构吗?怎么并行的？注意xgboost的并行不是tree粒度的并行，xgboost也是一次迭代完才能进行下一次迭代的（第t次迭代的代价函数里包含了前面t-1次迭代的预测值）。xgboost的并行是在特征粒度上的。我们知道，决策树的学习最耗时的一个步骤就是对特征的值进行排序（因为要确定最佳分割点），xgboost在训练之前，预先对数据进行了排序，然后保存为block结构，后面的迭代中重复地使用这个结构，大大减小计算量。这个block结构也使得并行成为了可能，在进行节点的分裂时，需要计算每个特征的增益，最终选增益最大的那个特征去做分裂，那么各个特征的增益计算就可以开多线程进行。</p></blockquote><p><img src="https://github.com/Buevara/blog_img/raw/master/4.18/4.18-13.png" alt="4.18-13"><img src="https://github.com/Buevara/blog_img/raw/master/4.18/4.18-14.png" alt="4.18-14"><img src="https://github.com/Buevara/blog_img/raw/master/4.18/4.18-15.png" alt="4.18-15"></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2&gt;机器学习--XGBOOST和GBDT的知识点整理&lt;/h2&gt;
-&lt;hr&gt;
-&lt;h3&gt;1.树模型缺失值&lt;/h3&gt;
-&lt;p&gt;树模型：
-如何处理缺失值：
-按照我自己的理解就是：在属性a下假如存在缺失值的话，在计算属性a下的信息增益或者信息增率时，把具有缺失值的元组去掉，把具有完整值的属
-      
-    
-    </summary>
-    
-    
-      <category term="机器学习" scheme="http://Buevara.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
-    
-      <category term="树模型" scheme="http://Buevara.github.io/tags/%E6%A0%91%E6%A8%A1%E5%9E%8B/"/>
-    
-  </entry>
-  
-  <entry>
     <title>面经--360机器学习算法岗位</title>
     <link href="http://Buevara.github.io/2018/04/24/%E9%9D%A2%E7%BB%8F--360%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95%E5%B2%97%E4%BD%8D%EF%BC%88%E4%BA%8C%E9%9D%A2%E6%8C%82%EF%BC%89/"/>
     <id>http://Buevara.github.io/2018/04/24/面经--360机器学习算法岗位（二面挂）/</id>
@@ -431,6 +401,36 @@
     
     
       <category term="面经" scheme="http://Buevara.github.io/tags/%E9%9D%A2%E7%BB%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>机器学习--XGBOOST和GBDT的知识点整理</title>
+    <link href="http://Buevara.github.io/2018/04/24/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0--XGBOOST%E5%92%8CGBDT%E7%9A%84%E7%9F%A5%E8%AF%86%E7%82%B9%E6%95%B4%E7%90%86/"/>
+    <id>http://Buevara.github.io/2018/04/24/机器学习--XGBOOST和GBDT的知识点整理/</id>
+    <published>2018-04-24T12:28:35.000Z</published>
+    <updated>2018-05-28T04:20:21.062Z</updated>
+    
+    <content type="html"><![CDATA[<h2>机器学习--XGBOOST和GBDT的知识点整理</h2><hr><h3>1.树模型缺失值</h3><p>树模型：如何处理缺失值：按照我自己的理解就是：在属性a下假如存在缺失值的话，在计算属性a下的信息增益或者信息增率时，把具有缺失值的元组去掉，把具有完整值的属性a代入计算，用去掉缺失值计算结果进行比较。</p><p>如图，假设有100个样本，针对属性A，有20个样本是缺失值。树模型处理缺失样本的时候，会先忽略属性A缺失的样本，然后采用某种属性选择度量（信息增益、增益率、基尼指数）对剩下的样本（现在有80个）进行分裂。假设将这80个样本分裂到图中的三个节点，三个节点分配到的样本数分别为30、25、25（称这个过程为过程一）。然后将属性A缺失的20个样本均加入到这三个节点中（称这个过程为过程二）。在过程一中加入节点的样本的权值均为1，而在过程二中加入节点的样本的权值为：该节点中属性A未缺失的样本数/父节点中属性A未缺失的样本数，如属性A缺失的样本添加到节点1之后的权重为 30/80 = 0.375。<img src="https://github.com/Buevara/blog_img/raw/master/4.18/4.18-5.png" alt="4.18-5"></p><h3>2.为什么树模型不需要归一化特征？</h3><p>概率模型不需要归一化，因为它们不关心变量的值，而是关心变量的分布和变量之间的条件概率。像svm、线性回归之类的最优化问题就需要归一化。决策树属于前者。</p><h3>3.xgboost</h3><p>https://blog.csdn.net/github_38414650/article/details/76061893</p><h3>4.为什么xgboost比gbdt更快？</h3><p>https://www.zhihu.com/question/41354392http://idatamining.net/blog/?p=1901</p><blockquote><p>1.可并行的近似直方图算法。树节点在进行分裂时，我们需要计算每个特征的每个分割点对应的增益，即用贪心法枚举所有可能的分割点。当数据无法一次载入内存或者在分布式情况下，贪心算法效率就会变得很低，所以xgboost还提出了一种可并行的近似直方图算法，用于高效地生成候选的分割点。利用直方图的离散，找到最优的切分点。</p></blockquote><blockquote><p>2.既提供了单机多线程并行加速，也支持多机分布式加速。也就提供了若干种不同的并行建树的updater实现，按并行策略的不同，包括：<br>I). inter-feature exact parallelism （特征级精确并行）   II). inter-feature approximate parallelism（特征级近似并行，基于特征分bin计算，减少了枚举所有特征分裂点的开销）<br>III). intra-feature parallelism （特征内并行）IV). inter-node parallelism  （多机并行）</p></blockquote><blockquote><p>3.把连续的浮点特征值离散化成k个整数，同时构造一个宽度为k的直方图。在 遍历数据的时候，根据离散化后的值作为索引在直方图中累积统计量，当遍历一次数据后，直方图累积了需要的统计量，然后根据直方图的离散值，遍历寻找最优的分割点。</p><p>4.xgboost工具支持并行。boosting不是一种串行的结构吗?怎么并行的？注意xgboost的并行不是tree粒度的并行，xgboost也是一次迭代完才能进行下一次迭代的（第t次迭代的代价函数里包含了前面t-1次迭代的预测值）。xgboost的并行是在特征粒度上的。我们知道，决策树的学习最耗时的一个步骤就是对特征的值进行排序（因为要确定最佳分割点），xgboost在训练之前，预先对数据进行了排序，然后保存为block结构，后面的迭代中重复地使用这个结构，大大减小计算量。这个block结构也使得并行成为了可能，在进行节点的分裂时，需要计算每个特征的增益，最终选增益最大的那个特征去做分裂，那么各个特征的增益计算就可以开多线程进行。</p></blockquote><p><img src="https://github.com/Buevara/blog_img/raw/master/4.18/4.18-13.png" alt="4.18-13"><img src="https://github.com/Buevara/blog_img/raw/master/4.18/4.18-14.png" alt="4.18-14"><img src="https://github.com/Buevara/blog_img/raw/master/4.18/4.18-15.png" alt="4.18-15"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2&gt;机器学习--XGBOOST和GBDT的知识点整理&lt;/h2&gt;
+&lt;hr&gt;
+&lt;h3&gt;1.树模型缺失值&lt;/h3&gt;
+&lt;p&gt;树模型：
+如何处理缺失值：
+按照我自己的理解就是：在属性a下假如存在缺失值的话，在计算属性a下的信息增益或者信息增率时，把具有缺失值的元组去掉，把具有完整值的属
+      
+    
+    </summary>
+    
+    
+      <category term="机器学习" scheme="http://Buevara.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="树模型" scheme="http://Buevara.github.io/tags/%E6%A0%91%E6%A8%A1%E5%9E%8B/"/>
     
   </entry>
   
