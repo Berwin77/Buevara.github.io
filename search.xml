@@ -1,15 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[Spark基础(二二)--大数据技术介绍]]></title>
-    <url>%2F2019%2F10%2F15%2FSpark%E5%9F%BA%E7%A1%80(%E4%BA%8C)--%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%8A%80%E6%9C%AF%E4%BB%8B%E7%BB%8D%E7%9A%84%E5%89%AF%E6%9C%AC%2F</url>
-    <content type="text"><![CDATA[本篇博客是学习子雨大数据之Spark入门教程的学习笔记，仅作学习之用。 1.代表性的大数据技术 Hadoop Spark Flink Beam 主要计算模式如图1-1 1.1 Hadoop Hadoop的生态系统图如图1-2 开源谷歌GFS，利用MapReduce分布式并行编程，MapReduce和HDFS是Hadoop的两大核心。 HDFS 分布式文件管理系统 Hive 数据仓库 数据仓库，借助底层HDFS和HBase完成存储，接受用户的SQL语句，转换为MapReduce程序进行查询，避免了大量的费时处理，类似于一个接口 Pig 数据流处理 数据流转换，存入数据仓库中 Mahout 数据挖掘库 支持MapReduce，写好了算法库，专门用来解决机器学习的算法，现在已经转向Spark平台 Flume 日志收集 日志实时采集。 Sqoop 数据ETL 关系型数据库批量导出并存入非关系型数据库（HBase、HDFS）。也可以将非关系型数据库数据转换为关系型数据库数据。 HBase 分布式数据库 非关系型数据库，列族数据库。 Zookeeper 分布式协作服务 选择在服务器中选择主管家，备用管家的任务。 Ambari 安装、部署、配置和管理工具 可视化监视和自动化部署。 MapReduce 分布式计算框架 MapReduce将复杂的、运行于大规模集群上的并行计算过程高度地抽象到了两个函数：Map和Reduce编程容易，不需要掌握分布式并行编程细节，也可以很容易把自己的程序运行在分布式系统上，完成海量数据的计算•MapReduce采用“分而治之”策略，一个存储在分布式文件系统中的大规模数据集，会被切分成许多独立的分片（split），这些分片可以被多个Map任务并行处理 图1-3 为MapReduce的工作流程。 第一步先进行分片，有多少个分片就有多少个Map。计算后给到Reduce合并，Reduce必须等所有Map结束才可运行。 什么是数据向计算靠拢，什么是计算向数据靠拢？ 举例：NLP任务，把许多词块放到不同的机器上，为了做计算，讲不同的词块拉倒同一台机器上进行处理，叫做数据向计算靠拢。代价非常大。 非常大的文件放在不同机器上，如果这台机器A速度快，把MapReduce分发代码程序到这台机器A上，靠近数据所在地方运行程序，把结果传给管家节点，进行汇总。这叫计算向数据靠拢。 MapReduce采用计算向数据靠拢，如图1-4所示。 Hadoop不需要了解底层技术，所有和分布式并行编程细节，编程简单，和开发单机版本无太大区别。 YARN 资源调度和管理框架 为MapReduce提供资源，进行调度，类似于“管家” YARN 为什们那么重要？ 如图1-5。原来的方法造成不同集群利用不平衡。 所以引入YARN，如图1-6。优点如图1-7。 1.2 Spark Spark慢慢代替Hadoop中的MapReduce。Spark架构图如图1-8所示。 Spark Core 我们通常所学习的。 Spark SQL 对关系型数据库进行存取。 Spark Streaming 进行流计算。 MLib 做机器学习算法。 GraphX 做图算法。 Spark生态系统如图1-9所示。 相比于Hadoop优势：全方位软件栈，只要学习掌握Spark自身一门语言，就可以编写不同应用环境下的应用程序。 Spark可以和Hadoop进行兼容，例如Spark可以对HDFS进行存取，也可以HIVE+Spark，HBase+Spark，NoSQL+Spark。 图1-10、图1-11、图1-12和图1-13是Spark和Hadoop进行对比： 1.机器学习算法是一个不断迭代的过程，对于磁盘的IO性能消耗非常大。没法在MapReduce实现。 2.耗时过长，Reduce需要在所有Map都结束后才能运行。 1.3 Flink Flink架构图如图1-14所示。 Flink和Spark的对比如图1-15、图1-16、图1-17所示。 Flink略晚于Spark面世，所以用的并没有Spark广泛。 1.4 Beam 谷歌开发的集大成的大数据平台。]]></content>
-      <tags>
-        <tag>Spark</tag>
-        <tag>大数据</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[Spark基础(一)--大数据技术介绍]]></title>
     <url>%2F2019%2F07%2F15%2FSpark%E5%9F%BA%E7%A1%80(%E4%B8%80)--%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%8A%80%E6%9C%AF%E4%BB%8B%E7%BB%8D%2F</url>
     <content type="text"><![CDATA[本篇博客是学习子雨大数据之Spark入门教程的学习笔记，仅作学习之用。 1.代表性的大数据技术 Hadoop Spark Flink Beam 主要计算模式如图1-1 1.1 Hadoop Hadoop的生态系统图如图1-2 开源谷歌GFS，利用MapReduce分布式并行编程，MapReduce和HDFS是Hadoop的两大核心。 HDFS 分布式文件管理系统 Hive 数据仓库 数据仓库，借助底层HDFS和HBase完成存储，接受用户的SQL语句，转换为MapReduce程序进行查询，避免了大量的费时处理，类似于一个接口 Pig 数据流处理 数据流转换，存入数据仓库中 Mahout 数据挖掘库 支持MapReduce，写好了算法库，专门用来解决机器学习的算法，现在已经转向Spark平台 Flume 日志收集 日志实时采集。 Sqoop 数据ETL 关系型数据库批量导出并存入非关系型数据库（HBase、HDFS）。也可以将非关系型数据库数据转换为关系型数据库数据。 HBase 分布式数据库 非关系型数据库，列族数据库。 Zookeeper 分布式协作服务 选择在服务器中选择主管家，备用管家的任务。 Ambari 安装、部署、配置和管理工具 可视化监视和自动化部署。 MapReduce 分布式计算框架 MapReduce将复杂的、运行于大规模集群上的并行计算过程高度地抽象到了两个函数：Map和Reduce编程容易，不需要掌握分布式并行编程细节，也可以很容易把自己的程序运行在分布式系统上，完成海量数据的计算•MapReduce采用“分而治之”策略，一个存储在分布式文件系统中的大规模数据集，会被切分成许多独立的分片（split），这些分片可以被多个Map任务并行处理 图1-3 为MapReduce的工作流程。 第一步先进行分片，有多少个分片就有多少个Map。计算后给到Reduce合并，Reduce必须等所有Map结束才可运行。 什么是数据向计算靠拢，什么是计算向数据靠拢？ 举例：NLP任务，把许多词块放到不同的机器上，为了做计算，讲不同的词块拉倒同一台机器上进行处理，叫做数据向计算靠拢。代价非常大。 非常大的文件放在不同机器上，如果这台机器A速度快，把MapReduce分发代码程序到这台机器A上，靠近数据所在地方运行程序，把结果传给管家节点，进行汇总。这叫计算向数据靠拢。 MapReduce采用计算向数据靠拢，如图1-4所示。 Hadoop不需要了解底层技术，所有和分布式并行编程细节，编程简单，和开发单机版本无太大区别。 YARN 资源调度和管理框架 为MapReduce提供资源，进行调度，类似于“管家” YARN 为什们那么重要？ 如图1-5。原来的方法造成不同集群利用不平衡。 所以引入YARN，如图1-6。优点如图1-7。 1.2 Spark Spark慢慢代替Hadoop中的MapReduce。Spark架构图如图1-8所示。 Spark Core 我们通常所学习的。 Spark SQL 对关系型数据库进行存取。 Spark Streaming 进行流计算。 MLib 做机器学习算法。 GraphX 做图算法。 Spark生态系统如图1-9所示。 相比于Hadoop优势：全方位软件栈，只要学习掌握Spark自身一门语言，就可以编写不同应用环境下的应用程序。 Spark可以和Hadoop进行兼容，例如Spark可以对HDFS进行存取，也可以HIVE+Spark，HBase+Spark，NoSQL+Spark。 图1-10、图1-11、图1-12和图1-13是Spark和Hadoop进行对比： 1.机器学习算法是一个不断迭代的过程，对于磁盘的IO性能消耗非常大。没法在MapReduce实现。 2.耗时过长，Reduce需要在所有Map都结束后才能运行。 1.3 Flink Flink架构图如图1-14所示。 Flink和Spark的对比如图1-15、图1-16、图1-17所示。 Flink略晚于Spark面世，所以用的并没有Spark广泛。 1.4 Beam 谷歌开发的集大成的大数据平台。]]></content>
@@ -108,20 +99,20 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[面经--360机器学习算法岗位]]></title>
-    <url>%2F2018%2F04%2F24%2F%E9%9D%A2%E7%BB%8F--360%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95%E5%B2%97%E4%BD%8D%EF%BC%88%E4%BA%8C%E9%9D%A2%E6%8C%82%EF%BC%89%2F</url>
-    <content type="text"><![CDATA[面经--360机器学习算法岗位（二面挂） 一面： 1.自我介绍. 2.问了所有的项目经历。 3.算法： 大数据下找到两个人的共同好友？ 澈彻策的博客 二面 1.自我介绍. 2.SVM为什么特征需要归一化？ 首选，什么是归一化？什么是标准化？ ！4.25-1 ！4.25-2 ！4.25-3 ！4.25-4 ！4.25-5 SVM的调参值？ C和g： cost和gamma gamma（或Epsilon ε）---不敏感损失函数的参数，gamma越大，支持向量越少，gamma值越小，支持向量越多，RBF宽度越大 C 惩罚系数，C过大或过小，泛化能力变差 ！4.25-6 参考链接 https://www.zhihu.com/question/20455227]]></content>
-      <tags>
-        <tag>面经</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[机器学习--XGBOOST和GBDT的知识点整理]]></title>
     <url>%2F2018%2F04%2F24%2F%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0--XGBOOST%E5%92%8CGBDT%E7%9A%84%E7%9F%A5%E8%AF%86%E7%82%B9%E6%95%B4%E7%90%86%2F</url>
     <content type="text"><![CDATA[机器学习--XGBOOST和GBDT的知识点整理 1.树模型缺失值 树模型： 如何处理缺失值： 按照我自己的理解就是：在属性a下假如存在缺失值的话，在计算属性a下的信息增益或者信息增率时，把具有缺失值的元组去掉，把具有完整值的属性a代入计算，用去掉缺失值计算结果进行比较。 如图，假设有100个样本，针对属性A，有20个样本是缺失值。树模型处理缺失样本的时候，会先忽略属性A缺失的样本，然后采用某种属性选择度量（信息增益、增益率、基尼指数）对剩下的样本（现在有80个）进行分裂。假设将这80个样本分裂到图中的三个节点，三个节点分配到的样本数分别为30、25、25（称这个过程为过程一）。然后将属性A缺失的20个样本均加入到这三个节点中（称这个过程为过程二）。在过程一中加入节点的样本的权值均为1，而在过程二中加入节点的样本的权值为：该节点中属性A未缺失的样本数/父节点中属性A未缺失的样本数，如属性A缺失的样本添加到节点1之后的权重为 30/80 = 0.375。 2.为什么树模型不需要归一化特征？ 概率模型不需要归一化，因为它们不关心变量的值，而是关心变量的分布和变量之间的条件概率。像svm、线性回归之类的最优化问题就需要归一化。决策树属于前者。 3.xgboost https://blog.csdn.net/github_38414650/article/details/76061893 4.为什么xgboost比gbdt更快？ https://www.zhihu.com/question/41354392 http://idatamining.net/blog/?p=1901 1.可并行的近似直方图算法。树节点在进行分裂时，我们需要计算每个特征的每个分割点对应的增益，即用贪心法枚举所有可能的分割点。当数据无法一次载入内存或者在分布式情况下，贪心算法效率就会变得很低，所以xgboost还提出了一种可并行的近似直方图算法，用于高效地生成候选的分割点。利用直方图的离散，找到最优的切分点。 2.既提供了单机多线程并行加速，也支持多机分布式加速。也就提供了若干种不同的并行建树的updater实现，按并行策略的不同，包括： I). inter-feature exact parallelism （特征级精确并行） II). inter-feature approximate parallelism（特征级近似并行，基于特征分bin计算，减少了枚举所有特征分裂点的开销） III). intra-feature parallelism （特征内并行） IV). inter-node parallelism （多机并行） 3.把连续的浮点特征值离散化成k个整数，同时构造一个宽度为k的直方图。在 遍历数据的时候，根据离散化后的值作为索引在直方图中累积统计量，当遍历一次数据后，直方图累积了需要的统计量，然后根据直方图的离散值，遍历寻找最优的分割点。 4.xgboost工具支持并行。boosting不是一种串行的结构吗?怎么并行的？注意xgboost的并行不是tree粒度的并行，xgboost也是一次迭代完才能进行下一次迭代的（第t次迭代的代价函数里包含了前面t-1次迭代的预测值）。xgboost的并行是在特征粒度上的。我们知道，决策树的学习最耗时的一个步骤就是对特征的值进行排序（因为要确定最佳分割点），xgboost在训练之前，预先对数据进行了排序，然后保存为block结构，后面的迭代中重复地使用这个结构，大大减小计算量。这个block结构也使得并行成为了可能，在进行节点的分裂时，需要计算每个特征的增益，最终选增益最大的那个特征去做分裂，那么各个特征的增益计算就可以开多线程进行。]]></content>
       <tags>
         <tag>机器学习</tag>
         <tag>树模型</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[面经--360机器学习算法岗位]]></title>
+    <url>%2F2018%2F04%2F24%2F%E9%9D%A2%E7%BB%8F--360%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95%E5%B2%97%E4%BD%8D%EF%BC%88%E4%BA%8C%E9%9D%A2%E6%8C%82%EF%BC%89%2F</url>
+    <content type="text"><![CDATA[面经--360机器学习算法岗位（二面挂） 一面： 1.自我介绍. 2.问了所有的项目经历。 3.算法： 大数据下找到两个人的共同好友？ 澈彻策的博客 二面 1.自我介绍. 2.SVM为什么特征需要归一化？ 首选，什么是归一化？什么是标准化？ ！4.25-1 ！4.25-2 ！4.25-3 ！4.25-4 ！4.25-5 SVM的调参值？ C和g： cost和gamma gamma（或Epsilon ε）---不敏感损失函数的参数，gamma越大，支持向量越少，gamma值越小，支持向量越多，RBF宽度越大 C 惩罚系数，C过大或过小，泛化能力变差 ！4.25-6 参考链接 https://www.zhihu.com/question/20455227]]></content>
+      <tags>
+        <tag>面经</tag>
       </tags>
   </entry>
   <entry>
