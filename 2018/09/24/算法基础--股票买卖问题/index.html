@@ -1,478 +1,713 @@
 <!DOCTYPE html>
-<html lang="en">
 
-<!-- Head tag -->
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="">
 <head>
-    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="keyword"  content="">
-    <link rel="shortcut icon" href="/img/ironman-draw.png">
-    <!-- Place this tag in your head or just before your close body tag. -->
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
-    <title>
-        
-          算法基础--股票买卖问题 - Buevara&#39;s blog
-        
-    </title>
-
-    <link rel="canonical" href="http://Buevara.github.io/2018/09/24/算法基础--股票买卖问题/">
-
-    <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
-
-    <!-- Custom CSS --> 
-    <link rel="stylesheet" href="/css/beantech.min.css">
-
-    <link rel="stylesheet" href="/css/donate.css">
-    
-    <!-- Pygments Highlight CSS -->
-    <link rel="stylesheet" href="/css/highlight.css">
-
-    <link rel="stylesheet" href="/css/widget.css">
-
-    <link rel="stylesheet" href="/css/rocket.css">
-
-    <link rel="stylesheet" href="/css/signature.css">
-
-    <link rel="stylesheet" href="/css/toc.css">
-
-    <!-- Custom Fonts -->
-    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
-    <!-- Hux change font-awesome CDN to qiniu -->
-    <link href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
 
 
-    <!-- Hux Delete, sad but pending in China
-    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/
-    css'>
-    -->
 
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-    <!-- ga & ba script hoook -->
-    <script></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
-</head>
 
 
-<!-- hack iOS CSS :active style -->
-<body ontouchstart="">
-	<!-- hexo-inject:begin --><!-- hexo-inject:end --><!-- Modified by Yu-Hsuan Yen -->
-<!-- Post Header -->
-<style type="text/css">
-    header.intro-header{
-        
-            background-image: url('')
-            /*post*/
-        
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="算法,动态规划,股票问题," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Buevara" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="股票买卖问题总结：  &amp;apos;&amp;apos;&amp;apos;股票买卖问题总结：1. 只能买卖一次2. 买卖无限次3. 买卖无限次但是每次需要手续费a元4. 买卖无限次，但每次卖出后需要“冷静”一天5. 只能买卖两次6. 买卖小于等于两次7. 买卖小于等于k次参考文献：https://segmentfault.com/a/1190000006672807#articleHeader3https://b">
+<meta name="keywords" content="算法,动态规划,股票问题">
+<meta property="og:type" content="article">
+<meta property="og:title" content="算法基础--股票买卖问题">
+<meta property="og:url" content="http://Buevara.github.io/2018/09/24/算法基础--股票买卖问题/index.html">
+<meta property="og:site_name" content="Buevara">
+<meta property="og:description" content="股票买卖问题总结：  &amp;apos;&amp;apos;&amp;apos;股票买卖问题总结：1. 只能买卖一次2. 买卖无限次3. 买卖无限次但是每次需要手续费a元4. 买卖无限次，但每次卖出后需要“冷静”一天5. 只能买卖两次6. 买卖小于等于两次7. 买卖小于等于k次参考文献：https://segmentfault.com/a/1190000006672807#articleHeader3https://b">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-09-25T03:52:10.773Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="算法基础--股票买卖问题">
+<meta name="twitter:description" content="股票买卖问题总结：  &amp;apos;&amp;apos;&amp;apos;股票买卖问题总结：1. 只能买卖一次2. 买卖无限次3. 买卖无限次但是每次需要手续费a元4. 买卖无限次，但每次卖出后需要“冷静”一天5. 只能买卖两次6. 买卖小于等于两次7. 买卖小于等于k次参考文献：https://segmentfault.com/a/1190000006672807#articleHeader3https://b">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     }
-    
-</style>
-
-<header class="intro-header" >
-    <!-- Signature -->
-    <div id="signature">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                
-                    <div class="post-heading">
-                        <div class="tags">
-                            
-                              <a class="tag" href="/tags/#算法" title="算法">算法</a>
-                            
-                              <a class="tag" href="/tags/#动态规划" title="动态规划">动态规划</a>
-                            
-                              <a class="tag" href="/tags/#股票问题" title="股票问题">股票问题</a>
-                            
-                        </div>
-                        <h1>算法基础--股票买卖问题</h1>
-                        <h2 class="subheading"></h2>
-                        <span class="meta">
-                            Posted by Buevara on
-                            2018-09-24
-                        </span>
-                    </div>
-                
-
-
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
-
-	
-    <!-- Navigation -->
-<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
-    <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header page-scroll">
-            <button type="button" class="navbar-toggle">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="/">Buevara</a>
-        </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <!-- Known Issue, found by Hux:
-            <nav>'s height woule be hold on by its content.
-            so, when navbar scale out, the <nav> will cover tags.
-            also mask any touch event of tags, unfortunately.
-        -->
-        <div id="huxblog_navbar">
-            <div class="navbar-collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="/">Home</a>
-                    </li>
-
-                    
-
-                        
-                        <li>
-                            <a href="/tags/">Tags</a>
-                        </li>
-                        
-                    
-                    
-                </ul>
-            </div>
-        </div>
-        <!-- /.navbar-collapse -->
-    </div>
-    <!-- /.container -->
-</nav>
-<script>
-    // Drop Bootstarp low-performance Navbar
-    // Use customize navbar with high-quality material design animation
-    // in high-perf jank-free CSS3 implementation
-    var $body   = document.body;
-    var $toggle = document.querySelector('.navbar-toggle');
-    var $navbar = document.querySelector('#huxblog_navbar');
-    var $collapse = document.querySelector('.navbar-collapse');
-
-    $toggle.addEventListener('click', handleMagic)
-    function handleMagic(e){
-        if ($navbar.className.indexOf('in') > 0) {
-        // CLOSE
-            $navbar.className = " ";
-            // wait until animation end.
-            setTimeout(function(){
-                // prevent frequently toggle
-                if($navbar.className.indexOf('in') < 0) {
-                    $collapse.style.height = "0px"
-                }
-            },400)
-        }else{
-        // OPEN
-            $collapse.style.height = "auto"
-            $navbar.className += " in";
-        }
-    }
+  };
 </script>
 
 
-    <!-- Main Content -->
-    <!-- Modify by Yu-Hsuan Yen -->
 
-<!-- Post Content -->
-<article>
-    <div class="container">
-        <div class="row">
+  <link rel="canonical" href="http://Buevara.github.io/2018/09/24/算法基础--股票买卖问题/"/>
 
-            <!-- Post Container -->
-            <div class="
-                col-lg-8 col-lg-offset-2
-                col-md-10 col-md-offset-1
-                post-container">
 
-                <h2>股票买卖问题总结：</h2>
+
+
+
+  <title>算法基础--股票买卖问题 | Buevara</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Buevara</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">To hard!To work!</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://Buevara.github.io/2018/09/24/算法基础--股票买卖问题/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Buevara">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Buevara">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">算法基础--股票买卖问题</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-24T10:28:35+08:00">
+                2018-09-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2>股票买卖问题总结：</h2>
 <hr>
 <p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&apos;&apos;&apos;</span><br><span class="line">股票买卖问题总结：</span><br><span class="line">1. 只能买卖一次</span><br><span class="line">2. 买卖无限次</span><br><span class="line">3. 买卖无限次但是每次需要手续费a元</span><br><span class="line">4. 买卖无限次，但每次卖出后需要“冷静”一天</span><br><span class="line">5. 只能买卖两次</span><br><span class="line">6. 买卖小于等于两次</span><br><span class="line">7. 买卖小于等于k次</span><br><span class="line"></span><br><span class="line">参考文献：</span><br><span class="line">https://segmentfault.com/a/1190000006672807#articleHeader3</span><br><span class="line">https://blog.csdn.net/sinat_35261315/article/details/79023510</span><br><span class="line">&apos;&apos;&apos;</span><br><span class="line"></span><br><span class="line">################################## 1.只买卖一次 #########################################</span><br><span class="line">##输入: [7,1,5,3,6,4]</span><br><span class="line">##输出: 5</span><br><span class="line">###第一种 添加两个数组 一个是从第i位起，后面的最大值（包括第i位）， 另一个是第i位以及之前，最小值</span><br><span class="line">def solve1_1(nums):</span><br><span class="line">    if len(nums) == 0 or len(nums) == 1:</span><br><span class="line">        return 0</span><br><span class="line">    n1 = [0]*len(nums)</span><br><span class="line">    n2 = [0]*len(nums)</span><br><span class="line">    n2[0] = nums[0]</span><br><span class="line">    for i in range(1, len(nums)):</span><br><span class="line">        n2[i] = min(nums[i-1], nums[i])</span><br><span class="line"></span><br><span class="line">    n1[len(nums)-1] = nums[len(nums)-1]</span><br><span class="line">    for i in range(len(nums)-2, -1, -1):</span><br><span class="line">        n1[i] = max(nums[i], n1[i+1])</span><br><span class="line">    result = map(lambda x,y:x-y,  n1, n2)</span><br><span class="line">    return max(result)</span><br><span class="line">#print(solve1_1([7,1,5,3,6,4]))</span><br><span class="line"></span><br><span class="line">###第二种方法 思想一样 但是不创建两个数组</span><br><span class="line"></span><br><span class="line">def solve1_2(nums):</span><br><span class="line">    if len(nums) == 0 or len(nums) == 1:</span><br><span class="line">        return 0</span><br><span class="line">    minn = nums[0]###初始化minn最小值</span><br><span class="line">    max_diff = 0 ###初始化最大收益值</span><br><span class="line">    for i in range(1, len(nums)):</span><br><span class="line">        if nums[i-1] &lt; minn:</span><br><span class="line">            minn = nums[i-1]</span><br><span class="line">        if max_diff&lt; nums[i] - minn:</span><br><span class="line">            max_diff = nums[i] - minn</span><br><span class="line">    return max_diff</span><br><span class="line">#print(solve1_2([7,1,5,3,6,4]))</span><br><span class="line"></span><br><span class="line">################################## 2.可以买卖无限次 #########################################</span><br><span class="line">&apos;&apos;&apos;</span><br><span class="line">要求和上面一样，不过这次可以进行多次交易，即买，卖，买，卖，买，卖…，其中买卖不能在同一天进行</span><br><span class="line"></span><br><span class="line">这样就不能像上面那样只求一次了，其实仔细想一下，序列无非三种排列</span><br><span class="line"></span><br><span class="line">递增，假设A&lt;B&lt;C&lt;D</span><br><span class="line">递减，假设A&gt;B&gt;C&gt;D</span><br><span class="line">无序，假设A&lt;B&gt;C&lt;D</span><br><span class="line">对于递增序列，最大的差值就是D−A，因为(D−A)=(D−C)+(C−B)+(B−A)&gt;(D−C)+(B−A)</span><br><span class="line">对于递减序列，为0</span><br><span class="line"></span><br><span class="line">对于无序序列，总可以找到若干个递增序列，就上面的例子而言最大差值为(B−A)+(D−C)，而实际上也可以写成(D−C)+max(C−B,0)+(B−A)，和递增序列的形式是一样的</span><br><span class="line"></span><br><span class="line">所以只要依次计算prices[i]−prices[i−1]即可</span><br><span class="line">&apos;&apos;&apos;</span><br><span class="line">def solve2_1(nums):</span><br><span class="line">    result = 0</span><br><span class="line"></span><br><span class="line">    for i in range(1, len(nums)):</span><br><span class="line"></span><br><span class="line">        if nums[i]&gt;nums[i-1]:</span><br><span class="line">            result += nums[i]-nums[i-1]</span><br><span class="line">    return result</span><br><span class="line">#print(solve2_1([1, 2, 1, 3, 0, 4]))</span><br><span class="line"></span><br><span class="line">################################## 3.买卖无限次但是需要手续费 ################################</span><br><span class="line">&apos;&apos;&apos;</span><br><span class="line">输入: prices = [1, 3, 2, 8, 4, 9], fee = 2</span><br><span class="line">输出: 8   解释: 能够达到的最大利润:  </span><br><span class="line">在此处买入 prices[0] = 1   在此处卖出 prices[3] = 8</span><br><span class="line">在此处买入 prices[4] = 4   在此处卖出 prices[5] = 9</span><br><span class="line">总利润: ((8 - 1) - 2) + ((9 - 4) - 2) = 8.</span><br><span class="line">&apos;&apos;&apos;</span><br><span class="line"></span><br><span class="line">&apos;&apos;&apos;</span><br><span class="line">第一解法：贪心算法  不是很好理解  个人不推荐</span><br><span class="line">选择的关键是找到一个最大后是不是能够卖掉stock，重新开始寻找买入机会。比如序列1 3 2 8，如果发现2小于3就完成交易买1卖3，此时由于fee=2，（3-1-fee）+(8-2-fee)&lt;8-1-fee)，所以说明卖早了，令max是当前最大price，当（maxx-price[i]&gt;=fee）时可以在max处卖出，且不会存在卖早的情况，再从i开始重新寻找买入机会。</span><br><span class="line">cur_diff记录了当前一次交易能得到的最大收益，只有当maxx-prices[i]&gt;=fee时，才将cur_diff累加到总的收益中。最后一次交易不需要考虑是否早卖了，所以直接累加最后一次的cur_diff。</span><br><span class="line"></span><br><span class="line">&apos;&apos;&apos;</span><br><span class="line"></span><br><span class="line">def solve3_1(nums, fee):</span><br><span class="line">    ##每次收取fee元手续费</span><br><span class="line">    minn = nums[0]</span><br><span class="line">    maxx = nums[0]</span><br><span class="line">    result = 0</span><br><span class="line">    cur_diff = 0</span><br><span class="line">    for i in range(1, len(nums)):</span><br><span class="line">        minn = min(minn, nums[i])</span><br><span class="line">        maxx = max(maxx, nums[i])</span><br><span class="line">        print(&apos;min, max&apos;, minn, maxx)</span><br><span class="line">        cur_diff = max(cur_diff, nums[i]-minn-fee)</span><br><span class="line">        print(&apos;cur_diff&apos;, cur_diff)</span><br><span class="line">        if maxx - nums[i] &gt;= fee:</span><br><span class="line">            result += cur_diff</span><br><span class="line">            cur_diff = 0</span><br><span class="line">            minn = nums[i]</span><br><span class="line">            maxx = nums[i]</span><br><span class="line">        print(&apos;result&apos;, result)</span><br><span class="line">    return result+cur_diff</span><br><span class="line"></span><br><span class="line">#print(solve3_1([1, 3, 2, 8, 4, 9], 2))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&apos;&apos;&apos;</span><br><span class="line">第二种解法： 动态规划 </span><br><span class="line">分析每天的行为，我们可以知道，主要的行为就是售出和购入。所以我们建立两个动态规划数组：sold和hold，其中</span><br><span class="line">sold[i]保存的是第i天出售股票后的最大利润，有两个状态，一个是在i天售出的利润，</span><br><span class="line">或者保持前一天也就是sold[i-1]的售出利润，选择其中的最大利润。</span><br><span class="line">hold[i]保存的是第i天持有股票的最大利润，也有两个状态，一个是在i天购入的利润，</span><br><span class="line">或者保持前一天也就是hold[i-1]的持有利润，选择其中的最大利润。</span><br><span class="line">写为动态规划式为： </span><br><span class="line">sold[i] = max(sold[i−1],hold[i−1]+prices[i]−fee); </span><br><span class="line">hold[i] = max(Hold[i-1],sold[i−1]−prices[i])</span><br><span class="line"></span><br><span class="line">https://blog.csdn.net/Koala_Tree/article/details/78530510</span><br><span class="line">&apos;&apos;&apos;</span><br><span class="line">def solve3_2(nums, fee):</span><br><span class="line">    sold = [0]*len(nums)</span><br><span class="line">    hold = [0]*len(nums)</span><br><span class="line">    hold[0] = -nums[0]</span><br><span class="line">    for i in range(1, len(nums)):</span><br><span class="line">        sold[i] = max(sold[i-1], hold[i-1] + nums[i]-fee)</span><br><span class="line">        hold[i] = max(hold[i-1], sold[i-1] - nums[i])</span><br><span class="line">    return sold[len(nums)-1]</span><br><span class="line">#print(solve3_2([1, 3, 2, 8, 4, 9], 2))</span><br><span class="line"></span><br><span class="line">&apos;&apos;&apos;</span><br><span class="line">第三种解法： 简化第二种解法空间复杂度 O(1)</span><br><span class="line">&apos;&apos;&apos;</span><br><span class="line">def solve3_3(nums, fee):</span><br><span class="line">    sold = 0</span><br><span class="line">    hold = -nums[0]</span><br><span class="line">    for i in range(1, len(nums)):</span><br><span class="line">        sold_old = sold</span><br><span class="line">        sold = max(sold, hold + nums[i]-fee)</span><br><span class="line">        hold = max(hold, sold_old - nums[i])</span><br><span class="line">    return sold</span><br><span class="line">#print(solve3_3([1, 3, 2, 8, 4, 9], 2))</span><br><span class="line"></span><br><span class="line">############################## 4.买卖无限次，但每次卖出后需要“冷静”1天 #######################</span><br><span class="line"></span><br><span class="line">&apos;&apos;&apos;</span><br><span class="line">prices = [1, 2, 3, 0, 2]</span><br><span class="line">maxProfit = 3</span><br><span class="line">transactions = [buy, sell, cooldown, buy, sell]</span><br><span class="line"></span><br><span class="line">根据3_2的思想 动态规划 sold和hold</span><br><span class="line">思路： </span><br><span class="line">sold[i] = max(hold[i-1] + price[i], sold[i-1])</span><br><span class="line">hold[i]  = max(sold[i-2] - price[i], hold[i-1]) </span><br><span class="line"></span><br><span class="line">https://www.cnblogs.com/grandyang/p/4997417.html</span><br><span class="line">&apos;&apos;&apos;</span><br><span class="line">def solve4_1(nums):</span><br><span class="line"></span><br><span class="line">    if len(nums) == 0 or len(nums) == 1:</span><br><span class="line">        return 0</span><br><span class="line">    sold = [0] * len(nums)</span><br><span class="line">    hold = [0] * len(nums)</span><br><span class="line">    hold[0] = -nums[0]</span><br><span class="line">    for i in range(1, len(nums)):</span><br><span class="line">        sold[i] = max(hold[i - 1] + nums[i], sold[i - 1])</span><br><span class="line">        hold[i] = max(sold[i - 2] - nums[i], hold[i - 1])</span><br><span class="line">    return sold[len(nums) - 1]</span><br><span class="line">#print(solve4_1([2, 1, 3, 0, 0, 3, 2]))</span><br><span class="line"></span><br><span class="line">&apos;&apos;&apos;</span><br><span class="line">第二种方法  简化 solve4_1 </span><br><span class="line">&apos;&apos;&apos;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def solve4_2(nums):</span><br><span class="line"></span><br><span class="line">    if len(nums) == 0 or len(nums) == 1:</span><br><span class="line">        return 0</span><br><span class="line">    sold = 0</span><br><span class="line">    pre_sold = 0</span><br><span class="line">    hold = -nums[0]</span><br><span class="line">    for i in range(1, len(nums)):</span><br><span class="line">        tmp = sold</span><br><span class="line">        sold = max(hold + nums[i], sold)</span><br><span class="line">        hold = max(pre_sold - nums[i], hold)</span><br><span class="line">        pre_sold = tmp</span><br><span class="line">    return sold</span><br><span class="line">#print(solve4_2([2, 1, 3, 0, 0, 3, 2]))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">################################## 5.只能买卖两次 #########################################</span><br><span class="line"></span><br><span class="line">##1, 2, 1, 3, 0, 4；最大收益为6，在第三天买入，第四天卖出，第五天买入，第六天卖出；</span><br><span class="line">&apos;&apos;&apos;</span><br><span class="line">第一种方式:</span><br><span class="line">两次股票交易的核心是可以定义一个交易点，在这个交易点之前可以做一次交易(赚的最大数目的钱为firstProf)，</span><br><span class="line">在这个交易点之后可以做一个交易(赚的最大数目的钱是secondProf)。</span><br><span class="line">那么要求的是max(firstProf+secondProf)。但是这个方法的时间复杂度是O(N^2)，空间复杂度是O(1)。</span><br><span class="line">&apos;&apos;&apos;</span><br><span class="line">def solve5_1(nums):</span><br><span class="line">    result = 0</span><br><span class="line">    for i in range(len(nums)):</span><br><span class="line">        k = solve1_2(nums[:i+1]) + solve1_2(nums[i:])</span><br><span class="line">        if result &lt; k:</span><br><span class="line">            result = k</span><br><span class="line">    return result</span><br><span class="line">#print(solve5_1([1, 2, 1, 3, 0, 4]))</span><br><span class="line"></span><br><span class="line">&apos;&apos;&apos;</span><br><span class="line">第二种方式:</span><br><span class="line">不同于Best Time to Buy and Sell Stock I中定义的初始状态A[i]表示第i天卖出挣的最大数目的钱，</span><br><span class="line">这个更进一步直接定义A[i]表示前i天赚的最大数目的钱。minPrice表示从第0天到第i-1天中的最低价格。</span><br><span class="line">A[0]=0。（初始状态）</span><br><span class="line">A[1]=max(prices[1]-prices[0],A[0])</span><br><span class="line">A[2]=max(prices[2]-minPrice,A[1])</span><br><span class="line">即A[i]=max(price[i]-minPrice,A[i-1]).</span><br><span class="line">A[0]=0</span><br><span class="line">另外一次扫描从数组后向前扫描，</span><br><span class="line">定义B[i]表示从第i天到最后一天n能赚的最大数目的钱。maxPrice表示第i+1天到n天的最高价格。</span><br><span class="line">B[n]=0。（初始状态）</span><br><span class="line">B[n-1]=max(maxPrice-prices[n-1],B[n])</span><br><span class="line">B[n-2]=max(maxPrice-prices[n-2],B[n-1])</span><br><span class="line">即B[i]=max(maxPrice-prices[i],B[i+1])</span><br><span class="line">B[n]=0</span><br><span class="line">那么以第i天为分割点能赚的最多数目的钱为A[i]+B[i]</span><br><span class="line">问题的解为max&#123;A[i]+B[i]&#125;。0&lt;=i&lt;=n。</span><br><span class="line">时间复杂度是O(N)，空间复杂度是O(N)。</span><br><span class="line">&apos;&apos;&apos;</span><br><span class="line">def solve5_2(nums):</span><br><span class="line">    result = 0</span><br><span class="line">    A = [0]*len(nums)</span><br><span class="line">    minn = nums[0]</span><br><span class="line">    for i in range(1, len(nums)):</span><br><span class="line">        if nums[i-1] &lt; minn:</span><br><span class="line">            minn = nums[i-1]</span><br><span class="line">        A[i] = max(nums[i] - minn, A[i-1])</span><br><span class="line">    B = [0] * len(nums)</span><br><span class="line">    end = len(nums)</span><br><span class="line">    maxx = nums[end-1]</span><br><span class="line">    for i in range(end-2, -1, -1):</span><br><span class="line">        if nums[i+1] &gt; maxx:</span><br><span class="line">            maxx = nums[i+1]</span><br><span class="line">        B[i] = max(maxx-nums[i], B[i+1])</span><br><span class="line">    #result = map(lambda x,y:x+y, A, B)</span><br><span class="line">    result = [A[i]+B[i] for i in range(len(A))]</span><br><span class="line">    return max(result)</span><br><span class="line">#print(solve5_2([1, 2, 1, 3, 0, 4]))</span><br><span class="line"></span><br><span class="line">&apos;&apos;&apos;</span><br><span class="line">最优化:时间复杂度O(n)，空间复杂度O(1)。</span><br><span class="line">第三种解法的核心是假设手上最开始只有0元钱，</span><br><span class="line">那么如果买入股票的价格为price，手上的钱需要减去这个price，</span><br><span class="line">如果卖出股票的价格为price，手上的钱需要加上这个price。</span><br><span class="line">它定义了4个状态：</span><br><span class="line">Buy1[i]表示前i天做第一笔交易买入股票后剩下的最多的钱；</span><br><span class="line">Sell1[i]表示前i天做第一笔交易卖出股票后剩下的最多的钱；</span><br><span class="line">Buy2[i]表示前i天做第二笔交易买入股票后剩下的最多的钱；</span><br><span class="line">Sell2[i]表示前i天做第二笔交易卖出股票后剩下的最多的钱；</span><br><span class="line">那么Sell2[i]=max&#123;Sell2[i-1],Buy2[i-1]+prices[i]&#125;</span><br><span class="line">       Buy2[i]=max&#123;Buy2[i-1],Sell1[i-1]-prices[i]&#125;</span><br><span class="line">       Sell1[i]=max&#123;Sell[i-1],Buy1[i-1]+prices[i]&#125;</span><br><span class="line">       Buy1[i]=max&#123;Buy[i-1],-prices[i]&#125;</span><br><span class="line">可以发现上面四个状态都是只与前一个状态有关，所以可以不使用数组而是使用变量来存储即可。</span><br><span class="line">&apos;&apos;&apos;</span><br><span class="line">def solve5_3(nums):</span><br><span class="line">    sell1 = 0</span><br><span class="line">    buy1 = -nums[0]</span><br><span class="line">    sell2 = 0</span><br><span class="line">    buy2 = 0</span><br><span class="line">    for i in range(1, len(nums)):</span><br><span class="line">        buy1 = max(buy1, -nums[i])</span><br><span class="line">        sell1 = max(sell1, buy1+nums[i])</span><br><span class="line">        buy2 = max(buy2, sell1-nums[i])</span><br><span class="line">        sell2 = max(sell2, buy2+nums[i])</span><br><span class="line">    return sell2</span><br><span class="line">#print(solve5_3([1, 2, 1, 3, 0, 4]))</span><br><span class="line"></span><br><span class="line">################################## 6.买卖小于等于2次 #########################################</span><br><span class="line">&apos;&apos;&apos;</span><br><span class="line">最多买两次就是第二种问题的一个变形，求买卖1次和买卖2次最大值，我们用solve4_2作为baseline来改造</span><br><span class="line">时间复杂度O(n),</span><br><span class="line">&apos;&apos;&apos;</span><br><span class="line"></span><br><span class="line">def solve6_1(nums):</span><br><span class="line">    result = 0</span><br><span class="line">    A = [0]*len(nums)###存从初始到第i天最大的收益</span><br><span class="line">    minn = nums[0]</span><br><span class="line">    for i in range(1, len(nums)):</span><br><span class="line">        if nums[i-1] &lt; minn:</span><br><span class="line">            minn = nums[i-1]</span><br><span class="line">        A[i] = max(nums[i] - minn, A[i-1])</span><br><span class="line">    B = [0] * len(nums)### 存从第i天开始到最后一天的最大收益</span><br><span class="line">    end = len(nums)</span><br><span class="line">    maxx = nums[end-1]</span><br><span class="line">    for i in range(end-2, -1, -1):</span><br><span class="line">        if nums[i+1] &gt; maxx:</span><br><span class="line">            maxx = nums[i+1]</span><br><span class="line">        B[i] = max(maxx-nums[i], B[i+1])</span><br><span class="line"></span><br><span class="line">    result = [A[i]+B[i] for i in range(len(A))]</span><br><span class="line">    return max(max(result), max(A))</span><br><span class="line">#print(solve6_1([1, 2, 1, 3, 0, 4]))</span><br><span class="line"></span><br><span class="line">&apos;&apos;&apos;</span><br><span class="line">也用solve5_3作为baseline来改造</span><br><span class="line">&apos;&apos;&apos;</span><br><span class="line">def solve6_2(nums):</span><br><span class="line">    sell1 = 0</span><br><span class="line">    buy1 = -nums[0]</span><br><span class="line">    sell2 = 0</span><br><span class="line">    buy2 = 0</span><br><span class="line">    for i in range(1, len(nums)):</span><br><span class="line">        buy1 = max(buy1, -nums[i])</span><br><span class="line">        sell1 = max(sell1, buy1+nums[i])</span><br><span class="line">        buy2 = max(buy2, sell1-nums[i])</span><br><span class="line">        sell2 = max(sell2, buy2+nums[i])</span><br><span class="line">    return max(sell2, sell1)</span><br><span class="line">#print(solve6_2([1, 2, 1, 3, 0, 4]))</span><br><span class="line"></span><br><span class="line">################################## 7.买卖小于等于k次 #########################################</span><br><span class="line">&apos;&apos;&apos;</span><br><span class="line">采用两种方法 均采用动态规划 复杂度相同： 时间复杂度O(n*k)，空间复杂度O(n) </span><br><span class="line">https://blog.csdn.net/smile_watermelon/article/details/47445981</span><br><span class="line"></span><br><span class="line">第一种：</span><br><span class="line"></span><br><span class="line">这里我们需要两个递推公式来分别更新两个变量local和global，我们其实可以求至少k次交易的最大利润。</span><br><span class="line">定义local[i][j]为在到达第i天时最多可进行j次交易并且最后一次交易在最后一天卖出的最大利润，此为局部最优。</span><br><span class="line">定义global[i][j]为在到达第i天时最多可进行j次交易的最大利润，此为全局最优。它们的递推式为：</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">local[i][j] = max(global[i-1][j-1]+max(diff,0), local[i-1][j]+diff); </span><br><span class="line">global[i][j] = max(local[i][j], global[i-1][j])</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">local[i][j] = max(global[i-1][j-1]+max(diff,0), local[i-1][j]+diff)</span><br><span class="line">需要看两个量，第一个是全局global到i-1天进行j-1次交易，然后加上今天的交易，</span><br><span class="line">如果今天是赚钱的话（也就是前面只要j-1次交易，最后一次交易取当前天）；</span><br><span class="line">第二个量则是取local第i-1天j次交易，然后加上今天的差值</span><br><span class="line">（这里因为local[i-1][j]比如包含第i-1天卖出的交易，所以现在变成第i天卖出，</span><br><span class="line">并不会增加交易次数，而且这里无论diff是不是大于0都一定要加上，</span><br><span class="line">因为否则就不满足local[i][j]必须在最后一天卖出的条件了）。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">global[i][j] = max(local[i][j], global[i-1][j])</span><br><span class="line">即，到第i天完成j次交易的最大收益，要么是第j次交易发生在第i天时的最大收益，</span><br><span class="line">要么是到第i-1天完成j次交易时的最大收益。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">如果k&gt;len(nums) 则问题退化成 问题2</span><br><span class="line">&apos;&apos;&apos;</span><br><span class="line">def solve7_1(nums, k):</span><br><span class="line"></span><br><span class="line">    if k == 0 or len(nums) ==0:</span><br><span class="line">        return 0</span><br><span class="line">    n = len(nums)</span><br><span class="line">    if k &gt; n:</span><br><span class="line">        ###退化成solve2_1</span><br><span class="line">        summ = 0</span><br><span class="line">        for i in range(1, n):</span><br><span class="line">            diff = nums[i]- nums[i-1]</span><br><span class="line">            summ+= max(0, diff)</span><br><span class="line">        return summ</span><br><span class="line">    else:</span><br><span class="line">        ### 行取 n  列取 k+1  因为交易笔数需要从1-k,第0列作为递推条件必须有</span><br><span class="line">        local = [[0]*(k+1) for _ in range(n)]</span><br><span class="line">        globall = [[0]*(k+1) for _ in range(n)]</span><br><span class="line">        for i in range(1, n):</span><br><span class="line">            diff = nums[i]-nums[i-1]</span><br><span class="line">            for j in range(1, k+1):</span><br><span class="line">                local[i][j] = max(globall[i-1][j-1]+max(diff, 0), local[i-1][j]+diff)</span><br><span class="line">                globall[i][j] = max(local[i][j], globall[i-1][j])</span><br><span class="line">        return globall[n-1][k]</span><br><span class="line"></span><br><span class="line">#print(solve7_1([2,4,1],2))</span><br></pre></td></tr></table></figure></p>
 
-                
+      
+    </div>
+    
+    
+    
 
-                <hr>
-                <!-- Pager -->
-                <ul class="pager">
-                    
-                        <li class="previous">
-                            <a href="/2019/07/15/Spark基础(一)--大数据技术介绍/" data-toggle="tooltip" data-placement="top" title="Spark基础(一)--大数据技术介绍">&larr; Previous Post</a>
-                        </li>
-                    
-                    
-                        <li class="next">
-                            <a href="/2018/09/01/秋招面经--作业帮机器学习算法岗位/" data-toggle="tooltip" data-placement="top" title="秋招面经--作业帮机器学习岗位">Next Post &rarr;</a>
-                        </li>
-                    
-                </ul>
+    
 
-                <br>
+    
 
-                <!--打赏-->
-                
-                <!--打赏-->
+    
 
-                <br>
-                <!--分享-->
-                
-                <!--分享-->
-                <br>                       
-                
-                <!-- require APlayer -->
-                
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/算法/" rel="tag"># 算法</a>
+          
+            <a href="/tags/动态规划/" rel="tag"># 动态规划</a>
+          
+            <a href="/tags/股票问题/" rel="tag"># 股票问题</a>
+          
+        </div>
+      
 
-                <!-- duoshuo Share start -->
-                
-                <!-- 多说 Share end-->
+      
+      
+      
 
-                <!-- 多说评论框 start -->
-                
-                <!-- 多说评论框 end -->
-
-                <!-- disqus comment start -->
-                
-                <!-- disqus comment end -->
-
-                
-                    <!-- disqus 评论框 start -->
-                    <div class="comment">
-                        <div id="lv-container" data-id="city" data-uid="MTAyMC8zNTQ5OC8xMjAzNA=="></div>
-                    </div>
-                    <!-- disqus 评论框 end -->
-                
-
-            </div>
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-            <!-- Tabe of Content -->
-            <!-- Table of Contents -->
+              <a href="/2018/09/01/秋招面经--作业帮机器学习算法岗位/" rel="next" title="秋招面经--作业帮机器学习岗位">
+                <i class="fa fa-chevron-left"></i> 秋招面经--作业帮机器学习岗位
+              </a>
+            
+          </div>
 
-                
-            <!-- Sidebar Container -->
-            <div class="
-                col-lg-8 col-lg-offset-2
-                col-md-10 col-md-offset-1
-                sidebar-container">
+          <span class="post-nav-divider"></span>
 
-                <!-- Featured Tags -->
-                
-                <section>
-                    <!-- no hr -->
-                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
-                    <div class="tags">
-                       
-                          <a class="tag" href="/tags/#算法" title="算法">算法</a>
-                        
-                          <a class="tag" href="/tags/#动态规划" title="动态规划">动态规划</a>
-                        
-                          <a class="tag" href="/tags/#股票问题" title="股票问题">股票问题</a>
-                        
-                    </div>
-                </section>
-                
-
-                <!-- Friends Blog -->
-                
-            </div>
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/07/15/Spark基础(一)--大数据技术介绍/" rel="prev" title="Spark基础(一)--大数据技术介绍">
+                Spark基础(一)--大数据技术介绍 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
         </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
     </div>
-</article>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zNTQ5OC8xMjAzNA=="></div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Buevara</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">33</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">股票买卖问题总结：</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Buevara</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
 
 
 
 
 
 
-    <!-- 来必力City版公共JS代码 start (一个网页只需插入一次) -->
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
     <script type="text/javascript">
-       (function(d, s) {
-           var j, e = d.getElementsByTagName(s)[0];
-    
-           if (typeof LivereTower === 'function') { return; }
-    
-           j = d.createElement(s);
-           j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-           j.async = true;
-    
-           e.parentNode.insertBefore(j, e);
-       })(document, 'script');
-    </script>
-    <noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
-    <!-- 来必力City版 公共JS代码 end -->
-
-
-
-
-<!-- chrome Firefox 中文锚点定位失效-->
-<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
-<!-- smooth scroll behavior polyfill  -->
-<script type="text/javascript" src="/js/smoothscroll.js"></script>
-<script>
-        $('#toc').on('click','a',function(a){
-            // var isChrome = window.navigator.userAgent.indexOf("Chrome") !== -1;
-            // console.log(window.navigator.userAgent,isChrome)
-                // if(isChrome) {
-                    // console.log(a.currentTarget.outerHTML);
-                    // console.log($(a.currentTarget).attr("href"));
-                    //跳转到指定锚点
-                    // document.getElementById(a.target.innerText.toLowerCase()).scrollIntoView(true);
-                    document.getElementById($(a.currentTarget).attr("href").replace("#","")).scrollIntoView({behavior: 'smooth' });
-                // }
-        })  
-</script>
-
-
-    <!-- Footer -->
-    <!-- Footer -->
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <ul class="list-inline text-center">
-                
-                
-                
-
-                
-
-                
-
-                
-
-                
-
-                </ul>
-                <p class="copyright text-muted">
-                    Copyright &copy; Buevara 2019 
-                    <br>
-                    Theme by <a href="http://beantech.org">BeanTech</a> 
-                    <span style="display: inline-block; margin: 0 5px;">
-                        <i class="fa fa-heart"></i>
-                    </span> 
-                    re-Ported by <a href="http://www.huweihuang.com">胡伟煌</a> | 
-                    <iframe
-                        style="margin-left: 2px; margin-bottom:-5px;"
-                        frameborder="0" scrolling="0" width="91px" height="20px"
-                        src="https://ghbtns.com/github-btn.html?user=huweihuang&repo=hexo-theme-huweihuang&type=star&count=true" >
-                    </iframe>
-                </p>
-            </div>
-        </div>
-    </div>
-</footer>
-
-<!-- jQuery -->
-<script src="/js/jquery.min.js"></script>
-
-<!-- Bootstrap Core JavaScript -->
-<script src="/js/bootstrap.min.js"></script>
-
-<!-- Custom Theme JavaScript -->
-<script src="/js/hux-blog.min.js"></script>
-
-
-<!-- async load function -->
-<script>
-    function async(u, c) {
-      var d = document, t = 'script',
-          o = d.createElement(t),
-          s = d.getElementsByTagName(t)[0];
-      o.src = u;
-      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
-      s.parentNode.insertBefore(o, s);
-    }
-</script>
-
-<!-- 
-     Because of the native support for backtick-style fenced code blocks 
-     right within the Markdown is landed in Github Pages, 
-     From V1.6, There is no need for Highlight.js, 
-     so Huxblog drops it officially.
-
-     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0  
-     - https://help.github.com/articles/creating-and-highlighting-code-blocks/    
--->
-<!--
-    <script>
-        async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
-            hljs.initHighlightingOnLoad();
-        })
-    </script>
-    <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
--->
-
-
-<!-- jquery.tagcloud.js -->
-<script>
-    // only load tagcloud.js in tag.html
-    if($('#tag_cloud').length !== 0){
-        async("http://Buevara.github.io/js/jquery.tagcloud.js",function(){
-            $.fn.tagcloud.defaults = {
-                //size: {start: 1, end: 1, unit: 'em'},
-                color: {start: '#bbbbee', end: '#0085a1'},
-            };
-            $('#tag_cloud a').tagcloud();
-        })
-    }
-</script>
-
-<!--fastClick.js -->
-<script>
-    async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
-        var $nav = document.querySelector("nav");
-        if($nav) FastClick.attach($nav);
-    })
-</script>
-
-
-<!-- Google Analytics -->
-
-
-
-
-<!-- Baidu Tongji -->
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  
 
 
 
 
 
 
-	<a id="rocket" href="#top" class=""></a>
-	<script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
-    <script type="text/javascript" src="/js/toc.js?v=1.0.0" async=""></script>
-<!-- Image to hack wechat -->
-<img src="http://Buevara.github.io/img/icon_wechat.png" width="0" height="0" />
-<!-- Migrate from head to bottom, no longer block render and still work -->
 
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
 
 </body>
-
 </html>
