@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Buevara</title>
+  <title>楓尘</title>
   <icon>https://www.gravatar.com/avatar/b052651cafe03624e87490e24b7f70c4</icon>
-  <subtitle>To hard!To work!</subtitle>
+  <subtitle>Do one thing at a time, and do well.</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://Buevara.github.io/"/>
@@ -10,7 +10,7 @@
   <id>http://Buevara.github.io/</id>
   
   <author>
-    <name>Buevara</name>
+    <name>楓尘</name>
     <email>brian7law@gmail.com</email>
   </author>
   
